@@ -261,7 +261,7 @@ namespace VietOCR.NET
             string version = System.Configuration.ConfigurationManager.AppSettings["Version"];
 
             MessageBox.Show(this, strProgName + " " + version + " © 2008\n" +
-                ".NET GUI Frontend for Tesseract 3.01 OCR Engine\n" +
+                ".NET GUI Frontend for Tesseract 3.02 OCR Engine\n" +
                 DateTime.Parse(releaseDate).ToString("D", System.Threading.Thread.CurrentThread.CurrentUICulture).Normalize() + "\n" +
                 "http://vietocr.sourceforge.net",
                 ((ToolStripMenuItem)sender).Text.Replace("&", string.Empty), MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -425,7 +425,7 @@ namespace VietOCR.NET
             curLangCode = installedLanguageCodes[this.toolStripCbLang.SelectedIndex];
 
             // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
-            bool vie = curLangCode.StartsWith("vie");
+            bool vie = curLangCode.Contains("vie");
             VietKeyHandler.VietModeEnabled = vie;
             this.vietInputMethodToolStripMenuItem.Visible = vie;
             this.toolStripMenuItemInputMethod.Visible = vie;
@@ -1056,6 +1056,17 @@ namespace VietOCR.NET
         protected virtual void deskewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        private void toolStripCbLang_TextUpdate(object sender, EventArgs e)
+        {
+            curLangCode = this.toolStripCbLang.Text;
+
+            // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
+            bool vie = curLangCode.Contains("vie");
+            VietKeyHandler.VietModeEnabled = vie;
+            this.vietInputMethodToolStripMenuItem.Visible = vie;
+            this.toolStripMenuItemInputMethod.Visible = vie;
         }
     }
 }
