@@ -656,10 +656,10 @@ namespace VietOCR.NET
             // toolStripCbLang
             // 
             this.toolStripCbLang.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripCbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripCbLang.Name = "toolStripCbLang";
             resources.ApplyResources(this.toolStripCbLang, "toolStripCbLang");
+            this.toolStripCbLang.Name = "toolStripCbLang";
             this.toolStripCbLang.SelectedIndexChanged += new System.EventHandler(this.toolStripCbLang_SelectedIndexChanged);
+            this.toolStripCbLang.TextUpdate += new System.EventHandler(this.toolStripCbLang_TextUpdate);
             // 
             // toolStripLabelLanguage
             // 
