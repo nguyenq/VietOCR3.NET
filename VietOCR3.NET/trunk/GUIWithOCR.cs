@@ -85,7 +85,7 @@ namespace VietOCR.NET
         {
             try
             {
-                if (this.toolStripCbLang.SelectedIndex == -1)
+                if (curLangCode.Trim().Length == 0)
                 {
                     MessageBox.Show(this, Properties.Resources.selectLanguage, strProgName);
                     return;
