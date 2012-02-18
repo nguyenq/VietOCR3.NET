@@ -91,6 +91,16 @@ namespace VietOCR.NET
             {
                 return;
             }
+
+            bool isWriteAccess = CheckDirectoryWriteAccess(Path.Combine(baseDir, TESS_DATA));
+
+            if (!isWriteAccess)
+            {
+                string msg = String.Format("You have no write access to \"{0}\" folder. Please run the program as administrator.", Path.Combine(baseDir, TESS_DATA).ToString());
+                MessageBox.Show(msg, GUI.strProgName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             this.buttonDownload.Enabled = false;
             this.buttonCancel.Enabled = true;
             this.toolStripProgressBar1.Value = 0;
@@ -136,6 +146,37 @@ namespace VietOCR.NET
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Determines if a folder is writable by a user.
+        /// </summary>
+        /// <param name="directory"></param>
+        /// <returns></returns>
+        private bool CheckDirectoryWriteAccess(string directory)
+        {
+            bool writeAccess = false;
+
+            if (Directory.Exists(directory))
+            {
+                try
+                {
+                    string tempFile = Path.Combine(directory, Path.GetRandomFileName());
+                    using (FileStream fs = File.Create(tempFile)) { }
+
+                    if (File.Exists(tempFile))
+                    {
+                        File.Delete(tempFile);
+                        writeAccess = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    writeAccess = false;
+                }
+            }
+
+            return writeAccess;
         }
 
         string FindKey(IDictionary<string, string> lookup, string value)
@@ -220,6 +261,9 @@ namespace VietOCR.NET
             }
             else
             {
+                WindowsPrincipal pricipal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+                bool hasAdministrativeRight = pricipal.IsInRole(WindowsBuiltInRole.Administrator);
+
                 string fileName = e.UserState.ToString();
                 if (fileName.StartsWith(DICTIONARY_FOLDER))
                 {
