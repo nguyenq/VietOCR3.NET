@@ -285,4 +285,11 @@
   <data name="Browse" xml:space="preserve">
     <value>Browse</value>
   </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend for Tesseract 3.01 OCR Engine</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>You have no write access to "{0}" folder.
+Please run the program as administrator.</value>
+  </data>
 </root>

@@ -282,4 +282,8 @@
   <data name="Browse" xml:space="preserve">
     <value>Xem</value>
   </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Bạn không có write access tới "{0}" folder.
+Hãy chạy chương trình như administrator.</value>
+  </data>
 </root>
