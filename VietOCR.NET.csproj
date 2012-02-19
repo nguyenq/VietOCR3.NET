@@ -99,9 +99,6 @@
       <SubType>Designer</SubType>
       <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI.sl-SI.resx">
-      <DependentUpon>GUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HtmlHelpForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>HtmlHelpForm.cs</DependentUpon>
