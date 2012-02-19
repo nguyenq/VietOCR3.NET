@@ -261,9 +261,6 @@ namespace VietOCR.NET
             }
             else
             {
-                WindowsPrincipal pricipal = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-                bool hasAdministrativeRight = pricipal.IsInRole(WindowsBuiltInRole.Administrator);
-
                 string fileName = e.UserState.ToString();
                 if (fileName.StartsWith(DICTIONARY_FOLDER))
                 {
