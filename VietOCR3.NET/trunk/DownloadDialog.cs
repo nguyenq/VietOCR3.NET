@@ -96,7 +96,7 @@ namespace VietOCR.NET
 
             if (!isWriteAccess)
             {
-                string msg = String.Format("You have no write access to \"{0}\" folder. Please run the program as administrator.", Path.Combine(baseDir, TESS_DATA).ToString());
+                string msg = String.Format(Properties.Resources.Access_denied, Path.Combine(baseDir, TESS_DATA).ToString());
                 MessageBox.Show(msg, GUI.strProgName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
