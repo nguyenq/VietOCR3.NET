@@ -105,14 +105,14 @@
       </xsd:complexType>
     </xsd:element>
   </xsd:schema>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
   <resheader name="version">
     <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -122,6 +122,9 @@
   </data>
   <data name="About_VietOCR" xml:space="preserve">
     <value>Apie „VietOCR.NET“</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Jūs neturite teisių, būtinų rašyti į „{0}“ aplanką. Paleiskite šią programą administratoriaus teisėmis.</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
     <value>Įtraukti į žodyną</value>
@@ -230,6 +233,9 @@
   </data>
   <data name="Please_restart" xml:space="preserve">
     <value>Pakartotinai paleiskite programą, kad naujai įdiegti kalbų paketai būtų užregistruoti.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET grafinė sąsaja „Tesseract 3.01“ optinio ženklų atpažinimo moduliui.</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_lt.html</value>
