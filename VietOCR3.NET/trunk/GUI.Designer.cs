@@ -645,7 +645,7 @@ namespace VietOCR.NET
             // 
             // toolStripButtonCancelOCR
             // 
-            this.toolStripButtonCancelOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripButtonCancelOCR, "toolStripButtonCancelOCR");
             this.toolStripButtonCancelOCR.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
             this.toolStripButtonCancelOCR.Name = "toolStripButtonCancelOCR";
