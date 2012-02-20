@@ -139,6 +139,9 @@
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 22</value>
   </data>
+  <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Tiesinti</value>
+  </data>  
   <data name="downloadLangDataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 22</value>
   </data>
@@ -234,6 +237,9 @@
   </data>
   <data name="psmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 22</value>
+  </data>
+  <data name="psmToolStripMenuItem.Text" xml:space="preserve">
+    <value>Puslapio &amp;segmentavimo būdas</value>
   </data>
   <data name="quitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 22</value>
