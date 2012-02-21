@@ -1208,28 +1208,28 @@
   </data>
   <data name="toolStripButtonSpellCheck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRy
-        oQAABF1JREFUWEftVG1Mm1UULiDbkKVjdm9pwWwqa8YGrRrM2BJndOqAhMRlHxhIFpdNcLACHTCYRT6L
-        2yJ14j4YySIJoVs6hK1roXyODx2bOnVbJFEZ6CSGD9kYuqnRaB7PqX2Xl9ofpr/40Td5cu8957nnPOfc
-        e1+ZzP/5O+DvwDzrQKA6y5oRnnMBDJ6TvkCJxqAI/Ydvq8inzLZB6ebxWp1pTffkCllNpzQHOhBn+gjP
-        EDRvdiJcf25AtfuDaOIGeKs9RNjbMnH88q+o//JP8JxIIRJiKAs7dvUPVPbcQVnnbbzVMQ3z4H1EG7tA
-        vIfd3OCny3snC9sm8d6V37DrzCi2nRpCgX0CVf2zWG3sZu5CTwEBYZsMus0nryOz6TsU2H7Ey0c+Q1iC
-        QSdRu0ygys2X7kNb2ovFSQfq5NvNra/Wf+2qkngKQpCQcdqc1TxGyX5G8onrEDKb7ylSqs8Le85Obnr/
-        c0Tl228Rb6mngGDaaK+iyqIKO6Ar6f7dRHOyOYgY7CYrWUDVwD3ElF7khOvlmyuPvH72e8T+u1YSQplT
-        0TuLsp67iMi1s30jYS3hOVVGw9VFj8W9SPMlngLk8QcHYeqdQVja8YEl26vt1VTpU2V9HEAuCuCzN1Fl
-        pZ3TMDqnkNsyhldO3sAjqTUNxFnGEPQ2FHfPuCDoz/P+lYQwQgRBQ1ATFkgFBCp21O7ZaRlF4tEvIE8u
-        MTMSqF07LSNgH5H5MipZQHHXDDZUf4pYEhdd3I2kE9cQf/AS1PqWj4kTyZwiuh8Gx6QogDvD30OERZKO
-        PtAQoil0Tpj6f6GEw9hluUkYRk7zLVSSTbPfMeTeqAzn4F13EFPiankiQ0dCjNTu5QVtrmpZQL7zJ+xr
-        ncKKAqd4NJwsKNJgO8OjtPqApYl52oRj17DXNg4tBXuyoh86AleYTpeJfe4WKvnJ5bVPiwJWkX0Vn39+
-        +22sLOpk3mphR21LauNNZNunkFz3FZT6c7OqrKYadY7th/jDg4gqah+RdiGY3nurnsjrDl/G4nVp+8n5
-        EoPnbGOf6g1LHZ+dmi5VLlX3rPkTaMv7oK3ow5b6b5DaOAJ17oW/iPMEQbfG6JxJaRhGtmMKu6mI1MZR
-        vGYdI0FDeLywnYU+uITyR/NaEWlwuECOWE7kRqxoZw7ZVijTauq5S9wdXTl1iqAlUPK/Q3VJW4kjEPjM
-        1ypS3rGqchz0U2sj/hX6efUgPN16Y0FEzAvujrpOgpXwW2djHIHfMv+lGDxn2/MErVsUt30DgZ+SFOtp
-        vZzAPxh+tiyEi5FyOQ7H49cw5xW4lMyLj/p8iDAuwSFvwnzgeY0zJ/ZdSk4YR+1GiOA126VEX3je4sxJ
-        /i0lGebk+xTgUYS4Zj9v8JXnGec/lfdz8kQZeCS4kvHoYWefTzzpPs+OylyVR8twmkbP87aQCLazXwSv
-        2S7l/h+eGIfzzcnDlb5LRoLXi8J2t585PvPEOGKH58Wr84vwd8DfgX8AdZzDjd4exLEAAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vwAADr8BOAVTJAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAAEeklEQVRYR+1U
+        f0yUdRjnR5iEO7HzjjtoWuFNDO6q0US3bGUlsLHlKmmwuZwGCR5wAoId8fNIXVxGqcjmYmOc7iTQ8w6O
+        n/GjRCsrdbFVCGWs8SMUKa1Wq316nrf3ZS+3q0Wj1R/3bp+93+/zfN7n+TzP9/u8fn6+x9cBXwf+Zx0I
+        0Gba08Oyz4DBa9IXINMYGG58+xUN+dRZDqhFHu+1GfY0T64qs/GYbm87Yi3v4iGC7qUOhBlP9Wt2vBVF
+        XH9vtQerdjWPHz73A+o++QW8JlKwjBjCwg5d+BkV3ddR2nENL7dPwTpwC1HmThDvDpEb9GBZz0RB6wRe
+        P/8jtp8YwbPHBpHvHEdl3wzWmLuYe7unAP/QTSbD5qOXkNH4JfId3+DJgx8iNN5kkKldrqLKrWdvQV/S
+        gyWJe2sVW6wtz9V9JlRJPCUhUJV+3JrZNErJvkPSkUtQZTTdVCZXnVbtPDmx6Y2PEJnnvEq8ZZ4CguhD
+        ZyVVFlnQDkNx108WWpPNRcQgkaxmAZX9NxFd8g4nXK/YXHHwhZNfIeaPvZoQwpzynhmUdt9AeI6T7RsJ
+        awmPaNLrLyy+O/ZxWi/1FKCI2zcAS880QlMP9y/dUuWsokofKO3lAApJAJ+9hSor6ZiC2T2JnOZRPHX0
+        Mu5Mqa4nznKGyuhAUde0AJXxNH+/ihBKCCfoCFrCIrmAAOXWmp3bbCNIePNjKJKKrYx4atc22zDYR2S+
+        jGoWUNQ5jQ1VHyCGxEUVdSHxyEXE7TsLrbH5PeJEMKeQ7ofJNSEJ4M7wcxthsayjsxqCdQXucUvf95Rw
+        CNttVwhDyG66igqy6fa4BsUP1WEcvPM6oouFlicwDCTETO1ekd8qVMsC8tzfYnfLJFbmu6Wj4WSBESbH
+        CX7Lq/dflpCrjz90EbscY9BTsPvL+2AgcIVpdJnYJ7ZQzSOX2zYlCVhN9tV8/nlt17CqsIN5a1Rba5pT
+        Gq4gyzmJpNpPoTaemtFkNlZrsx1fxx0YQGRh27C8C0E07y1GIq87cA5L1qXuIecTDF6zjX2aF221fHZa
+        ulQ5VN3D1vehL+uFvrwXT9d9jpSGYWhzzvxKnHsJhvvM7unk+iFkuSaxg4pIaRjB8/ZREjSIewraWOjs
+        JVTclduCCJNLADliOJGIGMnOHLKtVKdW13GXuDuGMuoUQU+g5L+FGBKfIY6KwGe+Vpn8ql2T7aKfWivx
+        z9PPqxthafbLi8KjHxM7KpwEK+FZZ2MsgWeZ/1IMXrPtUYJeFMVt30DgUZJjPe1XEPgHw2PLQrgYOZfj
+        cDyehjlTICj5zx/q8X7CmAz7vYlaaJ6Q4wYlJ4yhZiMk8J7tchELzRNif0FJhjj5biX4LUHas//f4M1W
+        3sfJE/zAb4KQjN8edvb9I54Ya0682c4KlUf54biYHIAfgx8biWA7+yXwnu3yY/m7vNdk8TivEIPVkWOM
+        nVJySQD72S76mSPwvF3Mv+LJi5J4UqfnxPImwFuy+drkAub77YLwfQJ8HfiziySftgW5bPMNwgJ+B7Kf
+        Fzl/qfCUAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButtonSpellCheck.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -1401,6 +1401,9 @@
         2f/a2tn/2trZ/9ra2f/a2tn/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAwAAAAMAAAAD
         AAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAA
 </value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 360</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VietOCR.NET</value>
