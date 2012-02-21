@@ -451,8 +451,10 @@ namespace VietOCR.NET
         {
             if (textFilename == null || OkToTrash())
             {
-                this.textBox1.Clear();
-                this.textBox1.ClearUndo();
+                //this.textBox1.Clear(); // cannot undo a clear action
+                this.textBox1.SelectAll();
+                this.textBox1.Cut();
+                //this.textBox1.ClearUndo();
                 textModified = false;
                 this.textBox1.Modified = false;
                 textFilename = null;
