@@ -1191,41 +1191,11 @@
   <data name="toolStripButtonCancelOCR.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripBtnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACrklEQVRYR61Xy0tUURyelVFE
-        4KY2JaQQKNIDJItIRLLHINKYyVCWojGEMaiIgQtBMEiIBBcuCoogglq4qEVBEG38L1ra48wdX9mDXvLr
-        fGfuudzR43ldB77hcs/ve9w75/GbVEr9qZhvPkoAH67YosbmtpeOIK3NvxNIEMJLp0R6/4YWWmsFcO0R
-        wl1n+nDNXhitvn0ZmcsQuOcQQpg76UzVH9wnSK/n6OPZOiUwZhGiZO6oI0grr57Tp/P1WqBGE8JbpxKi
-        y3NP6XP6iBGoU4QQ5h4alVhK+GoUAi8e05e2Y0agLhaiZO7ObQy9xTrfz3EaQkvPHhJrbzACdXKvcOXA
-        K/SM9piyEItPZqlw8bgRH9INBNjUQjN8a5vM5Y5WHuLRDAUdJ7cFi1zLZK4MUXxwn4qdp5KBa9iaq0PM
-        TtFSV5MXipzraq4MEczcoeVssxPA8TVXh5ieoJUrLVYIeG1S83iIaogF98ZptbvVCqgNA1QnPM5TYpMp
-        3B2jr9fPOQEci7ND21MI82BylNZ6014A1zdE6cknhulbX1siQMMphOwLCuN5+n6jfVsALasQsi9gYwP0
-        I5cxYiF7hgCbWmhqQ0Tmt3P08+YlIxivk4cRrl04m1ZGZD7ST79udRnBeB3MD+3e2cnFLuAa91y48RBi
-        wrGhXvqdzxrBBnuEed2eXWkuUsOBtS6OcoxZaXCv+M8hOiKW76Y/g1e1QE3MvIob7wifJOonXHRkQxJ1
-        RGwgS3+HrymBMYW5ctu20UEXpuyIWO4y/RvpKQPuaczVITQ6xo6I9XfQ+mifAK4tzNUhFDoq8y3IGW6e
-        cTEv08EkFXOLa0gdnbkyhMOTbzxU0N5VyRAxHUxW459d2RtikpyAUDjbtSeXYhArBFxoAAdszONvAqsD
-        MCbWJANXq/MfTyefXzq+m7sAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripBtnClear.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripBtnClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 36</value>
-  </data>
-  <data name="toolStripBtnClear.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="toolStripBtnClear.ToolTipText" xml:space="preserve">
-    <value>Clear Textbox</value>
-  </data>
   <data name="toolStripCbLang.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Standard</value>
   </data>
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 39</value>
+    <value>100, 39</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
@@ -1239,7 +1209,7 @@
   <data name="toolStripButtonSpellCheck.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRy
+        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRy
         oQAABF1JREFUWEftVG1Mm1UULiDbkKVjdm9pwWwqa8YGrRrM2BJndOqAhMRlHxhIFpdNcLACHTCYRT6L
         2yJ14j4YySIJoVs6hK1roXyODx2bOnVbJFEZ6CSGD9kYuqnRaB7PqX2Xl9ofpr/40Td5cu8957nnPOfc
         e1+ZzP/5O+DvwDzrQKA6y5oRnnMBDJ6TvkCJxqAI/Ydvq8inzLZB6ebxWp1pTffkCllNpzQHOhBn+gjP
@@ -1270,6 +1240,36 @@
   </data>
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Spell Check</value>
+  </data>
+  <data name="toolStripBtnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACrklEQVRYR61Xy0tUURyelVFE
+        4KY2JaQQKNIDJItIRLLHINKYyVCWojGEMaiIgQtBMEiIBBcuCoogglq4qEVBEG38L1ra48wdX9mDXvLr
+        fGfuudzR43ldB77hcs/ve9w75/GbVEr9qZhvPkoAH67YosbmtpeOIK3NvxNIEMJLp0R6/4YWWmsFcO0R
+        wl1n+nDNXhitvn0ZmcsQuOcQQpg76UzVH9wnSK/n6OPZOiUwZhGiZO6oI0grr57Tp/P1WqBGE8JbpxKi
+        y3NP6XP6iBGoU4QQ5h4alVhK+GoUAi8e05e2Y0agLhaiZO7ObQy9xTrfz3EaQkvPHhJrbzACdXKvcOXA
+        K/SM9piyEItPZqlw8bgRH9INBNjUQjN8a5vM5Y5WHuLRDAUdJ7cFi1zLZK4MUXxwn4qdp5KBa9iaq0PM
+        TtFSV5MXipzraq4MEczcoeVssxPA8TVXh5ieoJUrLVYIeG1S83iIaogF98ZptbvVCqgNA1QnPM5TYpMp
+        3B2jr9fPOQEci7ND21MI82BylNZ6014A1zdE6cknhulbX1siQMMphOwLCuN5+n6jfVsALasQsi9gYwP0
+        I5cxYiF7hgCbWmhqQ0Tmt3P08+YlIxivk4cRrl04m1ZGZD7ST79udRnBeB3MD+3e2cnFLuAa91y48RBi
+        wrGhXvqdzxrBBnuEed2eXWkuUsOBtS6OcoxZaXCv+M8hOiKW76Y/g1e1QE3MvIob7wifJOonXHRkQxJ1
+        RGwgS3+HrymBMYW5ctu20UEXpuyIWO4y/RvpKQPuaczVITQ6xo6I9XfQ+mifAK4tzNUhFDoq8y3IGW6e
+        cTEv08EkFXOLa0gdnbkyhMOTbzxU0N5VyRAxHUxW459d2RtikpyAUDjbtSeXYhArBFxoAAdszONvAqsD
+        MCbWJANXq/MfTyefXzq+m7sAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripBtnClear.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolStripBtnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnClear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="toolStripBtnClear.ToolTipText" xml:space="preserve">
+    <value>Clear Textbox</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -1777,12 +1777,6 @@
   <data name="&gt;&gt;toolStripButtonCancelOCR.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripBtnClear.Name" xml:space="preserve">
-    <value>toolStripBtnClear</value>
-  </data>
-  <data name="&gt;&gt;toolStripBtnClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripCbLang.Name" xml:space="preserve">
     <value>toolStripCbLang</value>
   </data>
@@ -1799,6 +1793,12 @@
     <value>toolStripButtonSpellCheck</value>
   </data>
   <data name="&gt;&gt;toolStripButtonSpellCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnClear.Name" xml:space="preserve">
+    <value>toolStripBtnClear</value>
+  </data>
+  <data name="&gt;&gt;toolStripBtnClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;backgroundWorkerLoad.Name" xml:space="preserve">
