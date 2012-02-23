@@ -103,10 +103,10 @@ namespace VietOCR.NET
             this.toolStripBtnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnOCR = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelOCR = new System.Windows.Forms.ToolStripButton();
-            this.toolStripCbLang = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripCbLang = new System.Windows.Forms.ToolStripComboBox();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -603,10 +603,10 @@ namespace VietOCR.NET
             this.toolStripBtnSave,
             this.toolStripBtnOCR,
             this.toolStripButtonCancelOCR,
+            this.toolStripBtnClear,
             this.toolStripCbLang,
             this.toolStripLabelLanguage,
-            this.toolStripButtonSpellCheck,
-            this.toolStripBtnClear});
+            this.toolStripButtonSpellCheck});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -651,19 +651,13 @@ namespace VietOCR.NET
             this.toolStripButtonCancelOCR.Name = "toolStripButtonCancelOCR";
             this.toolStripButtonCancelOCR.Click += new System.EventHandler(this.toolStripButtonCancelOCR_Click);
             // 
-            // toolStripCbLang
+            // toolStripBtnClear
             // 
-            this.toolStripCbLang.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripCbLang, "toolStripCbLang");
-            this.toolStripCbLang.Name = "toolStripCbLang";
-            this.toolStripCbLang.SelectedIndexChanged += new System.EventHandler(this.toolStripCbLang_SelectedIndexChanged);
-            this.toolStripCbLang.TextUpdate += new System.EventHandler(this.toolStripCbLang_TextUpdate);
-            // 
-            // toolStripLabelLanguage
-            // 
-            this.toolStripLabelLanguage.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripLabelLanguage.Name = "toolStripLabelLanguage";
-            resources.ApplyResources(this.toolStripLabelLanguage, "toolStripLabelLanguage");
+            this.toolStripBtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnClear, "toolStripBtnClear");
+            this.toolStripBtnClear.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
+            this.toolStripBtnClear.Name = "toolStripBtnClear";
+            this.toolStripBtnClear.Click += new System.EventHandler(this.toolStripBtnClear_Click);
             // 
             // toolStripButtonSpellCheck
             // 
@@ -675,14 +669,19 @@ namespace VietOCR.NET
             this.toolStripButtonSpellCheck.Name = "toolStripButtonSpellCheck";
             this.toolStripButtonSpellCheck.Click += new System.EventHandler(this.toolStripButtonSpellCheck_Click);
             // 
-            // toolStripBtnClear
+            // toolStripLabelLanguage
             // 
-            this.toolStripBtnClear.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripBtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnClear, "toolStripBtnClear");
-            this.toolStripBtnClear.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
-            this.toolStripBtnClear.Name = "toolStripBtnClear";
-            this.toolStripBtnClear.Click += new System.EventHandler(this.toolStripBtnClear_Click);
+            this.toolStripLabelLanguage.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabelLanguage.Name = "toolStripLabelLanguage";
+            resources.ApplyResources(this.toolStripLabelLanguage, "toolStripLabelLanguage");
+            // 
+            // toolStripCbLang
+            // 
+            this.toolStripCbLang.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripCbLang, "toolStripCbLang");
+            this.toolStripCbLang.Name = "toolStripCbLang";
+            this.toolStripCbLang.SelectedIndexChanged += new System.EventHandler(this.toolStripCbLang_SelectedIndexChanged);
+            this.toolStripCbLang.TextUpdate += new System.EventHandler(this.toolStripCbLang_TextUpdate);
             // 
             // backgroundWorkerLoad
             // 
