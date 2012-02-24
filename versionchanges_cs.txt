@@ -20,6 +20,6 @@ Version 3.2 (26 November 2011)
 - Update lists of language codes
 - Add PSM support to execution from command line
 
-Version 3.3 (23 February 2012)
+Version 3.3 (24 February 2012)
 - Download Language Data will warn if the user does not have write access to tessdata folder
 - Use icons from FatCow (http://www.fatcow.com/free-icons) and by Rimas Kudelis
