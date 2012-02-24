@@ -270,9 +270,9 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </metadata>
+  </data>
   <data name="toolStrip2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -315,9 +315,9 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>771, 17</value>
-  </metadata>
+  </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 148</value>
   </data>
@@ -651,9 +651,9 @@
   <data name="toolStripBtnRotateCW.ToolTipText" xml:space="preserve">
     <value>Rotate Clockwise</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </metadata>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -790,7 +790,7 @@
     <value>166, 22</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Deskew</value>
+    <value>&amp;Deskew</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
@@ -877,7 +877,7 @@
     <value>219, 22</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Page Segmentation Mode</value>
+    <value>Page &amp;Segmentation Mode</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -933,9 +933,9 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;About VietOCR.NET</value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 544</value>
-  </metadata>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 544</value>
   </data>
@@ -969,9 +969,9 @@
   <data name="toolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
-  </metadata>
+  </data>
   <data name="toolStripBtnOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1303,12 +1303,12 @@
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="backgroundWorkerLoad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="backgroundWorkerLoad.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>587, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

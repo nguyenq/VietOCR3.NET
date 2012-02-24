@@ -415,4 +415,10 @@
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Kontrola preklepov</value>
   </data>
+  <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Vyrovnani&amp;e sklonu</value>
+  </data>
+  <data name="psmToolStripMenuItem.Text" xml:space="preserve">
+    <value>Režim &amp;segmentácie stany</value>
+  </data>
 </root>
