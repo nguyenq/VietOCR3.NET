@@ -285,4 +285,11 @@
   <data name="Browse" xml:space="preserve">
     <value>Prezerať</value>
   </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Nemáte právo pre zápis do zložky "{0}".
+Prosím spustite program ako administrátor.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI rozhranie pre tesseract 3.01 OCR</value>
+  </data>
 </root>
