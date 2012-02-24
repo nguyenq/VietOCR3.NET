@@ -379,4 +379,10 @@
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Duyệt chính tả</value>
   </data>
+  <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Chỉnh độ nghiêng</value>
+  </data>
+  <data name="psmToolStripMenuItem.Text" xml:space="preserve">
+    <value>Chế độ &amp;phân trang</value>
+  </data>
 </root>

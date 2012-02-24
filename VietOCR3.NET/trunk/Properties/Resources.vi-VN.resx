@@ -286,4 +286,7 @@
     <value>Bạn không có write access tới "{0}" folder.
 Hãy chạy chương trình như administrator.</value>
   </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend cho Tesseract 3.01 OCR Engine</value>
+  </data>
 </root>
