@@ -385,4 +385,7 @@
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
     <value>Chế độ &amp;phân trang</value>
   </data>
+  <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mốt &amp;screenshot</value>
+  </data>
 </root>
