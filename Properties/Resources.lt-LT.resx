@@ -124,7 +124,8 @@
     <value>Apie „VietOCR.NET“</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>Jūs neturite teisių, būtinų rašyti į „{0}“ aplanką. Paleiskite šią programą administratoriaus teisėmis.</value>
+    <value>Jūs neturite teisių, būtinų rašyti į „{0}“ aplanką.
+Paleiskite šią programą administratoriaus teisėmis.</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
     <value>Įtraukti į žodyną</value>
