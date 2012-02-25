@@ -40,7 +40,7 @@ namespace VietOCR.NET
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(792, 566);
+            this.webBrowser1.Size = new System.Drawing.Size(792, 544);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating);
             this.webBrowser1.StatusTextChanged += new System.EventHandler(this.webBrowser1_StatusTextChanged);
@@ -66,8 +66,8 @@ namespace VietOCR.NET
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 566);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "HtmlHelpForm";
             this.Text = "HtmlHelpForm";
             this.statusStrip1.ResumeLayout(false);
