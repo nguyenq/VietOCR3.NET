@@ -57,6 +57,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VietOCR.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -91,6 +94,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ScrollablePictureBox.cs</DependentUpon>
@@ -123,12 +127,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="tessdata\eng.traineddata">
+    <Content Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\vie.traineddata">
+    </Content>
+    <Content Include="tessdata\vie.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangeCaseDialog.cs">
@@ -301,19 +305,16 @@
     <Compile Include="WIA\WiaScannerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\ISO639-3.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\ISO639-1.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\OO-SpellDictionaries.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="Data\Tess3DataURL.xml">
+    <Content Include="Data\ISO639-3.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Hunspellx64.dll">
+    <Content Include="Data\ISO639-1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\OO-SpellDictionaries.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Tess3DataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Hunspellx86.dll">
@@ -352,21 +353,21 @@
     <Content Include="Library\pdfpagecount.ps">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="dict\en_US.aff">
+    <Content Include="dict\en_US.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\en_US.dic">
+    </Content>
+    <Content Include="dict\en_US.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\user.dic">
+    </Content>
+    <Content Include="dict\user.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\vi_VN.aff">
+    </Content>
+    <Content Include="dict\vi_VN.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\vi_VN.dic">
+    </Content>
+    <Content Include="dict\vi_VN.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <EmbeddedResource Include="ChangeCaseDialog.lt-LT.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,12 +458,12 @@
     <EmbeddedResource Include="StatusForm.resx">
       <DependentUpon>StatusForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data\eng.DangAmbigs.txt">
+    <Content Include="Data\eng.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\vie.DangAmbigs.txt">
+    </Content>
+    <Content Include="Data\vie.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Content Include="samples\vietsample.tif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -475,7 +476,9 @@
     <Content Include="samples\vietsample2.tif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="versionchanges_cs.txt" />
+    <Content Include="versionchanges_cs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WIA">
@@ -509,6 +512,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
