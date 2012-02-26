@@ -197,7 +197,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727"
+                "FrameworkVersion" = "8:.NETFramework,Version=v2.0"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -528,8 +528,9 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR3.NET"
         "ProductCode" = "8:{B6FD239C-1045-4A7D-B005-6B9C65972C20}"
-        "PackageCode" = "8:{0AEBAF8F-8B4F-45CE-BA51-8CA09D42CA94}"
+        "PackageCode" = "8:{46DC7430-E19B-4D99-A56B-A154C2CCB85F}"
         "UpgradeCode" = "8:{E53F3670-7B1D-405A-AC8A-2207B69BDDDB}"
+        "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
