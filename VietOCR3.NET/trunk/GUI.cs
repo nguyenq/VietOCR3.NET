@@ -88,6 +88,7 @@ namespace VietOCR.NET
         const string strFilterIndex = "FilterIndex";
         const string strMruList = "MruList";
 
+        protected bool isFitImageSelected;
         protected Point curScrollPos;
         protected Point pointClicked;
         protected readonly string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -652,6 +653,7 @@ namespace VietOCR.NET
             this.pictureBox1.Dock = DockStyle.None;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
             scaleX = scaleY = 1f;
+            isFitImageSelected = false;
 
             displayImage();
 
@@ -685,18 +687,26 @@ namespace VietOCR.NET
             this.lblCurIndex.Text = Properties.Resources.Page_ + (imageIndex + 1) + Properties.Resources._of_ + imageTotal;
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
-            if (this.scaleX != 1f)
+
+            if (this.isFitImageSelected)
+            {
+                Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                this.pictureBox1.Width = fitSize.Width;
+                this.pictureBox1.Height = fitSize.Height;
+                setScale();
+            }
+            else if (this.scaleX != 1f)
             {
                 this.pictureBox1.Width = Convert.ToInt32(this.pictureBox1.Width / scaleX);
                 this.pictureBox1.Height = Convert.ToInt32(this.pictureBox1.Height / scaleY);
             }
             curScrollPos = Point.Empty;
-            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
             this.centerPicturebox();
         }
 
         protected void centerPicturebox()
         {
+            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty; 
             int x = 0;
             int y = 0;
 
@@ -908,8 +918,21 @@ namespace VietOCR.NET
             if (this.pictureBox1.Image != null)
             {
                 this.pictureBox1.Deselect();
-                scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
-                scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+                if (this.isFitImageSelected)
+                {
+                    int w = this.splitContainer2.Panel2.Width;
+                    int h = this.splitContainer2.Panel2.Height;
+                    Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, w, h);
+                    this.pictureBox1.Width = fitSize.Width;
+                    this.pictureBox1.Height = fitSize.Height;
+                    setScale();
+                    this.centerPicturebox();
+                }
+                else
+                {
+                    scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
+                    scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+                }
                 if (isCentered)
                 {
                     this.centerPicturebox();
@@ -917,6 +940,36 @@ namespace VietOCR.NET
             }
         }
 
+        protected void setScale()
+        {
+            scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
+            scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+            if (scaleX > scaleY)
+            {
+                scaleY = scaleX;
+            }
+            else
+            {
+                scaleX = scaleY;
+            }
+        }
+
+        protected Size fitImagetoContainer(int w, int h, int maxWidth, int maxHeight)
+        {
+            float ratio = (float)w / h;
+
+            w = maxWidth;
+            h = (int)Math.Floor(maxWidth / ratio);
+
+            if (h > maxHeight)
+            {
+                h = maxHeight;
+                w = (int)Math.Floor(maxHeight * ratio);
+            }
+
+            return new Size(w, h);
+        }
+        
         private void textBox1_ModifiedChanged(object sender, EventArgs e)
         {
             if (textModified && !this.textBox1.Modified)
