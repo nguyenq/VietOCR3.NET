@@ -32,7 +32,7 @@ namespace VietOCR.NET
                 displayImage();
 
                 // recalculate scale factors if in Fit Image mode
-                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.StretchImage)
+                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
                 {
                     scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
                     scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
@@ -55,7 +55,7 @@ namespace VietOCR.NET
                 displayImage();
 
                 // recalculate scale factors if in Fit Image mode
-                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.StretchImage)
+                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
                 {
                     scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
                     scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
@@ -73,11 +73,15 @@ namespace VietOCR.NET
             this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
             this.pictureBox1.Deselect();
 
-            this.pictureBox1.Dock = DockStyle.Fill;
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
-            scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
-        }
+            this.pictureBox1.Dock = DockStyle.None;
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+            this.pictureBox1.Width = fitSize.Width;
+            this.pictureBox1.Height = fitSize.Height;
+            setScale();
+            this.centerPicturebox();
+            isFitImageSelected = true;
+        }  
 
         protected override void toolStripBtnActualSize_Click(object sender, EventArgs e)
         {
@@ -93,6 +97,7 @@ namespace VietOCR.NET
             scaleX = scaleY = 1f;
             this.centerPicturebox();
             this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y));
+            isFitImageSelected = false;
         }
 
         protected override void toolStripBtnRotateCCW_Click(object sender, EventArgs e)
@@ -119,7 +124,7 @@ namespace VietOCR.NET
             this.pictureBox1.Size = new Size(this.pictureBox1.Height, this.pictureBox1.Width);
             this.pictureBox1.Refresh();
             // recalculate scale factors if in Fit Image mode
-            if (this.pictureBox1.SizeMode == PictureBoxSizeMode.StretchImage)
+            if (this.isFitImageSelected)
             {
                 scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
                 scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
@@ -131,7 +136,7 @@ namespace VietOCR.NET
         {
             this.pictureBox1.Deselect();
             //isFitForZoomIn = true;
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
             // Zoom works best if you first fit the image according to its true aspect ratio.
             Fit();
@@ -141,6 +146,7 @@ namespace VietOCR.NET
             scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
             scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
             this.centerPicturebox();
+            isFitImageSelected = false;
         }
 
         protected override void toolStripBtnZoomOut_Click(object sender, EventArgs e)
@@ -148,7 +154,7 @@ namespace VietOCR.NET
             this.pictureBox1.Deselect();
             //isFitForZoomIn = false;
             // StretchImage SizeMode works best for zooming.
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             // Zoom works best if you first fit the image according to its true aspect ratio.
             Fit();
             // Make the PictureBox dimensions smaller by 25% to effect the Zoom.
@@ -157,6 +163,7 @@ namespace VietOCR.NET
             scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
             scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
             this.centerPicturebox();
+            isFitImageSelected = false;
         }
 
         // This method makes the image fit properly in the PictureBox. You might think 
