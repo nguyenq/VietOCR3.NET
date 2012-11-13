@@ -55,7 +55,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3}", tiffFile, outputFileName, lang, PSM);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3}", tiffFile, outputFileName, lang, PageSegMode);
                 p.Start();
 
                 // Read the output stream first and then wait.
