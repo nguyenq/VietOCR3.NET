@@ -104,10 +104,22 @@
     <Compile Include="GUIWithBatch.Designer.cs">
       <DependentUpon>GUIWithBatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUIWithBulkOCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithBulkOCR.Designer.cs">
+      <DependentUpon>GUIWithBulkOCR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BulkDialog.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIWithBatch.resx">
+      <DependentUpon>GUIWithBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIWithBulkOCR.resx">
+      <DependentUpon>GUIWithBulkOCR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">

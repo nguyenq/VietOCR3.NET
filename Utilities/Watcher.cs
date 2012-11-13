@@ -9,7 +9,7 @@ namespace VietOCR.NET.Utilities
     public class Watcher
     {
         private Queue<String> queue;
-        private Regex filters = new Regex(@".*\.(tif|tiff|jpg|jpeg|png|bmp)$", RegexOptions.IgnoreCase);
+        private Regex filters = new Regex(@".*\.(tif|tiff|jpg|jpeg|png|bmp|pdf)$", RegexOptions.IgnoreCase);
 
         private FileSystemWatcher watcher;
 
