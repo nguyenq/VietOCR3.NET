@@ -30,12 +30,12 @@ namespace VietOCR.NET
                 bulkDialog = new BulkDialog();
             }
 
-            bulkDialog.WatchFolder = imageFolder;
+            bulkDialog.ImageFolder = imageFolder;
             bulkDialog.OutputFolder = bulkOutputFolder;
 
             if (bulkDialog.ShowDialog() == DialogResult.OK)
             {
-                imageFolder = bulkDialog.WatchFolder;
+                imageFolder = bulkDialog.ImageFolder;
                 bulkOutputFolder = bulkDialog.OutputFolder;
             }
         }

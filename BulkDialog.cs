@@ -10,12 +10,12 @@ namespace VietOCR.NET
 {
     public partial class BulkDialog : Form
     {
-        private string watchFolder;
+        private string imageFolder;
 
-        public string WatchFolder
+        public string ImageFolder
         {
-            get { return watchFolder; }
-            set { watchFolder = value; }
+            get { return imageFolder; }
+            set { imageFolder = value; }
         }
         private string outputFolder;
 
@@ -34,11 +34,11 @@ namespace VietOCR.NET
         {
             base.OnLoad(ea);
 
-            //this.textBoxWatch.Text = watchFolder;
-            //this.textBoxOutput.Text = outputFolder;
-            
-            //this.toolTip1.SetToolTip(this.btnWatch, Properties.Resources.Browse);
-            //this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
+            this.textBoxFolder.Text = imageFolder;
+            this.textBoxOutput.Text = outputFolder;
+
+            this.toolTip1.SetToolTip(this.btnFolder, Properties.Resources.Browse);
+            this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
         }
 
         protected override void OnClosed(EventArgs ea)
@@ -47,6 +47,30 @@ namespace VietOCR.NET
 
             //watchFolder = this.textBoxWatch.Text;
             //outputFolder = this.textBoxOutput.Text;
+        }
+
+        private void btnFolder_Click(object sender, EventArgs e)
+        {
+            this.folderBrowserDialog1.Description = "Set Image Folder.";
+            this.folderBrowserDialog1.SelectedPath = imageFolder;
+
+            if (this.folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                imageFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxFolder.Text = imageFolder;
+            }
+        }
+
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            this.folderBrowserDialog1.Description = "Set Output Folder.";
+            this.folderBrowserDialog1.SelectedPath = outputFolder;
+
+            if (this.folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                outputFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxOutput.Text = outputFolder;
+            }
         }
     }
 }
