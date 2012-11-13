@@ -1123,5 +1123,10 @@ namespace VietOCR.NET
             this.vietInputMethodToolStripMenuItem.Visible = vie;
             this.toolStripMenuItemInputMethod.Visible = vie;
         }
+
+        protected virtual void bulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
     }
 }

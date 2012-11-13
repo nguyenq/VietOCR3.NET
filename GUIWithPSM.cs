@@ -24,7 +24,7 @@ using OCR.TesseractWrapper;
 
 namespace VietOCR.NET
 {
-    public partial class GUIWithPSM : VietOCR.NET.GUIWithSettings
+    public partial class GUIWithPSM : VietOCR.NET.GUIWithBatch
     {
         const string strPSM = "PageSegMode";
         ToolStripMenuItem psmItemChecked;
