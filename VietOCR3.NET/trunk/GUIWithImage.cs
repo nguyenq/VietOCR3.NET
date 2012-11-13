@@ -25,7 +25,7 @@ using VietOCR.NET.Utilities;
 
 namespace VietOCR.NET
 {
-    public partial class GUIWithImage : VietOCR.NET.GUIWithPostprocess
+    public partial class GUIWithImage : VietOCR.NET.GUIWithBulkOCR
     {
         const string strScreenshotMode = "ScreenshotMode";
         const double MINIMUM_DESKEW_THRESHOLD = 0.05d;
