@@ -128,7 +128,7 @@ namespace VietOCR.NET
 
             OCRImageEntity entity = (OCRImageEntity)e.Argument;
             OCR<Image> ocrEngine = new OCRImages();
-            ocrEngine.PSM = selectedPSM;
+            ocrEngine.PageSegMode = selectedPSM;
 
             // Assign the result of the computation to the Result property of the DoWorkEventArgs
             // object. This is will be available to the RunWorkerCompleted eventhandler.

@@ -65,7 +65,7 @@ namespace VietOCR.NET
                 IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
 
                 OCR<Image> ocrEngine = new OCRImages();
-                ocrEngine.PSM = psm;
+                ocrEngine.PageSegMode = psm;
                 string result = ocrEngine.RecognizeText(imageList, curLangCode);
 
                 // postprocess to correct common OCR errors
