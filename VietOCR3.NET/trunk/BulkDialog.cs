@@ -10,12 +10,12 @@ namespace VietOCR.NET
 {
     public partial class BulkDialog : Form
     {
-        private string imageFolder;
+        private string inputFolder;
 
-        public string ImageFolder
+        public string InputFolder
         {
-            get { return imageFolder; }
-            set { imageFolder = value; }
+            get { return inputFolder; }
+            set { inputFolder = value; }
         }
         private string outputFolder;
 
@@ -34,10 +34,10 @@ namespace VietOCR.NET
         {
             base.OnLoad(ea);
 
-            this.textBoxFolder.Text = imageFolder;
+            this.textBoxInput.Text = inputFolder;
             this.textBoxOutput.Text = outputFolder;
 
-            this.toolTip1.SetToolTip(this.btnFolder, Properties.Resources.Browse);
+            this.toolTip1.SetToolTip(this.btnInput, Properties.Resources.Browse);
             this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
         }
 
@@ -45,19 +45,19 @@ namespace VietOCR.NET
         {
             base.OnClosed(ea);
 
-            //watchFolder = this.textBoxWatch.Text;
-            //outputFolder = this.textBoxOutput.Text;
+            inputFolder = this.textBoxInput.Text;
+            outputFolder = this.textBoxOutput.Text;
         }
 
-        private void btnFolder_Click(object sender, EventArgs e)
+        private void btnInput_Click(object sender, EventArgs e)
         {
-            this.folderBrowserDialog1.Description = "Set Image Folder.";
-            this.folderBrowserDialog1.SelectedPath = imageFolder;
+            this.folderBrowserDialog1.Description = "Set Input Image Folder.";
+            this.folderBrowserDialog1.SelectedPath = inputFolder;
 
             if (this.folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                imageFolder = this.folderBrowserDialog1.SelectedPath;
-                this.textBoxFolder.Text = imageFolder;
+                inputFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxInput.Text = inputFolder;
             }
         }
 
