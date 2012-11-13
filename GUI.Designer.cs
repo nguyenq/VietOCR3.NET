@@ -63,6 +63,8 @@ namespace VietOCR.NET
             this.oCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oCRAllPagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bulkOCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
             this.postprocessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metadataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,8 +110,6 @@ namespace VietOCR.NET
             this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.bulkOCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -379,6 +379,17 @@ namespace VietOCR.NET
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // bulkOCRToolStripMenuItem
+            // 
+            this.bulkOCRToolStripMenuItem.Name = "bulkOCRToolStripMenuItem";
+            resources.ApplyResources(this.bulkOCRToolStripMenuItem, "bulkOCRToolStripMenuItem");
+            this.bulkOCRToolStripMenuItem.Click += new System.EventHandler(this.bulkOCRToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            resources.ApplyResources(this.toolStripMenuItem11, "toolStripMenuItem11");
             // 
             // postprocessToolStripMenuItem
             // 
@@ -695,17 +706,6 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
-            // bulkOCRToolStripMenuItem
-            // 
-            this.bulkOCRToolStripMenuItem.Name = "bulkOCRToolStripMenuItem";
-            resources.ApplyResources(this.bulkOCRToolStripMenuItem, "bulkOCRToolStripMenuItem");
-            this.bulkOCRToolStripMenuItem.Click += new System.EventHandler(this.bulkOCRToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem11
-            // 
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            resources.ApplyResources(this.toolStripMenuItem11, "toolStripMenuItem11");
-            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
@@ -820,7 +820,7 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem10;
         protected System.Windows.Forms.ToolStripMenuItem psmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bulkOCRToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem11;
+        protected System.Windows.Forms.ToolStripMenuItem bulkOCRToolStripMenuItem;
     }
 }

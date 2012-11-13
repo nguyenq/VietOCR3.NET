@@ -1569,6 +1569,18 @@
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;bulkOCRToolStripMenuItem.Name" xml:space="preserve">
+    <value>bulkOCRToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bulkOCRToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem11.Name" xml:space="preserve">
+    <value>toolStripMenuItem11</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;postprocessToolStripMenuItem.Name" xml:space="preserve">
     <value>postprocessToolStripMenuItem</value>
   </data>
@@ -1826,18 +1838,6 @@
   </data>
   <data name="&gt;&gt;backgroundWorkerLoad.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bulkOCRToolStripMenuItem.Name" xml:space="preserve">
-    <value>bulkOCRToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;bulkOCRToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem11.Name" xml:space="preserve">
-    <value>toolStripMenuItem11</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>
