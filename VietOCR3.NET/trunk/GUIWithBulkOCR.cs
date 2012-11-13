@@ -74,9 +74,12 @@ namespace VietOCR.NET
 
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRrunning;
                 this.Cursor = Cursors.WaitCursor;
+                this.pictureBox1.UseWaitCursor = true;
+                this.textBox1.Cursor = Cursors.WaitCursor;
                 this.toolStripProgressBar1.Enabled = true;
                 this.toolStripProgressBar1.Visible = true;
                 this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
+                this.bulkOCRToolStripMenuItem.Enabled = false;
 
                 if (!this.statusForm.Visible)
                 {
@@ -122,6 +125,15 @@ namespace VietOCR.NET
 
         private void backgroundWorkerBulk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            if (this.statusForm.IsDisposed)
+            {
+                this.statusForm = new StatusForm();
+                statusForm.Text = Properties.Resources.BatchProcessStatus;
+            }
+            if (!this.statusForm.Visible)
+            {
+                this.statusForm.Show();
+            }
             this.statusForm.TextBox.AppendText((string)e.UserState + Environment.NewLine);
         }
 
@@ -151,6 +163,9 @@ namespace VietOCR.NET
             }
 
             this.Cursor = Cursors.Default;
+            this.pictureBox1.UseWaitCursor = false;
+            this.textBox1.Cursor = Cursors.Default;
+            this.bulkOCRToolStripMenuItem.Enabled = true;
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
