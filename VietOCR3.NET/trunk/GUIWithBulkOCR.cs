@@ -95,11 +95,11 @@ namespace VietOCR.NET
                 {
                     this.statusForm.Show();
                 }
-                else if (this.statusForm.WindowState == FormWindowState.Minimized) 
+                else if (this.statusForm.WindowState == FormWindowState.Minimized)
                 {
                     this.statusForm.WindowState = FormWindowState.Normal;
-                    this.statusForm.BringToFront();
                 }
+                this.statusForm.BringToFront();
 
                 // start bulk OCR
                 this.backgroundWorkerBulk.RunWorkerAsync();
