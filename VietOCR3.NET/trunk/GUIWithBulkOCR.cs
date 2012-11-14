@@ -177,6 +177,7 @@ namespace VietOCR.NET
                 // Note that due to a race condition in the DoWork event handler, the Cancelled
                 // flag may not have been set, even though CancelAsync was called.
                 this.toolStripStatusLabel1.Text = "OCR " + Properties.Resources.canceled;
+                this.statusForm.TextBox.AppendText("*** " + this.toolStripStatusLabel1.Text + " ***");
             }
             else
             {
