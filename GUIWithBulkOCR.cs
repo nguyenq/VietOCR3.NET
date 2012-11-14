@@ -37,7 +37,6 @@ namespace VietOCR.NET
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
-        private bool ocrRunning;
 
         public GUIWithBulkOCR()
         {
@@ -60,7 +59,7 @@ namespace VietOCR.NET
 
         protected override void bulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ocrRunning)
+            if (backgroundWorkerBulk != null && backgroundWorkerBulk.IsBusy)
             {
                 backgroundWorkerBulk.CancelAsync();
                 return;
@@ -102,7 +101,6 @@ namespace VietOCR.NET
                     this.statusForm.BringToFront();
                 }
 
-                ocrRunning = true;
                 // start bulk OCR
                 this.backgroundWorkerBulk.RunWorkerAsync();
             }
@@ -190,7 +188,6 @@ namespace VietOCR.NET
             this.Cursor = Cursors.Default;
             this.pictureBox1.UseWaitCursor = false;
             this.textBox1.Cursor = Cursors.Default;
-            ocrRunning = false;
             this.bulkOCRToolStripMenuItem.Text = "Bulk OCR...";
         }
 
