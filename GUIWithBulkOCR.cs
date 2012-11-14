@@ -81,6 +81,11 @@ namespace VietOCR.NET
                 this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
                 this.bulkOCRToolStripMenuItem.Enabled = false;
 
+                if (this.statusForm.IsDisposed)
+                {
+                    this.statusForm = new StatusForm();
+                    statusForm.Text = Properties.Resources.BatchProcessStatus;
+                }
                 if (!this.statusForm.Visible)
                 {
                     this.statusForm.Show();
@@ -91,17 +96,31 @@ namespace VietOCR.NET
             }
         }
 
+        //protected override void cancelBulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    backgroundWorkerBulk.CancelAsync();
+        //}
+
         private void backgroundWorkerBulk_DoWork(object sender, DoWorkEventArgs e)
         {
             // Get the BackgroundWorker that raised this event.
             BackgroundWorker worker = sender as BackgroundWorker;
-
-            string[] filePaths = Directory.GetFiles(inputFolder, "*.tif");
-            int i = 0;
-            foreach (string file in filePaths)
+            string imageFilters = "*.tif|*.tiff|*.jpg|*.jpeg|*.gif|*.png|*.bmp|*.pdf";
+            List<string> files = new List<string>();
+            foreach (string filter in imageFilters.Split('|'))
             {
-                i++;
-                FileInfo imageFile = new FileInfo(file);
+                files.AddRange(Directory.GetFiles(inputFolder, filter));
+            }
+
+            for (int i = 0; i < files.Count; i++)
+            {
+                if (worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    break;
+                }
+                FileInfo imageFile = new FileInfo(files[i]);
+                worker.ReportProgress(i, imageFile.FullName);
                 IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
                 OCR<Image> ocrEngine = new OCRImages();
                 ocrEngine.PageSegMode = selectedPSM;
@@ -118,9 +137,7 @@ namespace VietOCR.NET
                 {
                     sw.Write(result);
                 }
-                worker.ReportProgress(i, imageFile.FullName);
             }
-
         }
 
         private void backgroundWorkerBulk_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -133,6 +150,10 @@ namespace VietOCR.NET
             if (!this.statusForm.Visible)
             {
                 this.statusForm.Show();
+            }
+            else if (this.statusForm.WindowState != FormWindowState.Minimized && !this.statusForm.Focused)
+            {
+                this.statusForm.Focus();
             }
             this.statusForm.TextBox.AppendText((string)e.UserState + Environment.NewLine);
         }
