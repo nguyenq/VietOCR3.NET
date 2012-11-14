@@ -37,6 +37,7 @@ namespace VietOCR.NET
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
+        private bool ocrRunning;
 
         public GUIWithBulkOCR()
         {
@@ -59,6 +60,11 @@ namespace VietOCR.NET
 
         protected override void bulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (ocrRunning)
+            {
+                backgroundWorkerBulk.CancelAsync();
+                return;
+            }
             if (bulkDialog == null)
             {
                 bulkDialog = new BulkDialog();
@@ -79,7 +85,7 @@ namespace VietOCR.NET
                 this.toolStripProgressBar1.Enabled = true;
                 this.toolStripProgressBar1.Visible = true;
                 this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
-                this.bulkOCRToolStripMenuItem.Enabled = false;
+                this.bulkOCRToolStripMenuItem.Text = "Cancel Bulk OCR";
 
                 if (this.statusForm.IsDisposed)
                 {
@@ -96,15 +102,11 @@ namespace VietOCR.NET
                     this.statusForm.BringToFront();
                 }
 
+                ocrRunning = true;
                 // start bulk OCR
                 this.backgroundWorkerBulk.RunWorkerAsync();
             }
         }
-
-        //protected override void cancelBulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    backgroundWorkerBulk.CancelAsync();
-        //}
 
         private void backgroundWorkerBulk_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -188,7 +190,8 @@ namespace VietOCR.NET
             this.Cursor = Cursors.Default;
             this.pictureBox1.UseWaitCursor = false;
             this.textBox1.Cursor = Cursors.Default;
-            this.bulkOCRToolStripMenuItem.Enabled = true;
+            ocrRunning = false;
+            this.bulkOCRToolStripMenuItem.Text = "Bulk OCR...";
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
