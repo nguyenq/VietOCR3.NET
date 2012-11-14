@@ -90,6 +90,11 @@ namespace VietOCR.NET
                 {
                     this.statusForm.Show();
                 }
+                else if (this.statusForm.WindowState == FormWindowState.Minimized) 
+                {
+                    this.statusForm.WindowState = FormWindowState.Normal;
+                    this.statusForm.BringToFront();
+                }
 
                 // start bulk OCR
                 this.backgroundWorkerBulk.RunWorkerAsync();
@@ -151,10 +156,7 @@ namespace VietOCR.NET
             {
                 this.statusForm.Show();
             }
-            else if (this.statusForm.WindowState != FormWindowState.Minimized && !this.statusForm.Focused)
-            {
-                this.statusForm.Focus();
-            }
+
             this.statusForm.TextBox.AppendText((string)e.UserState + Environment.NewLine);
         }
 

@@ -761,7 +761,7 @@ namespace VietOCR.NET
 
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
-            if (!this.textBox1.Focused)
+            if (!this.textBox1.Focused && this.ContainsFocus)
             {
                 textBox1.HideSelection = false;
 

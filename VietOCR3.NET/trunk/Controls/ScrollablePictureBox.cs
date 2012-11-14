@@ -142,7 +142,7 @@ namespace VietOCR.NET.Controls
         /// <param name="e"></param>
         private void ScrollablePictureBox_MouseEnter(object sender, EventArgs e)
         {
-            if (!this.Focused)
+            if (!this.Focused && this.FindForm().ContainsFocus)
             {
                 currentScrollPos = ((Panel)this.Parent).AutoScrollPosition;
                 this.Focus();
