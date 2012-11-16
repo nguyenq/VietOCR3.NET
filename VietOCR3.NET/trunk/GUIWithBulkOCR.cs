@@ -100,6 +100,7 @@ namespace VietOCR.NET
                     this.statusForm.WindowState = FormWindowState.Normal;
                 }
                 this.statusForm.BringToFront();
+                this.statusForm.TextBox.AppendText("\t-- Beginning of task --" + Environment.NewLine);
 
                 // start bulk OCR
                 this.backgroundWorkerBulk.RunWorkerAsync();
@@ -183,7 +184,7 @@ namespace VietOCR.NET
             {
                 // Finally, handle the case where the operation succeeded.
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRcompleted;
-                //this.textBox1.AppendText(e.Result.ToString());
+                this.statusForm.TextBox.AppendText("\t-- End of task --" + Environment.NewLine);
             }
 
             this.Cursor = Cursors.Default;
