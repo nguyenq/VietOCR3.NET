@@ -40,14 +40,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(367, 266);
+            this.textBox1.Size = new System.Drawing.Size(324, 222);
             this.textBox1.TabIndex = 0;
             // 
             // StatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 266);
+            this.ClientSize = new System.Drawing.Size(324, 222);
             this.Controls.Add(this.textBox1);
             this.Name = "StatusForm";
             this.Text = "Batch Process Status";
