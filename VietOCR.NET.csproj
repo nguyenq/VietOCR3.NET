@@ -110,6 +110,7 @@
     <Compile Include="GUIWithBulkOCR.Designer.cs">
       <DependentUpon>GUIWithBulkOCR.cs</DependentUpon>
     </Compile>
+    <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BulkDialog.resx">

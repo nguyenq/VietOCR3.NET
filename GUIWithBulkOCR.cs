@@ -25,6 +25,8 @@ using VietOCR.NET.Utilities;
 using VietOCR.NET.Postprocessing;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.Threading;
+using System.Globalization;
 
 namespace VietOCR.NET
 {
@@ -34,7 +36,7 @@ namespace VietOCR.NET
         const string strBulkOutputFolder = "BulkOutputFolder";
 
         private string inputFolder;
-        private string bulkOutputFolder;
+        private string outputFolder;
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
@@ -74,12 +76,12 @@ namespace VietOCR.NET
             }
 
             bulkDialog.InputFolder = inputFolder;
-            bulkDialog.OutputFolder = bulkOutputFolder;
+            bulkDialog.OutputFolder = outputFolder;
 
             if (bulkDialog.ShowDialog() == DialogResult.OK)
             {
                 inputFolder = bulkDialog.InputFolder;
-                bulkOutputFolder = bulkDialog.OutputFolder;
+                outputFolder = bulkDialog.OutputFolder;
 
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRrunning;
                 this.Cursor = Cursors.WaitCursor;
@@ -138,34 +140,16 @@ namespace VietOCR.NET
 
         private void performOCR(FileInfo imageFile)
         {
-            IList<Image> imageList;
-
             try
             {
-                imageList = ImageIOHelper.GetImageList(imageFile);
-                OCR<Image> ocrEngine = new OCRImages();
-                ocrEngine.PageSegMode = selectedPSM;
-                string result = ocrEngine.RecognizeText(imageList, curLangCode);
-
-                // postprocess to correct common OCR errors
-                result = Processor.PostProcess(result, curLangCode);
-                // correct common errors caused by OCR
-                result = TextUtilities.CorrectOCRErrors(result);
-                // correct letter cases
-                result = TextUtilities.CorrectLetterCases(result);
-
-                using (StreamWriter sw = new StreamWriter(Path.Combine(bulkOutputFolder, imageFile.Name + ".txt"), false, new System.Text.UTF8Encoding()))
-                {
-                    sw.Write(result);
-                }
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + ".txt"), curLangCode, selectedPSM);
             }
             catch
             {
+                // Sets the UI culture to the selected language.
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedUILanguage);
+
                 this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.Cannotprocess + imageFile.Name + " **" });
-            }
-            finally
-            {
-                imageList = null;
             }
         }
 
@@ -233,14 +217,14 @@ namespace VietOCR.NET
         {
             base.LoadRegistryInfo(regkey);
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            bulkOutputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
         {
             base.SaveRegistryInfo(regkey);
             regkey.SetValue(strInputFolder, inputFolder);
-            regkey.SetValue(strBulkOutputFolder, bulkOutputFolder);
+            regkey.SetValue(strBulkOutputFolder, outputFolder);
         }
     }
 }
