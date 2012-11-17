@@ -35,7 +35,7 @@ namespace VietOCR.NET
 
         private StatusForm statusForm;
 
-        delegate void UpdateStatusEvent(string fileName);
+        delegate void UpdateStatusEvent(string message);
 
         public GUIWithBatch()
         {
@@ -133,9 +133,9 @@ namespace VietOCR.NET
             }
         }
 
-        void WorkerUpdate(string fileName)
+        void WorkerUpdate(string message)
         {
-            this.statusForm.TextBox.AppendText(fileName + Environment.NewLine);
+            this.statusForm.TextBox.AppendText(message + Environment.NewLine);
         }
 
         protected override void updateWatch()
