@@ -24,6 +24,7 @@ using System.IO;
 using VietOCR.NET.Utilities;
 using VietOCR.NET.Postprocessing;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace VietOCR.NET
 {
@@ -37,6 +38,9 @@ namespace VietOCR.NET
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
+
+        Stopwatch stopWatch = new Stopwatch();
+        delegate void UpdateStatusEvent(string message);
 
         public GUIWithBulkOCR()
         {
@@ -103,6 +107,7 @@ namespace VietOCR.NET
                 this.statusForm.TextBox.AppendText("\t-- Beginning of task --" + Environment.NewLine);
 
                 // start bulk OCR
+                stopWatch.Start();
                 this.backgroundWorkerBulk.RunWorkerAsync();
             }
         }
@@ -127,7 +132,17 @@ namespace VietOCR.NET
                 }
                 FileInfo imageFile = new FileInfo(files[i]);
                 worker.ReportProgress(i, imageFile.FullName);
-                IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
+                performOCR(imageFile);
+            }
+        }
+
+        private void performOCR(FileInfo imageFile)
+        {
+            IList<Image> imageList;
+
+            try
+            {
+                imageList = ImageIOHelper.GetImageList(imageFile);
                 OCR<Image> ocrEngine = new OCRImages();
                 ocrEngine.PageSegMode = selectedPSM;
                 string result = ocrEngine.RecognizeText(imageList, curLangCode);
@@ -144,6 +159,19 @@ namespace VietOCR.NET
                     sw.Write(result);
                 }
             }
+            catch
+            {
+                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.Cannotprocess + imageFile.Name + " **" });
+            }
+            finally
+            {
+                imageList = null;
+            }
+        }
+
+        void WorkerUpdate(string message)
+        {
+            this.statusForm.TextBox.AppendText(message + Environment.NewLine);
         }
 
         private void backgroundWorkerBulk_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -178,7 +206,7 @@ namespace VietOCR.NET
                 // Note that due to a race condition in the DoWork event handler, the Cancelled
                 // flag may not have been set, even though CancelAsync was called.
                 this.toolStripStatusLabel1.Text = "OCR " + Properties.Resources.canceled;
-                this.statusForm.TextBox.AppendText("*** " + this.toolStripStatusLabel1.Text + " ***");
+                this.statusForm.TextBox.AppendText("\t-- Task " + Properties.Resources.canceled + " --" + Environment.NewLine);
             }
             else
             {
@@ -191,6 +219,14 @@ namespace VietOCR.NET
             this.pictureBox1.UseWaitCursor = false;
             this.textBox1.Cursor = Cursors.Default;
             this.bulkOCRToolStripMenuItem.Text = "Bulk OCR...";
+
+            stopWatch.Stop();
+            // Get the elapsed time as a TimeSpan value.
+            TimeSpan ts = stopWatch.Elapsed;
+
+            // Format and display the TimeSpan value. 
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+            this.statusForm.TextBox.AppendText("\tElapsed time: " + elapsedTime + Environment.NewLine);
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
