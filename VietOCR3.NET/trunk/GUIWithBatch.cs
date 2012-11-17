@@ -93,43 +93,21 @@ namespace VietOCR.NET
 
             if (curLangCode == null)
             {
-                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "    **  " + Properties.Resources.selectLanguage + "  **" });
+                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.selectLanguage + " **" });
                 //queue.Clear();
-                return;
-            }
-
-            IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
-            if (imageList == null)
-            {
-                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "    **  " + Properties.Resources.Cannotprocess + imageFile.Name + "  **" });
                 return;
             }
 
             try
             {
-                OCR<Image> ocrEngine = new OCRImages();
-                ocrEngine.PageSegMode = selectedPSM;
-                string result = ocrEngine.RecognizeText(imageList, curLangCode);
-
-                // postprocess to correct common OCR errors
-                result = Processor.PostProcess(result, curLangCode);
-                // correct common errors caused by OCR
-                result = TextUtilities.CorrectOCRErrors(result);
-                // correct letter cases
-                result = TextUtilities.CorrectLetterCases(result);
-
-                using (StreamWriter sw = new StreamWriter(Path.Combine(outputFolder, imageFile.Name + ".txt"), false, new System.Text.UTF8Encoding()))
-                {
-                    sw.Write(result);
-                }
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + ".txt"), curLangCode, selectedPSM);
             }
-            catch (Exception e)
+            catch
             {
                 // Sets the UI culture to the selected language.
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedUILanguage);
 
-                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "    **  " + Properties.Resources.Cannotprocess + imageFile.Name + "  **" });
-                Console.WriteLine(e.StackTrace);
+                this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.Cannotprocess + imageFile.Name + " **" });
             }
         }
 

@@ -17,68 +17,52 @@ namespace VietOCR.NET
 
         void PerformOCR(string[] args)
         {
-            try
+            if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length == 3 || args.Length == 5)
             {
-                if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length == 3 || args.Length == 5)
-                {
-                    Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode]");
-                    return;
-                }
-                FileInfo imageFile = new FileInfo(args[0]);
-                FileInfo outputFile = new FileInfo(args[1]);
+                Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode]");
+                return;
+            }
+            FileInfo imageFile = new FileInfo(args[0]);
+            FileInfo outputFile = new FileInfo(args[1] + ".txt");
 
-                if (!imageFile.Exists)
-                {
-                    Console.WriteLine("Input file does not exist.");
-                    return;
-                }
+            if (!imageFile.Exists)
+            {
+                Console.WriteLine("Input file does not exist.");
+                return;
+            }
 
-                string curLangCode = "eng"; //default language
-                string psm = "3"; // or alternatively, "PSM_AUTO"; // 3 - Fully automatic page segmentation, but no OSD (default)
+            string curLangCode = "eng"; //default language
+            string psm = "3"; // or alternatively, "PSM_AUTO"; // 3 - Fully automatic page segmentation, but no OSD (default)
 
-                if (args.Length == 4)
-                {
-                    if (args[2].Equals("-l"))
-                    {
-                        curLangCode = args[3];
-                    }
-                    else if (args[2].Equals("-psm"))
-                    {
-                        psm = args[3];
-                    }
-                }
-                else if (args.Length == 6)
+            if (args.Length == 4)
+            {
+                if (args[2].Equals("-l"))
                 {
                     curLangCode = args[3];
-                    psm = args[5];
-                    try
-                    {
-                        Int16.Parse(psm);
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Invalid input value.");
-                        return;
-                    }
                 }
-
-                IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
-
-                OCR<Image> ocrEngine = new OCRImages();
-                ocrEngine.PageSegMode = psm;
-                string result = ocrEngine.RecognizeText(imageList, curLangCode);
-
-                // postprocess to correct common OCR errors
-                result = Processor.PostProcess(result, curLangCode);
-                // correct common errors caused by OCR
-                result = TextUtilities.CorrectOCRErrors(result);
-                // correct letter cases
-                result = TextUtilities.CorrectLetterCases(result);
-
-                using (StreamWriter sw = new StreamWriter(outputFile.FullName + ".txt", false, new System.Text.UTF8Encoding()))
+                else if (args[2].Equals("-psm"))
                 {
-                    sw.Write(result);
+                    psm = args[3];
                 }
+            }
+            else if (args.Length == 6)
+            {
+                curLangCode = args[3];
+                psm = args[5];
+                try
+                {
+                    Int16.Parse(psm);
+                }
+                catch
+                {
+                    Console.WriteLine("Invalid input value.");
+                    return;
+                }
+            }
+
+            try
+            {
+                OCRHelper.PerformOCR(imageFile.FullName, outputFile.FullName, curLangCode, psm);
             }
             catch (Exception e)
             {
