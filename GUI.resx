@@ -736,7 +736,7 @@
     <value>183, 22</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bulk OCR...</value>
+    <value>&amp;Bulk OCR...</value>
   </data>
   <data name="toolStripMenuItem11.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
