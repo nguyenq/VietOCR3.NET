@@ -298,4 +298,16 @@ Please run the program as administrator.</value>
   <data name="CancelBulkOCR" xml:space="preserve">
     <value>Cancel Bulk OCR</value>
   </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Beginning of task</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Elapsed time</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>End of task</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Task canceled</value>
+  </data>
 </root>

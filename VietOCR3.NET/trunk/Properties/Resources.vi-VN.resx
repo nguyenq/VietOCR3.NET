@@ -295,4 +295,16 @@ Hãy chạy chương trình như administrator.</value>
   <data name="CancelBulkOCR" xml:space="preserve">
     <value>Bãi lệnh OCR hàng loạt</value>
   </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Khởi đầu tác vụ</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Thời gian đã qua</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>Kết thúc tác vụ</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Tác vụ được hủy bỏ</value>
+  </data>
 </root>
