@@ -289,4 +289,10 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Program_desc" xml:space="preserve">
     <value>.NET GUI Frontend cho Tesseract 3.01 OCR Engine</value>
   </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Tình trạng OCR hàng loạt</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Bãi lệnh OCR hàng loạt</value>
+  </data>
 </root>
