@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BulkDialog));
             this.labelOutput = new System.Windows.Forms.Label();
             this.labelInput = new System.Windows.Forms.Label();
             this.btnOutput = new System.Windows.Forms.Button();
@@ -43,92 +44,73 @@
             // 
             // labelOutput
             // 
-            this.labelOutput.AutoSize = true;
-            this.labelOutput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelOutput.Location = new System.Drawing.Point(11, 50);
+            resources.ApplyResources(this.labelOutput, "labelOutput");
             this.labelOutput.Name = "labelOutput";
-            this.labelOutput.Size = new System.Drawing.Size(74, 13);
-            this.labelOutput.TabIndex = 19;
-            this.labelOutput.Text = "Output Folder:";
+            this.toolTip1.SetToolTip(this.labelOutput, resources.GetString("labelOutput.ToolTip"));
             // 
             // labelInput
             // 
-            this.labelInput.AutoSize = true;
-            this.labelInput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelInput.Location = new System.Drawing.Point(11, 24);
+            resources.ApplyResources(this.labelInput, "labelInput");
             this.labelInput.Name = "labelInput";
-            this.labelInput.Size = new System.Drawing.Size(66, 13);
-            this.labelInput.TabIndex = 18;
-            this.labelInput.Text = "Input Folder:";
+            this.toolTip1.SetToolTip(this.labelInput, resources.GetString("labelInput.ToolTip"));
             // 
             // btnOutput
             // 
-            this.btnOutput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnOutput.Location = new System.Drawing.Point(274, 45);
+            resources.ApplyResources(this.btnOutput, "btnOutput");
             this.btnOutput.Name = "btnOutput";
-            this.btnOutput.Size = new System.Drawing.Size(30, 23);
-            this.btnOutput.TabIndex = 17;
-            this.btnOutput.Text = "...";
+            this.toolTip1.SetToolTip(this.btnOutput, resources.GetString("btnOutput.ToolTip"));
             this.btnOutput.UseVisualStyleBackColor = true;
             this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
             // 
             // btnInput
             // 
-            this.btnInput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInput.Location = new System.Drawing.Point(274, 19);
+            resources.ApplyResources(this.btnInput, "btnInput");
             this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(30, 23);
-            this.btnInput.TabIndex = 16;
-            this.btnInput.Text = "...";
+            this.toolTip1.SetToolTip(this.btnInput, resources.GetString("btnInput.ToolTip"));
             this.btnInput.UseVisualStyleBackColor = true;
             this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // textBoxOutput
             // 
+            resources.ApplyResources(this.textBoxOutput, "textBoxOutput");
             this.textBoxOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxOutput.Location = new System.Drawing.Point(86, 47);
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
-            this.textBoxOutput.Size = new System.Drawing.Size(182, 20);
-            this.textBoxOutput.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.textBoxOutput, resources.GetString("textBoxOutput.ToolTip"));
             // 
-            // textBoxFolder
+            // textBoxInput
             // 
+            resources.ApplyResources(this.textBoxInput, "textBoxInput");
             this.textBoxInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxInput.Location = new System.Drawing.Point(86, 21);
-            this.textBoxInput.Name = "textBoxFolder";
+            this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.ReadOnly = true;
-            this.textBoxInput.Size = new System.Drawing.Size(182, 20);
-            this.textBoxInput.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.textBoxInput, resources.GetString("textBoxInput.ToolTip"));
             // 
             // buttonCancel
             // 
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonCancel.Location = new System.Drawing.Point(229, 85);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 21;
-            this.buttonCancel.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.buttonCancel, resources.GetString("buttonCancel.ToolTip"));
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonRun
             // 
+            resources.ApplyResources(this.buttonRun, "buttonRun");
             this.buttonRun.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonRun.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonRun.Location = new System.Drawing.Point(148, 85);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(75, 23);
-            this.buttonRun.TabIndex = 20;
-            this.buttonRun.Text = "Run";
+            this.toolTip1.SetToolTip(this.buttonRun, resources.GetString("buttonRun.ToolTip"));
             this.buttonRun.UseVisualStyleBackColor = true;
+            // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             // 
             // BulkDialog
             // 
             this.AcceptButton = this.buttonRun;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 126);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonRun);
             this.Controls.Add(this.labelOutput);
@@ -141,8 +123,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BulkDialog";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Bulk OCR";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.ResumeLayout(false);
             this.PerformLayout();
 
