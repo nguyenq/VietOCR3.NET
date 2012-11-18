@@ -61,6 +61,11 @@ namespace VietOCR.NET
             base.ChangeUILanguage(locale);
 
             statusForm.Text = Properties.Resources.BulkProcessStatus;
+            
+            if (bulkDialog != null)
+            {
+                bulkDialog.ChangeUILanguage(locale);
+            }
         }
 
         protected override void bulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
