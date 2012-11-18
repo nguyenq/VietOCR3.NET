@@ -116,6 +116,9 @@
     <EmbeddedResource Include="BulkDialog.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.sk-SK.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.vi-VN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
