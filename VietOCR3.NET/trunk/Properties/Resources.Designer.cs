@@ -125,6 +125,15 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bulk OCR.
+        /// </summary>
+        internal static string Bulk_OCR {
+            get {
+                return ResourceManager.GetString("Bulk_OCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bulk Process Status.
         /// </summary>
         internal static string BulkProcessStatus {

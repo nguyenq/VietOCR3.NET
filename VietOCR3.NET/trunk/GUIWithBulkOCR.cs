@@ -202,7 +202,7 @@ namespace VietOCR.NET
             this.Cursor = Cursors.Default;
             this.pictureBox1.UseWaitCursor = false;
             this.textBox1.Cursor = Cursors.Default;
-            this.bulkOCRToolStripMenuItem.Text = "Bulk OCR...";
+            this.bulkOCRToolStripMenuItem.Text = Properties.Resources.Bulk_OCR + "...";
 
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.
