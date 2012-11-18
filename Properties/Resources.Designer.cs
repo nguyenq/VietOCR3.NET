@@ -107,6 +107,15 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Beginning of task.
+        /// </summary>
+        internal static string Beginning_of_task {
+            get {
+                return ResourceManager.GetString("Beginning_of_task", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
         internal static string Browse {
@@ -247,6 +256,24 @@ namespace VietOCR.NET.Properties {
         internal static string Downloading {
             get {
                 return ResourceManager.GetString("Downloading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elapsed time.
+        /// </summary>
+        internal static string Elapsed_time {
+            get {
+                return ResourceManager.GetString("Elapsed_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End of task.
+        /// </summary>
+        internal static string End_of_task {
+            get {
+                return ResourceManager.GetString("End_of_task", resourceCulture);
             }
         }
         
@@ -580,6 +607,15 @@ namespace VietOCR.NET.Properties {
         internal static string suggest_split {
             get {
                 return ResourceManager.GetString("suggest_split", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task canceled.
+        /// </summary>
+        internal static string Task_canceled {
+            get {
+                return ResourceManager.GetString("Task_canceled", resourceCulture);
             }
         }
         

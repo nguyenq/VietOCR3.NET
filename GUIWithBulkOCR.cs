@@ -106,7 +106,7 @@ namespace VietOCR.NET
                     this.statusForm.WindowState = FormWindowState.Normal;
                 }
                 this.statusForm.BringToFront();
-                this.statusForm.TextBox.AppendText("\t-- Beginning of task --" + Environment.NewLine);
+                this.statusForm.TextBox.AppendText("\t-- " + Properties.Resources.Beginning_of_task + " --" + Environment.NewLine);
 
                 // start bulk OCR
                 stopWatch.Start();
@@ -190,13 +190,13 @@ namespace VietOCR.NET
                 // Note that due to a race condition in the DoWork event handler, the Cancelled
                 // flag may not have been set, even though CancelAsync was called.
                 this.toolStripStatusLabel1.Text = "OCR " + Properties.Resources.canceled;
-                this.statusForm.TextBox.AppendText("\t-- Task " + Properties.Resources.canceled + " --" + Environment.NewLine);
+                this.statusForm.TextBox.AppendText("\t-- " + Properties.Resources.Task_canceled + " --" + Environment.NewLine);
             }
             else
             {
                 // Finally, handle the case where the operation succeeded.
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRcompleted;
-                this.statusForm.TextBox.AppendText("\t-- End of task --" + Environment.NewLine);
+                this.statusForm.TextBox.AppendText("\t-- " + Properties.Resources.End_of_task + " --" + Environment.NewLine);
             }
 
             this.Cursor = Cursors.Default;
@@ -210,7 +210,7 @@ namespace VietOCR.NET
 
             // Format and display the TimeSpan value. 
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-            this.statusForm.TextBox.AppendText("\tElapsed time: " + elapsedTime + Environment.NewLine);
+            this.statusForm.TextBox.AppendText("\t" + Properties.Resources.Elapsed_time + ": " + elapsedTime + Environment.NewLine);
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
