@@ -292,4 +292,10 @@ Prosím spustite program ako administrátor.</value>
   <data name="Program_desc" xml:space="preserve">
     <value>.NET GUI rozhranie pre tesseract 3.01 OCR</value>
   </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Bulk Process Status</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Cancel Bulk OCR</value>
+  </data>
 </root>

@@ -292,4 +292,10 @@
     <value>You have no write access to "{0}" folder.
 Please run the program as administrator.</value>
   </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Bulk Process Status</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Cancel Bulk OCR</value>
+  </data>
 </root>

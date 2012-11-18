@@ -48,7 +48,7 @@ namespace VietOCR.NET
         {
             InitializeComponent();
             statusForm = new StatusForm();
-            statusForm.Text = Properties.Resources.BatchProcessStatus;
+            statusForm.Text = Properties.Resources.BulkProcessStatus;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace VietOCR.NET
         {
             base.ChangeUILanguage(locale);
 
-            statusForm.Text = Properties.Resources.BatchProcessStatus;
+            statusForm.Text = Properties.Resources.BulkProcessStatus;
         }
 
         protected override void bulkOCRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace VietOCR.NET
                 this.toolStripProgressBar1.Enabled = true;
                 this.toolStripProgressBar1.Visible = true;
                 this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
-                this.bulkOCRToolStripMenuItem.Text = "Cancel Bulk OCR";
+                this.bulkOCRToolStripMenuItem.Text = Properties.Resources.CancelBulkOCR;
 
                 if (this.statusForm.IsDisposed)
                 {
