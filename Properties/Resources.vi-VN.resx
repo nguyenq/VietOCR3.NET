@@ -307,4 +307,7 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Task_canceled" xml:space="preserve">
     <value>Tác vụ được hủy bỏ</value>
   </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>OCR hàng loạt</value>
+  </data>
 </root>

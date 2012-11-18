@@ -310,4 +310,7 @@ Prosím spustite program ako administrátor.</value>
   <data name="Task_canceled" xml:space="preserve">
     <value>Task canceled</value>
   </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>Bulk OCR</value>
+  </data>
 </root>
