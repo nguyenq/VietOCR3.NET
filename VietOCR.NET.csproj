@@ -113,6 +113,9 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BulkDialog.lt-LT.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
