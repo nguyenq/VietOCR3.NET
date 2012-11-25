@@ -32,7 +32,7 @@ namespace VietOCR.NET
     {
         private Queue<String> queue;
         private Watcher watcher;
-
+        private System.Windows.Forms.Timer aTimer;
         private StatusForm statusForm;
 
         delegate void UpdateStatusEvent(string message);
@@ -52,10 +52,13 @@ namespace VietOCR.NET
             watcher = new Watcher(queue, watchFolder);
             watcher.Enabled = watchEnabled;
 
-            System.Windows.Forms.Timer aTimer = new System.Windows.Forms.Timer();
+            aTimer = new System.Windows.Forms.Timer();
             aTimer.Interval = 10000;
             aTimer.Tick += new EventHandler(OnTimedEvent);
-            aTimer.Start();
+            if (watchEnabled)
+            {
+                aTimer.Start();
+            }
         }
 
         private void OnTimedEvent(Object sender, EventArgs e)
@@ -83,6 +86,10 @@ namespace VietOCR.NET
             try
             {
                 imageFile = new FileInfo(queue.Dequeue());
+                if (imageFile == null || !imageFile.Exists)
+                {
+                    return;
+                }
             }
             catch
             {
@@ -120,6 +127,14 @@ namespace VietOCR.NET
         {
             watcher.Path = watchFolder;
             watcher.Enabled = watchEnabled;
+            if (watchEnabled)
+            {
+                aTimer.Start();
+            }
+            else
+            {
+                aTimer.Stop();
+            }
         }
     }
 }
