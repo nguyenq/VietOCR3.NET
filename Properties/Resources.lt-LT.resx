@@ -293,24 +293,24 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
     <value>„VietOCR.NET“ žinynas</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>Bulk Process Status</value>
+    <value>Urminės užduoties būsena</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
-    <value>Cancel Bulk OCR</value>
+    <value>Atsisakyti urminio atpažinimo</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
-    <value>Beginning of task</value>
+    <value>Užduotis pradedama vykdyti</value>
   </data>
   <data name="Elapsed_time" xml:space="preserve">
-    <value>Elapsed time</value>
+    <value>Sugaištas laikas</value>
   </data>
   <data name="End_of_task" xml:space="preserve">
-    <value>End of task</value>
+    <value>Užduotis baigiama vykdyti</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
-    <value>Task canceled</value>
+    <value>Užduoties vykdymas nutrauktas</value>
   </data>
   <data name="Bulk_OCR" xml:space="preserve">
-    <value>Bulk OCR</value>
+    <value>Urminis atpažinimas</value>
   </data>
 </root>
