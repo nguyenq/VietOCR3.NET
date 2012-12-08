@@ -151,6 +151,9 @@
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
       <SubType>Designer</SubType>
