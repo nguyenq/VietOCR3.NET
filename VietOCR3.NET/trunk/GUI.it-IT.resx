@@ -697,7 +697,7 @@
     <value>195, 22</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File Recenti</value>
+    <value>File &amp;Recenti</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -727,7 +727,7 @@
     <value>183, 22</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR &amp;Tutte le pagine</value>
+    <value>OCR &amp;Tutte le Pagine</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
@@ -829,7 +829,7 @@
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Visualizza &amp;Metodo d'Ingresso</value>
+    <value>&amp;Visualizza Metodo d'Ingresso</value>
   </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -847,7 +847,7 @@
     <value>219, 22</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Scaricamento del pacchetto lingua in corso...</value>
+    <value>&amp;Scaricamento del Pacchetto Lingua...</value>
   </data>
   <data name="toolStripMenuItem10.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
