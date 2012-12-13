@@ -17,8 +17,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
-using OCR.TesseractWrapper;
+using Tesseract;
 
 namespace VietOCR.NET
 {
@@ -39,26 +40,36 @@ namespace VietOCR.NET
         public override string RecognizeText(IList<Image> images, string lang)
         {
             string tessdata = Path.Combine(basedir, TESSDATA);
-            TesseractProcessor processor = new TesseractProcessor();
-            processor.Init(tessdata, lang, oem);
-            processor.SetPageSegMode((ePageSegMode)Enum.Parse(typeof(ePageSegMode), PageSegMode));
+            TesseractEngine processor = new TesseractEngine(tessdata, lang, EngineMode.Default);
+            //processor.((ePageSegMode)Enum.Parse(typeof(ePageSegMode), PageSegMode));
 
             StringBuilder strB = new StringBuilder();
 
             foreach (Image image in images)
             {
-                //if (rect != Rectangle.Empty)
-                //{
-                //    processor.UseROI = true;
-                //    processor.ROI = rect;
-                //}
-                string text = processor.Recognize(image);
+                string text = processor.Process(ConvertImage2Pix((Bitmap)image), Tesseract.PageSegMode.Auto).GetText();
 
                 if (text == null) return String.Empty;
                 strB.Append(text);
             }
 
             return strB.ToString().Replace("\n", Environment.NewLine);
+        }
+
+        private IPix ConvertImage2Pix(Bitmap bmp)
+        {
+            IntPtr pval = IntPtr.Zero;
+            BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, bmp.PixelFormat);
+
+            try
+            {
+                pval = bd.Scan0;
+                return Pix.Create(pval);
+            }
+            finally
+            {
+                bmp.UnlockBits(bd);
+            }
         }
     }
 }
