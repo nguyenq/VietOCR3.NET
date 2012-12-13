@@ -20,7 +20,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using Vietpad.NET.Controls;
 using Microsoft.Win32;
-using OCR.TesseractWrapper;
+using Tesseract;
 
 namespace VietOCR.NET
 {
@@ -54,14 +54,14 @@ namespace VietOCR.NET
 
             List<ToolStripRadioButtonMenuItem> ar = new List<ToolStripRadioButtonMenuItem>();
 
-            foreach (string mode in Enum.GetNames(typeof(ePageSegMode)))
+            foreach (string mode in Enum.GetNames(typeof(PageSegMode)))
             {
-                if ((ePageSegMode)Enum.Parse(typeof(ePageSegMode), mode) == ePageSegMode.PSM_COUNT)
+                if ((PageSegMode)Enum.Parse(typeof(PageSegMode), mode) == PageSegMode.Count)
                 {
                     continue;
                 }
                 ToolStripRadioButtonMenuItem psmItem = new ToolStripRadioButtonMenuItem();
-                psmItem.Text = psmDict[mode];
+                psmItem.Text = mode; // psmDict[mode];
                 psmItem.Tag = mode;
                 psmItem.CheckOnClick = true;
                 psmItem.Click += eh;
@@ -98,7 +98,7 @@ namespace VietOCR.NET
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);
-            selectedPSM = (string)regkey.GetValue(strPSM, Enum.GetName(typeof(ePageSegMode), ePageSegMode.PSM_AUTO));
+            selectedPSM = (string)regkey.GetValue(strPSM, Enum.GetName(typeof(PageSegMode), PageSegMode.Auto));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
