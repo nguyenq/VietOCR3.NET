@@ -36,7 +36,7 @@ namespace VietOCR.NET
         /// <param name="index"></param>
         /// <param name="lang"></param>
         /// <returns></returns>
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        //[System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override string RecognizeText(IList<Image> images, string lang)
         {
             string tessdata = Path.Combine(basedir, TESSDATA);
@@ -47,7 +47,8 @@ namespace VietOCR.NET
 
             foreach (Image image in images)
             {
-                string text = processor.Process(ConvertImage2Pix((Bitmap)image), Tesseract.PageSegMode.Auto).GetText();
+                //string text = processor.Process(Pix.LoadFromFile("C:\\Projects\\tesseractnet\\BaseApiTester\\phototest.tif"), Tesseract.PageSegMode.Auto).GetText();
+                string text = processor.Process(ConvertBitmapToPix((Bitmap)image), Tesseract.PageSegMode.Auto).GetText();
 
                 if (text == null) return String.Empty;
                 strB.Append(text);
@@ -56,7 +57,7 @@ namespace VietOCR.NET
             return strB.ToString().Replace("\n", Environment.NewLine);
         }
 
-        private IPix ConvertImage2Pix(Bitmap bmp)
+        private IPix ConvertBitmapToPix(Bitmap bmp)
         {
             IntPtr pval = IntPtr.Zero;
             BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, bmp.PixelFormat);
@@ -64,6 +65,8 @@ namespace VietOCR.NET
             try
             {
                 pval = bd.Scan0;
+                //var depth1 = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
+                //var depth2 = Tesseract.Interop.LeptonicaApi.GetDepth(pval);
                 return Pix.Create(pval);
             }
             finally
