@@ -20,6 +20,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using Tesseract;
+using System.Runtime.InteropServices;
 
 namespace VietOCR.NET
 {
@@ -30,7 +31,7 @@ namespace VietOCR.NET
         const int oem = 3;
 
         /// <summary>
-        /// Recognize text
+        /// Recognize text.
         /// </summary>
         /// <param name="images"></param>
         /// <param name="index"></param>
@@ -40,23 +41,37 @@ namespace VietOCR.NET
         public override string RecognizeText(IList<Image> images, string lang)
         {
             string tessdata = Path.Combine(basedir, TESSDATA);
-            TesseractEngine processor = new TesseractEngine(tessdata, lang, EngineMode.Default);
-            //processor.((ePageSegMode)Enum.Parse(typeof(ePageSegMode), PageSegMode));
 
-            StringBuilder strB = new StringBuilder();
-
-            foreach (Image image in images)
+            using (TesseractEngine engine = new TesseractEngine(tessdata, lang, EngineMode.Default))
             {
-                //string text = processor.Process(Pix.LoadFromFile("C:\\Projects\\tesseractnet\\BaseApiTester\\phototest.tif"), Tesseract.PageSegMode.Auto).GetText();
-                string text = processor.Process(ConvertBitmapToPix((Bitmap)image), Tesseract.PageSegMode.Auto).GetText();
+                PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
 
-                if (text == null) return String.Empty;
-                strB.Append(text);
+                StringBuilder strB = new StringBuilder();
+
+                foreach (Image image in images)
+                {
+                    using (IPix pix = ConvertBitmapToPix(new Bitmap(image)))
+                    {
+                        using (Page page = engine.Process(pix, psm))
+                        {
+                            string text = page.GetText();
+
+                            if (text == null) return String.Empty;
+                            strB.Append(text);
+                        }
+                    }
+                }
+
+                return strB.ToString().Replace("\n", Environment.NewLine);
             }
-
-            return strB.ToString().Replace("\n", Environment.NewLine);
         }
 
+        /// <summary>
+        /// Converts .NET Bitmap to Leptonica Pix.
+        /// Not completed yet!
+        /// </summary>
+        /// <param name="bmp"></param>
+        /// <returns></returns>
         private IPix ConvertBitmapToPix(Bitmap bmp)
         {
             IntPtr pval = IntPtr.Zero;
@@ -64,10 +79,28 @@ namespace VietOCR.NET
 
             try
             {
-                pval = bd.Scan0;
-                //var depth1 = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
-                //var depth2 = Tesseract.Interop.LeptonicaApi.GetDepth(pval);
-                return Pix.Create(pval);
+                var depth = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
+
+                // Get the address of the first line.
+                IntPtr ptr = bd.Scan0;
+
+                // Declare an array to hold the bytes of the bitmap. 
+                int bytes = Math.Abs(bd.Stride) * bmp.Height;
+                byte[] rgbValues = new byte[bytes];
+
+                // Copy the RGB values into the array.
+                System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
+
+                IPix pix = Pix.Create(bmp.Width, bmp.Height, depth);
+                //void* pixptr = pix.Handle.ToPointer();
+
+                //for (int counter = 2; counter < rgbValues.Length; counter += 3)
+                //    pix. = rgbValues[counter];
+
+                // Copy the RGB values back to the bitmap
+                //System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, pix.Handle, bytes);
+
+                return pix;
             }
             finally
             {
