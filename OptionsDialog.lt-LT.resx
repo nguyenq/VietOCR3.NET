@@ -125,10 +125,13 @@
     <value>Stebimasis aplankas</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>338, 102</value>
+    <value>340, 102</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>348, 128</value>
+  </data>
+  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 74</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 74</value>
