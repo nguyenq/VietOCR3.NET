@@ -34,6 +34,14 @@ namespace VietOCR.NET
             set { pageSegMode = value; }
         }
 
+        private bool hocr;
+
+        public bool Hocr
+        {
+            get { return hocr; }
+            set { hocr = value; }
+        }
+
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string RecognizeText(IList<T> imageEntities, string lang, Rectangle selection)
         {

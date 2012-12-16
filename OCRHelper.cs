@@ -10,7 +10,7 @@ namespace VietOCR.NET
 {
     class OCRHelper
     {
-        public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode)
+        public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, bool hocr)
         {
             IList<Image> imageList;
 
@@ -19,14 +19,19 @@ namespace VietOCR.NET
                 imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
                 OCR<Image> ocrEngine = new OCRImages();
                 ocrEngine.PageSegMode = pageSegMode;
+                ocrEngine.Hocr = hocr;
                 string result = ocrEngine.RecognizeText(imageList, langCode);
 
-                // postprocess to correct common OCR errors
-                result = Processor.PostProcess(result, langCode);
-                // correct common errors caused by OCR
-                result = TextUtilities.CorrectOCRErrors(result);
-                // correct letter cases
-                result = TextUtilities.CorrectLetterCases(result);
+                // skip post-corrections if hocr output
+                if (!hocr)
+                {
+                    // postprocess to correct common OCR errors
+                    result = Processor.PostProcess(result, langCode);
+                    // correct common errors caused by OCR
+                    result = TextUtilities.CorrectOCRErrors(result);
+                    // correct letter cases
+                    result = TextUtilities.CorrectLetterCases(result);
+                }
 
                 using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
                 {
