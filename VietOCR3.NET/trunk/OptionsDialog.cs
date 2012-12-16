@@ -58,6 +58,12 @@ namespace VietOCR.NET
             set { dangAmbigsEnabled = value; }
         }
 
+        public bool Hocr
+        {
+            get { return this.checkBoxHocr.Checked; }
+            set { this.checkBoxHocr.Checked = value; }
+        }
+
         public OptionsDialog()
         {
             InitializeComponent();

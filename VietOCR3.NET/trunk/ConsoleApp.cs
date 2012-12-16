@@ -19,11 +19,20 @@ namespace VietOCR.NET
         {
             if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length == 3 || args.Length == 5)
             {
-                Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode]");
+                Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode] [hocr]");
                 return;
             }
+
+            bool hocr = false;
+            foreach (string arg in args)
+            {
+                if ("hocr" == arg)
+                {
+                    hocr = true;
+                }
+            }
             FileInfo imageFile = new FileInfo(args[0]);
-            FileInfo outputFile = new FileInfo(args[1] + ".txt");
+            FileInfo outputFile = new FileInfo(args[1] + (hocr ? ".html" : ".txt"));
 
             if (!imageFile.Exists)
             {
@@ -62,7 +71,7 @@ namespace VietOCR.NET
 
             try
             {
-                OCRHelper.PerformOCR(imageFile.FullName, outputFile.FullName, curLangCode, psm);
+                OCRHelper.PerformOCR(imageFile.FullName, outputFile.FullName, curLangCode, psm, hocr);
             }
             catch (Exception e)
             {

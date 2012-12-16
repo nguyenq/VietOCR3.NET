@@ -31,10 +31,12 @@ namespace VietOCR.NET
         const string strWatchEnable = "WatchEnable";
         const string strWatchFolder = "WatchFolder";
         const string strOutputFolder = "OutputFolder";
+        const string strBatchHocr = "BatchHocr";
 
         protected string watchFolder;
         protected string outputFolder;
         protected bool watchEnabled;
+        protected bool hocr;
 
         private OptionsDialog optionsDialog;
  
@@ -56,6 +58,7 @@ namespace VietOCR.NET
             optionsDialog.DangAmbigsPath = dangAmbigsPath;
             optionsDialog.DangAmbigsEnabled = dangAmbigsOn;
             optionsDialog.CurLangCode = curLangCode;
+            optionsDialog.Hocr = hocr;
 
             if (optionsDialog.ShowDialog() == DialogResult.OK)
             {
@@ -65,6 +68,7 @@ namespace VietOCR.NET
                 dangAmbigsPath = optionsDialog.DangAmbigsPath;
                 dangAmbigsOn = optionsDialog.DangAmbigsEnabled;
                 curLangCode = optionsDialog.CurLangCode;
+                hocr = optionsDialog.Hocr;
 
                 updateWatch();
             }
@@ -102,6 +106,7 @@ namespace VietOCR.NET
             watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnable, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            hocr = Convert.ToBoolean((int)regkey.GetValue(strBatchHocr, Convert.ToInt32(false)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -110,6 +115,7 @@ namespace VietOCR.NET
             regkey.SetValue(strWatchEnable, Convert.ToInt32(watchEnabled));
             regkey.SetValue(strWatchFolder, watchFolder);
             regkey.SetValue(strOutputFolder, outputFolder);
+            regkey.SetValue(strBatchHocr, Convert.ToInt32(hocr));
         }
     }
 }

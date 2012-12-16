@@ -34,9 +34,11 @@ namespace VietOCR.NET
     {
         const string strInputFolder = "InputFolder";
         const string strBulkOutputFolder = "BulkOutputFolder";
+        const string strBulkHocr = "BulkHocr";
 
         private string inputFolder;
         private string outputFolder;
+        private bool hocr;
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
@@ -82,11 +84,13 @@ namespace VietOCR.NET
 
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
+            bulkDialog.Hocr = hocr;
 
             if (bulkDialog.ShowDialog() == DialogResult.OK)
             {
                 inputFolder = bulkDialog.InputFolder;
                 outputFolder = bulkDialog.OutputFolder;
+                hocr = bulkDialog.Hocr;
 
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRrunning;
                 this.Cursor = Cursors.WaitCursor;
@@ -147,7 +151,7 @@ namespace VietOCR.NET
         {
             try
             {
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + ".txt"), curLangCode, selectedPSM);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + (hocr ? ".html" : ".txt")), curLangCode, selectedPSM, hocr);
             }
             catch
             {
@@ -223,6 +227,7 @@ namespace VietOCR.NET
             base.LoadRegistryInfo(regkey);
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            hocr = Convert.ToBoolean((int)regkey.GetValue(strBulkHocr, Convert.ToInt32(false)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -230,6 +235,7 @@ namespace VietOCR.NET
             base.SaveRegistryInfo(regkey);
             regkey.SetValue(strInputFolder, inputFolder);
             regkey.SetValue(strBulkOutputFolder, outputFolder);
+            regkey.SetValue(strBulkHocr, Convert.ToInt32(hocr));
         }
     }
 }

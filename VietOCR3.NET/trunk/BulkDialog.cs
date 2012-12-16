@@ -27,6 +27,12 @@ namespace VietOCR.NET
             set { outputFolder = value; }
         }
 
+        public bool Hocr
+        {
+            get { return this.checkBoxHocr.Checked; }
+            set { this.checkBoxHocr.Checked = value; }
+        }
+
         public BulkDialog()
         {
             InitializeComponent();
