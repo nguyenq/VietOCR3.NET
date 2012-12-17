@@ -51,7 +51,7 @@ namespace VietOCR.NET
 
                 foreach (Image image in images)
                 {
-                    using (IPix pix = ConvertBitmapToPix(new Bitmap(image)))
+                    using (IPix pix = ConvertBitmapToPix1(image))
                     {
                         using (Page page = engine.Process(pix, psm))
                         {
@@ -65,6 +65,21 @@ namespace VietOCR.NET
 
                 return strB.ToString().Replace("\n", Environment.NewLine);
             }
+        }
+
+        /// <summary>
+        /// Temporary solution. Will be removed after support is built in tesseract wrapper.
+        /// </summary>
+        /// <param name="bmp"></param>
+        /// <returns></returns>
+        private IPix ConvertBitmapToPix1(Image bmp)
+        {
+            string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".png";
+            bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+            IPix pix = Pix.LoadFromFile(fileName);
+            File.Delete(fileName);
+
+            return pix;
         }
 
         /// <summary>
@@ -93,13 +108,7 @@ namespace VietOCR.NET
                 System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
 
                 IPix pix = Pix.Create(bmp.Width, bmp.Height, depth);
-                //void* pixptr = pix.Handle.ToPointer();
-
-                //for (int counter = 2; counter < rgbValues.Length; counter += 3)
-                //    pix. = rgbValues[counter];
-
-                // Copy the RGB values back to the bitmap
-                //System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, pix.Handle, bytes);
+                //    pix.data = rgbValues;
 
                 return pix;
             }
