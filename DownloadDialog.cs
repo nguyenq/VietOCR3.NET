@@ -81,6 +81,16 @@ namespace VietOCR.NET
 
             if (numberOfDownloads > 0)
             {
+                string destFolder = Path.Combine(baseDir, TESS_DATA);
+
+                //In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
+                //After extraction, move them up two levels
+                string[] files = Directory.GetFiles(Path.Combine(destFolder, @"tesseract-ocr\tessdata"), "*.traineddata");
+                foreach (string file in files)
+                {
+                    File.Move(file, Path.Combine(destFolder, Path.GetFileName(file)));
+                }
+
                 MessageBox.Show(this, Properties.Resources.Please_restart, GUI.strProgName);
             }
         }
@@ -122,18 +132,19 @@ namespace VietOCR.NET
                     try
                     {
                         Uri uri = new Uri(availableLanguageCodes[key]);
-                        DownloadDataFile(uri, TESS_DATA);  // download language data pack. In Tesseract 3.0, data is packaged not under a directory
+                        DownloadDataFile(uri, TESS_DATA);  // download language data pack. In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
 
-                        if (lookupISO_3_1_Codes.ContainsKey(key))
-                        {
-                            string iso_3_1_Code = lookupISO_3_1_Codes[key]; // vie -> vi_VN
-                            if (availableDictionaries.ContainsKey(iso_3_1_Code))
-                            {
-                                uri = new Uri(availableDictionaries[iso_3_1_Code]);
-                                ++numOfConcurrentTasks;
-                                DownloadDataFile(uri, DICTIONARY_FOLDER); // download dictionary
-                            }
-                        }
+                        // Note: Disable dictionary download since OpenOffice dictionaries seem to have been lost.
+                        //if (lookupISO_3_1_Codes.ContainsKey(key))
+                        //{
+                        //    string iso_3_1_Code = lookupISO_3_1_Codes[key]; // vie -> vi_VN
+                        //    if (availableDictionaries.ContainsKey(iso_3_1_Code))
+                        //    {
+                        //        uri = new Uri(availableDictionaries[iso_3_1_Code]);
+                        //        ++numOfConcurrentTasks;
+                        //        DownloadDataFile(uri, DICTIONARY_FOLDER); // download dictionary
+                        //    }
+                        //}
                     }
                     catch (Exception)
                     {
