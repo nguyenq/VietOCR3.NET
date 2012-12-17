@@ -677,7 +677,6 @@ namespace VietOCR.NET
             // toolStripCbLang
             // 
             this.toolStripCbLang.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripCbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.toolStripCbLang, "toolStripCbLang");
             this.toolStripCbLang.Name = "toolStripCbLang";
             this.toolStripCbLang.SelectedIndexChanged += new System.EventHandler(this.toolStripCbLang_SelectedIndexChanged);
