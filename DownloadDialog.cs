@@ -134,17 +134,16 @@ namespace VietOCR.NET
                         Uri uri = new Uri(availableLanguageCodes[key]);
                         DownloadDataFile(uri, TESS_DATA);  // download language data pack. In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
 
-                        // Note: Disable dictionary download since OpenOffice dictionaries seem to have been lost.
-                        //if (lookupISO_3_1_Codes.ContainsKey(key))
-                        //{
-                        //    string iso_3_1_Code = lookupISO_3_1_Codes[key]; // vie -> vi_VN
-                        //    if (availableDictionaries.ContainsKey(iso_3_1_Code))
-                        //    {
-                        //        uri = new Uri(availableDictionaries[iso_3_1_Code]);
-                        //        ++numOfConcurrentTasks;
-                        //        DownloadDataFile(uri, DICTIONARY_FOLDER); // download dictionary
-                        //    }
-                        //}
+                        if (lookupISO_3_1_Codes.ContainsKey(key))
+                        {
+                            string iso_3_1_Code = lookupISO_3_1_Codes[key]; // vie -> vi_VN
+                            if (availableDictionaries.ContainsKey(iso_3_1_Code))
+                            {
+                                uri = new Uri(availableDictionaries[iso_3_1_Code]);
+                                ++numOfConcurrentTasks;
+                                DownloadDataFile(uri, DICTIONARY_FOLDER); // download dictionary
+                            }
+                        }
                     }
                     catch (Exception)
                     {
