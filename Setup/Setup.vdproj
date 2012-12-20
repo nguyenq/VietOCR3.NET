@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8E8685CD3BFB419896B8FE419532FC08"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_92C7ED829F284F987F256A7CE31ABA07"
         "OwnerKey" = "8:_C6D8832B5FD6466EBA83AE85A104B8F4"
         "MsmSig" = "8:_UNDEFINED"
@@ -150,7 +156,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:VietOCR.NET-3.3.1a\\Setup.msi"
+        "OutputFilename" = "8:VietOCR.NET-3.4-Beta\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -249,7 +255,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:tesseract, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.1.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_50AD683AE94ABF3E3ED8D3FE2C134083"
@@ -358,6 +364,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8E8685CD3BFB419896B8FE419532FC08"
+            {
+            "SourcePath" = "8:..\\readme_cs_it.html"
+            "TargetName" = "8:readme_cs_it.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_92C7ED829F284F987F256A7CE31ABA07"
             {
             "AssemblyRegister" = "3:1"
@@ -436,11 +462,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.WIA, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_BE4EBD0AF304B72881218EC2A8D6819A"
-                    {
-                    "Name" = "8:Interop.WIA.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.WIA.dll"
             "TargetName" = "8:"
@@ -527,20 +548,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR.NET"
-        "ProductCode" = "8:{6B4AE4E8-E095-4E23-A7F8-C73307B0F3EA}"
-        "PackageCode" = "8:{592CF2D8-27F6-46ED-810D-7F76CA8B7C93}"
+        "ProductCode" = "8:{4D0A0EA1-DDEB-4456-AD83-E60D8985261C}"
+        "PackageCode" = "8:{F1A3BCFF-DB50-462C-B315-441666536812}"
         "UpgradeCode" = "8:{E53F3670-7B1D-405A-AC8A-2207B69BDDDB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.3.001"
+        "ProductVersion" = "8:3.4.000"
         "Manufacturer" = "8:VietUnicode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://sourceforge.net/projects/vietocr/support"
         "Title" = "8:Setup for VietOCR.NET"
-        "Subject" = "8:Installer for VietOCR.NET v3.3.1"
+        "Subject" = "8:Installer for VietOCR.NET v3.4"
         "ARPCONTACT" = "8:Quan Nguyen"
         "Keywords" = "8:Vietnamese OCR"
         "ARPCOMMENTS" = "8:http://vietocr.sf.net"
