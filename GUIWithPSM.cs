@@ -89,7 +89,10 @@ namespace VietOCR.NET
 
         void MenuPSMOnClick(object obj, EventArgs ea)
         {
-            psmItemChecked.Checked = false;
+            if (psmItemChecked != null)
+            {
+                psmItemChecked.Checked = false;
+            }
             psmItemChecked = (ToolStripMenuItem)obj;
             psmItemChecked.Checked = true;
             selectedPSM = psmItemChecked.Tag.ToString();
