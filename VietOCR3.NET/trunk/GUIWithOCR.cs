@@ -26,7 +26,7 @@ namespace VietOCR.NET
 {
     public partial class GUIWithOCR : VietOCR.NET.GUIWithImageOps
     {
-        protected string selectedPSM = "PSM_AUTO"; // 3 - Fully automatic page segmentation, but no OSD (default)
+        protected string selectedPSM = "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
 
         public GUIWithOCR()
         {

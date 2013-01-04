@@ -45,8 +45,16 @@ namespace VietOCR.NET
             using (TesseractEngine engine = new TesseractEngine(tessdata, lang, EngineMode.Default))
             {
                 engine.SetVariable("tessedit_create_hocr", Hocr ? "1" : "0");
-                PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
+                Tesseract.PageSegMode psm;
 
+                try
+                {
+                    psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
+                }
+                catch
+                {
+                    psm = Tesseract.PageSegMode.Auto;
+                }
                 StringBuilder strB = new StringBuilder();
 
                 foreach (Image image in images)
