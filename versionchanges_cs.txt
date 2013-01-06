@@ -28,8 +28,7 @@ Version 3.3.1 (28 November 2012)
 - Fit Image now retains image aspect ratio
 - Add Bulk OCR process
 
-Version 3.4 Beta3 (4 January 2013)
+Version 3.4 (6 January 2013)
 - Upgrade to Tesseract 3.02 .NET wrapper (r820)
 - Add hocr support for Bulk & Batch ops
 - Update links to dictionary files
-- Fix a 'PSM_AUTO' not found issue that prevents OCR operations
