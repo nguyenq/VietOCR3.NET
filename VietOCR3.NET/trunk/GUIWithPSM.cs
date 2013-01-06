@@ -101,7 +101,16 @@ namespace VietOCR.NET
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);
-            selectedPSM = (string)regkey.GetValue(strPSM, Enum.GetName(typeof(PageSegMode), PageSegMode.Auto));
+            selectedPSM = (string)regkey.GetValue(strPSM, Enum.GetName(typeof(PageSegMode), Tesseract.PageSegMode.Auto));
+            try
+            {
+                // validate PSM value
+                Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), selectedPSM);
+            }
+            catch 
+            {
+                selectedPSM = Enum.GetName(typeof(PageSegMode), Tesseract.PageSegMode.Auto);
+            }
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
