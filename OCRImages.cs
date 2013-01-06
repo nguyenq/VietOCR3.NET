@@ -37,7 +37,7 @@ namespace VietOCR.NET
         /// <param name="index"></param>
         /// <param name="lang"></param>
         /// <returns></returns>
-        //[System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override string RecognizeText(IList<Image> images, string lang)
         {
             string tessdata = Path.Combine(basedir, TESSDATA);
@@ -45,21 +45,13 @@ namespace VietOCR.NET
             using (TesseractEngine engine = new TesseractEngine(tessdata, lang, EngineMode.Default))
             {
                 engine.SetVariable("tessedit_create_hocr", Hocr ? "1" : "0");
-                Tesseract.PageSegMode psm;
-
-                try
-                {
-                    psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
-                }
-                catch
-                {
-                    psm = Tesseract.PageSegMode.Auto;
-                }
+                Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
+ 
                 StringBuilder strB = new StringBuilder();
 
                 foreach (Image image in images)
                 {
-                    using (IPix pix = ConvertBitmapToPix1(image))
+                    using (Pix pix = ConvertBitmapToPix1(image))
                     {
                         using (Page page = engine.Process(pix, psm))
                         {
@@ -80,50 +72,61 @@ namespace VietOCR.NET
         /// </summary>
         /// <param name="bmp"></param>
         /// <returns></returns>
-        private IPix ConvertBitmapToPix1(Image bmp)
+        private Pix ConvertBitmapToPix1(Image bmp)
         {
             string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".png";
             bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
-            IPix pix = Pix.LoadFromFile(fileName);
+            Pix pix = Pix.LoadFromFile(fileName);
             File.Delete(fileName);
 
             return pix;
         }
 
-        /// <summary>
-        /// Converts .NET Bitmap to Leptonica Pix.
-        /// Not completed yet!
-        /// </summary>
-        /// <param name="bmp"></param>
-        /// <returns></returns>
-        private IPix ConvertBitmapToPix(Bitmap bmp)
-        {
-            IntPtr pval = IntPtr.Zero;
-            BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, bmp.PixelFormat);
+        ///// <summary>
+        ///// This currently supports only a few image formats. Will address these in the next version.  1/6/2013
+        ///// </summary>
+        ///// <param name="image"></param>
+        ///// <returns></returns>
+        //private Pix ConvertBitmapToPix2(Image image)
+        //{
+        //    Pix pix = PixConverter.ToPix((Bitmap) image);
+        //    return pix;
+        //}
 
-            try
-            {
-                var depth = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
+        ///// <summary>
+        ///// Converts .NET Bitmap to Leptonica Pix.
+        ///// Not completed yet!
+        ///// </summary>
+        ///// <param name="bmp"></param>
+        ///// <returns></returns>
+        //private Pix ConvertBitmapToPix(Bitmap bmp)
+        //{
+        //    IntPtr pval = IntPtr.Zero;
+        //    BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, bmp.PixelFormat);
 
-                // Get the address of the first line.
-                IntPtr ptr = bd.Scan0;
+        //    try
+        //    {
+        //        var depth = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
 
-                // Declare an array to hold the bytes of the bitmap. 
-                int bytes = Math.Abs(bd.Stride) * bmp.Height;
-                byte[] rgbValues = new byte[bytes];
+        //        // Get the address of the first line.
+        //        IntPtr ptr = bd.Scan0;
 
-                // Copy the RGB values into the array.
-                System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
+        //        // Declare an array to hold the bytes of the bitmap. 
+        //        int bytes = Math.Abs(bd.Stride) * bmp.Height;
+        //        byte[] rgbValues = new byte[bytes];
 
-                IPix pix = Pix.Create(bmp.Width, bmp.Height, depth);
-                //    pix.data = rgbValues;
+        //        // Copy the RGB values into the array.
+        //        System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
 
-                return pix;
-            }
-            finally
-            {
-                bmp.UnlockBits(bd);
-            }
-        }
+        //        Pix pix = Pix.Create(bmp.Width, bmp.Height, depth);
+        //        //    pix.data = rgbValues;
+
+        //        return pix;
+        //    }
+        //    finally
+        //    {
+        //        bmp.UnlockBits(bd);
+        //    }
+        //}
     }
 }
