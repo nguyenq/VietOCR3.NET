@@ -104,7 +104,7 @@ namespace VietOCR.NET
                 if (this.statusForm.IsDisposed)
                 {
                     this.statusForm = new StatusForm();
-                    statusForm.Text = Properties.Resources.BatchProcessStatus;
+                    statusForm.Text = Properties.Resources.BulkProcessStatus;
                 }
                 if (!this.statusForm.Visible)
                 {
@@ -172,7 +172,7 @@ namespace VietOCR.NET
             if (this.statusForm.IsDisposed)
             {
                 this.statusForm = new StatusForm();
-                statusForm.Text = Properties.Resources.BatchProcessStatus;
+                statusForm.Text = Properties.Resources.BulkProcessStatus;
             }
             if (!this.statusForm.Visible)
             {

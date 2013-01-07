@@ -29,6 +29,6 @@ Version 3.3.1 (28 November 2012)
 - Add Bulk OCR process
 
 Version 3.4 (6 January 2013)
-- Upgrade to Tesseract 3.02 .NET wrapper (r820)
-- Add hocr support for Bulk & Batch ops
+- Upgrade to Tesseract 3.02 .NET wrapper (r820) (https://github.com/charlesw/tesseract)
+- Add hocr support for Bulk & Batch and command-line operations
 - Update links to dictionary files
