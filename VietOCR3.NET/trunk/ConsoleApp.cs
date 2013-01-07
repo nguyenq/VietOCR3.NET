@@ -17,7 +17,7 @@ namespace VietOCR.NET
 
         void PerformOCR(string[] args)
         {
-            if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length == 3 || args.Length == 5)
+            if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length >= 8)
             {
                 Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode] [hocr]");
                 return;
@@ -41,9 +41,9 @@ namespace VietOCR.NET
             }
 
             string curLangCode = "eng"; //default language
-            string psm = "3"; // or alternatively, "PSM_AUTO"; // 3 - Fully automatic page segmentation, but no OSD (default)
+            string psm = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
 
-            if (args.Length == 4)
+            if ((args.Length == 4 && !hocr) || (args.Length == 5 && hocr))
             {
                 if (args[2].Equals("-l"))
                 {
@@ -54,7 +54,7 @@ namespace VietOCR.NET
                     psm = args[3];
                 }
             }
-            else if (args.Length == 6)
+            else if ((args.Length == 6 && !hocr) || (args.Length == 7 && hocr))
             {
                 curLangCode = args[3];
                 psm = args[5];
