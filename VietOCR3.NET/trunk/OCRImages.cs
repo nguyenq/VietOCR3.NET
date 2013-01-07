@@ -48,14 +48,16 @@ namespace VietOCR.NET
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
  
                 StringBuilder strB = new StringBuilder();
+                int pageNum = 0;
 
                 foreach (Image image in images)
                 {
+                    pageNum++;
                     using (Pix pix = ConvertBitmapToPix1(image))
                     {
                         using (Page page = engine.Process(pix, psm))
                         {
-                            string text = page.GetText();
+                            string text = Hocr ? page.GetHOCRText(pageNum - 1) : page.GetText();
 
                             if (text == null) return String.Empty;
                             strB.Append(text);
