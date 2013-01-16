@@ -53,7 +53,7 @@ namespace VietOCR.NET
                 foreach (Image image in images)
                 {
                     pageNum++;
-                    using (Pix pix = ConvertBitmapToPix1(image))
+                    using (Pix pix = ConvertBitmapToPix(image))
                     {
                         using (Page page = engine.Process(pix, psm))
                         {
@@ -70,65 +70,46 @@ namespace VietOCR.NET
         }
 
         /// <summary>
-        /// Temporary solution. Will be removed after support is built in tesseract wrapper.
+        /// Not really efficient.
         /// </summary>
-        /// <param name="bmp"></param>
+        /// <param name="image"></param>
         /// <returns></returns>
-        private Pix ConvertBitmapToPix1(Image bmp)
+        private Pix ConvertBitmapToPix1(Image image)
         {
             string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".png";
-            bmp.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+            image.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
             Pix pix = Pix.LoadFromFile(fileName);
             File.Delete(fileName);
 
             return pix;
         }
 
-        ///// <summary>
-        ///// This currently supports only a few image formats. Will address these in the next version.  1/6/2013
-        ///// </summary>
-        ///// <param name="image"></param>
-        ///// <returns></returns>
-        //private Pix ConvertBitmapToPix2(Image image)
-        //{
-        //    Pix pix = PixConverter.ToPix((Bitmap) image);
-        //    return pix;
-        //}
+        /// <summary>
+        /// This currently supports only a few image formats. Will address these in the next version.  1/15/2013
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        private Pix ConvertBitmapToPix2(Image image)
+        {
+            return PixConverter.ToPix((Bitmap)image);
+        }
 
-        ///// <summary>
-        ///// Converts .NET Bitmap to Leptonica Pix.
-        ///// Not completed yet!
-        ///// </summary>
-        ///// <param name="bmp"></param>
-        ///// <returns></returns>
-        //private Pix ConvertBitmapToPix(Bitmap bmp)
-        //{
-        //    IntPtr pval = IntPtr.Zero;
-        //    BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, bmp.PixelFormat);
-
-        //    try
-        //    {
-        //        var depth = Bitmap.GetPixelFormatSize(bmp.PixelFormat);
-
-        //        // Get the address of the first line.
-        //        IntPtr ptr = bd.Scan0;
-
-        //        // Declare an array to hold the bytes of the bitmap. 
-        //        int bytes = Math.Abs(bd.Stride) * bmp.Height;
-        //        byte[] rgbValues = new byte[bytes];
-
-        //        // Copy the RGB values into the array.
-        //        System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
-
-        //        Pix pix = Pix.Create(bmp.Width, bmp.Height, depth);
-        //        //    pix.data = rgbValues;
-
-        //        return pix;
-        //    }
-        //    finally
-        //    {
-        //        bmp.UnlockBits(bd);
-        //    }
-        //}
+        /// <summary>
+        /// Converts .NET Bitmap to Leptonica Pix.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        private Pix ConvertBitmapToPix(Image image)
+        {
+            
+            try
+            {
+                return ConvertBitmapToPix2(image);
+            }
+            catch
+            {
+                return ConvertBitmapToPix1(image);
+            }
+        }
     }
 }

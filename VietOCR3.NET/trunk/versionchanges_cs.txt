@@ -32,3 +32,6 @@ Version 3.4 (6 January 2013)
 - Upgrade to Tesseract 3.02 .NET wrapper (r820) (https://github.com/charlesw/tesseract)
 - Add hocr support for Bulk & Batch and command-line operations
 - Update links to dictionary files
+
+Version 3.4.1 Beta (15 January 2013)
+- Update .NET wrapper and utilize new image conversion methods
