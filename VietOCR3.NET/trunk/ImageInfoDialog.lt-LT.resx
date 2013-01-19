@@ -218,7 +218,7 @@
     <value>122, 123</value>
   </data>
   <data name="labelBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 126</value>
+    <value>50, 126</value>
   </data>
   <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 13</value>
