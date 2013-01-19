@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.Text.RegularExpressions;
 
 namespace VietOCR.NET
 {
@@ -32,8 +34,21 @@ namespace VietOCR.NET
             this.textBoxYRes.Text = Math.Round(this.image.VerticalResolution).ToString();
             this.textBoxWidth.Text = this.image.Width.ToString();
             this.textBoxHeight.Text = this.image.Height.ToString();
+            this.textBoxBitDepth.Text = FormatPF(this.image.PixelFormat);
             this.comboBox3.SelectedIndex = 0;
             this.comboBox4.SelectedIndex = 0;
+        }
+
+        private string FormatPF(PixelFormat pf)
+        {
+            Match match = Regex.Match(pf.ToString(), @"Format(\d+)bpp");
+
+            if (match.Success)
+            {
+                return match.Groups[1].Value;
+            }
+
+            return string.Empty;
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

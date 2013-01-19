@@ -43,6 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBoxBitDepth = new System.Windows.Forms.TextBox();
+            this.labelBitDepth = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -137,12 +139,25 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
+            // textBoxBitDepth
+            // 
+            resources.ApplyResources(this.textBoxBitDepth, "textBoxBitDepth");
+            this.textBoxBitDepth.Name = "textBoxBitDepth";
+            this.textBoxBitDepth.ReadOnly = true;
+            // 
+            // labelBitDepth
+            // 
+            resources.ApplyResources(this.labelBitDepth, "labelBitDepth");
+            this.labelBitDepth.Name = "labelBitDepth";
+            // 
             // ImageInfoDialog
             // 
             this.AcceptButton = this.buttonOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
+            this.Controls.Add(this.textBoxBitDepth);
+            this.Controls.Add(this.labelBitDepth);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox4);
@@ -182,5 +197,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBoxBitDepth;
+        private System.Windows.Forms.Label labelBitDepth;
     }
 }
