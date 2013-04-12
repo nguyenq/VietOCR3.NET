@@ -70,31 +70,6 @@ namespace VietOCR.NET
         }
 
         /// <summary>
-        /// Not really efficient.
-        /// </summary>
-        /// <param name="image"></param>
-        /// <returns></returns>
-        private Pix ConvertBitmapToPix1(Image image)
-        {
-            string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".png";
-            image.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
-            Pix pix = Pix.LoadFromFile(fileName);
-            File.Delete(fileName);
-
-            return pix;
-        }
-
-        /// <summary>
-        /// This currently supports only a few image formats. Will address these in the next version.  1/15/2013
-        /// </summary>
-        /// <param name="image"></param>
-        /// <returns></returns>
-        private Pix ConvertBitmapToPix2(Image image)
-        {
-            return PixConverter.ToPix((Bitmap)image);
-        }
-
-        /// <summary>
         /// Converts .NET Bitmap to Leptonica Pix.
         /// </summary>
         /// <param name="image"></param>
@@ -104,12 +79,27 @@ namespace VietOCR.NET
             
             try
             {
-                return ConvertBitmapToPix2(image);
+                return PixConverter.ToPix((Bitmap)image);
             }
             catch
             {
-                return ConvertBitmapToPix1(image);
+                return ConvertBitmapToPixViaFile(image);
             }
+        }
+
+        /// <summary>
+        /// Writes .NET image to file and read it back as Pix image. Works in all cases but not efficient.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
+        private Pix ConvertBitmapToPixViaFile(Image image)
+        {
+            string fileName = System.IO.Path.GetTempPath() + Guid.NewGuid().ToString() + ".png";
+            image.Save(fileName, System.Drawing.Imaging.ImageFormat.Png);
+            Pix pix = Pix.LoadFromFile(fileName);
+            File.Delete(fileName);
+
+            return pix;
         }
     }
 }
