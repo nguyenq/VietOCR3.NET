@@ -82,6 +82,11 @@ namespace VietOCR.NET.Postprocessing
 
                 while ((str = sr.ReadLine()) != null)
                 {
+                    // skip empty line or line starts with #
+                    if (str.Trim().Length == 0 || str.Trim().StartsWith("#"))
+                    {
+                        continue;
+                    }
                     int index = str.IndexOf('=');
                     if (index <= 0)
                     {
