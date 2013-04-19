@@ -120,9 +120,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.sk-SK.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.tr-TR.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.vi-VN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
@@ -130,13 +135,28 @@
     <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.tr-TR.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.it-IT.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.tr-TR.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.it-IT.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.tr-TR.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.tr-TR.resx">
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -149,12 +169,27 @@
     <EmbeddedResource Include="ImageInfoDialog.it-IT.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.tr-TR.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it-IT.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.tr-TR.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.tr-TR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.tr-TR.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
@@ -462,6 +497,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.vi-VN.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
@@ -493,6 +529,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.vi-VN.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
@@ -502,6 +539,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.vi-VN.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
@@ -519,6 +557,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.sk-SK.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>

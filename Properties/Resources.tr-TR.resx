@@ -38,24 +38,24 @@
     
     The mimetype is used for serialized objects, and tells the 
     ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
+    extensible. For a given mimetype the value mTop be set accordingly:
     
     Note - application/x-microsoft.net.object.binary.base64 is the format 
     that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
     
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object mTop be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -289,7 +289,7 @@
     <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>Hiçbir &quot;{0}&quot; klasörüne yazma erişimi yok. �?� Lütfen programı yönetici olarak çalıştırın.</value>
+    <value>Hiçbir &quot;{0}&quot; klasörüne yazma erişimi yok. �?� Lütfen programı yönetici olarak çalıştırın.</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
     <value>Toplu işlem durumu</value>

@@ -38,24 +38,24 @@
     
     The mimetype is used for serialized objects, and tells the 
     ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
+    extensible. For a given mimetype the value mTop be set accordingly:
     
     Note - application/x-microsoft.net.object.binary.base64 is the format 
     that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
     
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object mTop be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="checkBoxHocr.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
@@ -135,23 +135,23 @@
     <value>hocr</value>
   </data>
   <data name="&gt;&gt;checkBoxHocr.Name" xml:space="preserve">
-    <value>HocrOnayKutusu</value>
+    <value>checkBoxHocr</value>
   </data>
   <data name="&gt;&gt;checkBoxHocr.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxHocr.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;checkBoxHocr.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="checkBoxWatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="checkBoxWatch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 74</value>
@@ -172,16 +172,16 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxWatch.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;checkBoxWatch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="labelOutput.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <data name="labelOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 42</value>
@@ -202,16 +202,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelOutput.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;labelOutput.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="labelWatch.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <data name="labelWatch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="labelWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
@@ -226,19 +226,19 @@
     <value>İzleme Klasörü:</value>
   </data>
   <data name="&gt;&gt;labelWatch.Name" xml:space="preserve">
-    <value>etiketizle</value>
+    <value>labelWatch</value>
   </data>
   <data name="&gt;&gt;labelWatch.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelWatch.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;labelWatch.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 37</value>
@@ -253,19 +253,19 @@
     <value>...</value>
   </data>
   <data name="&gt;&gt;btnOutput.Name" xml:space="preserve">
-    <value>btnçıktı</value>
+    <value>btnOutput</value>
   </data>
   <data name="&gt;&gt;btnOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnOutput.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnOutput.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="btnWatch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 11</value>
@@ -280,13 +280,13 @@
     <value>...</value>
   </data>
   <data name="&gt;&gt;btnWatch.Name" xml:space="preserve">
-    <value>btnizle</value>
+    <value>btnWatch</value>
   </data>
   <data name="&gt;&gt;btnWatch.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnWatch.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnWatch.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -301,13 +301,13 @@
     <value>9</value>
   </data>
   <data name="&gt;&gt;textBoxOutput.Name" xml:space="preserve">
-    <value>MetinKutusuÇıktı</value>
+    <value>textBoxOutput</value>
   </data>
   <data name="&gt;&gt;textBoxOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxOutput.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;textBoxOutput.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -322,13 +322,13 @@
     <value>8</value>
   </data>
   <data name="&gt;&gt;textBoxWatch.Name" xml:space="preserve">
-    <value>MetinKutusuİzle</value>
+    <value>textBoxWatch</value>
   </data>
   <data name="&gt;&gt;textBoxWatch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxWatch.Parent" xml:space="preserve">
-    <value>SayfaSekmesi1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;textBoxWatch.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -349,22 +349,22 @@
     <value>İzle</value>
   </data>
   <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>SekmeKontrolu1</value>
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>SekmeKontrolu1</value>
+    <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="checkBoxDangAmbigs.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <data name="checkBoxDangAmbigs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="checkBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 51</value>
@@ -385,16 +385,16 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxDangAmbigs.Parent" xml:space="preserve">
-    <value>SayfaSekmesi2</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;checkBoxDangAmbigs.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="labelPath.AutoSize" type="System.Boolean, mscorlib">
-    <value>Doğru</value>
+    <value>True</value>
   </data>
   <data name="labelPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 18</value>
@@ -409,19 +409,19 @@
     <value>Yol:</value>
   </data>
   <data name="&gt;&gt;labelPath.Name" xml:space="preserve">
-    <value>Etiketyolu</value>
+    <value>labelPath</value>
   </data>
   <data name="&gt;&gt;labelPath.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelPath.Parent" xml:space="preserve">
-    <value>SayfaSekmesi2</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;labelPath.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnDangAmbigs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 13</value>
@@ -442,7 +442,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnDangAmbigs.Parent" xml:space="preserve">
-    <value>SayfaSekmesi2</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;btnDangAmbigs.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -463,7 +463,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxDangAmbigs.Parent" xml:space="preserve">
-    <value>SayfaSekmesi2</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;textBoxDangAmbigs.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -484,19 +484,19 @@
     <value>DangAmbigs.txt</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>SayfaSekmesi2</value>
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>SekmeKontrolu1</value>
+    <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Ust</value>
+    <value>Top</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -508,13 +508,13 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>SekmeKontrolu1</value>
+    <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -532,13 +532,13 @@
     <value>Tamam</value>
   </data>
   <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
-    <value>TamamButonu</value>
+    <value>buttonOK</value>
   </data>
   <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -556,13 +556,13 @@
     <value>İptal</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
-    <value>İptalDüğmesi</value>
+    <value>buttonCancel</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -589,19 +589,19 @@
     <value>312, 168</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>MerkeziÜst</value>
+    <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Seçenekler</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>DosyaAcDialog1</value>
+    <value>openFileDialog1</value>
   </data>
   <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
-    <value>KlasörTarayıcıDialog1</value>
+    <value>folderBrowserDialog1</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -613,7 +613,7 @@
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>DiyalogAyarlari</value>
+    <value>OptionsDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
