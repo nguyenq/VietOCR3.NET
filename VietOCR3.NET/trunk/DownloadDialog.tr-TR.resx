@@ -38,24 +38,24 @@
     
     The mimetype is used for serialized objects, and tells the 
     ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
+    extensible. For a given mimetype the value mTop be set accordingly:
     
     Note - application/x-microsoft.net.object.binary.base64 is the format 
     that the ResXResourceWriter will generate, however the reader can 
     read any of the formats listed below.
     
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object mTop be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object mTop be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -119,11 +119,11 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="buttonDownload.Enabled" type="System.Boolean, mscorlib">
-    <value>Yanlış</value>
+    <value>False</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="buttonDownload.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="buttonDownload.Location" type="System.Drawing.Point, System.Drawing">
@@ -139,19 +139,19 @@
     <value>İndir</value>
   </data>
   <data name="&gt;&gt;buttonDownload.Name" xml:space="preserve">
-    <value>İndirDüğmesi</value>
+    <value>buttonDownload</value>
   </data>
   <data name="&gt;&gt;buttonDownload.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonDownload.Parent" xml:space="preserve">
-    <value>$u</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonDownload.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="buttonClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 109</value>
@@ -166,13 +166,13 @@
     <value>Kapat</value>
   </data>
   <data name="&gt;&gt;buttonClose.Name" xml:space="preserve">
-    <value>kapatdüğmesi</value>
+    <value>buttonClose</value>
   </data>
   <data name="&gt;&gt;buttonClose.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonClose.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonClose.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -187,7 +187,7 @@
     <value>100, 16</value>
   </data>
   <data name="toolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
-    <value>Yanlış</value>
+    <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 158</value>
@@ -202,22 +202,22 @@
     <value>durumŞeridi1</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>durumŞeridi1</value>
+    <value>statusStrip1</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="buttonCancel.Enabled" type="System.Boolean, mscorlib">
-    <value>Yanlış</value>
+    <value>False</value>
   </data>
   <data name="buttonCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>HayırKontrolü</value>
+    <value>NoControl</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 54</value>
@@ -232,13 +232,13 @@
     <value>İptal</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
-    <value>İptalDüğmesi</value>
+    <value>buttonCancel</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -277,13 +277,13 @@
     <value>Mevcut Diller</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>grupKutu1</value>
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$bu</value>
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -298,19 +298,19 @@
     <value>263, 180</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>MerkeziÜst</value>
+    <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Dil Verilerini İndirin</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
-    <value>ŞeritDurumuaracıEtiket1</value>
+    <value>toolStripStatusLabel1</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
-    <value>araçŞeridiİlerlemeÇubuğu1</value>
+    <value>toolStripProgressBar1</value>
   </data>
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
