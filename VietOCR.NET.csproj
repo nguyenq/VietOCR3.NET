@@ -156,6 +156,9 @@
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI.sk-SK.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI.tr-TR.resx">
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -233,6 +236,7 @@
     <Content Include="Data\slk.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="readme_cs_tr.html" />
     <Content Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -434,9 +438,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.sk-SK.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI.sk-SK.resx">
-      <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIWithImageOps.resx">
       <DependentUpon>GUIWithImageOps.cs</DependentUpon>
