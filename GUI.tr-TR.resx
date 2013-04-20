@@ -599,17 +599,17 @@
   <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="contextMenToprip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <data name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>771, 17</value>
   </data>
-  <data name="contextMenToprip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 148</value>
   </data>
-  <data name="&gt;&gt;contextMenToprip1.Name" xml:space="preserve">
-    <value>contextMenToprip1</value>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
   </data>
-  <data name="&gt;&gt;contextMenToprip1.Type" xml:space="preserve">
-    <value>VietOCR.NET.Controls.TextBoxContextMenToprip, VietOCR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>VietOCR.NET.Controls.TextBoxContextMenuStrip, VietOCR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -677,7 +677,7 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="menToprip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <data name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="openToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -738,7 +738,7 @@
     <value>37, 20</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dosya</value>
+    <value>&amp;Dosya</value>
   </data>
   <data name="oCRToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+D</value>
@@ -780,7 +780,7 @@
     <value>76, 20</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>Komut</value>
+    <value>&amp;Komut</value>
   </data>
   <data name="metadataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -810,7 +810,7 @@
     <value>52, 20</value>
   </data>
   <data name="imageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Resim</value>
+    <value>&amp;Resim</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -825,7 +825,7 @@
     <value>220, 22</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
-    <value>Font...</value>
+    <value>&amp;Font...</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 6</value>
@@ -849,7 +849,7 @@
     <value>57, 20</value>
   </data>
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
-    <value>Biçim</value>
+    <value>&amp;Biçim</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
@@ -897,37 +897,37 @@
     <value>61, 20</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ayarlar</value>
+    <value>&amp;Ayarlar</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>TIFF Birleştirme</value>
+    <value>&amp;TIFF Birleştirme</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>PDF Birleştirme</value>
+    <value>&amp;PDF Birleştirme</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>PDF Bölme</value>
+    <value>PDF &amp;Bölme</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Araçlar</value>
+    <value>Araç&amp;lar</value>
   </data>
   <data name="helpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
   </data>
   <data name="helpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>VietOCR.NET Yardım</value>
+    <value>VietOCR.NET &amp;Yardım</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 6</value>
@@ -936,36 +936,36 @@
     <value>179, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>VietOCR.NET Hakkında</value>
+    <value>VietOCR.NET &amp;Hakkında</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Yardım</value>
+    <value>&amp;Yardım</value>
   </data>
-  <data name="menToprip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="menToprip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>792, 24</value>
   </data>
-  <data name="menToprip1.TabIndex" type="System.Int32, mscorlib">
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="menToprip1.Text" xml:space="preserve">
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>Menuseridi1</value>
   </data>
-  <data name="&gt;&gt;menToprip1.Name" xml:space="preserve">
-    <value>Menuseridi1</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menToprip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenToprip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menToprip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;menToprip1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
