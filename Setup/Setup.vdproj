@@ -69,6 +69,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9AF9728CD73D4B7EA2B56B44ECC71DBD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A70D6F584D0B430D1307EB4DB17F2F51"
         "OwnerKey" = "8:_BE4EBD0AF304B72881218EC2A8D6819A"
         "MsmSig" = "8:_UNDEFINED"
@@ -94,19 +100,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BE4EBD0AF304B72881218EC2A8D6819A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_92C7ED829F284F987F256A7CE31ABA07"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_50AD683AE94ABF3E3ED8D3FE2C134083"
+        "OwnerKey" = "8:_8A6BAE44B425E23D0D01677435D9284C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,7 +112,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8A6BAE44B425E23D0D01677435D9284C"
+        "OwnerKey" = "8:_50AD683AE94ABF3E3ED8D3FE2C134083"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_92C7ED829F284F987F256A7CE31ABA07"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BE4EBD0AF304B72881218EC2A8D6819A"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -399,6 +405,26 @@
             {
             "SourcePath" = "8:..\\readme_cs_lt.html"
             "TargetName" = "8:readme_cs_lt.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AF9728CD73D4B7EA2B56B44ECC71DBD"
+            {
+            "SourcePath" = "8:..\\readme_cs_tr.html"
+            "TargetName" = "8:readme_cs_tr.html"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
             "Condition" = "8:"
