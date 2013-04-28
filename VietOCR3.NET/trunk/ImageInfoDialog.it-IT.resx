@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-<xsd:schema id="root" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -46,94 +105,95 @@
       </xsd:complexType>
     </xsd:element>
   </xsd:schema>
-<resheader name="resmimetype">
+  <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
-<resheader name="version">
+  <resheader name="version">
     <value>2.0</value>
   </resheader>
-<resheader name="reader">
+  <resheader name="reader">
     <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<resheader name="writer">
+  <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+  <assembly alias="System.Drawing" name="System.Drawing" />
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 157</value>
   </data>
-<data name="labelXRes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="labelXRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 13</value>
   </data>
-<data name="labelXRes.Text" xml:space="preserve">
+  <data name="labelXRes.Text" xml:space="preserve">
     <value>Risoluzione-X</value>
   </data>
-<data name="textBoxXRes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBoxXRes.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 71</value>
   </data>
-<data name="textBoxYRes.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBoxYRes.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 97</value>
   </data>
-<data name="labelYRes.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="labelYRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 13</value>
   </data>
-<data name="labelYRes.Text" xml:space="preserve">
+  <data name="labelYRes.Text" xml:space="preserve">
     <value>Risoluzione-Y</value>
   </data>
-<data name="textBoxWidth.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBoxWidth.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 19</value>
   </data>
-<data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
   </data>
-<data name="labelWidth.Text" xml:space="preserve">
+  <data name="labelWidth.Text" xml:space="preserve">
     <value>Larghezza</value>
   </data>
-<data name="textBoxHeight.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBoxHeight.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 45</value>
   </data>
-<data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
   </data>
-<data name="labelHeight.Text" xml:space="preserve">
+  <data name="labelHeight.Text" xml:space="preserve">
     <value>Altezza</value>
   </data>
-<data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>127, 157</value>
   </data>
-<data name="buttonCancel.Text" xml:space="preserve">
+  <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
-<data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 74</value>
   </data>
-<data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 100</value>
   </data>
   <data name="comboBox4.Items1" xml:space="preserve">
     <value>pollici</value>
   </data>
-<data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>152, 44</value>
   </data>
   <data name="comboBox3.Items1" xml:space="preserve">
     <value>pollici</value>
   </data>
-<data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>152, 19</value>
   </data>
-<data name="textBoxBitDepth.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBoxBitDepth.Location" type="System.Drawing.Point, System.Drawing">
     <value>101, 123</value>
   </data>
-<data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
   </data>
-<data name="labelBitDepth.Text" xml:space="preserve">
+  <data name="labelBitDepth.Text" xml:space="preserve">
     <value>Profondità bit</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>249, 197</value>
   </data>
-<data name="$this.Text" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
     <value>Proprietà Immagine</value>
   </data>
 </root>
