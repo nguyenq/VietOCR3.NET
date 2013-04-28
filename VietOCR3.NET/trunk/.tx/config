@@ -4,43 +4,43 @@ lang_map = lt: lt-LT, it: it-IT, sk: sk-SK, tr: tr-TR, vi: vi-VN
 
 [vietocr.BulkDialog_resx]
 file_filter = BulkDialog.<lang>.resx
-source_file = BulkDialog.resx
+source_file = .tx/BulkDialog.resx
 source_lang = en
 type = RESX
 
 [vietocr.ChangeCaseDialog_resx]
 file_filter = ChangeCaseDialog.<lang>.resx
-source_file = ChangeCaseDialog.resx
+source_file = .tx/ChangeCaseDialog.resx
 source_lang = en
 type = RESX
 
 [vietocr.TextBoxContextMenuStrip_resx]
 file_filter = Controls/TextBoxContextMenuStrip.<lang>.resx
-source_file = Controls/TextBoxContextMenuStrip.resx
+source_file = .tx/Controls/TextBoxContextMenuStrip.resx
 source_lang = en
 type = RESX
 
 [vietocr.DownloadDialog_resx]
 file_filter = DownloadDialog.<lang>.resx
-source_file = DownloadDialog.resx
+source_file = .tx/DownloadDialog.resx
 source_lang = en
 type = RESX
 
 [vietocr.GUI_resx]
 file_filter = GUI.<lang>.resx
-source_file = GUI.resx
+source_file = .tx/GUI.resx
 source_lang = en
 type = RESX
 
 [vietocr.ImageInfoDialog_resx]
 file_filter = ImageInfoDialog.<lang>.resx
-source_file = ImageInfoDialog.resx
+source_file = .tx/ImageInfoDialog.resx
 source_lang = en
 type = RESX
 
 [vietocr.OptionsDialog_resx]
 file_filter = OptionsDialog.<lang>.resx
-source_file = OptionsDialog.resx
+source_file = .tx/OptionsDialog.resx
 source_lang = en
 type = RESX
 
@@ -52,7 +52,7 @@ type = RESX
 
 [vietocr.SplitPdfDialog_resx]
 file_filter = SplitPdfDialog.<lang>.resx
-source_file = SplitPdfDialog.resx
+source_file = .tx/SplitPdfDialog.resx
 source_lang = en
 type = RESX
 
