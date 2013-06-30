@@ -112,6 +112,9 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BulkDialog.ca-ES.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.it-IT.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +135,9 @@
     <EmbeddedResource Include="BulkDialog.vi-VN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ca-ES.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,11 +145,17 @@
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ca-ES.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.it-IT.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.tr-TR.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ca-ES.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.it-IT.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
@@ -151,6 +163,9 @@
     <EmbeddedResource Include="DownloadDialog.tr-TR.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ca-ES.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -170,12 +185,18 @@
     <EmbeddedResource Include="GUIWithBulkOCR.resx">
       <DependentUpon>GUIWithBulkOCR.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ca-ES.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.it-IT.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.tr-TR.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ca-ES.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it-IT.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
@@ -184,9 +205,13 @@
       <DependentUpon>OptionsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
     <EmbeddedResource Include="Properties\Resources.tr-TR.resx">
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ca-ES.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
@@ -238,6 +263,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="readme_cs_tr.html" />
+    <EmbeddedResource Include="readme_cs_ca.html" />
     <Content Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
