@@ -257,25 +257,25 @@
     <value>195, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Aç...</value>
+    <value>&amp;Aç...</value>
   </data>
   <data name="scanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="scanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tara...</value>
+    <value>&amp;Tara...</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kaydet</value>
+    <value>&amp;Kaydet</value>
   </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Farklı Kaydet</value>
+    <value>&amp;Farklı Kaydet</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -284,7 +284,7 @@
     <value>195, 22</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Son Dosyalar</value>
+    <value>&amp;Son Dosyalar</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -293,7 +293,7 @@
     <value>195, 22</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Çıkış</value>
+    <value>Ç&amp;ıkış</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -305,13 +305,13 @@
     <value>183, 22</value>
   </data>
   <data name="oCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR</value>
+    <value>&amp;OCR</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR &amp;Tüm Sayfalar</value>
+    <value>OCR Tüm &amp;Sayfalar</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
@@ -320,7 +320,7 @@
     <value>183, 22</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>Toplu OCR...</value>
+    <value>&amp;Toplu OCR...</value>
   </data>
   <data name="toolStripMenuItem11.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
@@ -329,7 +329,7 @@
     <value>183, 22</value>
   </data>
   <data name="postprocessToolStripMenuItem.Text" xml:space="preserve">
-    <value>İşlem-sonrası</value>
+    <value>İşle&amp;m-sonrası</value>
   </data>
   <data name="commandToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 20</value>
@@ -341,7 +341,7 @@
     <value>166, 22</value>
   </data>
   <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Özellikler...</value>
+    <value>Ö&amp;zellikler...</value>
   </data>
   <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
@@ -350,7 +350,7 @@
     <value>166, 22</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Eğimli</value>
+    <value>&amp;Eğimli</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
@@ -359,7 +359,7 @@
     <value>166, 22</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ekran Modu</value>
+    <value>Ekran &amp;Modu</value>
   </data>
   <data name="imageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -371,7 +371,7 @@
     <value>220, 22</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sözcük Kaydırma</value>
+    <value>&amp;Sözcük Kaydırma</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -386,13 +386,13 @@
     <value>220, 22</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Durumu Değiştir...</value>
+    <value>&amp;Durumu Değiştir...</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
-    <value>Satır Sonlarını Kaldır</value>
+    <value>Satır Sonlarını &amp;Kaldır</value>
   </data>
   <data name="formatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
@@ -404,7 +404,7 @@
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Viet Girdi ve Yöntemi</value>
+    <value>Viet Girdi ve &amp;Yöntemi</value>
   </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -413,7 +413,7 @@
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Kullanıcı Arabirimi Dili</value>
+    <value>&amp;Kullanıcı Arabirimi Dili</value>
   </data>
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -422,7 +422,7 @@
     <value>219, 22</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dil Verisini İndir...</value>
+    <value>&amp;Dil Verisini İndir...</value>
   </data>
   <data name="toolStripMenuItem10.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -431,7 +431,7 @@
     <value>219, 22</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sayfa &amp;Segmentasyon Modu</value>
+    <value>Sayfa Segmentasyon &amp;Modu</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -440,7 +440,7 @@
     <value>219, 22</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Seçenekler...</value>
+    <value>&amp;Seçenekler...</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
