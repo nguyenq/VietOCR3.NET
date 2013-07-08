@@ -143,6 +143,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.cs-CZ.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
@@ -168,6 +169,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.cs-CZ.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.it-IT.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
@@ -181,6 +183,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.cs-CZ.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -205,6 +208,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.cs-CZ.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.it-IT.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
@@ -218,6 +222,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.cs-CZ.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it-IT.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
@@ -234,6 +239,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ca-ES.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.cs-CZ.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
