@@ -115,6 +115,9 @@
     <EmbeddedResource Include="BulkDialog.ca-ES.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.cs-CZ.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.it-IT.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +141,9 @@
     <EmbeddedResource Include="ChangeCaseDialog.ca-ES.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.cs-CZ.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ca-ES.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.cs-CZ.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.it-IT.resx">
@@ -157,6 +166,9 @@
     <EmbeddedResource Include="DownloadDialog.ca-ES.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.cs-CZ.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.it-IT.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +177,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.ca-ES.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.cs-CZ.resx">
       <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
@@ -188,6 +203,9 @@
     <EmbeddedResource Include="ImageInfoDialog.ca-ES.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.cs-CZ.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.it-IT.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +216,9 @@
     <EmbeddedResource Include="OptionsDialog.ca-ES.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.cs-CZ.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it-IT.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +227,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs-CZ.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
     <EmbeddedResource Include="Properties\Resources.tr-TR.resx">
       <SubType>Designer</SubType>
@@ -264,6 +286,7 @@
     </Content>
     <EmbeddedResource Include="readme_cs_tr.html" />
     <EmbeddedResource Include="readme_cs_ca.html" />
+    <EmbeddedResource Include="readme_cs_cs.html" />
     <Content Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

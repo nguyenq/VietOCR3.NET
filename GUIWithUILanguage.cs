@@ -40,7 +40,7 @@ namespace VietOCR.NET
 
             List<ToolStripRadioButtonMenuItem> ar = new List<ToolStripRadioButtonMenuItem>();
 
-            String[] uiLangs = { "ca-ES", "en-US", "it-IT", "lt-LT", "sk-SK", "tr-TR", "vi-VN" };
+            String[] uiLangs = { "ca-ES", "cs-CZ", "en-US", "it-IT", "lt-LT", "sk-SK", "tr-TR", "vi-VN" };
             foreach (string uiLang in uiLangs)
             {
                 ToolStripRadioButtonMenuItem miuil = new ToolStripRadioButtonMenuItem();

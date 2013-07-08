@@ -1,6 +1,6 @@
 [main]
 host = https://www.transifex.com
-lang_map = ca: ca-ES, it: it-IT, lt: lt-LT, sk: sk-SK, tr: tr-TR, vi: vi-VN
+lang_map = bn: bn-IN, ca: ca-ES, cs: cs-CZ, fa: fa-IR, it: it-IT, lt: lt-LT, sk: sk-SK, tr: tr-TR, vi: vi-VN
 
 [vietocr.BulkDialog_resx]
 file_filter = BulkDialog.<lang>.resx
@@ -61,4 +61,4 @@ file_filter = readme_cs_<lang>.html
 source_file = readme_cs.html
 source_lang = en
 type = HTML
-lang_map = ca: ca, it: it, lt: lt, sk: sk, tr: tr, vi: vi
+lang_map = bn: bn, ca: ca, cs: cs, fa: fa, it: it, lt: lt, sk: sk, tr: tr, vi: vi
