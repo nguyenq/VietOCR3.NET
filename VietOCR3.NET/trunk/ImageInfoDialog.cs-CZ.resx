@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,129 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing"/>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 100</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 155</value>
   </data>
   <data name="labelXRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Bitová hloubka</value>
-  </data>
-  <data name="textBoxHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="comboBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
-  </data>
-  <data name="labelWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 22</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Zrušit</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Vlastnosti obrázku</value>
-  </data>
-  <data name="labelYRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 100</value>
-  </data>
-  <data name="textBoxXRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 71</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="labelBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value></value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="labelXRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 74</value>
-  </data>
-  <data name="labelHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 48</value>
-  </data>
-  <data name="textBoxHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 45</value>
-  </data>
-  <data name="labelYRes.Text" xml:space="preserve">
-    <value>Rozlišení Y</value>
-  </data>
-  <data name="textBoxYRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 97</value>
-  </data>
-  <data name="textBoxYRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="textBoxBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 123</value>
-  </data>
-  <data name="textBoxXRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 155</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 74</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Výška</value>
-  </data>
-  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 19</value>
-  </data>
-  <data name="labelYRes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
+    <value>61, 13</value>
   </data>
   <data name="labelXRes.Text" xml:space="preserve">
     <value>Rozlišení X</value>
   </data>
-  <data name="textBoxWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+  <data name="textBoxXRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 71</value>
   </data>
-  <data name="textBoxBitDepth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+  <data name="textBoxYRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 97</value>
   </data>
-  <data name="comboBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 21</value>
+  <data name="labelYRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
   </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Šířka</value>
+  <data name="labelYRes.Text" xml:space="preserve">
+    <value>Rozlišení Y</value>
   </data>
   <data name="textBoxWidth.Location" type="System.Drawing.Point, System.Drawing">
     <value>99, 19</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="labelWidth.Text" xml:space="preserve">
+    <value>Šířka</value>
+  </data>
+  <data name="textBoxHeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 45</value>
+  </data>
+  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="labelHeight.Text" xml:space="preserve">
+    <value>Výška</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 155</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 74</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 100</value>
+  </data>
+  <data name="comboBox4.Items" xml:space="preserve">
+    <value>pixelů</value>
+  </data>
+  <data name="comboBox4.Items1" xml:space="preserve">
+    <value>palců</value>
   </data>
   <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 44</value>
@@ -250,16 +184,22 @@
   <data name="comboBox3.Items1" xml:space="preserve">
     <value>palců</value>
   </data>
-  <data name="comboBox3.Items2" xml:space="preserve">
-    <value>cm</value>
+  <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 19</value>
   </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>pixelů</value>
+  <data name="textBoxBitDepth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 123</value>
   </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>palců</value>
+  <data name="labelBitDepth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 126</value>
   </data>
-  <data name="comboBox4.Items2" xml:space="preserve">
-    <value>cm</value>
+  <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="labelBitDepth.Text" xml:space="preserve">
+    <value>Bitová hloubka</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Vlastnosti obrázku</value>
   </data>
 </root>
