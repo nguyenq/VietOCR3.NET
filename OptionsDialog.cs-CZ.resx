@@ -140,7 +140,7 @@
     <value>58, 17</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>Povolit</value>
+    <value>Povoliť</value>
   </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 13</value>
