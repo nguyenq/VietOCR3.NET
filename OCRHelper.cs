@@ -33,6 +33,12 @@ namespace VietOCR.NET
                     result = TextUtilities.CorrectLetterCases(result);
                 }
 
+                DirectoryInfo dir = Directory.GetParent(outputFile);
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
+
                 using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
                 {
                     sw.Write(result);

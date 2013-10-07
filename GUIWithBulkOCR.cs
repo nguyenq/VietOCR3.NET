@@ -131,7 +131,7 @@ namespace VietOCR.NET
             List<string> files = new List<string>();
             foreach (string filter in imageFilters.Split('|'))
             {
-                files.AddRange(Directory.GetFiles(inputFolder, filter));
+                files.AddRange(Directory.GetFiles(inputFolder, filter, SearchOption.AllDirectories));
             }
 
             for (int i = 0; i < files.Count; i++)
@@ -151,7 +151,8 @@ namespace VietOCR.NET
         {
             try
             {
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + (hocr ? ".html" : ".txt")), curLangCode, selectedPSM, hocr);
+                string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename + (hocr ? ".html" : ".txt")), curLangCode, selectedPSM, hocr);
             }
             catch
             {
