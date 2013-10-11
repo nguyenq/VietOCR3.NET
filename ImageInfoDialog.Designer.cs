@@ -38,7 +38,6 @@
             this.labelWidth = new System.Windows.Forms.Label();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
             this.labelHeight = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -49,8 +48,8 @@
             // 
             // buttonOK
             // 
-            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            resources.ApplyResources(this.buttonOK, "buttonOK");
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.UseVisualStyleBackColor = true;
             // 
@@ -98,13 +97,6 @@
             resources.ApplyResources(this.labelHeight, "labelHeight");
             this.labelHeight.Name = "labelHeight";
             // 
-            // buttonCancel
-            // 
-            resources.ApplyResources(this.buttonCancel, "buttonCancel");
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -117,25 +109,25 @@
             // 
             // comboBox4
             // 
-            resources.ApplyResources(this.comboBox4, "comboBox4");
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             resources.GetString("comboBox4.Items"),
             resources.GetString("comboBox4.Items1"),
             resources.GetString("comboBox4.Items2")});
+            resources.ApplyResources(this.comboBox4, "comboBox4");
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
-            resources.ApplyResources(this.comboBox3, "comboBox3");
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             resources.GetString("comboBox3.Items"),
             resources.GetString("comboBox3.Items1"),
             resources.GetString("comboBox3.Items2")});
+            resources.ApplyResources(this.comboBox3, "comboBox3");
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -155,14 +147,12 @@
             this.AcceptButton = this.buttonOK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.buttonCancel;
             this.Controls.Add(this.textBoxBitDepth);
             this.Controls.Add(this.labelBitDepth);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.textBoxHeight);
             this.Controls.Add(this.labelHeight);
             this.Controls.Add(this.textBoxWidth);
@@ -192,7 +182,6 @@
         private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.TextBox textBoxHeight;
         private System.Windows.Forms.Label labelHeight;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox4;

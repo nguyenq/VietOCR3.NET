@@ -69,7 +69,16 @@ namespace VietOCR.NET
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metadataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brightenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monochromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invertedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deskewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autocropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.screenshotModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -402,7 +411,9 @@ namespace VietOCR.NET
             this.imageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.metadataToolStripMenuItem,
             this.toolStripMenuItem6,
+            this.filterToolStripMenuItem,
             this.deskewToolStripMenuItem,
+            this.autocropToolStripMenuItem,
             this.toolStripMenuItem8,
             this.screenshotModeToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
@@ -419,11 +430,67 @@ namespace VietOCR.NET
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
             // 
+            // filterToolStripMenuItem
+            // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.brightenToolStripMenuItem,
+            this.contrastToolStripMenuItem,
+            this.grayscaleToolStripMenuItem,
+            this.monochromeToolStripMenuItem,
+            this.invertedToolStripMenuItem,
+            this.sharpenToolStripMenuItem,
+            this.smoothToolStripMenuItem});
+            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            resources.ApplyResources(this.filterToolStripMenuItem, "filterToolStripMenuItem");
+            // 
+            // brightenToolStripMenuItem
+            // 
+            this.brightenToolStripMenuItem.Name = "brightenToolStripMenuItem";
+            resources.ApplyResources(this.brightenToolStripMenuItem, "brightenToolStripMenuItem");
+            this.brightenToolStripMenuItem.Click += new System.EventHandler(this.brightenToolStripMenuItem_Click);
+            // 
+            // contrastToolStripMenuItem
+            // 
+            this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
+            resources.ApplyResources(this.contrastToolStripMenuItem, "contrastToolStripMenuItem");
+            this.contrastToolStripMenuItem.Click += new System.EventHandler(this.contrastToolStripMenuItem_Click);
+            // 
+            // grayscaleToolStripMenuItem
+            // 
+            this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
+            resources.ApplyResources(this.grayscaleToolStripMenuItem, "grayscaleToolStripMenuItem");
+            // 
+            // monochromeToolStripMenuItem
+            // 
+            this.monochromeToolStripMenuItem.Name = "monochromeToolStripMenuItem";
+            resources.ApplyResources(this.monochromeToolStripMenuItem, "monochromeToolStripMenuItem");
+            // 
+            // invertedToolStripMenuItem
+            // 
+            this.invertedToolStripMenuItem.Name = "invertedToolStripMenuItem";
+            resources.ApplyResources(this.invertedToolStripMenuItem, "invertedToolStripMenuItem");
+            // 
+            // sharpenToolStripMenuItem
+            // 
+            this.sharpenToolStripMenuItem.Name = "sharpenToolStripMenuItem";
+            resources.ApplyResources(this.sharpenToolStripMenuItem, "sharpenToolStripMenuItem");
+            // 
+            // smoothToolStripMenuItem
+            // 
+            this.smoothToolStripMenuItem.Name = "smoothToolStripMenuItem";
+            resources.ApplyResources(this.smoothToolStripMenuItem, "smoothToolStripMenuItem");
+            // 
             // deskewToolStripMenuItem
             // 
             this.deskewToolStripMenuItem.Name = "deskewToolStripMenuItem";
             resources.ApplyResources(this.deskewToolStripMenuItem, "deskewToolStripMenuItem");
             this.deskewToolStripMenuItem.Click += new System.EventHandler(this.deskewToolStripMenuItem_Click);
+            // 
+            // autocropToolStripMenuItem
+            // 
+            this.autocropToolStripMenuItem.Name = "autocropToolStripMenuItem";
+            resources.ApplyResources(this.autocropToolStripMenuItem, "autocropToolStripMenuItem");
+            this.autocropToolStripMenuItem.Click += new System.EventHandler(this.autocropToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
@@ -821,5 +888,14 @@ namespace VietOCR.NET
         protected System.Windows.Forms.ToolStripMenuItem psmToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem11;
         protected System.Windows.Forms.ToolStripMenuItem bulkOCRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem brightenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contrastToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monochromeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invertedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smoothToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autocropToolStripMenuItem;
     }
 }

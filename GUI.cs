@@ -1128,5 +1128,20 @@ namespace VietOCR.NET
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
+
+        protected virtual void brightenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected virtual void autocropToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected virtual void contrastToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
     }
 }
