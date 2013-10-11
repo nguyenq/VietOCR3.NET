@@ -65,7 +65,7 @@ namespace VietOCR.NET
             }
             TrackbarDialog dialog = new TrackbarDialog();
             dialog.LabelText = "Brightness";
-            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(ChildUpdated);
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedBrightness);
 
             originalImage = imageList[imageIndex];
 
@@ -87,7 +87,7 @@ namespace VietOCR.NET
             TrackbarDialog dialog = new TrackbarDialog();
             dialog.LabelText = "Contrast";
             dialog.SetForContrast();
-            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(ChildUpdated1);
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedContrast);
 
             originalImage = imageList[imageIndex];
 
@@ -99,14 +99,14 @@ namespace VietOCR.NET
             }
         }
 
-        private void ChildUpdated(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        private void UpdatedBrightness(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
             Image image = ImageHelper.Brighten(originalImage, e.NewValue * 0.01f);
             imageList[imageIndex] = image;
             this.pictureBox1.Image = new Bitmap(image);
         }
 
-        private void ChildUpdated1(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        private void UpdatedContrast(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
             Image image = ImageHelper.Contrast(originalImage, e.NewValue * 0.04f);
             imageList[imageIndex] = image;
