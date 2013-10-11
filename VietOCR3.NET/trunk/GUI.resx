@@ -809,7 +809,7 @@
     <value>166, 22</value>
   </data>
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Filter</value>
+    <value>&amp;Filter</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -821,7 +821,7 @@
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Auto-crop</value>
+    <value>Auto &amp;Crop</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
