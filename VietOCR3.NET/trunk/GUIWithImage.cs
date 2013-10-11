@@ -22,6 +22,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using VietOCR.NET.Utilities;
+using System.Drawing.Imaging;
 
 namespace VietOCR.NET
 {
@@ -29,6 +30,7 @@ namespace VietOCR.NET
     {
         const string strScreenshotMode = "ScreenshotMode";
         const double MINIMUM_DESKEW_THRESHOLD = 0.05d;
+        Image originalImage;
 
         public GUIWithImage()
         {
@@ -54,6 +56,63 @@ namespace VietOCR.NET
             }
         }
 
+        protected override void brightenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            TrackbarDialog dialog = new TrackbarDialog();
+            dialog.LabelText = "Brightness";
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(ChildUpdated);
+
+            originalImage = imageList[imageIndex];
+
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.pictureBox1.Image = new Bitmap(originalImage);
+            }
+        }
+
+        protected override void contrastToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            TrackbarDialog dialog = new TrackbarDialog();
+            dialog.LabelText = "Contrast";
+            dialog.SetForContrast();
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(ChildUpdated1);
+
+            originalImage = imageList[imageIndex];
+
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.pictureBox1.Image = new Bitmap(originalImage);
+            }
+        }
+
+        private void ChildUpdated(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        {
+            Image image = ImageHelper.Brighten(originalImage, e.NewValue * 0.01f);
+            imageList[imageIndex] = image;
+            this.pictureBox1.Image = new Bitmap(image);
+        }
+
+        private void ChildUpdated1(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        {
+            Image image = ImageHelper.Contrast(originalImage, e.NewValue * 0.04f);
+            imageList[imageIndex] = image;
+            this.pictureBox1.Image = new Bitmap(image);
+        }
+
         protected override void deskewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)
@@ -73,6 +132,17 @@ namespace VietOCR.NET
                 this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             }
             this.Cursor = Cursors.Default;
+        }
+
+        protected override void autocropToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)imageList[imageIndex]);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
         protected override void screenshotModeToolStripMenuItem_Click(object sender, EventArgs e)
