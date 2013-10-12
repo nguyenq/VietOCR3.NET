@@ -212,7 +212,8 @@ namespace VietOCR.NET
             }
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
-            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+            imageList[imageIndex] = ImageHelper.GaussianBlur((Bitmap)originalImage);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
         protected override void screenshotModeToolStripMenuItem_Click(object sender, EventArgs e)
