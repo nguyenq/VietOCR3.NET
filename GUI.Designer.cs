@@ -459,26 +459,31 @@ namespace VietOCR.NET
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
             resources.ApplyResources(this.grayscaleToolStripMenuItem, "grayscaleToolStripMenuItem");
+            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // monochromeToolStripMenuItem
             // 
             this.monochromeToolStripMenuItem.Name = "monochromeToolStripMenuItem";
             resources.ApplyResources(this.monochromeToolStripMenuItem, "monochromeToolStripMenuItem");
+            this.monochromeToolStripMenuItem.Click += new System.EventHandler(this.monochromeToolStripMenuItem_Click);
             // 
             // invertedToolStripMenuItem
             // 
             this.invertedToolStripMenuItem.Name = "invertedToolStripMenuItem";
             resources.ApplyResources(this.invertedToolStripMenuItem, "invertedToolStripMenuItem");
+            this.invertedToolStripMenuItem.Click += new System.EventHandler(this.invertedToolStripMenuItem_Click);
             // 
             // sharpenToolStripMenuItem
             // 
             this.sharpenToolStripMenuItem.Name = "sharpenToolStripMenuItem";
             resources.ApplyResources(this.sharpenToolStripMenuItem, "sharpenToolStripMenuItem");
+            this.sharpenToolStripMenuItem.Click += new System.EventHandler(this.sharpenToolStripMenuItem_Click);
             // 
             // smoothToolStripMenuItem
             // 
             this.smoothToolStripMenuItem.Name = "smoothToolStripMenuItem";
             resources.ApplyResources(this.smoothToolStripMenuItem, "smoothToolStripMenuItem");
+            this.smoothToolStripMenuItem.Click += new System.EventHandler(this.smoothToolStripMenuItem_Click);
             // 
             // deskewToolStripMenuItem
             // 

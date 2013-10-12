@@ -145,6 +145,49 @@ namespace VietOCR.NET
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
+        protected override void grayscaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            imageList[imageIndex] = ImageHelper.ConvertGrayscale((Bitmap)imageList[imageIndex]);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+        }
+
+        protected override void monochromeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            imageList[imageIndex] = ImageHelper.ConvertMonochrome((Bitmap)imageList[imageIndex]);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+        }
+
+        protected override void invertedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            imageList[imageIndex] = ImageHelper.InvertColor((Bitmap)imageList[imageIndex]);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+        }
+
+        protected override void sharpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected override void smoothToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
         protected override void screenshotModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem mi = (ToolStripMenuItem)sender;
