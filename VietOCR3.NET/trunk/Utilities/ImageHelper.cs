@@ -285,7 +285,7 @@ namespace VietOCR.NET.Utilities
                         break;
                 }
 
-                srcRect = Rectangle.FromLTRB(xMin, yMin, xMax+1, yMax+1);
+                srcRect = Rectangle.FromLTRB(xMin, yMin, xMax + 1, yMax + 1);
             }
             finally
             {
@@ -407,6 +407,83 @@ namespace VietOCR.NET.Utilities
                   string.Format("Values are topmost={0} btm={1} left={2} right={3} croppedWidth={4} croppedHeight={5}", topmost, bottommost, leftmost, rightmost, croppedWidth, croppedHeight),
                   ex);
             }
+        }
+
+        /// <summary>
+        /// http://bobpowell.net/grayscale.aspx
+        /// http://code.msdn.microsoft.com/windowsdesktop/ColorMatrix-Image-Filters-f6ed20ae
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        public static Bitmap ConvertGrayscale(Bitmap img)
+        {
+            Bitmap dest = new Bitmap(img.Width, img.Height);
+            dest.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+
+            ColorMatrix cm = new ColorMatrix(new float[][]{   
+                                      new float[]{0.3f,0.3f,0.3f,0,0},
+                                      new float[]{0.59f,0.59f,0.59f,0,0},
+                                      new float[]{0.11f,0.11f,0.11f,0,0},
+                                      new float[]{0,0,0,1,0,0},
+                                      new float[]{0,0,0,0,1,0},
+                                      new float[]{0,0,0,0,0,1}});
+
+            ImageAttributes ia = new ImageAttributes();
+            ia.SetColorMatrix(cm);
+            using (Graphics g = Graphics.FromImage(dest))
+            {
+                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
+            }
+
+            return dest;
+        }
+
+        public static Bitmap ConvertMonochrome(Bitmap img)
+        {
+            Bitmap dest = new Bitmap(img.Width, img.Height);
+            dest.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+
+            ImageAttributes ia = new ImageAttributes();
+            ColorMatrix cm = new ColorMatrix();
+            cm.Matrix00 = cm.Matrix11 = cm.Matrix22 = 0.99f;
+            cm.Matrix33 = cm.Matrix44 = 1;
+            cm.Matrix40 = cm.Matrix41 = cm.Matrix42 = .04f;
+            ia.SetColorMatrix(cm);
+
+            using (Graphics g = Graphics.FromImage(dest))
+            {
+                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
+            }
+            return dest;
+        }
+
+        /// <summary>
+        /// http://mariusbancila.ro/blog/2009/11/13/using-colormatrix-for-creating-negative-image/
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        public static Bitmap InvertColor(Bitmap img)
+        {
+            Bitmap dest = new Bitmap(img.Width, img.Height);
+            dest.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+
+            // create the negative color matrix
+            ColorMatrix colorMatrix = new ColorMatrix(new float[][]
+            {
+                new float[] {-1, 0, 0, 0, 0},
+                new float[] {0, -1, 0, 0, 0},
+                new float[] {0, 0, -1, 0, 0},
+                new float[] {0, 0, 0, 1, 0},
+                new float[] {1, 1, 1, 0, 1}
+            }); 
+            ImageAttributes ia = new ImageAttributes();
+            ia.SetColorMatrix(colorMatrix);
+
+            using (Graphics g = Graphics.FromImage(dest))
+            {
+                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
+            }
+            return dest;
         }
 
     }
