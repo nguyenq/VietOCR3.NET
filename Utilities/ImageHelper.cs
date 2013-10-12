@@ -373,6 +373,35 @@ namespace VietOCR.NET.Utilities
             if (rightmost == 0) rightmost = w; // As reached left
             if (bottommost == 0) bottommost = h; // As reached top.
 
+            // allow a 5px-margin
+            int margin = 5;
+
+            if ((leftmost - margin) >= 0)
+            {
+                leftmost -= margin;
+            }
+
+            if ((topmost - margin) >= 0)
+            {
+                topmost -= margin;
+            }
+
+            if ((rightmost + margin) <= w)
+            {
+                rightmost += margin;
+            }
+
+            if ((bottommost + margin) <= h)
+            {
+                bottommost += margin;
+            }
+
+            // if same size, return the original
+            if (leftmost == 0 && topmost == 0 && rightmost == w && bottommost == h)
+            {
+                return bmp;
+            }
+
             int croppedWidth = rightmost - leftmost;
             int croppedHeight = bottommost - topmost;
 
