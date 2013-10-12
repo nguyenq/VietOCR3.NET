@@ -119,6 +119,7 @@ namespace VietOCR.NET
             this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -414,6 +415,7 @@ namespace VietOCR.NET
             this.filterToolStripMenuItem,
             this.deskewToolStripMenuItem,
             this.autocropToolStripMenuItem,
+            this.undoToolStripMenuItem,
             this.toolStripMenuItem8,
             this.screenshotModeToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
@@ -777,6 +779,12 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
+            // undoToolStripMenuItem
+            // 
+            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
+            resources.ApplyResources(this.undoToolStripMenuItem, "undoToolStripMenuItem");
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
@@ -902,5 +910,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem sharpenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem smoothToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autocropToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
     }
 }

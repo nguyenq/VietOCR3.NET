@@ -30,6 +30,7 @@ namespace VietOCR.NET
     {
         const string strScreenshotMode = "ScreenshotMode";
         const double MINIMUM_DESKEW_THRESHOLD = 0.05d;
+        Stack<Image> stack = new Stack<Image>();
         Image originalImage;
 
         public GUIWithImage()
@@ -68,7 +69,7 @@ namespace VietOCR.NET
             dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedBrightness);
 
             originalImage = imageList[imageIndex];
-
+            stack.Push(originalImage);
             if (dialog.ShowDialog() == DialogResult.Cancel)
             {
                 // restore original image
@@ -90,7 +91,7 @@ namespace VietOCR.NET
             dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedContrast);
 
             originalImage = imageList[imageIndex];
-
+            stack.Push(originalImage);
             if (dialog.ShowDialog() == DialogResult.Cancel)
             {
                 // restore original image
@@ -141,8 +142,13 @@ namespace VietOCR.NET
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
             }
-            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)imageList[imageIndex]);
+            this.Cursor = Cursors.WaitCursor;
+            originalImage = imageList[imageIndex];
+            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+            this.pictureBox1.Size = this.pictureBox1.Image.Size;
+            this.centerPicturebox();
+            this.Cursor = Cursors.Default;
         }
 
         protected override void grayscaleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -152,7 +158,9 @@ namespace VietOCR.NET
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
             }
-            imageList[imageIndex] = ImageHelper.ConvertGrayscale((Bitmap)imageList[imageIndex]);
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            imageList[imageIndex] = ImageHelper.ConvertGrayscale((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
@@ -163,7 +171,9 @@ namespace VietOCR.NET
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
             }
-            imageList[imageIndex] = ImageHelper.ConvertMonochrome((Bitmap)imageList[imageIndex]);
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            imageList[imageIndex] = ImageHelper.ConvertMonochrome((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
@@ -174,17 +184,33 @@ namespace VietOCR.NET
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
             }
-            imageList[imageIndex] = ImageHelper.InvertColor((Bitmap)imageList[imageIndex]);
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            imageList[imageIndex] = ImageHelper.InvertColor((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
         protected override void sharpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
         protected override void smoothToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
@@ -192,6 +218,18 @@ namespace VietOCR.NET
         {
             ToolStripMenuItem mi = (ToolStripMenuItem)sender;
             mi.Checked ^= true;
+        }
+
+        protected override void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (stack.Count == 0)
+            {
+                return;
+            }
+
+            Image image = stack.Pop();
+            imageList[imageIndex] = image;
+            this.pictureBox1.Image = new Bitmap(image);
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
