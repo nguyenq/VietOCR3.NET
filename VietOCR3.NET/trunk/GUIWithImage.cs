@@ -145,7 +145,7 @@ namespace VietOCR.NET
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
             imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage);
-            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+            this.pictureBox1.Image = new Bitmap(originalImage);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
             this.centerPicturebox();
             this.Cursor = Cursors.Default;
@@ -199,7 +199,8 @@ namespace VietOCR.NET
             }
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
-            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+            imageList[imageIndex] = ImageHelper.Sharpen((Bitmap)originalImage);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
         protected override void smoothToolStripMenuItem_Click(object sender, EventArgs e)
