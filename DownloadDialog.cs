@@ -85,12 +85,20 @@ namespace VietOCR.NET
 
                 //In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
                 //After extraction, move them up two levels
-                string[] files = Directory.GetFiles(Path.Combine(destFolder, @"tesseract-ocr\tessdata"), "*.traineddata");
+                string[] files = Directory.GetFiles(Path.Combine(destFolder, @"tesseract-ocr\tessdata"));
                 foreach (string file in files)
                 {
                     File.Move(file, Path.Combine(destFolder, Path.GetFileName(file)));
                 }
-
+                try
+                {
+                    //remove extraneous directories left by file extraction
+                    Directory.Delete(Path.Combine(destFolder, "tesseract-ocr"), true);
+                }
+                catch
+                {
+                    // trap and ignore
+                }
                 MessageBox.Show(this, Properties.Resources.Please_restart, GUI.strProgName);
             }
         }
