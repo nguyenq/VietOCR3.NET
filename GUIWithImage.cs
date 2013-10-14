@@ -30,7 +30,7 @@ namespace VietOCR.NET
     {
         const string strScreenshotMode = "ScreenshotMode";
         const double MINIMUM_DESKEW_THRESHOLD = 0.05d;
-        Stack<Image> stack = new Stack<Image>();
+        FixedSizeStack<Image> stack = new FixedSizeStack<Image>(10);
         Image originalImage;
 
         public GUIWithImage()
@@ -234,6 +234,11 @@ namespace VietOCR.NET
             this.pictureBox1.Image = new Bitmap(image);
         }
 
+        protected override void clearStack()
+        {
+            stack.Clear();
+        }
+
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);
@@ -248,5 +253,32 @@ namespace VietOCR.NET
 
             regkey.SetValue(strScreenshotMode, Convert.ToInt32(this.screenshotModeToolStripMenuItem.Checked));
         }
+    }
+
+    class FixedSizeStack<T> : LinkedList<T> 
+    {
+        private int limit;
+
+        public FixedSizeStack(int limit) : base()
+        {
+            this.limit = limit;
+        }
+
+        public T Pop()
+        {
+            T obj = base.First.Value;
+            base.RemoveFirst();
+            return obj;
+        }
+
+        public void Push(T obj)
+        {
+            base.AddFirst(obj);
+            if (this.Count > limit)
+            {
+                base.RemoveLast();
+            }
+        }
+
     }
 }

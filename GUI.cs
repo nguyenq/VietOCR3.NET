@@ -657,6 +657,9 @@ namespace VietOCR.NET
 
             displayImage();
 
+            // clear undo buffer
+            clearStack();
+
             this.Text = imageFile.Name + " - " + strProgName;
             //this.toolStripStatusLabel1.Text = null;
             this.pictureBox1.Deselect();
@@ -680,6 +683,11 @@ namespace VietOCR.NET
             }
 
             setButton();
+        }
+
+        protected virtual void clearStack()
+        {
+            // to be implemented in subclass
         }
 
         protected void displayImage()

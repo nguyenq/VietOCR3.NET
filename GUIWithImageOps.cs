@@ -30,6 +30,7 @@ namespace VietOCR.NET
             {
                 this.toolStripStatusLabel1.Text = null;
                 displayImage();
+                clearStack();
 
                 // recalculate scale factors if in Fit Image mode
                 if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
@@ -53,6 +54,7 @@ namespace VietOCR.NET
             {
                 this.toolStripStatusLabel1.Text = null;
                 displayImage();
+                clearStack();
 
                 // recalculate scale factors if in Fit Image mode
                 if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
@@ -108,6 +110,7 @@ namespace VietOCR.NET
             imageList[imageIndex].RotateFlip(RotateFlipType.Rotate270FlipNone);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             adjustPictureBoxAfterFlip();
+            clearStack();
         }
 
         protected override void toolStripBtnRotateCW_Click(object sender, EventArgs e)
@@ -117,6 +120,7 @@ namespace VietOCR.NET
             imageList[imageIndex].RotateFlip(RotateFlipType.Rotate90FlipNone);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             adjustPictureBoxAfterFlip();
+            clearStack();
         }
 
         private void adjustPictureBoxAfterFlip()
