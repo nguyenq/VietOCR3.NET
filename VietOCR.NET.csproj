@@ -381,6 +381,7 @@
     <Compile Include="TrackbarDialog.Designer.cs">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\FixedSizeStack.cs" />
     <Compile Include="Utilities\FormLocalizer.cs" />
     <Compile Include="GUIWithOCR.cs">
       <SubType>Form</SubType>
