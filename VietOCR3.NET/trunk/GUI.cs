@@ -821,7 +821,8 @@ namespace VietOCR.NET
         {
             base.LoadRegistryInfo(regkey);
 
-            this.toolStripCbLang.SelectedItem = regkey.GetValue(strOcrLanguage, null);
+            this.curLangCode = (string)regkey.GetValue(strOcrLanguage, null);
+            this.toolStripCbLang.Text = curLangCode;
             this.textBox1.WordWrap = Convert.ToBoolean(
                 (int)regkey.GetValue(strWordWrap, Convert.ToInt32(true)));
             this.textBox1.Font = new Font((string)regkey.GetValue(strFontFace, "Microsoft Sans Serif"),
@@ -845,10 +846,8 @@ namespace VietOCR.NET
         {
             base.SaveRegistryInfo(regkey);
 
-            if (this.toolStripCbLang.SelectedIndex != -1)
-            {
-                regkey.SetValue(strOcrLanguage, this.toolStripCbLang.SelectedItem.ToString());
-            }
+            regkey.SetValue(strOcrLanguage, this.toolStripCbLang.Text);
+
             regkey.SetValue(strWordWrap, Convert.ToInt32(this.textBox1.WordWrap));
             regkey.SetValue(strFontFace, this.textBox1.Font.Name);
             regkey.SetValue(strFontSize, this.textBox1.Font.SizeInPoints.ToString());
