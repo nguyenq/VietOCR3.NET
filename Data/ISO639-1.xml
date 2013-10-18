@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <properties>
   <comment>ISO 639-1 Standard</comment>
-  <entry key="ben">bn_BD</entry>
+  <entry key="ban">bn_BD</entry>
+  <entry key="ben">bn_IN</entry>
   <entry key="bul">bg_BG</entry>
   <entry key="cat">ca_ES</entry>
   <entry key="ces">cs_CZ</entry>
@@ -16,7 +17,9 @@
   <entry key="eus">eu_ES</entry>
   <entry key="fin">fi_FI</entry>
   <entry key="fra">fr_FR</entry>
+  <entry key="guj">gu_IN</entry>
   <entry key="heb">iw_IL</entry>    
+  <entry key="hin">hi_IN</entry>
   <entry key="hun">hu_HU</entry>
   <entry key="ind">id_ID</entry>
   <entry key="ita">it_IT</entry>
@@ -27,12 +30,16 @@
   <entry key="lav">lv_LV</entry>
   <entry key="lit">lt_LT</entry>
   <entry key="mal">ml_IN</entry>
+  <entry key="mar">mr_IN</entry>
   <entry key="nld">nl_NL</entry>
   <entry key="nor">no_NO</entry>
+  <entry key="ori">or_IN</entry>
+  <entry key="pan">pa_IN</entry>
   <entry key="pol">pl_PL</entry>
   <entry key="por">pt_BR</entry>
   <entry key="ron">ro_RO</entry>
   <entry key="rus">ru_RU</entry>
+  <entry key="san">sa_IN</entry>
   <entry key="slk">sk_SK</entry>
   <entry key="slv">sl_SI</entry>
   <entry key="spa">es_ES</entry>
