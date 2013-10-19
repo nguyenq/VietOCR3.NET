@@ -822,6 +822,10 @@ namespace VietOCR.NET
             base.LoadRegistryInfo(regkey);
 
             this.toolStripCbLang.Text = (string)regkey.GetValue(strOcrLanguage, null);
+            if (curLangCode == null)
+            {
+                curLangCode = this.toolStripCbLang.Text;
+            }
             this.textBox1.WordWrap = Convert.ToBoolean(
                 (int)regkey.GetValue(strWordWrap, Convert.ToInt32(true)));
             this.textBox1.Font = new Font((string)regkey.GetValue(strFontFace, "Microsoft Sans Serif"),
