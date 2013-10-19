@@ -472,23 +472,69 @@ namespace VietOCR.NET.Utilities
             return dest;
         }
 
+        /// <summary>
+        /// http://bobpowell.net/onebit.aspx
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
         public static Bitmap ConvertMonochrome(Bitmap img)
         {
-            Bitmap dest = new Bitmap(img.Width, img.Height);
-            dest.SetResolution(img.HorizontalResolution, img.VerticalResolution);
-
-            ImageAttributes ia = new ImageAttributes();
-            ColorMatrix cm = new ColorMatrix();
-            cm.Matrix00 = cm.Matrix11 = cm.Matrix22 = 0.99f;
-            cm.Matrix33 = cm.Matrix44 = 1;
-            cm.Matrix40 = cm.Matrix41 = cm.Matrix42 = .04f;
-            ia.SetColorMatrix(cm);
-
-            using (Graphics g = Graphics.FromImage(dest))
+            if (img.PixelFormat == PixelFormat.Format1bppIndexed)
             {
-                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
+                return img;
+            } 
+            else if (img.PixelFormat != PixelFormat.Format32bppPArgb)
+            {
+                Bitmap temp = new Bitmap(img.Width, img.Height, PixelFormat.Format32bppPArgb);
+                temp.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+                Graphics g = Graphics.FromImage(temp);
+                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel);
+                g.Dispose();
+                img = temp;
             }
+
+            //lock the bits of the original bitmap
+            BitmapData bmdo = img.LockBits(new Rectangle(0, 0, img.Width, img.Height), ImageLockMode.ReadOnly, img.PixelFormat);
+
+            //and the new 1bpp bitmap
+            Bitmap dest = new Bitmap(img.Width, img.Height, PixelFormat.Format1bppIndexed);
+            dest.SetResolution(img.HorizontalResolution, img.VerticalResolution);
+            BitmapData bmdn = dest.LockBits(new Rectangle(0, 0, dest.Width, dest.Height), ImageLockMode.ReadWrite, PixelFormat.Format1bppIndexed);
+
+            //scan through the pixels Y by X
+            for (int y = 0; y < img.Height; y++)
+            {
+                for (int x = 0; x < img.Width; x++)
+                {
+                    //generate the address of the colour pixel
+                    int index = y * bmdo.Stride + (x * 4);
+
+                    //check its brightness
+                    if (Color.FromArgb(Marshal.ReadByte(bmdo.Scan0, index + 2),
+                                    Marshal.ReadByte(bmdo.Scan0, index + 1),
+                                    Marshal.ReadByte(bmdo.Scan0, index)).GetBrightness() > 0.5f)
+                        SetIndexedPixel(x, y, bmdn, true); //set it if it's bright.
+                }
+            }
+
+            //tidy up
+            dest.UnlockBits(bmdn);
+            img.UnlockBits(bmdo);
+
             return dest;
+        }
+
+        protected static void SetIndexedPixel(int x, int y, BitmapData bmd, bool pixel)
+        {
+            int index = y * bmd.Stride + (x >> 3);
+            byte p = Marshal.ReadByte(bmd.Scan0, index);
+            byte mask = (byte)(0x80 >> (x & 0x7));
+            if (pixel)
+                p |= mask;
+            else
+                p &= (byte)(mask ^ 0xff);
+
+            Marshal.WriteByte(bmd.Scan0, index, p);
         }
 
         /// <summary>
@@ -509,7 +555,7 @@ namespace VietOCR.NET.Utilities
                 new float[] {0, 0, -1, 0, 0},
                 new float[] {0, 0, 0, 1, 0},
                 new float[] {1, 1, 1, 0, 1}
-            }); 
+            });
             ImageAttributes ia = new ImageAttributes();
             ia.SetColorMatrix(colorMatrix);
 
@@ -743,9 +789,9 @@ namespace VietOCR.NET.Utilities
             {
                 g.DrawImage(bmp, 0, 0);
             }
-            
+
             return bmpNew;
         }
-    
+
     }
 }
