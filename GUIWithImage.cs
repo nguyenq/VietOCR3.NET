@@ -38,11 +38,6 @@ namespace VietOCR.NET
             InitializeComponent();
         }
 
-        protected override void imageToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
-        {
-            this.undoToolStripMenuItem.Enabled = stack.Count > 0;
-        }
-
         protected override void metadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)

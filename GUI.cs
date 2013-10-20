@@ -1183,10 +1183,5 @@ namespace VietOCR.NET
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
-
-        protected virtual void imageToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
-        {
-
-        }
     }
 }

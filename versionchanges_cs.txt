@@ -33,7 +33,7 @@ Version 3.4 (6 January 2013)
 - Add hocr support for Bulk & Batch and command-line operations
 - Update links to dictionary files
 
-Version 3.4.1 Beta 4 (19 October 2013)
+Version 3.4.1 Beta 4 (20 October 2013)
 - Update .NET wrapper (Tesseract 3.02 r866)
 - Enhance Bulk ops with subdirectory support
 - Incorporate image filters

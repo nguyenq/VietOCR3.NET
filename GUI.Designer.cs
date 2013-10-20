@@ -422,7 +422,6 @@ namespace VietOCR.NET
             this.screenshotModeToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
             resources.ApplyResources(this.imageToolStripMenuItem, "imageToolStripMenuItem");
-            this.imageToolStripMenuItem.DropDownOpening += new System.EventHandler(this.imageToolStripMenuItem_DropDownOpening);
             // 
             // metadataToolStripMenuItem
             // 
