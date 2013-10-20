@@ -107,7 +107,7 @@ namespace VietOCR.NET
 
         private void UpdatedBrightness(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
-            Image image = ImageHelper.Brighten(originalImage, e.NewValue * 0.01f);
+            Image image = ImageHelper.Brighten(originalImage, e.NewValue * 0.005f);
             imageList[imageIndex] = image;
             this.pictureBox1.Image = new Bitmap(image);
         }
