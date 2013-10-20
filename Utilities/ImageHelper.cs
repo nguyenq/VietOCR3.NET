@@ -188,259 +188,360 @@ namespace VietOCR.NET.Utilities
             return bmpNew;
         }
 
+        ///// <summary>
+        ///// Auto-crop an image, eliminating empty surrounding area.
+        ///// This does not work for some reasons, probably b/c the image is not transparent.
+        ///// http://stackoverflow.com/questions/4820212/automatically-trim-a-bitmap-to-minimum-size
+        ///// </summary>
+        ///// <param name="source"></param>
+        ///// <returns></returns>
+        //public static Image TrimBitmap(Image source)
+        //{
+        //    Rectangle srcRect = default(Rectangle);
+        //    BitmapData data = null;
+        //    try
+        //    {
+        //        data = ((Bitmap)source).LockBits(new Rectangle(0, 0, source.Width, source.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+        //        byte[] buffer = new byte[data.Height * data.Stride];
+        //        Marshal.Copy(data.Scan0, buffer, 0, buffer.Length);
+
+        //        int xMin = int.MaxValue,
+        //            xMax = int.MinValue,
+        //            yMin = int.MaxValue,
+        //            yMax = int.MinValue;
+
+        //        bool foundPixel = false;
+
+        //        // Find xMin
+        //        for (int x = 0; x < data.Width; x++)
+        //        {
+        //            bool stop = false;
+        //            for (int y = 0; y < data.Height; y++)
+        //            {
+        //                byte alpha = buffer[y * data.Stride + 4 * x + 3];
+        //                if (alpha != 0)
+        //                {
+        //                    xMin = x;
+        //                    stop = true;
+        //                    foundPixel = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (stop)
+        //                break;
+        //        }
+
+        //        // Image is empty...
+        //        if (!foundPixel)
+        //            return null;
+
+        //        // Find yMin
+        //        for (int y = 0; y < data.Height; y++)
+        //        {
+        //            bool stop = false;
+        //            for (int x = xMin; x < data.Width; x++)
+        //            {
+        //                byte alpha = buffer[y * data.Stride + 4 * x + 3];
+        //                if (alpha != 0)
+        //                {
+        //                    yMin = y;
+        //                    stop = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (stop)
+        //                break;
+        //        }
+
+        //        // Find xMax
+        //        for (int x = data.Width - 1; x >= xMin; x--)
+        //        {
+        //            bool stop = false;
+        //            for (int y = yMin; y < data.Height; y++)
+        //            {
+        //                byte alpha = buffer[y * data.Stride + 4 * x + 3];
+        //                if (alpha != 0)
+        //                {
+        //                    xMax = x;
+        //                    stop = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (stop)
+        //                break;
+        //        }
+
+        //        // Find yMax
+        //        for (int y = data.Height - 1; y >= yMin; y--)
+        //        {
+        //            bool stop = false;
+        //            for (int x = xMin; x <= xMax; x++)
+        //            {
+        //                byte alpha = buffer[y * data.Stride + 4 * x + 3];
+        //                if (alpha != 0)
+        //                {
+        //                    yMax = y;
+        //                    stop = true;
+        //                    break;
+        //                }
+        //            }
+        //            if (stop)
+        //                break;
+        //        }
+
+        //        srcRect = Rectangle.FromLTRB(xMin, yMin, xMax + 1, yMax + 1);
+        //    }
+        //    finally
+        //    {
+        //        if (data != null)
+        //            ((Bitmap)source).UnlockBits(data);
+        //    }
+
+        //    Bitmap dest = new Bitmap(srcRect.Width, srcRect.Height);
+        //    dest.SetResolution(source.HorizontalResolution, source.VerticalResolution);
+        //    Rectangle destRect = new Rectangle(0, 0, srcRect.Width, srcRect.Height);
+        //    using (Graphics graphics = Graphics.FromImage(dest))
+        //    {
+        //        graphics.DrawImage(source, destRect, srcRect, GraphicsUnit.Pixel);
+        //    }
+        //    return dest;
+        //}
+
+        ///// <summary>
+        ///// Autocrop an image, removing surrounding white space. This may be slow but works.
+        ///// However, .NET 3.5 is required for Lambda Expression. Consider replacing with a .NET 2.0 solution.
+        ///// http://stackoverflow.com/questions/248141/remove-surrounding-whitespace-from-an-image
+        ///// http://www.itdevspace.com/2012/07/c-crop-white-space-from-around-image.html
+        ///// </summary>
+        ///// <param name="bmp"></param>
+        ///// <returns></returns>
+        //public static Bitmap AutoCrop(Bitmap bmp)
+        //{
+        //    int w = bmp.Width;
+        //    int h = bmp.Height;
+
+        //    Func<int, bool> allWhiteRow = row =>
+        //    {
+        //        for (int i = 0; i < w; ++i)
+        //        {
+        //            Color clr = bmp.GetPixel(i, row);
+        //            if (clr.R != 255 || clr.A < 255)
+        //                return false;
+        //        }
+        //        return true;
+        //    };
+
+        //    Func<int, bool> allWhiteColumn = col =>
+        //    {
+        //        for (int i = 0; i < h; ++i)
+        //        {
+        //            Color clr = bmp.GetPixel(col, i);
+        //            if (clr.R != 255 || clr.A < 0)
+        //                return false;
+        //        }
+        //        return true;
+        //    };
+
+        //    int topmost = 0;
+        //    for (int row = 0; row < h; ++row)
+        //    {
+        //        if (allWhiteRow(row))
+        //            topmost = row;
+        //        else break;
+        //    }
+
+        //    int bottommost = 0;
+        //    for (int row = h - 1; row >= 0; --row)
+        //    {
+        //        if (allWhiteRow(row))
+        //            bottommost = row;
+        //        else break;
+        //    }
+
+        //    int leftmost = 0, rightmost = 0;
+        //    for (int col = 0; col < w; ++col)
+        //    {
+        //        if (allWhiteColumn(col))
+        //            leftmost = col;
+        //        else
+        //            break;
+        //    }
+
+        //    for (int col = w - 1; col >= 0; --col)
+        //    {
+        //        if (allWhiteColumn(col))
+        //            rightmost = col;
+        //        else
+        //            break;
+        //    }
+
+        //    if (rightmost == 0) rightmost = w; // As reached left
+        //    if (bottommost == 0) bottommost = h; // As reached top.
+
+        //    // allow a 5px-margin
+        //    int margin = 5;
+
+        //    if ((leftmost - margin) >= 0)
+        //    {
+        //        leftmost -= margin;
+        //    }
+
+        //    if ((topmost - margin) >= 0)
+        //    {
+        //        topmost -= margin;
+        //    }
+
+        //    if ((rightmost + margin) <= w)
+        //    {
+        //        rightmost += margin;
+        //    }
+
+        //    if ((bottommost + margin) <= h)
+        //    {
+        //        bottommost += margin;
+        //    }
+
+        //    // if same size, return the original
+        //    if (leftmost == 0 && topmost == 0 && rightmost == w && bottommost == h)
+        //    {
+        //        return bmp;
+        //    }
+
+        //    int croppedWidth = rightmost - leftmost;
+        //    int croppedHeight = bottommost - topmost;
+
+        //    if (croppedWidth == 0) // No border on left or right
+        //    {
+        //        leftmost = 0;
+        //        croppedWidth = w;
+        //    }
+
+        //    if (croppedHeight == 0) // No border on top or bottom
+        //    {
+        //        topmost = 0;
+        //        croppedHeight = h;
+        //    }
+
+        //    try
+        //    {
+        //        var target = new Bitmap(croppedWidth, croppedHeight);
+        //        target.SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
+        //        using (Graphics g = Graphics.FromImage(target))
+        //        {
+        //            g.DrawImage(bmp,
+        //              new RectangleF(0, 0, croppedWidth, croppedHeight),
+        //              new RectangleF(leftmost, topmost, croppedWidth, croppedHeight),
+        //              GraphicsUnit.Pixel);
+        //        }
+        //        return target;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(
+        //          string.Format("Values are topmost={0} btm={1} left={2} right={3} croppedWidth={4} croppedHeight={5}", topmost, bottommost, leftmost, rightmost, croppedWidth, croppedHeight),
+        //          ex);
+        //    }
+        //}
+
         /// <summary>
-        /// Auto-crop an image, eliminating empty surrounding area.
-        /// This does not work for some reasons, probably b/c the image is not transparent.
-        /// http://stackoverflow.com/questions/4820212/automatically-trim-a-bitmap-to-minimum-size
+        /// Check from top and left. Immediately break the loops when encountering a non-white pixel.
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static Image TrimBitmap(Image source)
+        public static Bitmap AutoCropBitmap(Bitmap source) 
         {
-            Rectangle srcRect = default(Rectangle);
-            BitmapData data = null;
-            try
-            {
-                data = ((Bitmap)source).LockBits(new Rectangle(0, 0, source.Width, source.Height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-                byte[] buffer = new byte[data.Height * data.Stride];
-                Marshal.Copy(data.Scan0, buffer, 0, buffer.Length);
+            int width = source.Width;
+            int height = source.Height;
 
-                int xMin = int.MaxValue,
-                    xMax = int.MinValue,
-                    yMin = int.MaxValue,
-                    yMax = int.MinValue;
+            int minX = 0;
+            int minY = 0;
+            int maxX = width;
+            int maxY = height;
+        
 
-                bool foundPixel = false;
-
-                // Find xMin
-                for (int x = 0; x < data.Width; x++)
-                {
-                    bool stop = false;
-                    for (int y = 0; y < data.Height; y++)
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    if (source.GetPixel(x, y).R != 255) 
                     {
-                        byte alpha = buffer[y * data.Stride + 4 * x + 3];
-                        if (alpha != 0)
-                        {
-                            xMin = x;
-                            stop = true;
-                            foundPixel = true;
-                            break;
-                        }
+                        minY = y;
+                        goto lable1;
                     }
-                    if (stop)
-                        break;
                 }
+            }
+            lable1:
 
-                // Image is empty...
-                if (!foundPixel)
-                    return null;
-
-                // Find yMin
-                for (int y = 0; y < data.Height; y++)
-                {
-                    bool stop = false;
-                    for (int x = xMin; x < data.Width; x++)
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < height; y++) {
+                    if (source.GetPixel(x, y).R != 255)
                     {
-                        byte alpha = buffer[y * data.Stride + 4 * x + 3];
-                        if (alpha != 0)
-                        {
-                            yMin = y;
-                            stop = true;
-                            break;
-                        }
+                        minX = x;
+                        goto lable2;
                     }
-                    if (stop)
-                        break;
                 }
+            }
+            lable2:
 
-                // Find xMax
-                for (int x = data.Width - 1; x >= xMin; x--)
-                {
-                    bool stop = false;
-                    for (int y = yMin; y < data.Height; y++)
+            for (int y = height - 1; y >= 0; y--) {
+                for (int x = 0; x < width; x++) {
+                    if (source.GetPixel(x, y).R != 255)
                     {
-                        byte alpha = buffer[y * data.Stride + 4 * x + 3];
-                        if (alpha != 0)
-                        {
-                            xMax = x;
-                            stop = true;
-                            break;
-                        }
+                        maxY = y;
+                        goto lable3;
                     }
-                    if (stop)
-                        break;
                 }
+            }
+            lable3:
 
-                // Find yMax
-                for (int y = data.Height - 1; y >= yMin; y--)
-                {
-                    bool stop = false;
-                    for (int x = xMin; x <= xMax; x++)
+            for (int x = width - 1; x >= 0; x--) {
+                for (int y = 0; y < height; y++) {
+                    if (source.GetPixel(x, y).R != 255)
                     {
-                        byte alpha = buffer[y * data.Stride + 4 * x + 3];
-                        if (alpha != 0)
-                        {
-                            yMax = y;
-                            stop = true;
-                            break;
-                        }
+                        maxX = x;
+                        goto lable4;
                     }
-                    if (stop)
-                        break;
                 }
-
-                srcRect = Rectangle.FromLTRB(xMin, yMin, xMax + 1, yMax + 1);
             }
-            finally
-            {
-                if (data != null)
-                    ((Bitmap)source).UnlockBits(data);
-            }
-
-            Bitmap dest = new Bitmap(srcRect.Width, srcRect.Height);
-            dest.SetResolution(source.HorizontalResolution, source.VerticalResolution);
-            Rectangle destRect = new Rectangle(0, 0, srcRect.Width, srcRect.Height);
-            using (Graphics graphics = Graphics.FromImage(dest))
-            {
-                graphics.DrawImage(source, destRect, srcRect, GraphicsUnit.Pixel);
-            }
-            return dest;
-        }
-
-        /// <summary>
-        /// Autocrop an image, removing surrounding white space. This may be slow but works.
-        /// However, .NET 3.5 is required for Lambda Expression. Consider replacing with a .NET 2.0 solution.
-        /// http://stackoverflow.com/questions/248141/remove-surrounding-whitespace-from-an-image
-        /// http://www.itdevspace.com/2012/07/c-crop-white-space-from-around-image.html
-        /// </summary>
-        /// <param name="bmp"></param>
-        /// <returns></returns>
-        public static Bitmap AutoCrop(Bitmap bmp)
-        {
-            int w = bmp.Width;
-            int h = bmp.Height;
-
-            Func<int, bool> allWhiteRow = row =>
-            {
-                for (int i = 0; i < w; ++i)
-                {
-                    Color clr = bmp.GetPixel(i, row);
-                    if (clr.R != 255 || clr.A < 255)
-                        return false;
-                }
-                return true;
-            };
-
-            Func<int, bool> allWhiteColumn = col =>
-            {
-                for (int i = 0; i < h; ++i)
-                {
-                    Color clr = bmp.GetPixel(col, i);
-                    if (clr.R != 255 || clr.A < 0)
-                        return false;
-                }
-                return true;
-            };
-
-            int topmost = 0;
-            for (int row = 0; row < h; ++row)
-            {
-                if (allWhiteRow(row))
-                    topmost = row;
-                else break;
-            }
-
-            int bottommost = 0;
-            for (int row = h - 1; row >= 0; --row)
-            {
-                if (allWhiteRow(row))
-                    bottommost = row;
-                else break;
-            }
-
-            int leftmost = 0, rightmost = 0;
-            for (int col = 0; col < w; ++col)
-            {
-                if (allWhiteColumn(col))
-                    leftmost = col;
-                else
-                    break;
-            }
-
-            for (int col = w - 1; col >= 0; --col)
-            {
-                if (allWhiteColumn(col))
-                    rightmost = col;
-                else
-                    break;
-            }
-
-            if (rightmost == 0) rightmost = w; // As reached left
-            if (bottommost == 0) bottommost = h; // As reached top.
-
+            lable4:
+           
             // allow a 5px-margin
             int margin = 5;
-
-            if ((leftmost - margin) >= 0)
-            {
-                leftmost -= margin;
+        
+            if ((minX - margin) >= 0) {
+                minX -= margin;
             }
-
-            if ((topmost - margin) >= 0)
-            {
-                topmost -= margin;
+        
+            if ((minY - margin) >= 0) {
+                minY -= margin;
             }
-
-            if ((rightmost + margin) <= w)
-            {
-                rightmost += margin;
+        
+            if ((maxX + margin) <= width) {
+                maxX += margin;
             }
-
-            if ((bottommost + margin) <= h)
-            {
-                bottommost += margin;
+        
+            if ((maxY + margin) <= height) {
+                maxY += margin;
             }
-
+        
             // if same size, return the original
-            if (leftmost == 0 && topmost == 0 && rightmost == w && bottommost == h)
-            {
-                return bmp;
+            if (minX == 0 && minY == 0 && maxX == width && maxY == height) {
+                return source;
             }
+        
+            int newWidth = maxX - minX + 1;
+            int newHeight = maxY - minY + 1;
+        
+            Bitmap target = new Bitmap(newWidth, newHeight);
+            target.SetResolution(source.HorizontalResolution, source.VerticalResolution);
 
-            int croppedWidth = rightmost - leftmost;
-            int croppedHeight = bottommost - topmost;
-
-            if (croppedWidth == 0) // No border on left or right
+            using (Graphics g = Graphics.FromImage(target))
             {
-                leftmost = 0;
-                croppedWidth = w;
-            }
-
-            if (croppedHeight == 0) // No border on top or bottom
-            {
-                topmost = 0;
-                croppedHeight = h;
-            }
-
-            try
-            {
-                var target = new Bitmap(croppedWidth, croppedHeight);
-                target.SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
-                using (Graphics g = Graphics.FromImage(target))
-                {
-                    g.DrawImage(bmp,
-                      new RectangleF(0, 0, croppedWidth, croppedHeight),
-                      new RectangleF(leftmost, topmost, croppedWidth, croppedHeight),
+                g.DrawImage(source,
+                      new RectangleF(0, 0, newWidth, newHeight),
+                      new RectangleF(minX, minY, newWidth, newHeight),
                       GraphicsUnit.Pixel);
-                }
-                return target;
             }
-            catch (Exception ex)
-            {
-                throw new Exception(
-                  string.Format("Values are topmost={0} btm={1} left={2} right={3} croppedWidth={4} croppedHeight={5}", topmost, bottommost, leftmost, rightmost, croppedWidth, croppedHeight),
-                  ex);
-            }
+
+            return target;
         }
 
         /// <summary>
@@ -482,7 +583,7 @@ namespace VietOCR.NET.Utilities
             if (img.PixelFormat == PixelFormat.Format1bppIndexed)
             {
                 return img;
-            } 
+            }
             else if (img.PixelFormat != PixelFormat.Format32bppPArgb)
             {
                 Bitmap temp = new Bitmap(img.Width, img.Height, PixelFormat.Format32bppPArgb);
