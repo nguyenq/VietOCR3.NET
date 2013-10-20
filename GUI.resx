@@ -787,10 +787,10 @@
   <data name="monochromeToolStripMenuItem.Text" xml:space="preserve">
     <value>Monochrome</value>
   </data>
-  <data name="invertedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="invertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="invertedToolStripMenuItem.Text" xml:space="preserve">
+  <data name="invertToolStripMenuItem.Text" xml:space="preserve">
     <value>Invert</value>
   </data>
   <data name="sharpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
@@ -822,6 +822,12 @@
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
     <value>Auto &amp;Crop</value>
+  </data>
+  <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 6</value>
+  </data>
+  <data name="undoToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Z</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -1693,10 +1699,10 @@
   <data name="&gt;&gt;monochromeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;invertedToolStripMenuItem.Name" xml:space="preserve">
-    <value>invertedToolStripMenuItem</value>
+  <data name="&gt;&gt;invertToolStripMenuItem.Name" xml:space="preserve">
+    <value>invertToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;invertedToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;invertToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;sharpenToolStripMenuItem.Name" xml:space="preserve">
@@ -1722,6 +1728,12 @@
   </data>
   <data name="&gt;&gt;autocropToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem12.Name" xml:space="preserve">
+    <value>toolStripMenuItem12</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;undoToolStripMenuItem.Name" xml:space="preserve">
     <value>undoToolStripMenuItem</value>
