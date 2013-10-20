@@ -1164,7 +1164,7 @@ namespace VietOCR.NET
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        protected virtual void invertedToolStripMenuItem_Click(object sender, EventArgs e)
+        protected virtual void invertToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
@@ -1182,6 +1182,11 @@ namespace VietOCR.NET
         protected virtual void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected virtual void imageToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+
         }
     }
 }

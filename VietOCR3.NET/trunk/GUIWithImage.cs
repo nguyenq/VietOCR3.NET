@@ -38,6 +38,11 @@ namespace VietOCR.NET
             InitializeComponent();
         }
 
+        protected override void imageToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            this.undoToolStripMenuItem.Enabled = stack.Count > 0;
+        }
+
         protected override void metadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)
@@ -129,7 +134,9 @@ namespace VietOCR.NET
 
             if ((imageSkewAngle > MINIMUM_DESKEW_THRESHOLD || imageSkewAngle < -(MINIMUM_DESKEW_THRESHOLD)))
             {
-                imageList[imageIndex] = ImageHelper.Rotate((Bitmap)imageList[imageIndex], -imageSkewAngle);
+                originalImage = imageList[imageIndex];
+                stack.Push(originalImage);
+                imageList[imageIndex] = ImageHelper.Rotate((Bitmap) originalImage, -imageSkewAngle);
                 this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             }
             this.Cursor = Cursors.Default;
@@ -144,6 +151,7 @@ namespace VietOCR.NET
             }
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
             imageList[imageIndex] = ImageHelper.AutoCropBitmap((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
@@ -177,7 +185,7 @@ namespace VietOCR.NET
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
-        protected override void invertedToolStripMenuItem_Click(object sender, EventArgs e)
+        protected override void invertToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)
             {
