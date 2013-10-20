@@ -13,7 +13,11 @@ namespace VietOCR.NET
     {
         public class ValueChangedEventArgs : EventArgs
         {
-            public float NewValue;
+            public float NewValue
+            {
+                get;
+                set;
+            }
 
             public ValueChangedEventArgs(float value)
                 : base()
@@ -61,7 +65,7 @@ namespace VietOCR.NET
 
         public void SetForContrast()
         {
-            this.trackBar1.Minimum = 0;
+            this.trackBar1.Minimum = 5;
             this.trackBar1.Value = 25;
             this.trackBar1.TickFrequency = 10;
         }
