@@ -103,15 +103,21 @@ namespace VietOCR.NET
         private void UpdatedBrightness(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
             Image image = ImageHelper.Brighten(originalImage, e.NewValue * 0.005f);
-            imageList[imageIndex] = image;
-            this.pictureBox1.Image = new Bitmap(image);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.pictureBox1.Image = new Bitmap(image);
+            }    
         }
 
         private void UpdatedContrast(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
             Image image = ImageHelper.Contrast(originalImage, e.NewValue * 0.04f);
-            imageList[imageIndex] = image;
-            this.pictureBox1.Image = new Bitmap(image);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.pictureBox1.Image = new Bitmap(image);
+            }
         }
 
         protected override void deskewToolStripMenuItem_Click(object sender, EventArgs e)
