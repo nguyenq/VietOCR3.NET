@@ -43,6 +43,7 @@
             this.trackBar1.Minimum = -100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(168, 45);
+            this.trackBar1.SmallChange = 5;
             this.trackBar1.TabIndex = 0;
             this.trackBar1.TickFrequency = 20;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);

@@ -34,6 +34,8 @@ namespace VietOCR.NET
             }
         }
 
+        private int prevValue;
+
         public delegate void HandleValueChange(object sender, ValueChangedEventArgs e);
         public event HandleValueChange ValueUpdated;
 
@@ -58,8 +60,16 @@ namespace VietOCR.NET
         {
             if (this.ValueUpdated != null)
             {
-                ValueChangedEventArgs args = new ValueChangedEventArgs(this.trackBar1.Value);
-                this.ValueUpdated(this, args);
+                TrackBar bar = (TrackBar)sender;
+                
+                //reduce # of unnecessary value changed events
+                if (Math.Abs(bar.Value - prevValue) >= bar.SmallChange)
+                {
+                    prevValue = bar.Value;
+                    //Console.WriteLine(prevValue);
+                    ValueChangedEventArgs args = new ValueChangedEventArgs(bar.Value);
+                    this.ValueUpdated(this, args);
+                }
             }
         }
 
