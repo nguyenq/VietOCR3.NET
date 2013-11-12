@@ -767,43 +767,43 @@
     <value>147, 22</value>
   </data>
   <data name="brightenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Brightness...</value>
+    <value>&amp;Brightness...</value>
   </data>
   <data name="contrastToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>Contrast...</value>
+    <value>&amp;Contrast...</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Grayscale</value>
+    <value>&amp;Grayscale</value>
   </data>
   <data name="monochromeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="monochromeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Monochrome</value>
+    <value>&amp;Monochrome</value>
   </data>
   <data name="invertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
-    <value>Invert</value>
+    <value>&amp;Invert</value>
   </data>
   <data name="sharpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="sharpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sharpen</value>
+    <value>&amp;Sharpen</value>
   </data>
   <data name="smoothToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
-    <value>Smooth</value>
+    <value>Sm&amp;ooth</value>
   </data>
   <data name="filterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -833,7 +833,7 @@
     <value>166, 22</value>
   </data>
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Undo</value>
+    <value>&amp;Undo</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
@@ -938,19 +938,19 @@
     <value>&amp;Settings</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
     <value>Merge &amp;TIFF...</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
     <value>Merge &amp;PDF...</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Split PDF...</value>
