@@ -261,6 +261,9 @@
     <EmbeddedResource Include="TrackbarDialog.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.vi-VN.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
       <SubType>Designer</SubType>

@@ -65,7 +65,7 @@ namespace VietOCR.NET
                 return;
             }
             TrackbarDialog dialog = new TrackbarDialog();
-            dialog.LabelText = "Brightness";
+            dialog.LabelText = Properties.Resources.Brightness;
             dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedBrightness);
 
             originalImage = imageList[imageIndex];
@@ -86,7 +86,7 @@ namespace VietOCR.NET
                 return;
             }
             TrackbarDialog dialog = new TrackbarDialog();
-            dialog.LabelText = "Contrast";
+            dialog.LabelText = Properties.Resources.Contrast;
             dialog.SetForContrast();
             dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedContrast);
 

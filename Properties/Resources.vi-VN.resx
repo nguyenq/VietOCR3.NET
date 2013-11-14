@@ -310,4 +310,10 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Bulk_OCR" xml:space="preserve">
     <value>OCR hàng loạt</value>
   </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Độ sáng tối</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Độ tương phản</value>
+  </data>
 </root>
