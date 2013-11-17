@@ -56,6 +56,12 @@ source_file = .tx/SplitPdfDialog.resx
 source_lang = en
 type = RESX
 
+[vietocr.TrackbarDialog_resx]
+file_filter = TrackbarDialog.<lang>.resx
+source_file = .tx/TrackbarDialog.resx
+source_lang = en
+type = RESX
+
 [vietocr.readme_cs_html]
 file_filter = readme_cs_<lang>.html
 source_file = readme_cs.html
