@@ -40,13 +40,17 @@ namespace VietOCR.NET
 
             List<ToolStripRadioButtonMenuItem> ar = new List<ToolStripRadioButtonMenuItem>();
 
-            String[] uiLangs = { "ca-ES", "cs-CZ", "en-US", "it-IT", "lt-LT", "sk-SK", "tr-TR", "vi-VN" };
+            String[] uiLangs = { "bn-IN", "ca-ES", "cs-CZ", "en-US", "fa-IR", "it-IT", "lt-LT", "ja-JP", "nl-NL", "sk-SK", "tr-TR", "vi-VN" };
             foreach (string uiLang in uiLangs)
             {
                 ToolStripRadioButtonMenuItem miuil = new ToolStripRadioButtonMenuItem();
                 CultureInfo ci = new CultureInfo(uiLang);
                 miuil.Tag = ci.Name;
                 miuil.Text = ci.Parent.DisplayName + " (" + ci.Parent.NativeName + ")";
+                if (ci.Parent.DisplayName.StartsWith("Invariant Language"))
+                {
+                    miuil.Text = ci.EnglishName.Substring(0, ci.EnglishName.IndexOf("(") - 1) + " (" + ci.NativeName.Substring(0, ci.NativeName.IndexOf("(") - 1) + ")";
+                }
                 miuil.CheckOnClick = true;
                 miuil.Click += eh;
                 ar.Add(miuil);
