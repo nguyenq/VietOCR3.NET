@@ -113,6 +113,10 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="readme_cs_bn.html" />
+    <EmbeddedResource Include="readme_cs_fa.html" />
+    <EmbeddedResource Include="readme_cs_ja.html" />
+    <EmbeddedResource Include="readme_cs_nl.html" />
     <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -211,6 +215,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.bn-IN.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.ca-ES.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -221,6 +226,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.fa-IR.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -228,9 +234,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.ja-JP.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.nl-NL.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.sk-SK.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -343,7 +351,7 @@
     <EmbeddedResource Include="TrackbarDialog.cs-CZ.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrackbarDialog.fa.resx">
+    <EmbeddedResource Include="TrackbarDialog.fa-IR.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.it-IT.resx">
