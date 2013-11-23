@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>Over VietOCR.NET</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>geannuleerd. </value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>Afbeelding kan niet geladen worden.</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>Selecteer een afbeelding.</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>OCR voltooid.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>OCR opdracht</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>OCR uitvoeren...</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>Open afbeelding</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs.html</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>Scannen voltooid.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Scannen...</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>Scan opdracht</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Selecteer een taal.</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET help</value>
+  </data>
+  <data name="_of_" xml:space="preserve">
+    <value>van</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>Opslaan als</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>Kan niet verwerken</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>Partij proces status</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Samengevoegde PDF opslaan</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Selecteer</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>is aangemaakt.</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>TIFF bestanden samenvoegen voltooid.</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>Controleer de uitvoerbestand(en) alstublieft in </value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>TIFF bestanden samenvoegen...</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>PDF splitten voltooid.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>PDF splitten...</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>Het zou nodig kunnen zijn om het PDF bestand in kleinere stukken te splitten voordat je doorgaat.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fout</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>Invoer onvolledig.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>Ongeldige invoer.</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>Laden voltooid.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>Afbeelding laden...</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>Afbeelding laden</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>Samenvoegen van PDF bestanden compleet.</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>PDF samenvoegen uitvoeren...</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>Correctie voltooid.</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>Herkenningsfouten corrigeren...</value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>Recente bestanden &amp;opschonen</value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>Geen recente bestanden</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>Wil je de wijzigingen opslaan in </value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Naamloos</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>Toevoegen aan map</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>Negeer alles</value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>Download geannuleerd. </value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>Download voltooid.</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>Download mislukt.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloaden...</value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>Herstart het programma om nieuwe taalpakketten te registreren.</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>Hulpbron bestaat niet.</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Meerdere pagina TIFF afbeelding opslaan</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>Selecteer invoer afbeeldingen</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>Selecteer invoer PDF&apos;s</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Bladeren</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Je hebt geen schrijfrechten op map &quot;{0}&quot;.
+Voer dit programma uit als administrator. </value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Partij proces status</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Annuleer partij OCR</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Begin van de taak</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Verstreken tijd</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>Eind van de taak</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Taak geannuleerd</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>Bulk OCR</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value></value>
+  </data>
+</root>

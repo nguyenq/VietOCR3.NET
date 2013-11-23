@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - Tesseract OCRの.NET製GUIフロントエンド</title>
+<style type="text/css">
+        .style1
+        {
+            font-size: x-small;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>概要</h3>
+        <p><a href="http://sourceforge.net/project/showfiles.php?group_id=153105">VietOCR</a>は.NET で書かれた<a href="http://code.google.com/p/tesseract-ocr/">Tesseract OCRエンジン</a>のGUIフロントエンドです。一般的な画像形式やマルチページTIFF形式の文字認識をサポートします。このプログラムはOCR処理につきまとう誤認識を修正する後処理をし、認識結果の正解率を向上させます。コマンドラインから実行すればコンソールアプリケーションとしても機能します。</p>
+        <p>バッチ処理がサポートされるようになりました。プログラムは監視フォルダ内の新しい画像ファイルを監視し、OCRエンジンを通して自動処理し出力フォルダに認識結果を出力します。</p>
+        <h3>システム要件</h3>
+        <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">Microsoft .NET Framework 2.0 再配布可能パッケージ</a>。</p>
+        <p>VietOCR.NETを実行中にFileLoadExceptionメッセージ"<i>Could not load file or assembly 'tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem. (Exception from HRESULT: 0x800736B1)</i>"が発生した場合はMicrosoft Visual C++ 2008 SP1再配布可能パッケージ（<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=a5c84275-3b97-4ab7-a40d-3802b2af5fc2&amp;displaylang=en">x86</a>、<a href="http://www.microsoft.com/downloads/details.aspx?familyid=BA9257CA-337F-4B40-8C14-157CFDFFEE4E&amp;displaylang=en">x64</a>）をインストールしてください。</p>
+        <h3>インストール</h3>
+        <p><tt>C:\Program Files</tt>フォルダにインストールする権限がない場合は、インストールフォルダ ダイアログで別のインストールフォルダを指定してください。</p>
+        <p>Windows Image Acquisition v2.0ライブラリを通してスキャンをサポートします。これにはWindows XPのService Pack 1(SP1)以降が必要です。Windows Vista/7ではこのライブラリが標準実装されています。WIAライブラリをインストールするには<tt>wiaaut.dll</tt>ファイルを<tt>System32</tt>ディレクトリ（通常は<tt>C:\Windows\System32</tt>）にコピーしてコマンドラインから実行します。</p>
+        <blockquote>
+            <p><tt>regsvr32 C:\Windows\System32\wiaaut.dll</tt></p>
+        </blockquote>
+        <p><a href="http://sourceforge.net/projects/ghostscript/">GPL Ghostscript</a>を通してPDFをサポートします。ライブラリをインストール後、環境変数<tt>Path</tt>を設定してダイナミックリンクライブラリ<tt>gsdll32.dll</tt>が検索パス内にあることを確認してください。これはWindowsの［コントロールパネル］&gt;［システム］&gt;［詳細設定］タブ&gt;［環境変数］からアクセスできます。たとえばGS version 9.10の場合、<tt>Path</tt>の変数値に追加するには次のようにします。</p>
+        <blockquote>
+            <p><tt>;C:\Program Files\gs\gs9.10\bin</tt></p>
+        </blockquote>
+        <p>Hunspellを通してスペルチェック機能を利用できます。<a href="http://wiki.services.openoffice.org/wiki/Dictionaries">辞書</a>ファイル（<tt>.aff</tt>、<tt>.dic</tt>）をVietOCRの<tt>dict</tt>フォルダに配置してください。</p>
+        <h3>説明</h3>
+        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Tesseractの言語データパック</a>は通常インストールフォルダ<tt>tesseract</tt>に解凍されます。データファイル名はISO639-3コードで始まり、サブディレクトリ<tt>tessdata</tt>に配置されます。VietOCRは<em>言語データをダウンロード</em>メニューで言語パックの選択、ダウンロード、インストールをサポートします。<tt>tessdata</tt>フォルダが<tt>C:\Program Files</tt>のようなシステムフォルダ内にある場合は、ダウンロードしたデータをフォルダにインストールできるようにするために、rootまたは管理者としてプログラムを実行してください。</p>
+        <p>ベトナム語の言語データはTimes New Roman、Arial、Verdana、Courier Newのフォントで生成されています。そのためよく似たフォントグリフを持つ画像ではより良い認識成功率を示すでしょう。サポートしているフォントと違った見かけのフォントグリフを持つ画像をOCRするには、一般的に、特別にそれらの書体をTesseractに<a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract">学習</a>させた別の言語データパックを生成してください。一部のVNI、TCVN3(ABC)フォントの言語データも最新バージョンにバンドルされています。</p>
+        <p>OCR画像はモノクロ（白黒）またはグレースケールで少なくとも200dpi（1インチあたりのドット数）から400dpiの解像度でスキャンしてください。優れた認識精度を求めて高解像度でスキャンする必要はありません。現在ベトナム語の認識精度は97％以上であり、それはTesseractの次のリリースでさらに改善されるかもしれません。もしそうなったとしても実際の認識率はまだスキャン画像の品質に大きく依存します。典型的なスキャン設定は300dpi、1bit（=1bpp 1ピクセルあたり1ビット）白黒または8bitグレースケール、無圧縮TIFFまたはPNG形式です。</p>
+        <p><em>スクリーンショット モード</em>は低解像度の画像に対して、スクリーン プリントのように300dpiで再スケーリングし認識率を向上させます。</p>
+        <p>組込みのテキスト後処理アルゴリズムに加えて、<tt>x.DangAmbigs.txt</tt>という名前のテキストファイルを使用して独自のカスタムテキスト置換スキームを追加できます。xはISO639-3言語コードです。 UTF-8エンコードしたファイルにはイコールで区切られた<tt>oldValue=newValue</tt>のペアを含めます。</p>
+        <p>組込みのツールにはOCR操作が便利になるように複数の画像やPDFファイルを単一のものに結合したり、メモリ不足例外が発生しそうな大きなPDFファイルを小さく分割したりする機能があります。</p>
+        <h3>後処理</h3>
+        <p>誤認識は一般的に3つのカテゴリに分類できます。誤認識の多くは文字の大文字/小文字に関係し（例 HOA、nhắC）、一般的なUnicode用テキストエディタで簡単に修正できます。他の多くの誤認識は、ダイアクリティカルマークの欠落、似ている形状の間違った文字など（huu – hưu、mang – marg、h0a – hoa、la – 1a、uhìu - nhìn）のOCR処理結果です。またこれらはスペルチェッカプログラムによって簡単に修正できます。組込みの後処理機能は前述の誤りの多くを修正するのに役立ちます。</p>
+        <p>誤認識の最後のカテゴリはセマンティックエラーであり、検出するのが最も困難です。これはその単語が辞書内では有効なエントリですが、文脈としては間違っていることを意味します。（例 tinh – tình、vân – vấn）これらのエラーはエディタを通して読み、元画像に応じてそれらを手作業で修正する必要があります。</p>
+        <p>組込み機能を使用してOCR誤認識の最初の2つのカテゴリを修正する方法は次のとおりです。</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>行をグループ化します。各行が別々の1行段落としてOCRされるように、行が属する段落にグループ化してください。<i>書式</i>メニュー下の<i>改行を削除</i>機能を使用します。詩ではこの操作が必要ない場合があるので注意してください。</li>
+            <li>文字ケースエラーの大部分を修正するために、同じく<i>書式</i>メニュー下の<i>文字ケースを変更</i>を選択し<i>［センテンスケース］</i>を選択します。残った文字ケースエラーの部分を見つけて修正します。</li>
+            <li>統合<i>スペルチェック</i>を使用してスペルミスエラーを修正します。</li>
+        </ol>
+<p>以上の処理により一般的な誤認識の大部分を除去できます。残るセマンティックエラーは少ないですが、人間がエディタを通して読み、スキャン元の文書のようにその文書を編集する必要があります。</p>
+        <p>質問がある場合は <a href="http://sourceforge.net/projects/vietocr/forums">VietOCRフォーラム</a>に投稿してください。</p>
+        <hr>
+</div>
+</body>
+</html>
