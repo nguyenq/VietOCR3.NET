@@ -209,6 +209,9 @@
       <DependentUpon>DownloadDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI.bn-IN.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI.ca-ES.resx">
       <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,9 +219,18 @@
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI.fa-IR.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI.it-IT.resx">
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ja-JP.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.nl-NL.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.sk-SK.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -322,16 +334,37 @@
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.bn-IN.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.ca-ES.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.cs-CZ.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.fa.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.it-IT.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.ja-JP.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.lt-LT.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.nl-NL.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.sk-SK.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.tr-TR.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.vi-VN.resx">
