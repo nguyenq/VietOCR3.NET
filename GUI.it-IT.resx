@@ -284,7 +284,7 @@
     <value>195, 22</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>File &amp;Recenti</value>
+    <value>&amp;File Recenti</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -293,7 +293,7 @@
     <value>195, 22</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Esci</value>
+    <value>E&amp;sci</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -311,7 +311,7 @@
     <value>183, 22</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR &amp;Tutte le Pagine</value>
+    <value>OCR &amp;Tutte le pagine</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
@@ -335,7 +335,7 @@
     <value>76, 20</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Comandi</value>
+    <value>&amp;Comando</value>
   </data>
   <data name="metadataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -359,7 +359,7 @@
     <value>166, 22</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Modalità &amp;Screenshoot</value>
+    <value>&amp;Modalità Screenshoot</value>
   </data>
   <data name="imageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -377,7 +377,7 @@
     <value>220, 22</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Font...</value>
+    <value>&amp;Carattere...</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 6</value>
@@ -386,7 +386,7 @@
     <value>220, 22</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Modifica Carattere...</value>
+    <value>&amp;Cambia Carattere...</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -422,7 +422,7 @@
     <value>219, 22</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Scaricamento Pacchetto Lingua...</value>
+    <value>&amp;Scaricamento del pacchetto lingua in corso...</value>
   </data>
   <data name="toolStripMenuItem10.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -431,7 +431,7 @@
     <value>219, 22</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Modalità di Segmentazione Pagina</value>
+    <value>Modalità di &amp;Segmentazione Pagina</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -446,7 +446,7 @@
     <value>61, 20</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Im&amp;postazioni</value>
+    <value>&amp;Proprietà</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>

@@ -260,7 +260,7 @@
     <value>195, 22</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Desa</value>
+    <value>De&amp;sa</value>
   </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
@@ -326,7 +326,7 @@
     <value>76, 20</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>Or&amp;dre</value>
+    <value>&amp;Ordre</value>
   </data>
   <data name="metadataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -341,7 +341,7 @@
     <value>166, 22</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Deskew</value>
+    <value>&amp;Corregeix el biaix</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
@@ -350,7 +350,7 @@
     <value>166, 22</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Screenshot Mode</value>
+    <value>Mode &amp;captura de pantalla</value>
   </data>
   <data name="imageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -395,7 +395,7 @@
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Viet Input &amp;Method</value>
+    <value>&amp;Mètode d'entrada vietnamita</value>
   </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -422,7 +422,7 @@
     <value>219, 22</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Page &amp;Segmentation Mode</value>
+    <value>Mode de &amp;segmentació de pàgina</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -443,19 +443,19 @@
     <value>133, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fusiona a &amp;TIFF</value>
+    <value>Fusiona a &amp;TIFF...</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fusiona a &amp;PDF</value>
+    <value>Fusiona a &amp;PDF...</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Divideix PDF</value>
+    <value>&amp;Divideix el PDF...</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
