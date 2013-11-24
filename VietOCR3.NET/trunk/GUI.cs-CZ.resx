@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -266,7 +266,7 @@
     <value>195, 22</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Uložit &amp;jako</value>
+    <value>Uložit j&amp;ako</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -404,7 +404,7 @@
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Jazyk uživatelského rozhraní</value>
+    <value>Jazyk &amp;uživatelského rozhraní</value>
   </data>
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
@@ -467,7 +467,7 @@
     <value>179, 22</value>
   </data>
   <data name="helpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>&amp;Nápověda VietOCR.NET</value>
+    <value>&amp;Nápověda k VietOCR.NET</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 6</value>
@@ -588,5 +588,8 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VietOCR.NET</value>
+  </data>
+  <data name="undoToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Zpět</value>
   </data>
 </root>

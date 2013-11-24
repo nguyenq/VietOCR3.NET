@@ -172,12 +172,6 @@
   <data name="labelHeight.Text" xml:space="preserve">
     <value>Aukštis</value>
   </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 159</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>&amp;Atsisakyti</value>
-  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 74</value>
   </data>
@@ -218,13 +212,13 @@
     <value>122, 123</value>
   </data>
   <data name="labelBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 126</value>
+    <value>23, 126</value>
   </data>
   <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
+    <value>90, 13</value>
   </data>
   <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Bitųgylis</value>
+    <value>Spalvų gylis bitais</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>262, 199</value>
