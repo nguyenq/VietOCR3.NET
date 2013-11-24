@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 159</value>
+    <value>94, 159</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>&amp;Gerai</value>

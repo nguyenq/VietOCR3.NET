@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 155</value>
+    <value>87, 155</value>
   </data>
   <data name="labelXRes.Text" xml:space="preserve">
     <value>X-Rozlíšenie</value>
@@ -150,12 +150,6 @@
   </data>
   <data name="labelHeight.Text" xml:space="preserve">
     <value>Výška</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 155</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Zrušiť</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 74</value>
