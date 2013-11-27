@@ -153,7 +153,7 @@ namespace VietOCR.NET
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
-            imageList[imageIndex] = ImageHelper.AutoCropBitmap((Bitmap)originalImage);
+            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage);
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
             this.centerPicturebox();
