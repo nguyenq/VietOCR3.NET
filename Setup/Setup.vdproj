@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_122771DACEE1466DAE7CBEF1919AEF53"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_24F1E030DD94492AB615B933E27D879B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_370F53D21F834D58990131604E2E4A78"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,6 +75,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_90390E2889A54B4697AFB2DC1A4022B0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_90A5F6A5E80B4221A56B8FBA419A9EA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -100,6 +118,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C6D8832B5FD6466EBA83AE85A104B8F4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EC581C134FDA43FD8E36AB770D81E8DA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -174,7 +198,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:VietOCR.NET-3.4.1\\Setup.msi"
+        "OutputFilename" = "8:VietOCR.NET-3.5-Beta\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -229,6 +253,46 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_122771DACEE1466DAE7CBEF1919AEF53"
+            {
+            "SourcePath" = "8:..\\readme_cs_ja.html"
+            "TargetName" = "8:readme_cs_ja.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24F1E030DD94492AB615B933E27D879B"
+            {
+            "SourcePath" = "8:..\\readme_cs_fa.html"
+            "TargetName" = "8:readme_cs_fa.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_370F53D21F834D58990131604E2E4A78"
             {
             "SourcePath" = "8:..\\readme_cs_vi.html"
@@ -273,16 +337,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.1.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_50AD683AE94ABF3E3ED8D3FE2C134083"
                     {
-                    "Name" = "8:tesseract.dll"
+                    "Name" = "8:Tesseract.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:tesseract.dll"
+            "SourcePath" = "8:Tesseract.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
@@ -406,6 +470,26 @@
             {
             "SourcePath" = "8:..\\readme_cs_it.html"
             "TargetName" = "8:readme_cs_it.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90390E2889A54B4697AFB2DC1A4022B0"
+            {
+            "SourcePath" = "8:..\\readme_cs_nl.html"
+            "TargetName" = "8:readme_cs_nl.html"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
             "Condition" = "8:"
@@ -564,6 +648,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC581C134FDA43FD8E36AB770D81E8DA"
+            {
+            "SourcePath" = "8:..\\readme_cs_bn.html"
+            "TargetName" = "8:readme_cs_bn.html"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -631,20 +735,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR.NET"
-        "ProductCode" = "8:{4991F911-CB16-40DA-917D-182D48D04853}"
-        "PackageCode" = "8:{6B1C2A08-D16B-4377-9A28-26304A4EB976}"
+        "ProductCode" = "8:{D3FA4BD2-76E3-47BC-BABD-E4B4DF6E6CF1}"
+        "PackageCode" = "8:{2BB0B6C4-3F21-41E7-8A6F-32CFF4EABF67}"
         "UpgradeCode" = "8:{E53F3670-7B1D-405A-AC8A-2207B69BDDDB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.4.1"
+        "ProductVersion" = "8:3.4.2"
         "Manufacturer" = "8:VietUnicode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://sourceforge.net/projects/vietocr/support"
         "Title" = "8:Setup for VietOCR.NET"
-        "Subject" = "8:Installer for VietOCR.NET v3.4.1"
+        "Subject" = "8:Installer for VietOCR.NET v3.4.2"
         "ARPCONTACT" = "8:Quan Nguyen"
         "Keywords" = "8:Vietnamese OCR"
         "ARPCOMMENTS" = "8:http://vietocr.sf.net"
