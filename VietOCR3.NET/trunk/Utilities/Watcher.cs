@@ -6,6 +6,9 @@ using System.Text.RegularExpressions;
 
 namespace VietOCR.NET.Utilities
 {
+    /// <summary>
+    /// Monitors a folder for new image files.
+    /// </summary>
     public class Watcher
     {
         private Queue<String> queue;
