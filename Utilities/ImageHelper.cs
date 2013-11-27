@@ -13,7 +13,7 @@ namespace VietOCR.NET.Utilities
     /// <summary>
     /// This class contains many image processing routines found on the web.
     /// </summary>
-    class ImageHelper
+    public class ImageHelper
     {
         /// <summary>
         /// Rescales an image.
@@ -448,7 +448,7 @@ namespace VietOCR.NET.Utilities
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static Bitmap AutoCropBitmap(Bitmap source) 
+        public static Bitmap AutoCrop(Bitmap source) 
         {
             int width = source.Width;
             int height = source.Height;
@@ -459,8 +459,10 @@ namespace VietOCR.NET.Utilities
             int maxY = height;
         
 
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) 
+            {
+                for (int x = 0; x < width; x++) 
+                {
                     if (source.GetPixel(x, y).R != 255) 
                     {
                         minY = y;
@@ -470,8 +472,10 @@ namespace VietOCR.NET.Utilities
             }
             lable1:
 
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) 
+            {
+                for (int y = minY; y < height; y++) 
+                {
                     if (source.GetPixel(x, y).R != 255)
                     {
                         minX = x;
@@ -481,8 +485,10 @@ namespace VietOCR.NET.Utilities
             }
             lable2:
 
-            for (int y = height - 1; y >= 0; y--) {
-                for (int x = 0; x < width; x++) {
+            for (int y = height - 1; y >= minY; y--)
+            {
+                for (int x = minX; x < width; x++)
+                {
                     if (source.GetPixel(x, y).R != 255)
                     {
                         maxY = y;
@@ -492,8 +498,10 @@ namespace VietOCR.NET.Utilities
             }
             lable3:
 
-            for (int x = width - 1; x >= 0; x--) {
-                for (int y = 0; y < height; y++) {
+            for (int x = width - 1; x >= minX; x--)
+            {
+                for (int y = minY; y < maxY; y++)
+                {
                     if (source.GetPixel(x, y).R != 255)
                     {
                         maxX = x;
