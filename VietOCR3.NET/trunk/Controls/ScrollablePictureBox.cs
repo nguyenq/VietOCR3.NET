@@ -109,7 +109,7 @@ namespace VietOCR.NET.Controls
                 Pen blackPen = new Pen(Color.Black);
                 //blackPen.DashStyle = DashStyle.Solid;
 
-                Rectangle[] squares = createSquares(rect);
+                List<Rectangle> squares = createSquares(rect);
                 foreach (Rectangle square in squares)
                 {
                     g.DrawRectangle(blackPen, square);
@@ -158,11 +158,12 @@ namespace VietOCR.NET.Controls
          * Creates grip squares.
          *
          */
-        Rectangle[] createSquares(Rectangle rect)
+        List<Rectangle> createSquares(Rectangle rect)
         {
+            List<Rectangle> ar = new List<Rectangle>();
             if (moving)
             {
-                return new Rectangle[] { };
+                return ar;
             }
 
             int wh = 6;
@@ -171,8 +172,7 @@ namespace VietOCR.NET.Controls
             int y = rect.Y - wh / 2;
             int w = rect.Width;
             int h = rect.Height;
-
-            List<Rectangle> ar = new List<Rectangle>();
+                        
             ar.Add(new Rectangle(x, y, wh, wh));
             ar.Add(new Rectangle(x + w / 2, y, wh, wh));
             ar.Add(new Rectangle(x + w, y, wh, wh));
@@ -182,7 +182,7 @@ namespace VietOCR.NET.Controls
             ar.Add(new Rectangle(x, y + h, wh, wh));
             ar.Add(new Rectangle(x, y + h / 2, wh, wh));
 
-            return ar.ToArray();
+            return ar;
         }
 
         private void ScrollablePictureBox_MouseDown(object sender, MouseEventArgs e)
