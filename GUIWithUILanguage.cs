@@ -77,7 +77,11 @@ namespace VietOCR.NET
 
         void MenuKeyboardUILangOnClick(object obj, EventArgs ea)
         {
-            miuilChecked.Checked = false;
+            if (miuilChecked != null)
+            {
+                miuilChecked.Checked = false;
+            }
+            
             miuilChecked = (ToolStripMenuItem)obj;
             miuilChecked.Checked = true;
             if (selectedUILanguage != miuilChecked.Tag.ToString())
