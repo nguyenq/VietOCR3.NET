@@ -140,25 +140,25 @@
     <value>Başlık biçimi</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 132</value>
+    <value>35, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Değiştir</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 132</value>
+    <value>116, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Kapat</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 1</value>
+    <value>24, 1</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 118</value>
+    <value>178, 118</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>222, 169</value>
+    <value>226, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Büyük/Küçük Harf Değiştir</value>
