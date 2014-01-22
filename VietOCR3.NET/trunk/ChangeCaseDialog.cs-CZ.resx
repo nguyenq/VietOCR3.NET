@@ -143,13 +143,13 @@
     <value>Velké začáteční</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 132</value>
+    <value>19, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Změnit</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 132</value>
+    <value>100, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Zavřít</value>
@@ -157,8 +157,11 @@
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 1</value>
   </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 118</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>184, 169</value>
+    <value>194, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Změnit velikost písmen</value>

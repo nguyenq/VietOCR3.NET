@@ -143,25 +143,25 @@
     <value>&amp;Visus Žodžius Pradėti Didžiąja</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 132</value>
+    <value>30, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>&amp;Keisti</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 132</value>
+    <value>109, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>&amp;Užverti</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 1</value>
+    <value>13, 1</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 118</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>205, 169</value>
+    <value>214, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Raidžių registro keitimas</value>

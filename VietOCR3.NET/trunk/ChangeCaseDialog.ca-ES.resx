@@ -143,22 +143,25 @@
     <value>Majúscules De Títols</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 132</value>
+    <value>39, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Canvia</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 132</value>
+    <value>120, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Tanca</value>
   </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 1</value>
+  </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 118</value>
+    <value>211, 118</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 169</value>
+    <value>235, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Canvia majúscules i minúscules</value>

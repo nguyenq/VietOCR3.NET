@@ -143,22 +143,22 @@
     <value>Veľké Začiatočné</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 132</value>
+    <value>22, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Zmeniť</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 132</value>
+    <value>103, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Zatvoriť</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 1</value>
+    <value>22, 1</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>181, 169</value>
+    <value>200, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Zmeniť veľkosť písmen</value>
