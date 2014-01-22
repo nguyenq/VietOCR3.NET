@@ -389,19 +389,19 @@
     <value>124, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nối &amp;TIFF</value>
+    <value>Nối &amp;TIFF...</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nối &amp;PDF</value>
+    <value>Nối &amp;PDF...</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tác&amp;h PDF</value>
+    <value>Tác&amp;h PDF...</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
