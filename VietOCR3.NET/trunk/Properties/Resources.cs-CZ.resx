@@ -313,4 +313,10 @@ Spusťte, prosím, program jako administrátor.</value>
   <data name="Bulk_OCR" xml:space="preserve">
     <value>Hromadné rozpoznávání</value>
   </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Jas</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Kontrast</value>
+  </data>
 </root>

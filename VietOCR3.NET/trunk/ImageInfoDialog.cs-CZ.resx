@@ -163,20 +163,8 @@
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 100</value>
   </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>pixelů</value>
-  </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>palců</value>
-  </data>
   <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 44</value>
-  </data>
-  <data name="comboBox3.Items" xml:space="preserve">
-    <value>pixelů</value>
-  </data>
-  <data name="comboBox3.Items1" xml:space="preserve">
-    <value>palců</value>
   </data>
   <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 19</value>
@@ -192,6 +180,9 @@
   </data>
   <data name="labelBitDepth.Text" xml:space="preserve">
     <value>Bitová hloubka</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>231, 202</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Vlastnosti obrázku</value>

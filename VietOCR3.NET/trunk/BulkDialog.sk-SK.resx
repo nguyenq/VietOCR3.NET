@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -133,14 +133,8 @@
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 45</value>
   </data>
-  <data name="btnOutput.ToolTip" xml:space="preserve">
-    <value>Prezerať</value>
-  </data>
   <data name="btnInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 19</value>
-  </data>
-  <data name="btnInput.ToolTip" xml:space="preserve">
-    <value>Prezerať</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 47</value>
@@ -164,7 +158,7 @@
     <value>113, 89</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>346, 126</value>
+    <value>344, 126</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Hromadné OCR</value>

@@ -178,26 +178,14 @@
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 100</value>
   </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>پیکسل</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>اینچ</value>
-  </data>
-  <data name="comboBox4.Items2" xml:space="preserve">
-    <value>سانتی‌متر</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>نقطه در اینچ -DPI-</value>
   </data>
   <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 44</value>
-  </data>
-  <data name="comboBox3.Items" xml:space="preserve">
-    <value>پیکسل</value>
-  </data>
-  <data name="comboBox3.Items1" xml:space="preserve">
-    <value>اینچ</value>
-  </data>
-  <data name="comboBox3.Items2" xml:space="preserve">
-    <value>سانتی‌متر</value>
   </data>
   <data name="comboBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>182, 19</value>
@@ -212,12 +200,9 @@
     <value>عمق بیت</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>276, 202</value>
+    <value>277, 202</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>خصوصیات تصویر</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>نقطه در اینچ -DPI-</value>
   </data>
 </root>
