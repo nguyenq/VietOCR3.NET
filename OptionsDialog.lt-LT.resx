@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 102</value>
+    <value>338, 102</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Stebimasis aplankas</value>
@@ -128,7 +128,7 @@
     <value>340, 102</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 128</value>
+    <value>346, 128</value>
   </data>
   <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 74</value>
@@ -157,8 +157,14 @@
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 37</value>
   </data>
+  <data name="btnOutput.Text" xml:space="preserve">
+    <value>…</value>
+  </data>
   <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 11</value>
+  </data>
+  <data name="btnWatch.Text" xml:space="preserve">
+    <value>…</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 39</value>
@@ -178,6 +184,9 @@
   <data name="labelPath.Text" xml:space="preserve">
     <value>&amp;Kelias:</value>
   </data>
+  <data name="btnDangAmbigs.Text" xml:space="preserve">
+    <value>…</value>
+  </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 134</value>
   </data>
@@ -191,7 +200,7 @@
     <value>&amp;Atsisakyti</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>348, 168</value>
+    <value>346, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Parinktys</value>

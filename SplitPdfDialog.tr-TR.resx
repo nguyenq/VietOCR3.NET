@@ -158,10 +158,10 @@
     <value>Dosyalar</value>
   </data>
   <data name="textBoxNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 100</value>
+    <value>224, 100</value>
   </data>
   <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 105</value>
+    <value>92, 105</value>
   </data>
   <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 13</value>

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
   </data>
@@ -155,7 +155,7 @@
     <value>19, 1</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>194, 169</value>
+    <value>193, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Büyük/Küçük Harf Değiştir</value>

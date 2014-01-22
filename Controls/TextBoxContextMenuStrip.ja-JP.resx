@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <root>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -46,61 +46,61 @@
       </xsd:complexType>
     </xsd:element>
   </xsd:schema>
-<resheader name="resmimetype">
+  <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
-<resheader name="version">
+  <resheader name="version">
     <value>2.0</value>
   </resheader>
-<resheader name="reader">
+  <resheader name="reader">
     <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<resheader name="writer">
+  <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<data name="miSelectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-<data name="miUndo.Text" xml:space="preserve">
-    <value>&amp;元に戻す</value>
-  </data>
-<data name="miCut.Text" xml:space="preserve">
-    <value>&amp;切り取り</value>
-  </data>
-<data name="miCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-<data name="miUndo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-<data name="miPaste.Text" xml:space="preserve">
-    <value>&amp;貼り付け</value>
-  </data>
-<data name="miCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-<data name="miCopy.Text" xml:space="preserve">
-    <value>&amp;コピー</value>
-  </data>
-<data name="miPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-<data name="miSelectAll.Text" xml:space="preserve">
-    <value>&amp;すべて選択</value>
-  </data>
-<data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 148</value>
   </data>
-<data name="miSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
-  </data>
-<data name="miDelete.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="miCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-<data name="miDelete.Text" xml:space="preserve">
+  <data name="miCopy.Text" xml:space="preserve">
+    <value>&amp;コピー</value>
+  </data>
+  <data name="miCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="miCut.Text" xml:space="preserve">
+    <value>&amp;切り取り</value>
+  </data>
+  <data name="miDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="miDelete.Text" xml:space="preserve">
     <value>&amp;削除</value>
   </data>
-<data name="miSeparator.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="miPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="miPaste.Text" xml:space="preserve">
+    <value>&amp;貼り付け</value>
+  </data>
+  <data name="miSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="miSelectAll.Text" xml:space="preserve">
+    <value>&amp;すべて選択</value>
+  </data>
+  <data name="miSeparator.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 6</value>
+  </data>
+  <data name="miSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 6</value>
+  </data>
+  <data name="miUndo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="miUndo.Text" xml:space="preserve">
+    <value>&amp;元に戻す</value>
   </data>
 </root>

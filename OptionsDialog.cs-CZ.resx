@@ -125,7 +125,7 @@
     <value>Sledovat</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 102</value>
+    <value>320, 102</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>328, 128</value>
@@ -135,9 +135,6 @@
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 74</value>
-  </data>
-  <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>Povoliť</value>

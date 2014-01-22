@@ -119,16 +119,16 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 102</value>
+    <value>329, 102</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Vigila</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 102</value>
+    <value>329, 102</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 128</value>
+    <value>337, 128</value>
   </data>
   <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
     <value>174, 74</value>
@@ -191,7 +191,7 @@
     <value>Cancel·la</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>345, 168</value>
+    <value>337, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Opcions</value>
