@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 20</value>
+  </data>
   <data name="tabPage1.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;checkBoxDangAmbigs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelWatch.Name" xml:space="preserve">
     <value>labelWatch</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>144, 136</value>
   </data>
@@ -149,17 +149,11 @@
   <data name="&gt;&gt;btnOutput.Name" xml:space="preserve">
     <value>btnOutput</value>
   </data>
-  <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 13</value>
-  </data>
   <data name="&gt;&gt;checkBoxHocr.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
   </data>
   <data name="&gt;&gt;checkBoxWatch.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -219,8 +213,8 @@
   <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;checkBoxDangAmbigs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="checkBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 51</value>
@@ -251,9 +245,6 @@
   </data>
   <data name="labelOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;checkBoxDangAmbigs.Name" xml:space="preserve">
-    <value>checkBoxDangAmbigs</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
     <value>304, 102</value>
@@ -287,6 +278,9 @@
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
+  </data>
+  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 74</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -345,8 +339,8 @@
   <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelPath.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;checkBoxDangAmbigs.Name" xml:space="preserve">
+    <value>checkBoxDangAmbigs</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -404,6 +398,9 @@
   </data>
   <data name="checkBoxHocr.ToolTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="labelPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -522,8 +519,8 @@
   <data name="btnWatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="labelPath.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -537,8 +534,8 @@
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Watch</value>
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 74</value>
+  <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 13</value>
   </data>
   <data name="&gt;&gt;btnDangAmbigs.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -653,6 +650,9 @@
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="buttonOK.ToolTip" xml:space="preserve">
     <value />
