@@ -6,9 +6,9 @@
 		<root>
 			<xsl:copy-of select="/root/xsd:schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
 			<xsl:copy-of select="/root/resheader"/>
-			<xsl:for-each select="data">
+			<xsl:for-each select="/root/data">
 				<xsl:sort select="@name" />
-				<xsl:if test="(@name and ((substring(@name, string-length(@name) - 4) = '.Text') or (substring(@name, string-length(@name) - 11) = '.ToolTipText') or (substring(@name, string-length(@name) - 4) = '.Size')))">
+				<xsl:if test="(@name and ((substring(@name, string-length(@name) - 4) = '.Text') or (substring(@name, string-length(@name) - 11) = '.ToolTipText') or (substring(@name, string-length(@name) - 4) = '.Size') or (substring(@name, string-length(@name) - 8) = '.Location')))">
 					<xsl:copy-of select="."/>
 				</xsl:if>
 			</xsl:for-each>
