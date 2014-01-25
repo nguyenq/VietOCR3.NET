@@ -123,12 +123,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC581C134FDA43FD8E36AB770D81E8DA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C6D8832B5FD6466EBA83AE85A104B8F4"
         "MsmSig" = "8:_UNDEFINED"
@@ -136,19 +130,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8A6BAE44B425E23D0D01677435D9284C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_75EEFBE97D45CF3F362ACE725FDEC28D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_50AD683AE94ABF3E3ED8D3FE2C134083"
+        "OwnerKey" = "8:_BE4EBD0AF304B72881218EC2A8D6819A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,7 +142,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BE4EBD0AF304B72881218EC2A8D6819A"
+        "OwnerKey" = "8:_50AD683AE94ABF3E3ED8D3FE2C134083"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_75EEFBE97D45CF3F362ACE725FDEC28D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8A6BAE44B425E23D0D01677435D9284C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -621,26 +615,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC581C134FDA43FD8E36AB770D81E8DA"
-            {
-            "SourcePath" = "8:..\\readme_cs_bn.html"
-            "TargetName" = "8:readme_cs_bn.html"
-            "Tag" = "8:"
-            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -1288,7 +1262,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C6D8832B5FD6466EBA83AE85A104B8F4"
             {
-            "SourcePath" = "8:..\\obj\\Release\\VietOCR.exe"
+            "SourcePath" = "8:..\\obj\\Debug\\VietOCR.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
