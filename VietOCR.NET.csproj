@@ -131,7 +131,6 @@
     <EmbeddedResource Include="DownloadDialog.nl-NL.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="readme_cs_bn.html" />
     <EmbeddedResource Include="readme_cs_fa.html" />
     <EmbeddedResource Include="readme_cs_ja.html" />
     <EmbeddedResource Include="readme_cs_nl.html" />
