@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>„VietOCR.NET“ – .NET grafinė sąsaja „Tesseract OCR“ moduliui</title>
+<style type="text/css">
+        .style1
+        {
+            font-size: x-small;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>PROGRAMOS APRAŠAS</h3>
+        <p>„<a href="http://sourceforge.net/project/showfiles.php?group_id=153105">VietOCR.NET</a>“
+            yra .NET technologija pagrįsta grafinė aplinka leidžianti naudotis „<a href="http://code.google.com/p/tesseract-ocr/">Tesseract
+                OCR</a>“ optinio ženklų atpažinimo moduliu ir yra skirta automatiškai atpažinti
+            nuskenuoto rašto ženklus. Programa numato populiariausius vaizdų formatus, leidžia
+            naudoti kelis ar daugiau puslapių viename vaizdo faile. Be to, programa gali papildomai
+            aptvarkyti atpažintą tekstą, ištaisydama būdingiausias teksto atpažinimo metu pasitaikančias
+            klaidas. Tai padeda pasiekti daug geresnės rezultato kokybės. Programa gali veikti
+            ir terminalo ekrane, ją startuojant komandinėje eilutėje.</p>
+        <p>Programoje numatytas ir urminis vaizdų apdorojimas. Programa gali stebėti nurodytą
+aplanką ir, jame atsiradus naujų failų, automatiškai juos apdoroti, o atpažintus
+tekstus įrašyti į rezultatams talpinti nurodytą aplanką.</p>
+        <h3>REIKALAVIMAI SISTEMAI</h3>
+        <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">
+„Microsoft .NET Framework 2.0“ platforma</a>.</p>
+        <p>Jeigu, leisdami „VietOCR.NET“, susiduriate su failo įkėlimo klaida, apie kurią pranešama
+taip: „<i>Could not load file or assembly 'tesseract, Version=1.0.0.0, Culture=neutral,
+PublicKeyToken=null' or one of its dependencies. This application has failed to
+start because the application configuration is incorrect. Reinstalling the application
+may fix this problem. (Exception from HRESULT: 0x800736B1)</i>“, prašom įdiegti
+Jūsų naudojamai operacinei sistemai tinkamą „Microsoft Visual C++ 2008 SP1 Redistributable“
+paketą (<a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=a5c84275-3b97-4ab7-a40d-3802b2af5fc2&amp;displaylang=en">x86</a>,
+<a href="http://www.microsoft.com/downloads/details.aspx?familyid=BA9257CA-337F-4B40-8C14-157CFDFFEE4E&amp;displaylang=en">
+x64</a>).</p>
+        <h3>PROGRAMOS ĮDIEGIMAS</h3>
+        <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <tt>C:\Program Files</tt>
+aplanką, diegimo metu galėsite nurodyti kitą disko vietą.</p>
+        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library
+(WIA) v2.0“ biblioteka, kuriai būtina „Windows XP SP1“ ar naujesnė „Windows“ laida; biblioteka yra įtraukta į Vista ir 7.
+WIA biblioteka įdiegiama, nukopijuojant failą <tt>wiaaut.dll</tt> į sistemos <tt>System32</tt>
+aplanką (dažniausiai jo kelias – <tt>C:\Windows\System32</tt>) ir jį užregistruojant
+tokia komanda:</p>
+        <blockquote>
+            <p><tt>regsvr32 C:\Windows\System32\wiaaut.dll</tt></p>
+        </blockquote>
+        <p>PDF failų palaikymas galimas naudojant „<a href="http://sourceforge.net/projects/ghostscript/">GPL Ghostscript</a>“ priemonę. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <tt>gsdll32.dll</tt> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <tt>Path</tt>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atverę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.10“ atveju, kintamąjį <tt>Path</tt> reikėtų papildyti tokia eilute:</p>
+        <blockquote>
+            <p><tt>;C:\Program Files\gs\gs9.10\bin</tt></p>
+        </blockquote>
+        <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+žodynų</a> failai (<tt>.aff</tt>, <tt>.dic</tt>) turėtų būti patalpinti į aplanką
+<tt>dict</tt>, esantį „VietOCR“ programos aplanke.</p>
+        <h3>INSTRUKCIJOS</h3>
+        <p>„Tesseract“ programos <a href="http://code.google.com/p/tesseract-ocr/downloads/list">
+kalbinių duomenų paketai</a> turėtų būti išskleisti į <tt>tesseract</tt> diegimo
+aplanke. Duomenų failai, kurių vardai prasideda ISO639-3 kodais, bus patalpinti
+į poaplankį <tt>tessdata</tt>. „VietOCR“ geba parsiųsti ir įdiegti kalbinių duomenų
+paketus kai kurioms kalboms; šia funkcija galite pasinaudoti, iškviesdami meniu
+„<i>Nuostatos</i>“ punktą „<i>Parsiųsti kalbinius duomenis</i>“. Jeigu <tt>tessdata</tt>
+aplankas yra sisteminio aplanko (pvz., <tt>C:\Program Files</tt>) viduje, kalbiniams
+duomenims įdiegti programą gali tekti vykdyti administratoriaus teisėmis.</p>
+        <p>Kalbinių duomenų failai yra generuojami konkretiems šriftams, todėl programai geriausiai
+sekasi atpažinti jai žinomais ar panašių glifų šriftais rašytus tekstus. Prireikus vaizduose
+atpažinti kitais šriftais rašytą tekstą, reikės „Tesseract“ programą papildomai
+<a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract">apmokyti</a>,
+sukuriant naujus kalbos duomenų failus. Kiek išsamiau lietuviškai apie „Tesseract“ galite
+paskaityti <a href="http://dg.lapas.info/?page_id=239">Donato Glodenio tinklaraštyje</a>.</p>
+        <p>Ženklų atpažinimui teksto failo vaizdai turi būti nuskaitomi nuo 200 iki 400 taškų
+colyje raiška, naudojant juodai baltą arba pilkumo tonų veikseną. Aukštesnės raiškos
+vaizdai nebūtinai pagerins ženklų atpažinimo kokybę, kuri ir taip yra pakankamai
+aukšta, ir kitose „Tesseract“ laidose gali dar pagerėti. Ženklų atpažinimo kokybė
+kiekvienu atveju priklauso nuo nuskenuoto vaizdo kokybės. Rekomenduojamos
+nuostatos skenuojamam vaizdui yra tokios: 300 taškų colyje, juodai balta veiksena (1bpp)
+arba 8 bitai taškui (8bpp; pilkumo tonai), vaizdą įrašant į neglaudintą TIFF arba
+PNG formato failą.</p>
+        <p><em>Žemos raiškos (ekranvaizdžio) veiksena</em> įgalina pagerinti žemos raiškos vaizdų 
+atpažinimo kokybę. Šioje veiksenoje, prieš atpažįstant tekstą, žemos raiškos (pvz. ekrano)
+vaizdų raiška padidinama iki 300 taškų colyje.</p>
+        <p>Programa numato galimybę jau esamą teksto apdorojimo algoritmą papildyti savuoju.
+Tam tiesiog pridėkite savo pritaikytą teksto ženklų pakeitimo schemą įrašytą faile <tt>x.DangAmbigs.txt</tt>,
+simbolį „x“ pakeisdami ISO639-3 standarto kalbos kodu (pvz., lietuvių kalbos kodas
+– „lit“). UTF-8 koduotės teksto faile lygybės ženklu „=“ atskirkite keistinų teksto
+fragmentų poras taip: <tt>senaReikšmė=naujaReikšmė</tt>.</p>
+        <p>Programoje įtaisyti įrankiai, skirti sujungti vaizdams ar PDF formato failams bei
+skaidyti PDF failams. Kartais patogiau apdoroti vieną failą, bet ne daug smulkių,
+o kartais, siekiant išvengti atminties stygiaus problemų, tenka padalinti vieną
+didelį failą į mažesnes dalis.</p>
+        <h3>NUSKAITYTO TEKSTO APDOROJIMAS</h3>
+        <p>Teksto atpažinimo klaidos paprastai gali būti skirstomos į tris kategorijas. Dauguma
+klaidų susiję su raidžių registru (pavyzdžiui, „šūVis“) – jos lengvai pataisomos
+bet kuria su unikodu koduotais tekstais gebančia dirbti tekstų rengykle. Kita klaidų
+rūšis susijusi su ženklų atpažinimo proceso problemomis, kai raidės supainiojamos
+dėl diakritinių ženklų arba formos panašumų. Tai nesunkiai pataisoma teksto rašybos
+taisymo programomis. Programoje įtaisyta nuskaityto teksto papildomo aptvarkymo
+funkcija leidžia pašalinti daugumą šių tipų klaidų.</p>
+        <p>Trečiosios kategorijos klaidas aptikti sunkiausia, nes jos yra semantinės. Šių klaidų atveju
+atpažinti žodžiai yra gramatiškai teisingi, tačiau prie konteksto jie nedera (pavyzdžiui,
+„sala“ ir „sąla“). Tokias atvejais tik žmogus, perskaitęs sakinį ir supratęs jo kontekstą,
+gali sugrąžinti žodį, buvusį originaliame dokumente.</p>
+        <p>Pateikiame instrukciją, kaip taisyti pirmos ir antros kategorijos teksto ženklų
+atpažinimo klaidas tiesiogiai programos lange:</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>sujunkite teksto eilutes. Po teksto atpažinimo kiekvienos eilutės gale atsiranda
+po eilutės skirtuką, nurodantį pastraipos pabaigą. Eilutėms sujungti pasinaudokite
+meniu „<i>Formatas</i>“ punktu „<i>Pašalinti eilučių skirtukus</i>“. Atkreipkite
+dėmesį, kad, kai tekstas yra eiliuotas (poezija ar pan.) to gali ir nereikėti;</li>
+            <li>daugumą raidžių registro klaidų pašalinsite, pasirinkę meniu „<i>Formatas</i>“ punktą
+„<i>Keisti raidžių registrą</i>“ ir nurodę punktą „<i>Sakinio stilius</i>“. Tai atlikę, suraskite
+ir pašalinkite likusias raidžių registro klaidas;</li>
+            <li>ištaisykite rašybos klaidas, pasinaudodami mygtuku „<i>Tikrinti rašybą</i>“.</li>
+        </ol>
+<p>Atlikus šiuos žingsnius, dauguma klaidų bus pašalintos. Likusios klaidos susiję
+su teksto semantika. Jos reikalauja žmogaus – tekstų redaktoriaus – pastangų. Redaktorius
+skaitys originalo tekstą ir ištaisys tas vietas, kuriose automatinis klaidų šalinimas
+negalėjo padėti.</p>
+        <p>Jeigu turite kokių nors klausimų, kviečiame kreiptis į <a href="http://forumai.akl.lt/">AKL biuro programų forumą</a>
+arba angliškai į <a href="http://sourceforge.net/projects/vietocr/forums">šios programos naudotojų forumą</a>.</p>
+        <hr>
+</div>
+</body>
+</html>

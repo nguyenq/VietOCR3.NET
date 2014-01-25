@@ -1,0 +1,42 @@
+VietOCR.NET Change Summary
+
+Version 3.0 (26 June 2011)
+- Use command-line process to invoke Tesseract 3.01 (r585) binary executable
+- Include improved Vietnamese language pack
+
+Version 3.1 (1 August 2011)
+- Integrate tesseractdotnet .NET wrapper DLL x86 (r48+) based on Tesseract 3.01 (r597)
+- Remove tesseract.exe file
+- Trap OutOfMemory exceptions that intermittently occur during drawing of selection boxes
+- Refactor
+
+Version 3.1.1 (12 September 2011)
+- Fix a bug in which the arrow keys would scroll the picturebox even when the textbox has focus
+- Provide Page Segmentation Mode options for Tesseract engine
+
+Version 3.2 (26 November 2011)
+- Update Tesseract 3.01 to r639 (final release version)
+- Remove unneeded liblept168.dll
+- Update lists of language codes
+- Add PSM support to execution from command line
+
+Version 3.3 (25 February 2012)
+- Download Language Data will warn if the user does not have write access to tessdata folder
+- Use icons from FatCow (http://www.fatcow.com/free-icons) and by Rimas Kudelis
+
+Version 3.3.1 (28 November 2012)
+- Fit Image now retains image aspect ratio
+- Add Bulk OCR process
+
+Version 3.4 (6 January 2013)
+- Upgrade to Tesseract 3.02 .NET wrapper (r820) (https://github.com/charlesw/tesseract)
+- Add hocr support for Bulk & Batch and command-line operations
+- Update links to dictionary files
+
+Version 3.5 (25 January 2014)
+- Update .NET wrapper (Tesseract 3.02 r866)
+- Enhance Bulk ops with subdirectory support
+- Incorporate image filters
+- Implement Undo function
+- Additional translations
+- Update NHunspell to 1.1.1
