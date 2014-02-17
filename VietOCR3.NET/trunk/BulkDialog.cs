@@ -27,10 +27,10 @@ namespace VietOCR.NET
             set { outputFolder = value; }
         }
 
-        public bool Hocr
+        public string OutputFormat
         {
-            get { return this.checkBoxHocr.Checked; }
-            set { this.checkBoxHocr.Checked = value; }
+            get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
+            set { this.comboBoxOutputFormat.SelectedItem = value; }
         }
 
         public BulkDialog()

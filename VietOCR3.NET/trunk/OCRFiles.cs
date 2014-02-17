@@ -40,8 +40,8 @@ namespace VietOCR.NET
         {
             string tempTessOutputFile = Path.GetTempFileName();
             File.Delete(tempTessOutputFile);
-            tempTessOutputFile = Path.ChangeExtension(tempTessOutputFile, Hocr ? HTMLFILE_EXTENSION : FILE_EXTENSION);
-            string outputFileName = tempTessOutputFile.Substring(0, tempTessOutputFile.Length - (Hocr ? HTMLFILE_EXTENSION.Length : FILE_EXTENSION.Length)); // chop the .txt extension
+            tempTessOutputFile = Path.ChangeExtension(tempTessOutputFile, OutputFormat == "hocr" ? HTMLFILE_EXTENSION : FILE_EXTENSION);
+            string outputFileName = tempTessOutputFile.Substring(0, tempTessOutputFile.Length - (OutputFormat == "hocr" ? HTMLFILE_EXTENSION.Length : FILE_EXTENSION.Length)); // chop the .txt extension
 
             // Start the child process.
             Process p = new Process();
@@ -56,7 +56,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4}", tiffFile, outputFileName, lang, PageSegMode, Hocr ? "hocr" : string.Empty);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4}", tiffFile, outputFileName, lang, PageSegMode, OutputFormat == "hocr" ? "hocr" : string.Empty);
                 p.Start();
 
                 // Read the output stream first and then wait.
