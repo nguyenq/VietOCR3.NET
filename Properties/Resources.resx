@@ -286,7 +286,7 @@
     <value>Browse</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
+    <value>.NET GUI Frontend for Tesseract 3.03 OCR Engine</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
     <value>You have no write access to "{0}" folder.
