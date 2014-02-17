@@ -50,6 +50,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.labelOutputFormat = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.labelOutputFormat);
             this.tabPage1.Controls.Add(this.comboBoxOutputFormat);
             this.tabPage1.Controls.Add(this.checkBoxWatch);
             this.tabPage1.Controls.Add(this.labelOutput);
@@ -79,13 +81,16 @@
             // 
             // comboBoxOutputFormat
             // 
+            this.comboBoxOutputFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOutputFormat.FormattingEnabled = true;
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
-            resources.GetString("comboBoxOutputFormat.Items2")});
+            resources.GetString("comboBoxOutputFormat.Items2"),
+            resources.GetString("comboBoxOutputFormat.Items3")});
             resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
+            this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
             // 
             // checkBoxWatch
             // 
@@ -186,6 +191,11 @@
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.RestoreDirectory = true;
             // 
+            // labelOutputFormat
+            // 
+            resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
+            this.labelOutputFormat.Name = "labelOutputFormat";
+            // 
             // OptionsDialog
             // 
             this.AcceptButton = this.buttonOK;
@@ -230,5 +240,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ComboBox comboBoxOutputFormat;
+        private System.Windows.Forms.Label labelOutputFormat;
     }
 }

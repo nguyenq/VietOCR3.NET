@@ -26,9 +26,6 @@ namespace VietOCR.NET
 {
     class OCRFiles : OCR<string>
     {
-        const string FILE_EXTENSION = ".txt";
-        const string HTMLFILE_EXTENSION = ".html";
-
         /// <summary>
         /// Recognizes TIFF files.
         /// </summary>
@@ -36,12 +33,12 @@ namespace VietOCR.NET
         /// <param name="lang"></param>
         /// <returns></returns>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override string RecognizeText(IList<string> tiffFiles, string lang)
+        public override string RecognizeText(IList<string> tiffFiles)
         {
             string tempTessOutputFile = Path.GetTempFileName();
             File.Delete(tempTessOutputFile);
-            tempTessOutputFile = Path.ChangeExtension(tempTessOutputFile, OutputFormat == "hocr" ? HTMLFILE_EXTENSION : FILE_EXTENSION);
-            string outputFileName = tempTessOutputFile.Substring(0, tempTessOutputFile.Length - (OutputFormat == "hocr" ? HTMLFILE_EXTENSION.Length : FILE_EXTENSION.Length)); // chop the .txt extension
+            tempTessOutputFile = Path.ChangeExtension(tempTessOutputFile, OutputFormat);
+            string outputFileName = Path.Combine(Path.GetDirectoryName(tempTessOutputFile), Path.GetFileNameWithoutExtension(tempTessOutputFile)); // chop the file extension
 
             // Start the child process.
             Process p = new Process();
@@ -56,7 +53,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4}", tiffFile, outputFileName, lang, PageSegMode, OutputFormat == "hocr" ? "hocr" : string.Empty);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4}", tiffFile, outputFileName, Language, PageSegMode, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
                 p.Start();
 
                 // Read the output stream first and then wait.

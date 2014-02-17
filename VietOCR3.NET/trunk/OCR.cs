@@ -34,7 +34,15 @@ namespace VietOCR.NET
             set { pageSegMode = value; }
         }
 
-        private string outputFormat;
+        private string language = "eng";
+
+        public string Language
+        {
+            get { return language; }
+            set { language = value; }
+        }
+
+        private string outputFormat = "txt";
 
         public string OutputFormat
         {
@@ -43,25 +51,25 @@ namespace VietOCR.NET
         }
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RecognizeText(IList<T> imageEntities, string lang, Rectangle selection)
+        public string RecognizeText(IList<T> imageEntities, Rectangle selection)
         {
             rect = selection;
-            return RecognizeText(imageEntities, lang);
+            return RecognizeText(imageEntities);
         }
         /// <summary>
         /// Recognize text
         /// </summary>
         /// <param name="imageEntities"></param>
         /// <param name="index"></param>
-        /// <param name="lang"></param>
+        /// 
         /// <returns></returns>
-        public abstract string RecognizeText(IList<T> imageEntities, string lang);
+        public abstract string RecognizeText(IList<T> imageEntities);
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RecognizeText(IList<T> imageEntities, string lang, Rectangle selection, BackgroundWorker worker, DoWorkEventArgs e)
+        public string RecognizeText(IList<T> imageEntities, Rectangle selection, BackgroundWorker worker, DoWorkEventArgs e)
         {
             rect = selection;
-            return RecognizeText(imageEntities, lang, worker, e);
+            return RecognizeText(imageEntities, worker, e);
         }
 
         /// <summary>
@@ -72,7 +80,7 @@ namespace VietOCR.NET
         /// <param name="lang">the language OCR is going to be performed for</param>
         /// <returns>result text</returns>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RecognizeText(IList<T> imageEntities, string lang, BackgroundWorker worker, DoWorkEventArgs e)
+        public string RecognizeText(IList<T> imageEntities, BackgroundWorker worker, DoWorkEventArgs e)
         {
             // Abort the operation if the user has canceled.
             // Note that a call to CancelAsync may have set 
@@ -91,7 +99,7 @@ namespace VietOCR.NET
                 return String.Empty;
             }
 
-            return RecognizeText(imageEntities, lang);
+            return RecognizeText(imageEntities);
         }
 
         void ProgressEvent(int percent)

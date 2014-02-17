@@ -90,5 +90,30 @@ namespace VietOCR.NET
             FormLocalizer localizer = new FormLocalizer(this, typeof(BulkDialog));
             localizer.ApplyCulture(new CultureInfo(locale));
         }
+
+        private void comboBoxOutputFormat_MouseHover(object sender, EventArgs e)
+        {
+            string val = this.comboBoxOutputFormat.SelectedItem.ToString();
+            switch (val)
+            {
+                case "txt+":
+                    val = "Text with postprocessing";
+                    break;
+                case "txt":
+                    val = "Text with no postprocessing";
+                    break;
+                case "pdf":
+                    val = "PDF";
+                    break;
+                case "hocr":
+                    val = "hOCR";
+                    break;
+                default:
+                    val = null;
+                    break;
+            }
+
+            this.toolTip1.SetToolTip(this.comboBoxOutputFormat, val);
+        }
     }
 }

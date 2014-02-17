@@ -29,10 +29,19 @@ namespace VietOCR.NET
                 if ("hocr" == arg)
                 {
                     outputFormat = "hocr";
+                } 
+                else if ("pdf" == arg) 
+                {
+                    outputFormat = "pdf";
+                }
+                else if ("txt+" == arg)
+                {
+                    outputFormat = "txt+";
                 }
             }
+
             FileInfo imageFile = new FileInfo(args[0]);
-            FileInfo outputFile = new FileInfo(args[1] + (outputFormat == "hocr" ? ".html" : ".txt"));
+            FileInfo outputFile = new FileInfo(args[1] + "." + outputFormat.Replace("+", string.Empty));
 
             if (!imageFile.Exists)
             {
