@@ -34,12 +34,12 @@ namespace VietOCR.NET
             set { pageSegMode = value; }
         }
 
-        private bool hocr;
+        private string outputFormat;
 
-        public bool Hocr
+        public string OutputFormat
         {
-            get { return hocr; }
-            set { hocr = value; }
+            get { return outputFormat; }
+            set { outputFormat = value; }
         }
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]

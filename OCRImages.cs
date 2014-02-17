@@ -44,7 +44,7 @@ namespace VietOCR.NET
 
             using (TesseractEngine engine = new TesseractEngine(tessdata, lang, EngineMode.Default))
             {
-                engine.SetVariable("tessedit_create_hocr", Hocr ? "1" : "0");
+                engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
  
                 StringBuilder strB = new StringBuilder();
@@ -57,7 +57,7 @@ namespace VietOCR.NET
                     {
                         using (Page page = engine.Process(pix, psm))
                         {
-                            string text = Hocr ? page.GetHOCRText(pageNum - 1) : page.GetText();
+                            string text = OutputFormat == "hocr" ? page.GetHOCRText(pageNum - 1) : page.GetText();
 
                             if (text == null) return String.Empty;
                             strB.Append(text);

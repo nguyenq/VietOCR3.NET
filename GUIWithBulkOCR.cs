@@ -34,11 +34,11 @@ namespace VietOCR.NET
     {
         const string strInputFolder = "InputFolder";
         const string strBulkOutputFolder = "BulkOutputFolder";
-        const string strBulkHocr = "BulkHocr";
+        const string strBulkOutputFormat = "BulkOutputFormat";
 
         private string inputFolder;
         private string outputFolder;
-        private bool hocr;
+        private string outputFormat;
 
         private BulkDialog bulkDialog;
         private StatusForm statusForm;
@@ -84,13 +84,13 @@ namespace VietOCR.NET
 
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
-            bulkDialog.Hocr = hocr;
+            bulkDialog.OutputFormat = outputFormat;
 
             if (bulkDialog.ShowDialog() == DialogResult.OK)
             {
                 inputFolder = bulkDialog.InputFolder;
                 outputFolder = bulkDialog.OutputFolder;
-                hocr = bulkDialog.Hocr;
+                outputFormat = bulkDialog.OutputFormat;
 
                 this.toolStripStatusLabel1.Text = Properties.Resources.OCRrunning;
                 this.Cursor = Cursors.WaitCursor;
@@ -152,7 +152,7 @@ namespace VietOCR.NET
             try
             {
                 string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename + (hocr ? ".html" : ".txt")), curLangCode, selectedPSM, hocr);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename + (outputFormat == "hocr" ? ".html" : ".txt")), curLangCode, selectedPSM, outputFormat);
             }
             catch
             {
@@ -228,7 +228,7 @@ namespace VietOCR.NET
             base.LoadRegistryInfo(regkey);
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            hocr = Convert.ToBoolean((int)regkey.GetValue(strBulkHocr, Convert.ToInt32(false)));
+            outputFormat = (string)regkey.GetValue(strBulkOutputFormat, "txt");
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -236,7 +236,7 @@ namespace VietOCR.NET
             base.SaveRegistryInfo(regkey);
             regkey.SetValue(strInputFolder, inputFolder);
             regkey.SetValue(strBulkOutputFolder, outputFolder);
-            regkey.SetValue(strBulkHocr, Convert.ToInt32(hocr));
+            regkey.SetValue(strBulkOutputFormat, outputFormat);
         }
     }
 }

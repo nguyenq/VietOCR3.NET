@@ -23,16 +23,16 @@ namespace VietOCR.NET
                 return;
             }
 
-            bool hocr = false;
+            string outputFormat = "txt";
             foreach (string arg in args)
             {
                 if ("hocr" == arg)
                 {
-                    hocr = true;
+                    outputFormat = "hocr";
                 }
             }
             FileInfo imageFile = new FileInfo(args[0]);
-            FileInfo outputFile = new FileInfo(args[1] + (hocr ? ".html" : ".txt"));
+            FileInfo outputFile = new FileInfo(args[1] + (outputFormat == "hocr" ? ".html" : ".txt"));
 
             if (!imageFile.Exists)
             {
@@ -43,7 +43,7 @@ namespace VietOCR.NET
             string curLangCode = "eng"; //default language
             string psm = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
 
-            if ((args.Length == 4 && !hocr) || (args.Length == 5 && hocr))
+            if ((args.Length == 4) || (args.Length == 5))
             {
                 if (args[2].Equals("-l"))
                 {
@@ -54,7 +54,7 @@ namespace VietOCR.NET
                     psm = args[3];
                 }
             }
-            else if ((args.Length == 6 && !hocr) || (args.Length == 7 && hocr))
+            else if ((args.Length == 6) || (args.Length == 7))
             {
                 curLangCode = args[3];
                 psm = args[5];
@@ -71,7 +71,7 @@ namespace VietOCR.NET
 
             try
             {
-                OCRHelper.PerformOCR(imageFile.FullName, outputFile.FullName, curLangCode, psm, hocr);
+                OCRHelper.PerformOCR(imageFile.FullName, outputFile.FullName, curLangCode, psm, outputFormat);
             }
             catch (Exception e)
             {
