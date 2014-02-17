@@ -152,7 +152,7 @@ namespace VietOCR.NET
             try
             {
                 string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename + (outputFormat == "hocr" ? ".html" : ".txt")), curLangCode, selectedPSM, outputFormat);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename + "." + outputFormat.Replace("+", string.Empty)), curLangCode, selectedPSM, outputFormat);
             }
             catch
             {
