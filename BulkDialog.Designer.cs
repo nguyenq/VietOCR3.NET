@@ -41,6 +41,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.comboBoxOutputFormat = new System.Windows.Forms.ComboBox();
+            this.labelOutputFormat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelOutput
@@ -97,19 +98,28 @@
             // 
             // comboBoxOutputFormat
             // 
+            this.comboBoxOutputFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOutputFormat.FormattingEnabled = true;
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
-            resources.GetString("comboBoxOutputFormat.Items2")});
+            resources.GetString("comboBoxOutputFormat.Items2"),
+            resources.GetString("comboBoxOutputFormat.Items3")});
             resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
+            this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
+            // 
+            // labelOutputFormat
+            // 
+            resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
+            this.labelOutputFormat.Name = "labelOutputFormat";
             // 
             // BulkDialog
             // 
             this.AcceptButton = this.buttonRun;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelOutputFormat);
             this.Controls.Add(this.comboBoxOutputFormat);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonRun);
@@ -141,5 +151,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ComboBox comboBoxOutputFormat;
+        private System.Windows.Forms.Label labelOutputFormat;
     }
 }

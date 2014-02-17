@@ -10,20 +10,44 @@ namespace VietOCR.NET
 {
     class OCRHelper
     {
+        /// <summary>
+        /// Performs OCR for bulk/batch and console operations.
+        /// </summary>
+        /// <param name="imageFile"></param>
+        /// <param name="outputFile"></param>
+        /// <param name="langCode"></param>
+        /// <param name="pageSegMode"></param>
+        /// <param name="outputFormat"></param>
         public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat)
         {
             IList<Image> imageList;
 
             try
             {
-                imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
+                DirectoryInfo dir = Directory.GetParent(outputFile);
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
+
+                bool postprocess = "txt+" == outputFormat;
+
                 OCR<Image> ocrEngine = new OCRImages();
                 ocrEngine.PageSegMode = pageSegMode;
-                ocrEngine.OutputFormat = outputFormat;
-                string result = ocrEngine.RecognizeText(imageList, langCode);
+                ocrEngine.Language = langCode;
+                ocrEngine.OutputFormat = outputFormat.Replace("+", string.Empty);
 
-                // skip post-corrections if hocr output
-                if (outputFormat == "txt")
+                // convert PDF to TIFF
+                if (imageFile.ToLower().EndsWith(".pdf"))
+                {
+                    imageFile = PdfUtilities.ConvertPdf2Tiff(imageFile);
+                }
+
+                imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
+                string result = ocrEngine.RecognizeText(imageList);
+
+                // post-corrections for txt+ output
+                if (postprocess)
                 {
                     // postprocess to correct common OCR errors
                     result = Processor.PostProcess(result, langCode);
@@ -33,15 +57,17 @@ namespace VietOCR.NET
                     result = TextUtilities.CorrectLetterCases(result);
                 }
 
-                DirectoryInfo dir = Directory.GetParent(outputFile);
-                if (!dir.Exists)
+                if (outputFormat == "pdf")
                 {
-                    dir.Create();
-                }
-
-                using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
+                    byte[] bytes = null; // get the byte array
+                    File.WriteAllBytes(outputFile, bytes);
+                } 
+                else 
                 {
-                    sw.Write(result);
+                    using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
+                    {
+                        sw.Write(result);
+                    }
                 }
             }
             finally

@@ -129,6 +129,7 @@ namespace VietOCR.NET
             OCRImageEntity entity = (OCRImageEntity)e.Argument;
             OCR<Image> ocrEngine = new OCRImages();
             ocrEngine.PageSegMode = selectedPSM;
+            ocrEngine.Language = entity.Language;
 
             // Assign the result of the computation to the Result property of the DoWorkEventArgs
             // object. This is will be available to the RunWorkerCompleted eventhandler.
@@ -143,7 +144,7 @@ namespace VietOCR.NET
                     break;
                 }
 
-                string result = ocrEngine.RecognizeText(((List<Image>)images).GetRange(i, 1), entity.Language, entity.Rect, worker, e);
+                string result = ocrEngine.RecognizeText(((List<Image>)images).GetRange(i, 1), entity.Rect, worker, e);
                 worker.ReportProgress(i, result); // i is not really percentage
             }
         }

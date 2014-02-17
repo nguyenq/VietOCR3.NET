@@ -38,11 +38,11 @@ namespace VietOCR.NET
         /// <param name="lang"></param>
         /// <returns></returns>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override string RecognizeText(IList<Image> images, string lang)
+        public override string RecognizeText(IList<Image> images)
         {
             string tessdata = Path.Combine(basedir, TESSDATA);
 
-            using (TesseractEngine engine = new TesseractEngine(tessdata, lang, EngineMode.Default))
+            using (TesseractEngine engine = new TesseractEngine(tessdata, Language, EngineMode.Default))
             {
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
