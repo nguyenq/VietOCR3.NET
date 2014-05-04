@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelOutputFormat = new System.Windows.Forms.Label();
             this.comboBoxOutputFormat = new System.Windows.Forms.ComboBox();
             this.checkBoxWatch = new System.Windows.Forms.CheckBox();
             this.labelOutput = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.labelOutputFormat = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -58,8 +58,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -78,6 +78,11 @@
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelOutputFormat
+            // 
+            resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
+            this.labelOutputFormat.Name = "labelOutputFormat";
             // 
             // comboBoxOutputFormat
             // 
@@ -190,11 +195,6 @@
             this.openFileDialog1.DefaultExt = "txt";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.RestoreDirectory = true;
-            // 
-            // labelOutputFormat
-            // 
-            resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
-            this.labelOutputFormat.Name = "labelOutputFormat";
             // 
             // OptionsDialog
             // 
