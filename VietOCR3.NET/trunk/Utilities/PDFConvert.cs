@@ -17,6 +17,7 @@ namespace ConvertPDF
     /// </summary>
     /// <see cref="http://www.codeproject.com/KB/cs/GhostScriptUseWithCSharp.aspx"/>
     /// <seealso cref="http://www.hrangel.com.br/index.php/2006/12/04/converter-pdf-para-imagem-jpeg-em-c/"/>
+    /// Modified by Quan Nguyen to support 64-bit DLL (10-May-2014)
     public class PDFConvert
     {
         #region Static
@@ -64,7 +65,10 @@ namespace ConvertPDF
         /// <param name="caller_handle"></param>
         /// <returns></returns>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_new_instance")]
-        private static extern int gsapi_new_instance(out IntPtr pinstance, IntPtr caller_handle);
+        private static extern int gsapi_new_instance32(out IntPtr pinstance, IntPtr caller_handle);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_new_instance")]
+        private static extern int gsapi_new_instance64(out IntPtr pinstance, IntPtr caller_handle);
 
         /// <summary>This is the important function that will perform the conversion</summary>
         /// <param name="instance"></param>
@@ -72,27 +76,41 @@ namespace ConvertPDF
         /// <param name="argv"></param>
         /// <returns></returns>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_init_with_args")]
-        private static extern int gsapi_init_with_args(IntPtr instance, int argc, IntPtr argv);
+        private static extern int gsapi_init_with_args32(IntPtr instance, int argc, IntPtr argv);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_init_with_args")]
+        private static extern int gsapi_init_with_args64(IntPtr instance, int argc, IntPtr argv);
         /// <summary>
         /// Exit the interpreter. This must be called on shutdown if gsapi_init_with_args() has been called, and just before gsapi_delete_instance(). 
         /// </summary>
         /// <param name="instance"></param>
         /// <returns></returns>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_exit")]
-        private static extern int gsapi_exit(IntPtr instance);
+        private static extern int gsapi_exit32(IntPtr instance);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_exit")]
+        private static extern int gsapi_exit64(IntPtr instance);
 
         /// <summary>
         /// Destroy an instance of Ghostscript. Before you call this, Ghostscript must have finished. If Ghostscript has been initialised, you must call gsapi_exit before gsapi_delete_instance. 
         /// </summary>
         /// <param name="instance"></param>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_delete_instance")]
-        private static extern void gsapi_delete_instance(IntPtr instance);
+        private static extern void gsapi_delete_instance32(IntPtr instance);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_delete_instance")]
+        private static extern void gsapi_delete_instance64(IntPtr instance);
+
         /// <summary>Get info about the version of Ghostscript i'm using</summary>
         /// <param name="pGSRevisionInfo"></param>
         /// <param name="intLen"></param>
         /// <returns></returns>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_revision")]
-        private static extern int gsapi_revision(ref GS_Revision pGSRevisionInfo, int intLen);
+        private static extern int gsapi_revision32(ref GS_Revision pGSRevisionInfo, int intLen);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_revision")]
+        private static extern int gsapi_revision64(ref GS_Revision pGSRevisionInfo, int intLen);
+
         /// <summary>Use a different I/O</summary>
         /// <param name="lngGSInstance"></param>
         /// <param name="gsdll_stdin">Function that menage the Standard INPUT</param>
@@ -100,7 +118,61 @@ namespace ConvertPDF
         /// <param name="gsdll_stderr">Function that menage the Standard ERROR output</param>
         /// <returns></returns>
         [DllImport("gsdll32.dll", EntryPoint = "gsapi_set_stdio")]
-        private static extern int gsapi_set_stdio(IntPtr lngGSInstance, StdioCallBack gsdll_stdin, StdioCallBack gsdll_stdout, StdioCallBack gsdll_stderr);
+        private static extern int gsapi_set_stdio32(IntPtr lngGSInstance, StdioCallBack gsdll_stdin, StdioCallBack gsdll_stdout, StdioCallBack gsdll_stderr);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_set_stdio")]
+        private static extern int gsapi_set_stdio64(IntPtr lngGSInstance, StdioCallBack gsdll_stdin, StdioCallBack gsdll_stdout, StdioCallBack gsdll_stderr);
+
+        #endregion
+        #region Wrap32_64
+
+        private static int gsapi_new_instance(out IntPtr pinstance, IntPtr caller_handle)
+        {
+            if (IntPtr.Size > 4)
+                return gsapi_new_instance64(out pinstance, caller_handle);
+            else
+                return gsapi_new_instance32(out pinstance, caller_handle);
+        }
+
+        private static int gsapi_init_with_args(IntPtr instance, int argc, IntPtr argv)
+        {
+            if (IntPtr.Size > 4)
+                return gsapi_init_with_args64(instance, argc, argv);
+            else
+                return gsapi_init_with_args32(instance, argc, argv);
+        }
+
+        private static void gsapi_exit(IntPtr instance)
+        {
+            if (IntPtr.Size > 4)
+                gsapi_exit64(instance);
+            else
+                gsapi_exit32(instance);
+        }
+
+        private static void gsapi_delete_instance(IntPtr instance)
+        {
+            if (IntPtr.Size > 4)
+                gsapi_delete_instance64(instance);
+            else
+                gsapi_delete_instance32(instance);
+        }
+
+        private static int gsapi_revision(ref GS_Revision pGSRevisionInfo, int intLen)
+        {
+            if (IntPtr.Size > 4)
+                return gsapi_revision64(ref pGSRevisionInfo, intLen);
+            else
+                return gsapi_revision32(ref pGSRevisionInfo, intLen);
+        }
+
+        private static int gsapi_set_stdio(IntPtr lngGSInstance, StdioCallBack gsdll_stdin, StdioCallBack gsdll_stdout, StdioCallBack gsdll_stderr)
+        {
+            if (IntPtr.Size > 4)
+                return gsapi_set_stdio64(lngGSInstance, gsdll_stdin, gsdll_stdout, gsdll_stderr);
+            else
+                return gsapi_set_stdio32(lngGSInstance, gsdll_stdin, gsdll_stdout, gsdll_stderr);
+        }
 
         #endregion
         #region Const
