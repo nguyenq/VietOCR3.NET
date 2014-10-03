@@ -602,6 +602,15 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Input Multi-page TIFF.
+        /// </summary>
+        internal static string Select_Input_TIFF {
+            get {
+                return ResourceManager.GetString("Select_Input_TIFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please select a language..
         /// </summary>
         internal static string selectLanguage {
@@ -625,6 +634,24 @@ namespace VietOCR.NET.Properties {
         internal static string SplitPDF_running {
             get {
                 return ResourceManager.GetString("SplitPDF_running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Split TIFF running....
+        /// </summary>
+        internal static string SplitTIFF_running {
+            get {
+                return ResourceManager.GetString("SplitTIFF_running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Split TIFF completed..
+        /// </summary>
+        internal static string SplitTIFFcompleted {
+            get {
+                return ResourceManager.GetString("SplitTIFFcompleted", resourceCulture);
             }
         }
         

@@ -125,6 +125,74 @@ namespace VietOCR.NET
             this.Cursor = Cursors.Default;
         }
 
+        protected override void splitTiffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = imageFolder;
+            openFileDialog1.Title = Properties.Resources.Select_Input_TIFF;
+            openFileDialog1.Filter = "Image Files (*.tif;*.tiff)|*.tif;*.tiff";
+            //openFileDialog1.FilterIndex = filterIndex;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //filterIndex = openFileDialog1.FilterIndex;
+                imageFolder = Path.GetDirectoryName(openFileDialog1.FileName);
+
+                this.Cursor = Cursors.WaitCursor;
+                this.toolStripStatusLabel1.Text = Properties.Resources.SplitTIFF_running;
+                //this.pictureBox1.UseWaitCursor = true;
+                this.textBox1.Cursor = Cursors.WaitCursor;
+                this.toolStripProgressBar1.Enabled = true;
+                this.toolStripProgressBar1.Visible = true;
+                this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
+
+                // Start the asynchronous operation.
+                backgroundWorkerSplitTiff.RunWorkerAsync(openFileDialog1.FileName);
+            }
+        }
+
+        private void backgroundWorkerSplitTiff_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string filename = (string)e.Argument;
+            IList<string> filenames = ImageIOHelper.SplitMultipageTiff(new FileInfo(filename));
+            e.Result = filenames;
+        }
+
+        private void backgroundWorkerSplitTiff_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+        }
+
+        private void backgroundWorkerSplitTiff_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.toolStripProgressBar1.Enabled = false;
+            this.toolStripProgressBar1.Visible = false;
+
+            // First, handle the case where an exception was thrown.
+            if (e.Error != null)
+            {
+                this.toolStripStatusLabel1.Text = String.Empty;
+                MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (e.Cancelled)
+            {
+                // Next, handle the case where the user canceled the operation.
+                // Note that due to a race condition in the DoWork event handler, the Cancelled
+                // flag may not have been set, even though CancelAsync was called.
+                this.toolStripStatusLabel1.Text = Properties.Resources.canceled;
+            }
+            else
+            {
+                // Finally, handle the case where the operation succeeded.
+                this.toolStripStatusLabel1.Text = Properties.Resources.SplitTIFFcompleted;
+                MessageBox.Show(this, Properties.Resources.SplitTIFFcompleted, strProgName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.toolStripStatusLabel1.Text = String.Empty;
+            this.textBox1.Cursor = Cursors.Default;
+            this.Cursor = Cursors.Default;
+        }
+
         protected override void splitPdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SplitPdfDialog dialog = new SplitPdfDialog();

@@ -892,6 +892,11 @@ namespace VietOCR.NET
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
+        protected virtual void splitTiffToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
         protected virtual void splitPdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);

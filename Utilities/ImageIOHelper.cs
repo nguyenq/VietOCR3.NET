@@ -96,6 +96,53 @@ namespace VietOCR.NET.Utilities
         }
 
         /// <summary>
+        /// Split multi-page TIFF.
+        /// </summary>
+        /// <param name="imageFile">file name</param>
+        /// <returns>list of output files</returns>
+        public static IList<string> SplitMultipageTiff(FileInfo imageFile)
+        {
+            Image image = null;
+
+            try
+            {
+                // read in the image
+                image = Image.FromFile(imageFile.FullName);
+
+                IList<string> images = new List<string>();
+
+                int count = image.GetFrameCount(FrameDimension.Page);
+                string basefilename = Path.Combine(imageFile.DirectoryName, Path.GetFileNameWithoutExtension(imageFile.Name));
+
+                for (int i = 0; i < count; i++)
+                {
+                    // save each frame to a file
+                    image.SelectActiveFrame(FrameDimension.Page, i);
+                    string filename = String.Format("{0}-{1}.tif", basefilename, (i + 1).ToString("D3"));
+                    image.Save(filename, ImageFormat.Tiff);
+                    images.Add(filename);
+                }
+
+                return images;
+            }
+            catch (OutOfMemoryException e)
+            {
+                throw new ApplicationException(e.Message, e);
+            }
+            catch (System.Runtime.InteropServices.ExternalException e)
+            {
+                throw new ApplicationException(e.Message + "\nIt might have run out of memory due to handling too many images or too large a file.", e);
+            }
+            finally
+            {
+                if (image != null)
+                {
+                    image.Dispose();
+                }
+            }
+        }
+
+        /// <summary>
         /// Merge multiple images into one TIFF image.
         /// </summary>
         /// <param name="inputImages"></param>

@@ -319,4 +319,13 @@ Please run the program as administrator.</value>
   <data name="Contrast" xml:space="preserve">
     <value>Contrast</value>
   </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>Select Input Multi-page TIFF</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>Split TIFF completed.</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>Split TIFF running...</value>
+  </data>
 </root>
