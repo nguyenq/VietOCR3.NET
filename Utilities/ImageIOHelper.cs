@@ -112,13 +112,12 @@ namespace VietOCR.NET.Utilities
                 IList<string> images = new List<string>();
 
                 int count = image.GetFrameCount(FrameDimension.Page);
-                string basefilename = Path.Combine(imageFile.DirectoryName, Path.GetFileNameWithoutExtension(imageFile.Name));
-
+                
                 for (int i = 0; i < count; i++)
                 {
                     // save each frame to a file
                     image.SelectActiveFrame(FrameDimension.Page, i);
-                    string filename = String.Format("{0}-{1}.tif", basefilename, (i + 1).ToString("D3"));
+                    string filename = Path.GetTempPath() + Guid.NewGuid().ToString() + ".tif";
                     image.Save(filename, ImageFormat.Tiff);
                     images.Add(filename);
                 }

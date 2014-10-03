@@ -155,9 +155,19 @@ namespace VietOCR.NET
 
         private void backgroundWorkerSplitTiff_DoWork(object sender, DoWorkEventArgs e)
         {
-            string filename = (string)e.Argument;
-            IList<string> filenames = ImageIOHelper.SplitMultipageTiff(new FileInfo(filename));
-            e.Result = filenames;
+            string infilename = (string) e.Argument;
+            string basefilename = Path.Combine(Path.GetDirectoryName(infilename), Path.GetFileNameWithoutExtension(infilename));
+
+            IList<string> filenames = ImageIOHelper.SplitMultipageTiff(new FileInfo(infilename));
+            
+            // move temp TIFF files to selected folder
+            for (int i = 0; i < filenames.Count; i++)
+            {
+                string outfilename = String.Format("{0}-{1:000}.tif", basefilename, i + 1);
+                File.Delete(outfilename);
+                File.Move(filenames[i], outfilename);
+            }
+            //e.Result = filenames;
         }
 
         private void backgroundWorkerSplitTiff_ProgressChanged(object sender, ProgressChangedEventArgs e)
