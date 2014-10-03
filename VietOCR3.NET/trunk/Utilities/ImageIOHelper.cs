@@ -98,10 +98,26 @@ namespace VietOCR.NET.Utilities
         /// <summary>
         /// Split multi-page TIFF.
         /// </summary>
-        /// <param name="imageFile">file name</param>
-        /// <returns>list of output files</returns>
+        /// <param name="imageFile">input multi-page TIFF files</param>
+        /// <returns>list of output TIFF files</returns>
         public static IList<string> SplitMultipageTiff(FileInfo imageFile)
         {
+            //get the codec for tiff files
+            ImageCodecInfo info = null;
+
+            foreach (ImageCodecInfo ice in ImageCodecInfo.GetImageEncoders())
+            {
+                if (ice.MimeType == "image/tiff")
+                {
+                    info = ice;
+                    break;
+                }
+            }
+
+            EncoderParameters ep = new EncoderParameters(1);
+            Encoder enc1 = Encoder.Compression;
+            ep.Param[0] = new EncoderParameter(enc1, (long)EncoderValue.CompressionNone);
+
             Image image = null;
 
             try
@@ -109,7 +125,7 @@ namespace VietOCR.NET.Utilities
                 // read in the image
                 image = Image.FromFile(imageFile.FullName);
 
-                IList<string> images = new List<string>();
+                IList<string> imagefiles = new List<string>();
 
                 int count = image.GetFrameCount(FrameDimension.Page);
                 
@@ -118,11 +134,11 @@ namespace VietOCR.NET.Utilities
                     // save each frame to a file
                     image.SelectActiveFrame(FrameDimension.Page, i);
                     string filename = Path.GetTempPath() + Guid.NewGuid().ToString() + ".tif";
-                    image.Save(filename, ImageFormat.Tiff);
-                    images.Add(filename);
+                    image.Save(filename, info, ep);
+                    imagefiles.Add(filename);
                 }
 
-                return images;
+                return imagefiles;
             }
             catch (OutOfMemoryException e)
             {
@@ -156,6 +172,7 @@ namespace VietOCR.NET.Utilities
                 if (ice.MimeType == "image/tiff")
                 {
                     info = ice;
+                    break;
                 }
             }
 
