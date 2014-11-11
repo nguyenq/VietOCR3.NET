@@ -120,7 +120,7 @@ namespace VietOCR.NET.Controls
                 blackPen.MiterLimit = 0;
                 blackPen.DashPattern = new float[] { 6, 6 };
                 blackPen.DashOffset = offset;
-                
+
                 try
                 {
                     g.DrawRectangle(blackPen, rect);
@@ -129,7 +129,7 @@ namespace VietOCR.NET.Controls
                 {
                     Console.WriteLine(e.Message + Environment.NewLine + e.StackTrace + Environment.NewLine + rect.ToString());
                 }
-                
+
                 blackPen.Dispose();
             }
 
@@ -145,7 +145,7 @@ namespace VietOCR.NET.Controls
             if (!this.Focused && this.FindForm().ContainsFocus)
             {
                 currentScrollPos = ((Panel)this.Parent).AutoScrollPosition;
-                this.Focus();
+                //this.Focus();
             }
         }
 
@@ -172,7 +172,7 @@ namespace VietOCR.NET.Controls
             int y = rect.Y - wh / 2;
             int w = rect.Width;
             int h = rect.Height;
-                        
+
             ar.Add(new Rectangle(x, y, wh, wh));
             ar.Add(new Rectangle(x + w / 2, y, wh, wh));
             ar.Add(new Rectangle(x + w, y, wh, wh));

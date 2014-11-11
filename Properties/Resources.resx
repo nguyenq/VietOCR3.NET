@@ -328,4 +328,7 @@ Please run the program as administrator.</value>
   <data name="SplitTIFF_running" xml:space="preserve">
     <value>Split TIFF running...</value>
   </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>There is no page numbered '{0}' in this image.</value>
+  </data>
 </root>

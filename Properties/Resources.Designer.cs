@@ -341,6 +341,15 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is no page numbered &apos;{0}&apos; in this image..
+        /// </summary>
+        internal static string InvalidPageMessage {
+            get {
+                return ResourceManager.GetString("InvalidPageMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load Image.
         /// </summary>
         internal static string Load_image {
