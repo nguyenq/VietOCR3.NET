@@ -316,4 +316,7 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Contrast" xml:space="preserve">
     <value>Độ tương phản</value>
   </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>Không có trang số '{0}' trong ảnh này.</value>
+  </data>
 </root>

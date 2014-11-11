@@ -692,7 +692,10 @@ namespace VietOCR.NET
 
         protected void displayImage()
         {
-            this.lblCurIndex.Text = Properties.Resources.Page_ + (imageIndex + 1) + Properties.Resources._of_ + imageTotal;
+            this.lblPage.Text = Properties.Resources.Page_.Trim();
+            this.textBoxCurPage.Text = (imageIndex + 1).ToString();
+            this.textBoxCurPage.Visible = true;
+            this.labelPageNum.Text = "/ " + imageTotal.ToString();
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
 
@@ -714,7 +717,7 @@ namespace VietOCR.NET
 
         protected void centerPicturebox()
         {
-            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty; 
+            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
             int x = 0;
             int y = 0;
 
@@ -800,7 +803,7 @@ namespace VietOCR.NET
 
             if (imageTotal > 0)
             {
-                this.lblCurIndex.Text = Properties.Resources.Page_ + (imageIndex + 1) + Properties.Resources._of_ + imageTotal;
+                this.lblPage.Text = Properties.Resources.Page_.Trim();
             }
 
             this.toolStripStatusLabel1.Text = null;
@@ -984,7 +987,7 @@ namespace VietOCR.NET
 
             return new Size(w, h);
         }
-        
+
         private void textBox1_ModifiedChanged(object sender, EventArgs e)
         {
             if (textModified && !this.textBox1.Modified)
@@ -1187,6 +1190,61 @@ namespace VietOCR.NET
         protected virtual void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        private void textBoxCurPage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                int pageNum;
+                try
+                {
+                    pageNum = Int32.Parse(textBoxCurPage.Text.Trim());
+
+                    if (pageNum == imageIndex + 1)
+                    {
+                        return; // no change
+                    }
+                    else if (pageNum < 1 || pageNum > imageTotal)
+                    {
+                        throw new ArgumentException(); // out of range
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show(string.Format(Properties.Resources.InvalidPageMessage, textBoxCurPage.Text));
+                    textBoxCurPage.Text = (imageIndex + 1).ToString();
+                    return;
+                }
+
+                this.pictureBox1.Deselect();
+                imageIndex = pageNum - 1;
+                this.toolStripStatusLabel1.Text = null;
+                displayImage();
+                clearStack();
+
+                // recalculate scale factors if in Fit Image mode
+                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
+                {
+                    scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
+                    scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+                }
+
+                setButton();
+            }
+        }
+
+        private void textBoxCurPage_Leave(object sender, EventArgs e)
+        {
+            this.textBoxCurPage.Text = (imageIndex + 1).ToString();
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (!this.pictureBox1.Focused && this.FindForm().ContainsFocus && !this.textBoxCurPage.Focused)
+            {
+                this.pictureBox1.Focus();
+            }
         }
     }
 }

@@ -31,7 +31,9 @@ namespace VietOCR.NET
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lblCurIndex = new System.Windows.Forms.Label();
+            this.labelPageNum = new System.Windows.Forms.Label();
+            this.textBoxCurPage = new System.Windows.Forms.TextBox();
+            this.lblPage = new System.Windows.Forms.Label();
             this.pictureBox1 = new VietOCR.NET.Controls.ScrollablePictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -101,6 +103,8 @@ namespace VietOCR.NET
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mergeTiffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitTiffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripSeparator();
             this.mergePdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitPdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,8 +125,6 @@ namespace VietOCR.NET
             this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.splitTiffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -145,7 +147,9 @@ namespace VietOCR.NET
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.lblCurIndex);
+            this.splitContainer2.Panel1.Controls.Add(this.labelPageNum);
+            this.splitContainer2.Panel1.Controls.Add(this.textBoxCurPage);
+            this.splitContainer2.Panel1.Controls.Add(this.lblPage);
             // 
             // splitContainer2.Panel2
             // 
@@ -155,16 +159,30 @@ namespace VietOCR.NET
             this.splitContainer2.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
             this.splitContainer2.Panel2.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
             // 
-            // lblCurIndex
+            // labelPageNum
             // 
-            resources.ApplyResources(this.lblCurIndex, "lblCurIndex");
-            this.lblCurIndex.Name = "lblCurIndex";
+            resources.ApplyResources(this.labelPageNum, "labelPageNum");
+            this.labelPageNum.Name = "labelPageNum";
+            // 
+            // textBoxCurPage
+            // 
+            resources.ApplyResources(this.textBoxCurPage, "textBoxCurPage");
+            this.textBoxCurPage.Name = "textBoxCurPage";
+            this.textBoxCurPage.TabStop = false;
+            this.textBoxCurPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCurPage_KeyPress);
+            this.textBoxCurPage.Leave += new System.EventHandler(this.textBoxCurPage_Leave);
+            // 
+            // lblPage
+            // 
+            resources.ApplyResources(this.lblPage, "lblPage");
+            this.lblPage.Name = "lblPage";
             // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // splitContainer1
             // 
@@ -179,6 +197,7 @@ namespace VietOCR.NET
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.TabStop = false;
             // 
             // panel1
             // 
@@ -645,6 +664,17 @@ namespace VietOCR.NET
             resources.ApplyResources(this.mergeTiffToolStripMenuItem, "mergeTiffToolStripMenuItem");
             this.mergeTiffToolStripMenuItem.Click += new System.EventHandler(this.mergeTiffToolStripMenuItem_Click);
             // 
+            // splitTiffToolStripMenuItem
+            // 
+            this.splitTiffToolStripMenuItem.Name = "splitTiffToolStripMenuItem";
+            resources.ApplyResources(this.splitTiffToolStripMenuItem, "splitTiffToolStripMenuItem");
+            this.splitTiffToolStripMenuItem.Click += new System.EventHandler(this.splitTiffToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            resources.ApplyResources(this.toolStripMenuItem13, "toolStripMenuItem13");
+            // 
             // mergePdfToolStripMenuItem
             // 
             this.mergePdfToolStripMenuItem.Name = "mergePdfToolStripMenuItem";
@@ -796,17 +826,6 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
-            // splitTiffToolStripMenuItem
-            // 
-            this.splitTiffToolStripMenuItem.Name = "splitTiffToolStripMenuItem";
-            resources.ApplyResources(this.splitTiffToolStripMenuItem, "splitTiffToolStripMenuItem");
-            this.splitTiffToolStripMenuItem.Click += new System.EventHandler(this.splitTiffToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem13
-            // 
-            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            resources.ApplyResources(this.toolStripMenuItem13, "toolStripMenuItem13");
-            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
@@ -820,6 +839,7 @@ namespace VietOCR.NET
             this.Name = "GUI";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_KeyDown);
             this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -876,7 +896,7 @@ namespace VietOCR.NET
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomIn;
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomOut;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Label lblCurIndex;
+        private System.Windows.Forms.Label lblPage;
         protected System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
@@ -936,5 +956,7 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem12;
         private System.Windows.Forms.ToolStripMenuItem splitTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem13;
+        private System.Windows.Forms.Label labelPageNum;
+        private System.Windows.Forms.TextBox textBoxCurPage;
     }
 }

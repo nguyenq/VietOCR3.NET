@@ -132,32 +132,86 @@
   <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="lblCurIndex.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
+  <data name="labelPageNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lblCurIndex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="labelPageNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 5</value>
   </data>
-  <data name="lblCurIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 5</value>
+  <data name="labelPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
   </data>
-  <data name="lblCurIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+  <data name="labelPageNum.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="lblCurIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;labelPageNum.Name" xml:space="preserve">
+    <value>labelPageNum</value>
   </data>
-  <data name="&gt;&gt;lblCurIndex.Name" xml:space="preserve">
-    <value>lblCurIndex</value>
-  </data>
-  <data name="&gt;&gt;lblCurIndex.Type" xml:space="preserve">
+  <data name="&gt;&gt;labelPageNum.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblCurIndex.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelPageNum.Parent" xml:space="preserve">
     <value>splitContainer2.Panel1</value>
   </data>
-  <data name="&gt;&gt;lblCurIndex.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;labelPageNum.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="textBoxCurPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 2</value>
+  </data>
+  <data name="textBoxCurPage.MaxLength" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="textBoxCurPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 20</value>
+  </data>
+  <data name="textBoxCurPage.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="textBoxCurPage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="textBoxCurPage.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;textBoxCurPage.Name" xml:space="preserve">
+    <value>textBoxCurPage</value>
+  </data>
+  <data name="&gt;&gt;textBoxCurPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCurPage.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;textBoxCurPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lblPage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 5</value>
+  </data>
+  <data name="lblPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="lblPage.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblPage.Name" xml:space="preserve">
+    <value>lblPage</value>
+  </data>
+  <data name="&gt;&gt;lblPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPage.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;lblPage.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
     <value>splitContainer2.Panel1</value>
@@ -938,28 +992,28 @@
     <value>&amp;Settings</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
     <value>Merge &amp;TIFF...</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
     <value>Split TIFF...</value>
   </data>
   <data name="toolStripMenuItem13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>139, 6</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
     <value>Merge &amp;PDF...</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>142, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Split PDF...</value>
@@ -1870,6 +1924,18 @@
   <data name="&gt;&gt;mergeTiffToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;splitTiffToolStripMenuItem.Name" xml:space="preserve">
+    <value>splitTiffToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;splitTiffToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem13.Name" xml:space="preserve">
+    <value>toolStripMenuItem13</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mergePdfToolStripMenuItem.Name" xml:space="preserve">
     <value>mergePdfToolStripMenuItem</value>
   </data>
@@ -1977,18 +2043,6 @@
   </data>
   <data name="&gt;&gt;backgroundWorkerLoad.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitTiffToolStripMenuItem.Name" xml:space="preserve">
-    <value>splitTiffToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;splitTiffToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem13.Name" xml:space="preserve">
-    <value>toolStripMenuItem13</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>

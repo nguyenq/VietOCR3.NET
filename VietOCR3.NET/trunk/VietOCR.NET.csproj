@@ -212,6 +212,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.ca-ES.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.cs-CZ.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
