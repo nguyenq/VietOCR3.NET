@@ -132,14 +132,11 @@
   <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="labelPageNum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="labelPageNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 5</value>
+    <value>197, 5</value>
   </data>
   <data name="labelPageNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>40, 13</value>
   </data>
   <data name="labelPageNum.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -157,7 +154,7 @@
     <value>0</value>
   </data>
   <data name="textBoxCurPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 2</value>
+    <value>168, 2</value>
   </data>
   <data name="textBoxCurPage.MaxLength" type="System.Int32, mscorlib">
     <value>3</value>
@@ -193,10 +190,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 5</value>
+    <value>104, 5</value>
   </data>
   <data name="lblPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="lblPage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -274,7 +271,7 @@
     <value>20</value>
   </data>
   <data name="splitContainer2.SplitterWidth" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
