@@ -31,15 +31,13 @@ namespace VietOCR.NET
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.labelPageNum = new System.Windows.Forms.Label();
-            this.textBoxCurPage = new System.Windows.Forms.TextBox();
-            this.lblPage = new System.Windows.Forms.Label();
             this.pictureBox1 = new VietOCR.NET.Controls.ScrollablePictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripBtnPrev = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
+            this.toolStripBtnRotateCCW = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnRotateCW = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnFitImage = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnActualSize = new System.Windows.Forms.ToolStripButton();
@@ -47,10 +45,8 @@ namespace VietOCR.NET
             this.toolStripBtnZoomIn = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnZoomOut = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnRotateCCW = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnRotateCW = new System.Windows.Forms.ToolStripButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
+            this.toolStripBtnPrev = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,8 +120,11 @@ namespace VietOCR.NET
             this.toolStripCbLang = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBoxCurPage = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,7 +132,6 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -145,12 +143,6 @@ namespace VietOCR.NET
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.Name = "splitContainer2";
             // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.labelPageNum);
-            this.splitContainer2.Panel1.Controls.Add(this.textBoxCurPage);
-            this.splitContainer2.Panel1.Controls.Add(this.lblPage);
-            // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AllowDrop = true;
@@ -158,24 +150,6 @@ namespace VietOCR.NET
             this.splitContainer2.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer2.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
             this.splitContainer2.Panel2.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
-            // 
-            // labelPageNum
-            // 
-            resources.ApplyResources(this.labelPageNum, "labelPageNum");
-            this.labelPageNum.Name = "labelPageNum";
-            // 
-            // textBoxCurPage
-            // 
-            resources.ApplyResources(this.textBoxCurPage, "textBoxCurPage");
-            this.textBoxCurPage.Name = "textBoxCurPage";
-            this.textBoxCurPage.TabStop = false;
-            this.textBoxCurPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCurPage_KeyPress);
-            this.textBoxCurPage.Leave += new System.EventHandler(this.textBoxCurPage_Leave);
-            // 
-            // lblPage
-            // 
-            resources.ApplyResources(this.lblPage, "lblPage");
-            this.lblPage.Name = "lblPage";
             // 
             // pictureBox1
             // 
@@ -192,7 +166,6 @@ namespace VietOCR.NET
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Panel1.Controls.Add(this.toolStrip2);
             // 
             // splitContainer1.Panel2
             // 
@@ -205,36 +178,37 @@ namespace VietOCR.NET
             this.panel1.Controls.Add(this.splitContainer2);
             this.panel1.Name = "panel1";
             // 
-            // toolStrip2
+            // textBox1
             // 
-            resources.ApplyResources(this.toolStrip2, "toolStrip2");
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBtnPrev,
-            this.toolStripBtnNext,
-            this.toolStripSeparator1,
-            this.toolStripBtnFitImage,
-            this.toolStripBtnActualSize,
-            this.toolStripSeparator2,
-            this.toolStripBtnZoomIn,
-            this.toolStripBtnZoomOut,
-            this.toolStripSeparator3,
-            this.toolStripBtnRotateCCW,
-            this.toolStripBtnRotateCW});
-            this.toolStrip2.Name = "toolStrip2";
+            this.textBox1.AllowDrop = true;
+            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ModifiedChanged += new System.EventHandler(this.textBox1_ModifiedChanged);
+            this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
+            this.textBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
+            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
+            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             // 
-            // toolStripBtnPrev
+            // contextMenuStrip1
             // 
-            this.toolStripBtnPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnPrev, "toolStripBtnPrev");
-            this.toolStripBtnPrev.Name = "toolStripBtnPrev";
-            this.toolStripBtnPrev.Click += new System.EventHandler(this.toolStripBtnPrev_Click);
+            this.contextMenuStrip1.Name = "standardTextBoxContextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // toolStripBtnNext
+            // toolStripBtnRotateCCW
             // 
-            this.toolStripBtnNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnNext, "toolStripBtnNext");
-            this.toolStripBtnNext.Name = "toolStripBtnNext";
-            this.toolStripBtnNext.Click += new System.EventHandler(this.toolStripBtnNext_Click);
+            this.toolStripBtnRotateCCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnRotateCCW, "toolStripBtnRotateCCW");
+            this.toolStripBtnRotateCCW.Name = "toolStripBtnRotateCCW";
+            this.toolStripBtnRotateCCW.Click += new System.EventHandler(this.toolStripBtnRotateCCW_Click);
+            // 
+            // toolStripBtnRotateCW
+            // 
+            this.toolStripBtnRotateCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnRotateCW, "toolStripBtnRotateCW");
+            this.toolStripBtnRotateCW.Name = "toolStripBtnRotateCW";
+            this.toolStripBtnRotateCW.Click += new System.EventHandler(this.toolStripBtnRotateCW_Click);
             // 
             // toolStripSeparator1
             // 
@@ -279,37 +253,19 @@ namespace VietOCR.NET
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
-            // toolStripBtnRotateCCW
+            // toolStripBtnPrev
             // 
-            this.toolStripBtnRotateCCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnRotateCCW, "toolStripBtnRotateCCW");
-            this.toolStripBtnRotateCCW.Name = "toolStripBtnRotateCCW";
-            this.toolStripBtnRotateCCW.Click += new System.EventHandler(this.toolStripBtnRotateCCW_Click);
+            this.toolStripBtnPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnPrev, "toolStripBtnPrev");
+            this.toolStripBtnPrev.Name = "toolStripBtnPrev";
+            this.toolStripBtnPrev.Click += new System.EventHandler(this.toolStripBtnPrev_Click);
             // 
-            // toolStripBtnRotateCW
+            // toolStripBtnNext
             // 
-            this.toolStripBtnRotateCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnRotateCW, "toolStripBtnRotateCW");
-            this.toolStripBtnRotateCW.Name = "toolStripBtnRotateCW";
-            this.toolStripBtnRotateCW.Click += new System.EventHandler(this.toolStripBtnRotateCW_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ModifiedChanged += new System.EventHandler(this.textBox1_ModifiedChanged);
-            this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
-            this.textBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
-            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
-            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "standardTextBoxContextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            this.toolStripBtnNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnNext, "toolStripBtnNext");
+            this.toolStripBtnNext.Name = "toolStripBtnNext";
+            this.toolStripBtnNext.Click += new System.EventHandler(this.toolStripBtnNext_Click);
             // 
             // menuStrip1
             // 
@@ -742,7 +698,22 @@ namespace VietOCR.NET
             this.toolStripBtnClear,
             this.toolStripCbLang,
             this.toolStripLabelLanguage,
-            this.toolStripButtonSpellCheck});
+            this.toolStripButtonSpellCheck,
+            this.toolStripSeparator4,
+            this.toolStripBtnPrev,
+            this.toolStripBtnNext,
+            this.toolStripTextBoxCurPage,
+            this.toolStripLabelPageNum,
+            this.toolStripSeparator1,
+            this.toolStripBtnFitImage,
+            this.toolStripBtnActualSize,
+            this.toolStripSeparator2,
+            this.toolStripBtnZoomIn,
+            this.toolStripBtnZoomOut,
+            this.toolStripSeparator3,
+            this.toolStripBtnRotateCCW,
+            this.toolStripBtnRotateCW,
+            this.toolStripSeparator6});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -819,6 +790,28 @@ namespace VietOCR.NET
             this.toolStripButtonSpellCheck.Name = "toolStripButtonSpellCheck";
             this.toolStripButtonSpellCheck.Click += new System.EventHandler(this.toolStripButtonSpellCheck_Click);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            // 
+            // toolStripTextBoxCurPage
+            // 
+            resources.ApplyResources(this.toolStripTextBoxCurPage, "toolStripTextBoxCurPage");
+            this.toolStripTextBoxCurPage.Name = "toolStripTextBoxCurPage";
+            this.toolStripTextBoxCurPage.Leave += new System.EventHandler(this.toolStripTextBoxCurPage_Leave);
+            this.toolStripTextBoxCurPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBoxCurPage_KeyPress);
+            // 
+            // toolStripLabelPageNum
+            // 
+            resources.ApplyResources(this.toolStripLabelPageNum, "toolStripLabelPageNum");
+            this.toolStripLabelPageNum.Name = "toolStripLabelPageNum";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
+            // 
             // backgroundWorkerLoad
             // 
             this.backgroundWorkerLoad.WorkerReportsProgress = true;
@@ -838,8 +831,6 @@ namespace VietOCR.NET
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_KeyDown);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -848,8 +839,6 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -888,7 +877,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabelLanguage;
         protected System.Windows.Forms.ToolStripComboBox toolStripCbLang;
-        private System.Windows.Forms.ToolStrip toolStrip2;
         protected System.Windows.Forms.ToolStripButton toolStripBtnPrev;
         protected System.Windows.Forms.ToolStripButton toolStripBtnNext;
         protected System.Windows.Forms.ToolStripButton toolStripBtnFitImage;
@@ -896,7 +884,6 @@ namespace VietOCR.NET
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomIn;
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomOut;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Label lblPage;
         protected System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
@@ -956,7 +943,9 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem12;
         private System.Windows.Forms.ToolStripMenuItem splitTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem13;
-        private System.Windows.Forms.Label labelPageNum;
-        private System.Windows.Forms.TextBox textBoxCurPage;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxCurPage;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelPageNum;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }

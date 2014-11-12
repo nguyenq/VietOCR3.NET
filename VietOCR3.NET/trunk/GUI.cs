@@ -692,10 +692,10 @@ namespace VietOCR.NET
 
         protected void displayImage()
         {
-            this.lblPage.Text = Properties.Resources.Page_.Trim();
-            this.textBoxCurPage.Text = (imageIndex + 1).ToString();
-            this.textBoxCurPage.Visible = true;
-            this.labelPageNum.Text = "/ " + imageTotal.ToString();
+            this.toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
+            this.toolStripTextBoxCurPage.Enabled = true;
+            this.toolStripLabelPageNum.Text = " / " + imageTotal.ToString();
+            this.toolStripLabelPageNum.Enabled = true;
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
 
@@ -800,11 +800,6 @@ namespace VietOCR.NET
         {
             FormLocalizer localizer = new FormLocalizer(this, typeof(GUI));
             localizer.ApplyCulture(new CultureInfo(locale));
-
-            if (imageTotal > 0)
-            {
-                this.lblPage.Text = Properties.Resources.Page_.Trim();
-            }
 
             this.toolStripStatusLabel1.Text = null;
 
@@ -1192,14 +1187,14 @@ namespace VietOCR.NET
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        private void textBoxCurPage_KeyPress(object sender, KeyPressEventArgs e)
+        private void toolStripTextBoxCurPage_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
                 int pageNum;
                 try
                 {
-                    pageNum = Int32.Parse(textBoxCurPage.Text.Trim());
+                    pageNum = Int32.Parse(toolStripTextBoxCurPage.Text.Trim());
 
                     if (pageNum == imageIndex + 1)
                     {
@@ -1212,8 +1207,8 @@ namespace VietOCR.NET
                 }
                 catch
                 {
-                    MessageBox.Show(string.Format(Properties.Resources.InvalidPageMessage, textBoxCurPage.Text));
-                    textBoxCurPage.Text = (imageIndex + 1).ToString();
+                    MessageBox.Show(string.Format(Properties.Resources.InvalidPageMessage, toolStripTextBoxCurPage.Text));
+                    toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
                     return;
                 }
 
@@ -1234,14 +1229,14 @@ namespace VietOCR.NET
             }
         }
 
-        private void textBoxCurPage_Leave(object sender, EventArgs e)
+        private void toolStripTextBoxCurPage_Leave(object sender, EventArgs e)
         {
-            this.textBoxCurPage.Text = (imageIndex + 1).ToString();
+            this.toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            if (!this.pictureBox1.Focused && this.FindForm().ContainsFocus && !this.textBoxCurPage.Focused)
+            if (!this.pictureBox1.Focused && this.FindForm().ContainsFocus && !this.toolStripTextBoxCurPage.Focused)
             {
                 this.pictureBox1.Focus();
             }
