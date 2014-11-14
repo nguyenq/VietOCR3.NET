@@ -656,6 +656,7 @@ namespace VietOCR.NET
             isFitImageSelected = false;
 
             displayImage();
+            loadThumbnails();
 
             // clear undo buffer
             clearStack();
@@ -994,6 +995,11 @@ namespace VietOCR.NET
             this.saveToolStripMenuItem.Enabled = this.textBox1.Modified;
         }
 
+        protected virtual void loadThumbnails()
+        {
+
+        }
+        
         protected virtual void metadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
