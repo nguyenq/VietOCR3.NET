@@ -58,7 +58,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>VietOCR.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\VietOCR.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="GUIWithBulkOCR.Designer.cs">
       <DependentUpon>GUIWithBulkOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIWithThumbnail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithThumbnail.Designer.cs">
+      <DependentUpon>GUIWithThumbnail.cs</DependentUpon>
     </Compile>
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
@@ -373,7 +379,7 @@
     <EmbeddedResource Include="TrackbarDialog.vi-VN.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VietOCR.ico" />
+    <EmbeddedResource Include="Resources\VietOCR.ico" />
     <EmbeddedResource Include="Controls\ScrollablePictureBox.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ScrollablePictureBox.cs</DependentUpon>
