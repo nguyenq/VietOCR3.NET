@@ -11,7 +11,7 @@ using VietOCR.NET.WIA;
 
 namespace VietOCR.NET
 {
-    public partial class GUIWithScan : VietOCR.NET.GUI
+    public partial class GUIWithScan : VietOCR.NET.GUIWithThumbnail
     {
         public GUIWithScan()
         {
