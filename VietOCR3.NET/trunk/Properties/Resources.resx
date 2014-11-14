@@ -331,4 +331,8 @@ Please run the program as administrator.</value>
   <data name="InvalidPageMessage" xml:space="preserve">
     <value>There is no page numbered '{0}' in this image.</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VietOCR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VietOCR.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

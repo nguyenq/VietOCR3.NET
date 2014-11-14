@@ -140,8 +140,11 @@ namespace VietOCR.NET
             // splitContainer2
             // 
             resources.ApplyResources(this.splitContainer2, "splitContainer2");
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            resources.ApplyResources(this.splitContainer2.Panel1, "splitContainer2.Panel1");
             // 
             // splitContainer2.Panel2
             // 
@@ -200,6 +203,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnRotateCCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnRotateCCW, "toolStripBtnRotateCCW");
+            this.toolStripBtnRotateCCW.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnRotateCCW.Name = "toolStripBtnRotateCCW";
             this.toolStripBtnRotateCCW.Click += new System.EventHandler(this.toolStripBtnRotateCCW_Click);
             // 
@@ -207,6 +211,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnRotateCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnRotateCW, "toolStripBtnRotateCW");
+            this.toolStripBtnRotateCW.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnRotateCW.Name = "toolStripBtnRotateCW";
             this.toolStripBtnRotateCW.Click += new System.EventHandler(this.toolStripBtnRotateCW_Click);
             // 
@@ -219,6 +224,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnFitImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnFitImage, "toolStripBtnFitImage");
+            this.toolStripBtnFitImage.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnFitImage.Name = "toolStripBtnFitImage";
             this.toolStripBtnFitImage.Click += new System.EventHandler(this.toolStripBtnFitImage_Click);
             // 
@@ -226,6 +232,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnActualSize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnActualSize, "toolStripBtnActualSize");
+            this.toolStripBtnActualSize.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnActualSize.Name = "toolStripBtnActualSize";
             this.toolStripBtnActualSize.Click += new System.EventHandler(this.toolStripBtnActualSize_Click);
             // 
@@ -238,6 +245,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnZoomIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnZoomIn, "toolStripBtnZoomIn");
+            this.toolStripBtnZoomIn.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnZoomIn.Name = "toolStripBtnZoomIn";
             this.toolStripBtnZoomIn.Click += new System.EventHandler(this.toolStripBtnZoomIn_Click);
             // 
@@ -245,6 +253,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnZoomOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnZoomOut, "toolStripBtnZoomOut");
+            this.toolStripBtnZoomOut.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnZoomOut.Name = "toolStripBtnZoomOut";
             this.toolStripBtnZoomOut.Click += new System.EventHandler(this.toolStripBtnZoomOut_Click);
             // 
@@ -257,6 +266,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnPrev.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnPrev, "toolStripBtnPrev");
+            this.toolStripBtnPrev.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnPrev.Name = "toolStripBtnPrev";
             this.toolStripBtnPrev.Click += new System.EventHandler(this.toolStripBtnPrev_Click);
             // 
@@ -264,6 +274,7 @@ namespace VietOCR.NET
             // 
             this.toolStripBtnNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripBtnNext, "toolStripBtnNext");
+            this.toolStripBtnNext.Margin = new System.Windows.Forms.Padding(4, 1, 4, 2);
             this.toolStripBtnNext.Name = "toolStripBtnNext";
             this.toolStripBtnNext.Click += new System.EventHandler(this.toolStripBtnNext_Click);
             // 
