@@ -153,6 +153,7 @@ namespace VietOCR.NET
             // 
             resources.ApplyResources(this.splitContainerImage.Panel1, "splitContainerImage.Panel1");
             this.splitContainerImage.Panel1.Controls.Add(this.flowLayoutPanelThumbnail);
+            this.splitContainerImage.Panel1Collapsed = true;
             // 
             // splitContainerImage.Panel2
             // 

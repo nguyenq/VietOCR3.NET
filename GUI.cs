@@ -91,7 +91,6 @@ namespace VietOCR.NET
         protected bool isFitImageSelected;
         protected Point curScrollPos;
         protected Point pointClicked;
-        private int dividerLocation;
         protected readonly string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         protected System.CodeDom.Compiler.TempFileCollection tempFileCollection = new System.CodeDom.Compiler.TempFileCollection();
@@ -1252,12 +1251,7 @@ namespace VietOCR.NET
         private void buttonCollapseExpand_Click(object sender, EventArgs e)
         {
             this.buttonCollapseExpand.Text = this.buttonCollapseExpand.Text == "»" ? "«" : "»";
-            int currentLoc = this.splitContainerImage.SplitterDistance;
-            if (currentLoc > 1)
-            {
-                dividerLocation = currentLoc;
-            }
-            this.splitContainerImage.SplitterDistance = currentLoc == 1 ? dividerLocation : 1;
+            this.splitContainerImage.Panel1Collapsed ^= true;
         }
     }
 }
