@@ -19,40 +19,50 @@ namespace VietOCR.NET
 
         protected override void loadThumbnails()
         {
-            Control.ControlCollection col = this.flowLayoutPanelThumbnail.Controls;
-            col.Clear();
+            this.flowLayoutPanelThumbnail.Controls.Clear();
             group.Controls.Clear();
 
-            int index = 0;
-
-            foreach (Image image in imageList)
-            {
-                RadioButton rb = new RadioButton();
-                rb.Width -= 20;
-                rb.Appearance = Appearance.Button;
-                rb.FlatStyle = FlatStyle.Flat;
-                rb.FlatAppearance.BorderColor = Color.Gray;
-                rb.BackgroundImage = image.GetThumbnailImage(90, 100, null, IntPtr.Zero);
-                rb.ImageAlign = ContentAlignment.MiddleCenter;
-                int horizontalMargin = (this.flowLayoutPanelThumbnail.Width - rb.Width) / 2;
-                rb.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 2);
-                rb.Height = 100;
-                rb.ImageIndex = index++;
-                rb.Click += new System.EventHandler(this.radioButton_Click);
-                group.Controls.Add(rb);
-                col.Add(rb);
-                Label label = new Label();
-                label.Text = (rb.ImageIndex + 1).ToString();
-                label.Width = 20;
-                horizontalMargin = (this.flowLayoutPanelThumbnail.Width - label.Width) / 2;
-                label.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
-                col.Add(label);
-            }
-
-            //loadImages.execute();
+            this.backgroundWorkerLoadThumbnail.RunWorkerAsync();
         }
 
-        void radioButton_Click(object sender, EventArgs e)
+        private void backgroundWorkerLoadThumbnail_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // Create thumbnails
+            for (int i = 0; i < imageList.Count; i++)
+            {
+                Image thumbnail = imageList[i].GetThumbnailImage(85, 110, null, IntPtr.Zero);
+                this.backgroundWorkerLoadThumbnail.ReportProgress(i, thumbnail);
+            }
+        }
+
+        private void backgroundWorkerLoadThumbnail_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            // Load thumbnails & associated labels into panel
+            Image thumbnail = (Image)e.UserState;
+            RadioButton rb = new RadioButton();
+            rb.Width = thumbnail.Width;
+            rb.Appearance = Appearance.Button;
+            rb.FlatStyle = FlatStyle.Flat;
+            rb.FlatAppearance.BorderColor = Color.Gray;
+            rb.BackgroundImage = thumbnail;
+            rb.ImageAlign = ContentAlignment.MiddleCenter;
+            int horizontalMargin = (this.flowLayoutPanelThumbnail.Width - rb.Width) / 2;
+            rb.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 2);
+            rb.Height = thumbnail.Height;
+            rb.ImageIndex = e.ProgressPercentage;
+            rb.Click += new System.EventHandler(this.radioButton_Click);
+            group.Controls.Add(rb);
+            this.flowLayoutPanelThumbnail.Controls.Add(rb);
+
+            Label label = new Label();
+            label.Text = (rb.ImageIndex + 1).ToString();
+            label.Width = 20;
+            horizontalMargin = (this.flowLayoutPanelThumbnail.Width - label.Width) / 2;
+            label.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
+            this.flowLayoutPanelThumbnail.Controls.Add(label);
+        }
+
+        private void radioButton_Click(object sender, EventArgs e)
         {
             int index = ((RadioButton)sender).ImageIndex;
             if (imageIndex == index)
