@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.splitContainerImage.Panel2.SuspendLayout();
+            this.splitContainerImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,15 +41,15 @@
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Size = new System.Drawing.Size(280, 373);
+            this.splitContainerImage.Size = new System.Drawing.Size(280, 373);
             // 
             // GUIWithBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(668, 458);
             this.Name = "GUIWithBatch";
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.ResumeLayout(false);
+            this.splitContainerImage.Panel2.ResumeLayout(false);
+            this.splitContainerImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

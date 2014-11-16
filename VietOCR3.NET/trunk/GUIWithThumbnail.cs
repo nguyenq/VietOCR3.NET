@@ -19,25 +19,31 @@ namespace VietOCR.NET
 
         protected override void loadThumbnails()
         {
-            Control.ControlCollection col = this.splitContainer2.Panel1.Controls;
+            Control.ControlCollection col = this.flowLayoutPanelThumbnail.Controls;
             col.Clear();
             group.Controls.Clear();
 
-            int y = 0;
             int index = 0;
+
             foreach (Image image in imageList)
             {
                 RadioButton rb = new RadioButton();
                 rb.Appearance = Appearance.Button;
-                
-                rb.Image = image.GetThumbnailImage(60, 80, null, IntPtr.Zero);
+                rb.BackgroundImage = image.GetThumbnailImage(100, 100, null, IntPtr.Zero);
                 rb.ImageAlign = ContentAlignment.MiddleCenter;
-                rb.Location = new Point(0, y);
-                y += 100;
+                int horizontalMargin = (this.flowLayoutPanelThumbnail.Width - rb.Width) / 2;
+                rb.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
+                rb.Height = 100;
                 rb.ImageIndex = index++;
                 rb.Click += new System.EventHandler(this.radioButton_Click);
                 group.Controls.Add(rb);
                 col.Add(rb);
+                Label label = new Label();
+                label.Text = rb.ImageIndex.ToString();
+                label.Width = 20;
+                horizontalMargin = (this.flowLayoutPanelThumbnail.Width - label.Width) / 2;
+                label.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
+                col.Add(label);
             }
 
             //loadImages.execute();

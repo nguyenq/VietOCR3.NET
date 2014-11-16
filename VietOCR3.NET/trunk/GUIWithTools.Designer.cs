@@ -32,8 +32,8 @@
             this.backgroundWorkerMergeTiff = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerMergePdf = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerSplitTiff = new System.ComponentModel.BackgroundWorker();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.splitContainerImage.Panel2.SuspendLayout();
+            this.splitContainerImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Size = new System.Drawing.Size(331, 541);
+            this.splitContainerImage.Size = new System.Drawing.Size(331, 541);
             // 
             // backgroundWorkerSplitPdf
             // 
@@ -76,8 +76,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(774, 626);
             this.Name = "GUIWithTools";
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.ResumeLayout(false);
+            this.splitContainerImage.Panel2.ResumeLayout(false);
+            this.splitContainerImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

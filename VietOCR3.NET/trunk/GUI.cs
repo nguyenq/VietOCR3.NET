@@ -91,6 +91,7 @@ namespace VietOCR.NET
         protected bool isFitImageSelected;
         protected Point curScrollPos;
         protected Point pointClicked;
+        private int dividerLocation;
         protected readonly string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         protected System.CodeDom.Compiler.TempFileCollection tempFileCollection = new System.CodeDom.Compiler.TempFileCollection();
@@ -702,7 +703,7 @@ namespace VietOCR.NET
 
             if (this.isFitImageSelected)
             {
-                Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+                Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainerImage.Panel2.Width, this.splitContainerImage.Panel2.Height);
                 this.pictureBox1.Width = fitSize.Width;
                 this.pictureBox1.Height = fitSize.Height;
                 setScale();
@@ -718,18 +719,18 @@ namespace VietOCR.NET
 
         protected void centerPicturebox()
         {
-            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
+            this.splitContainerImage.Panel2.AutoScrollPosition = Point.Empty;
             int x = 0;
             int y = 0;
 
-            if (this.pictureBox1.Width < this.splitContainer2.Panel2.Width)
+            if (this.pictureBox1.Width < this.splitContainerImage.Panel2.Width)
             {
-                x = (this.splitContainer2.Panel2.Width - this.pictureBox1.Width) / 2;
+                x = (this.splitContainerImage.Panel2.Width - this.pictureBox1.Width) / 2;
             }
 
-            if (this.pictureBox1.Height < this.splitContainer2.Panel2.Height)
+            if (this.pictureBox1.Height < this.splitContainerImage.Panel2.Height)
             {
-                y = (this.splitContainer2.Panel2.Height - this.pictureBox1.Height) / 2;
+                y = (this.splitContainerImage.Panel2.Height - this.pictureBox1.Height) / 2;
             }
 
             this.pictureBox1.Location = new Point(x, y);
@@ -927,15 +928,15 @@ namespace VietOCR.NET
 
         protected override void OnResize(EventArgs e)
         {
-            bool isCentered = this.splitContainer2.Panel2.AutoScrollPosition == Point.Empty;
+            bool isCentered = this.splitContainerImage.Panel2.AutoScrollPosition == Point.Empty;
             base.OnResize(e);
             if (this.pictureBox1.Image != null)
             {
                 this.pictureBox1.Deselect();
                 if (this.isFitImageSelected)
                 {
-                    int w = this.splitContainer2.Panel2.Width;
-                    int h = this.splitContainer2.Panel2.Height;
+                    int w = this.splitContainerImage.Panel2.Width;
+                    int h = this.splitContainerImage.Panel2.Height;
                     Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, w, h);
                     this.pictureBox1.Width = fitSize.Width;
                     this.pictureBox1.Height = fitSize.Height;
@@ -1078,45 +1079,45 @@ namespace VietOCR.NET
                 this.toolStripBtnNext.PerformClick();
             }
 
-            if (this.splitContainer2.Focused)
+            if (this.splitContainerImage.Focused)
             {
                 if (keyData == Keys.Left)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X) - 10, Math.Abs(curScrollPos.Y));
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X) - 10, Math.Abs(curScrollPos.Y));
                 }
                 else if (keyData == Keys.Right)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X) + 10, Math.Abs(curScrollPos.Y));
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X) + 10, Math.Abs(curScrollPos.Y));
                 }
                 else if (keyData == Keys.Up)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) - 10);
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) - 10);
                 }
                 else if (keyData == Keys.Down)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) + 10);
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) + 10);
                 }
                 else if (keyData == (Keys.Control | Keys.Home))
                 {
-                    this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = Point.Empty;
                 }
                 else if (keyData == (Keys.Control | Keys.End))
                 {
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(this.splitContainer2.Panel2.HorizontalScroll.Maximum), Math.Abs(this.splitContainer2.Panel2.VerticalScroll.Maximum));
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(this.splitContainerImage.Panel2.HorizontalScroll.Maximum), Math.Abs(this.splitContainerImage.Panel2.VerticalScroll.Maximum));
                 }
                 else if (keyData == Keys.PageUp)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) - this.splitContainer2.Panel2.VerticalScroll.LargeChange);
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) - this.splitContainerImage.Panel2.VerticalScroll.LargeChange);
                 }
                 else if (keyData == Keys.PageDown)
                 {
-                    curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-                    this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) + this.splitContainer2.Panel2.VerticalScroll.LargeChange);
+                    curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+                    this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y) + this.splitContainerImage.Panel2.VerticalScroll.LargeChange);
                 }
             }
             return base.ProcessCmdKey(ref msg, keyData);
@@ -1246,6 +1247,17 @@ namespace VietOCR.NET
             {
                 this.pictureBox1.Focus();
             }
+        }
+
+        private void buttonCollapseExpand_Click(object sender, EventArgs e)
+        {
+            this.buttonCollapseExpand.Text = this.buttonCollapseExpand.Text == "»" ? "«" : "»";
+            int currentLoc = this.splitContainerImage.SplitterDistance;
+            if (currentLoc > 1)
+            {
+                dividerLocation = currentLoc;
+            }
+            this.splitContainerImage.SplitterDistance = currentLoc == 1 ? dividerLocation : 1;
         }
     }
 }

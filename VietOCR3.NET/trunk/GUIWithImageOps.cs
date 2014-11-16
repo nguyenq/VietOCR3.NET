@@ -71,13 +71,13 @@ namespace VietOCR.NET
             this.toolStripBtnActualSize.Enabled = true;
             this.toolStripBtnZoomIn.Enabled = false;
             this.toolStripBtnZoomOut.Enabled = false;
-            curScrollPos = this.splitContainer2.Panel2.AutoScrollPosition;
-            this.splitContainer2.Panel2.AutoScrollPosition = Point.Empty;
+            curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
+            this.splitContainerImage.Panel2.AutoScrollPosition = Point.Empty;
             this.pictureBox1.Deselect();
 
             this.pictureBox1.Dock = DockStyle.None;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainer2.Panel2.Width, this.splitContainer2.Panel2.Height);
+            Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainerImage.Panel2.Width, this.splitContainerImage.Panel2.Height);
             this.pictureBox1.Width = fitSize.Width;
             this.pictureBox1.Height = fitSize.Height;
             setScale();
@@ -98,7 +98,7 @@ namespace VietOCR.NET
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
             scaleX = scaleY = 1f;
             this.centerPicturebox();
-            this.splitContainer2.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y));
+            this.splitContainerImage.Panel2.AutoScrollPosition = new Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y));
             isFitImageSelected = false;
         }
 
