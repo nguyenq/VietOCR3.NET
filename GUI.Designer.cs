@@ -30,10 +30,11 @@ namespace VietOCR.NET
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainerImage = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanelThumbnail = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new VietOCR.NET.Controls.ScrollablePictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelImage = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
             this.toolStripBtnRotateCCW = new System.Windows.Forms.ToolStripButton();
@@ -125,34 +126,47 @@ namespace VietOCR.NET
             this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.panelArrow = new System.Windows.Forms.Panel();
+            this.buttonCollapseExpand = new System.Windows.Forms.Button();
+            this.splitContainerImage.Panel1.SuspendLayout();
+            this.splitContainerImage.Panel2.SuspendLayout();
+            this.splitContainerImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelImage.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.panelArrow.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainer2
+            // splitContainerImage
             // 
-            resources.ApplyResources(this.splitContainer2, "splitContainer2");
-            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainerImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.splitContainerImage, "splitContainerImage");
+            this.splitContainerImage.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainerImage.Name = "splitContainerImage";
             // 
-            // splitContainer2.Panel1
+            // splitContainerImage.Panel1
             // 
-            resources.ApplyResources(this.splitContainer2.Panel1, "splitContainer2.Panel1");
+            resources.ApplyResources(this.splitContainerImage.Panel1, "splitContainerImage.Panel1");
+            this.splitContainerImage.Panel1.Controls.Add(this.flowLayoutPanelThumbnail);
             // 
-            // splitContainer2.Panel2
+            // splitContainerImage.Panel2
             // 
-            this.splitContainer2.Panel2.AllowDrop = true;
-            resources.ApplyResources(this.splitContainer2.Panel2, "splitContainer2.Panel2");
-            this.splitContainer2.Panel2.Controls.Add(this.pictureBox1);
-            this.splitContainer2.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
-            this.splitContainer2.Panel2.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
+            this.splitContainerImage.Panel2.AllowDrop = true;
+            resources.ApplyResources(this.splitContainerImage.Panel2, "splitContainerImage.Panel2");
+            this.splitContainerImage.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainerImage.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
+            this.splitContainerImage.Panel2.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
+            this.splitContainerImage.TabStop = false;
+            // 
+            // flowLayoutPanelThumbnail
+            // 
+            resources.ApplyResources(this.flowLayoutPanelThumbnail, "flowLayoutPanelThumbnail");
+            this.flowLayoutPanelThumbnail.Name = "flowLayoutPanelThumbnail";
             // 
             // pictureBox1
             // 
@@ -168,18 +182,18 @@ namespace VietOCR.NET
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel1);
+            this.splitContainer1.Panel1.Controls.Add(this.panelImage);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
             this.splitContainer1.TabStop = false;
             // 
-            // panel1
+            // panelImage
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.splitContainer2);
-            this.panel1.Name = "panel1";
+            this.panelImage.Controls.Add(this.splitContainerImage);
+            resources.ApplyResources(this.panelImage, "panelImage");
+            this.panelImage.Name = "panelImage";
             // 
             // textBox1
             // 
@@ -830,11 +844,27 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
+            // panelArrow
+            // 
+            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelArrow.Controls.Add(this.buttonCollapseExpand);
+            resources.ApplyResources(this.panelArrow, "panelArrow");
+            this.panelArrow.Name = "panelArrow";
+            // 
+            // buttonCollapseExpand
+            // 
+            this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
+            this.buttonCollapseExpand.Name = "buttonCollapseExpand";
+            this.buttonCollapseExpand.UseVisualStyleBackColor = true;
+            this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
+            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.panelArrow);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -842,20 +872,22 @@ namespace VietOCR.NET
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_KeyDown);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.ResumeLayout(false);
+            this.splitContainerImage.Panel1.ResumeLayout(false);
+            this.splitContainerImage.Panel2.ResumeLayout(false);
+            this.splitContainerImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelImage.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.panelArrow.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -895,8 +927,8 @@ namespace VietOCR.NET
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomIn;
         protected System.Windows.Forms.ToolStripButton toolStripBtnZoomOut;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        protected System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.SplitContainer splitContainerImage;
+        private System.Windows.Forms.Panel panelImage;
         protected System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         protected VietOCR.NET.Controls.ScrollablePictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton toolStripBtnRotateCCW;
@@ -958,5 +990,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxCurPage;
         private System.Windows.Forms.ToolStripLabel toolStripLabelPageNum;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.Panel panelArrow;
+        private System.Windows.Forms.Button buttonCollapseExpand;
+        protected System.Windows.Forms.FlowLayoutPanel flowLayoutPanelThumbnail;
     }
 }
