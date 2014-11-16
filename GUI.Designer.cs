@@ -35,6 +35,8 @@ namespace VietOCR.NET
             this.pictureBox1 = new VietOCR.NET.Controls.ScrollablePictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelImage = new System.Windows.Forms.Panel();
+            this.panelArrow = new System.Windows.Forms.Panel();
+            this.buttonCollapseExpand = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
             this.toolStripBtnRotateCCW = new System.Windows.Forms.ToolStripButton();
@@ -126,8 +128,6 @@ namespace VietOCR.NET
             this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.panelArrow = new System.Windows.Forms.Panel();
-            this.buttonCollapseExpand = new System.Windows.Forms.Button();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
@@ -136,10 +136,10 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelImage.SuspendLayout();
+            this.panelArrow.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.panelArrow.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainerImage
@@ -192,8 +192,24 @@ namespace VietOCR.NET
             // panelImage
             // 
             this.panelImage.Controls.Add(this.splitContainerImage);
+            this.panelImage.Controls.Add(this.panelArrow);
             resources.ApplyResources(this.panelImage, "panelImage");
             this.panelImage.Name = "panelImage";
+            // 
+            // panelArrow
+            // 
+            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelArrow.Controls.Add(this.buttonCollapseExpand);
+            resources.ApplyResources(this.panelArrow, "panelArrow");
+            this.panelArrow.Name = "panelArrow";
+            // 
+            // buttonCollapseExpand
+            // 
+            this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
+            this.buttonCollapseExpand.Name = "buttonCollapseExpand";
+            this.buttonCollapseExpand.UseVisualStyleBackColor = true;
+            this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
             // 
             // textBox1
             // 
@@ -844,27 +860,11 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
-            // panelArrow
-            // 
-            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelArrow.Controls.Add(this.buttonCollapseExpand);
-            resources.ApplyResources(this.panelArrow, "panelArrow");
-            this.panelArrow.Name = "panelArrow";
-            // 
-            // buttonCollapseExpand
-            // 
-            this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
-            this.buttonCollapseExpand.Name = "buttonCollapseExpand";
-            this.buttonCollapseExpand.UseVisualStyleBackColor = true;
-            this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
-            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.panelArrow);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -881,13 +881,13 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
             this.panelImage.ResumeLayout(false);
+            this.panelArrow.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panelArrow.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

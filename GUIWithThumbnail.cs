@@ -28,18 +28,21 @@ namespace VietOCR.NET
             foreach (Image image in imageList)
             {
                 RadioButton rb = new RadioButton();
+                rb.Width -= 20;
                 rb.Appearance = Appearance.Button;
-                rb.BackgroundImage = image.GetThumbnailImage(100, 100, null, IntPtr.Zero);
+                rb.FlatStyle = FlatStyle.Flat;
+                rb.FlatAppearance.BorderColor = Color.Gray;
+                rb.BackgroundImage = image.GetThumbnailImage(90, 100, null, IntPtr.Zero);
                 rb.ImageAlign = ContentAlignment.MiddleCenter;
                 int horizontalMargin = (this.flowLayoutPanelThumbnail.Width - rb.Width) / 2;
-                rb.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
+                rb.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 2);
                 rb.Height = 100;
                 rb.ImageIndex = index++;
                 rb.Click += new System.EventHandler(this.radioButton_Click);
                 group.Controls.Add(rb);
                 col.Add(rb);
                 Label label = new Label();
-                label.Text = rb.ImageIndex.ToString();
+                label.Text = (rb.ImageIndex + 1).ToString();
                 label.Width = 20;
                 horizontalMargin = (this.flowLayoutPanelThumbnail.Width - label.Width) / 2;
                 label.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 0);
