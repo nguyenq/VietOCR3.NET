@@ -283,7 +283,6 @@ namespace VietOCR.NET
                 openFile(openFileDialog1.FileName);
                 filterIndex = openFileDialog1.FilterIndex;
             }
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1252,6 +1251,11 @@ namespace VietOCR.NET
         {
             this.buttonCollapseExpand.Text = this.buttonCollapseExpand.Text == "»" ? "«" : "»";
             this.splitContainerImage.Panel1Collapsed ^= true;
+        }
+
+        protected virtual void splitContainerImage_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
     }
 }
