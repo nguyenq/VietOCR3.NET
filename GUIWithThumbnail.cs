@@ -74,5 +74,14 @@ namespace VietOCR.NET
             clearStack();
             setButton();
         }
+
+        protected override void splitContainerImage_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+            foreach (Control con in this.flowLayoutPanelThumbnail.Controls)
+            {
+                int horizontalMargin = (this.flowLayoutPanelThumbnail.Width - con.Width) / 2;
+                con.Margin = new Padding(horizontalMargin, 0, horizontalMargin, 2);
+            }
+        }
     }
 }
