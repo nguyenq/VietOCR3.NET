@@ -128,6 +128,7 @@ namespace VietOCR.NET
             this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
@@ -210,6 +211,7 @@ namespace VietOCR.NET
             this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
             this.buttonCollapseExpand.Name = "buttonCollapseExpand";
+            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
             this.buttonCollapseExpand.UseVisualStyleBackColor = true;
             this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
             // 
@@ -995,5 +997,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.Panel panelArrow;
         private System.Windows.Forms.Button buttonCollapseExpand;
         protected System.Windows.Forms.FlowLayoutPanel flowLayoutPanelThumbnail;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

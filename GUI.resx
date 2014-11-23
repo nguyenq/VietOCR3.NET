@@ -264,6 +264,12 @@
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 544</value>
+  </metadata>
+  <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
+    <value>Page Thumbnails</value>
+  </data>
   <data name="&gt;&gt;buttonCollapseExpand.Name" xml:space="preserve">
     <value>buttonCollapseExpand</value>
   </data>
@@ -2064,6 +2070,12 @@
   </data>
   <data name="&gt;&gt;backgroundWorkerLoad.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>
