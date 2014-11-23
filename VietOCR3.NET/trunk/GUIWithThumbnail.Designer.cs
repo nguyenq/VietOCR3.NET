@@ -59,7 +59,6 @@
             this.ClientSize = new System.Drawing.Size(927, 641);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "GUIWithThumbnail";
-            this.Text = "GUIWithThumbnail";
             this.splitContainerImage.Panel2.ResumeLayout(false);
             this.splitContainerImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

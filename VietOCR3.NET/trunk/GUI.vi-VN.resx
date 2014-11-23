@@ -472,4 +472,7 @@
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Duyệt chính tả</value>
   </data>
+  <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
+    <value>Trang thu nhỏ</value>
+  </data>
 </root>
