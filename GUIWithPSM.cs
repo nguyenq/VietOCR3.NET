@@ -86,7 +86,7 @@ namespace VietOCR.NET
                 }
             }
 
-            this.toolStripStatusLabelPSM.Text = "PSM: " + selectedPSM;
+            this.toolStripStatusLabelPSMvalue.Text = selectedPSM;
         }
 
         void MenuPSMOnClick(object obj, EventArgs ea)
@@ -98,7 +98,7 @@ namespace VietOCR.NET
             psmItemChecked = (ToolStripMenuItem)obj;
             psmItemChecked.Checked = true;
             selectedPSM = psmItemChecked.Tag.ToString();
-            this.toolStripStatusLabelPSM.Text = "PSM: " + selectedPSM;
+            this.toolStripStatusLabelPSMvalue.Text = selectedPSM;
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)

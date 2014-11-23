@@ -475,4 +475,7 @@
   <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
     <value>Trang thu nhỏ</value>
   </data>
+  <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
+    <value>Chế độ phân trang</value>
+  </data>
 </root>
