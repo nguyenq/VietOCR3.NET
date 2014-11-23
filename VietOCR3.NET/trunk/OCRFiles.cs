@@ -21,6 +21,7 @@ using System.Threading;
 using System.ComponentModel;
 using System.IO;
 using System.Diagnostics;
+using Tesseract;
 
 namespace VietOCR.NET
 {
@@ -41,6 +42,7 @@ namespace VietOCR.NET
             File.Delete(tempTessOutputFile);
             tempTessOutputFile = Path.ChangeExtension(tempTessOutputFile, OutputFormat);
             string outputFileName = Path.Combine(Path.GetDirectoryName(tempTessOutputFile), Path.GetFileNameWithoutExtension(tempTessOutputFile)); // chop the file extension
+            int psm = (int)Enum.Parse(typeof(PageSegMode), PageSegMode);
 
             // Start the child process.
             Process p = new Process();
@@ -55,7 +57,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5}", tiffFile, outputFileName, Language, PageSegMode, CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5}", tiffFile, outputFileName, Language, psm, CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
                 p.Start();
 
                 // Read the output stream first and then wait.
@@ -83,7 +85,7 @@ namespace VietOCR.NET
             }
 
             File.Delete(tempTessOutputFile);
-            return result.ToString();
+            return result.ToString().Replace("\n", Environment.NewLine);
         }
     }
 }

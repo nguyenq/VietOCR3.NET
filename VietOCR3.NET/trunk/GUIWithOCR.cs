@@ -157,6 +157,8 @@ namespace VietOCR.NET
 
         //    OCRImageEntity entity = (OCRImageEntity)e.Argument;
         //    OCR<string> ocrEngine = new OCRFiles();
+        //    ocrEngine.PageSegMode = selectedPSM;
+        //    ocrEngine.Language = entity.Language;
 
         //    IList<string> workingImageFiles = entity.ImageFiles;
 
@@ -173,7 +175,7 @@ namespace VietOCR.NET
         //            break;
         //        }
 
-        //        string result = ocrEngine.RecognizeText(((List<string>)workingImageFiles).GetRange(i, 1), entity.Language, worker, e);
+        //        string result = ocrEngine.RecognizeText(((List<string>)workingImageFiles).GetRange(i, 1), worker, e);
         //        worker.ReportProgress(i, result); // i is not really percentage
         //    }
         //}
