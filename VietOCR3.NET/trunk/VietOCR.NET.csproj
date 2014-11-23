@@ -433,6 +433,9 @@
     <Content Include="tessdata\vie.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="tessdata\configs\tess_configs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChangeCaseDialog.cs">
