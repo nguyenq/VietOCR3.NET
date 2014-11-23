@@ -813,6 +813,9 @@ namespace VietOCR.NET
             }
 
             this.contextMenuStrip1.ChangeUILanguage();
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
+            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
