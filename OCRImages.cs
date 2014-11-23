@@ -28,6 +28,8 @@ namespace VietOCR.NET
     {
         readonly string basedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         const string TESSDATA = "tessdata/";
+        const string CONFIGS_FILE = "tessdata/configs/tess_configs";
+
         const int oem = 3;
 
         /// <summary>
@@ -45,6 +47,7 @@ namespace VietOCR.NET
             using (TesseractEngine engine = new TesseractEngine(tessdata, Language, EngineMode.Default))
             {
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
+                ControlParameters(engine);
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
  
                 StringBuilder strB = new StringBuilder();
@@ -66,6 +69,36 @@ namespace VietOCR.NET
                 }
 
                 return strB.ToString().Replace("\n", Environment.NewLine);
+            }
+        }
+
+        /// <summary>
+        /// Reads tessdata/configs/tess_configs and SetVariable on Tesseract engine.
+        /// </summary>
+        /// <param name="engine"></param>
+        void ControlParameters(TesseractEngine engine)
+        {
+            string datapath = Path.Combine(basedir, CONFIGS_FILE);
+            if (!File.Exists(datapath))
+            {
+                return;
+            }
+
+            string[] lines = File.ReadAllLines(datapath);
+            foreach (string line in lines)
+            {
+                if (!line.Trim().StartsWith("#"))
+                {
+                    try
+                    {
+                        string[] keyValuePair = line.Trim().Split(@" \t".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        engine.SetVariable(keyValuePair[0], keyValuePair[1]);
+                    }
+                    catch
+                    {
+                        //ignore and continue on
+                    }
+                }
             }
         }
 
