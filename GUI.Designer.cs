@@ -113,6 +113,7 @@ namespace VietOCR.NET
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabelPSM = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripBtnOpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnScan = new System.Windows.Forms.ToolStripButton();
@@ -129,7 +130,7 @@ namespace VietOCR.NET
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolStripStatusLabelPSM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
@@ -720,6 +721,7 @@ namespace VietOCR.NET
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
+            this.toolStripStatusLabelSpring,
             this.toolStripStatusLabelPSM});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
@@ -733,6 +735,13 @@ namespace VietOCR.NET
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            // 
+            // toolStripStatusLabelPSM
+            // 
+            this.toolStripStatusLabelPSM.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.toolStripStatusLabelPSM.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabelPSM.Name = "toolStripStatusLabelPSM";
+            resources.ApplyResources(this.toolStripStatusLabelPSM, "toolStripStatusLabelPSM");
             // 
             // toolStrip1
             // 
@@ -866,10 +875,11 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
-            // toolStripStatusLabelPSM
+            // toolStripStatusLabelSpring
             // 
-            this.toolStripStatusLabelPSM.Name = "toolStripStatusLabelPSM";
-            resources.ApplyResources(this.toolStripStatusLabelPSM, "toolStripStatusLabelPSM");
+            this.toolStripStatusLabelSpring.Name = "toolStripStatusLabelSpring";
+            resources.ApplyResources(this.toolStripStatusLabelSpring, "toolStripStatusLabelSpring");
+            this.toolStripStatusLabelSpring.Spring = true;
             // 
             // GUI
             // 
@@ -1006,5 +1016,6 @@ namespace VietOCR.NET
         protected System.Windows.Forms.FlowLayoutPanel flowLayoutPanelThumbnail;
         private System.Windows.Forms.ToolTip toolTip1;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSM;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpring;
     }
 }
