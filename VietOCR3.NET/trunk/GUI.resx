@@ -1055,13 +1055,19 @@
     <value>False</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>609, 19</value>
+    <value>602, 19</value>
   </data>
   <data name="toolStripStatusLabelPSM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 19</value>
+    <value>38, 19</value>
   </data>
   <data name="toolStripStatusLabelPSM.Text" xml:space="preserve">
-    <value>PSM</value>
+    <value>PSM:</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
+    <value>Page Segmentation Mode</value>
+  </data>
+  <data name="toolStripStatusLabelPSMvalue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 19</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 542</value>
@@ -1996,10 +2002,22 @@
   <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripStatusLabelSpring.Name" xml:space="preserve">
+    <value>toolStripStatusLabelSpring</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelSpring.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripStatusLabelPSM.Name" xml:space="preserve">
     <value>toolStripStatusLabelPSM</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabelPSM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelPSMvalue.Name" xml:space="preserve">
+    <value>toolStripStatusLabelPSMvalue</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelPSMvalue.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripBtnOpen.Name" xml:space="preserve">
@@ -2091,12 +2109,6 @@
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabelSpring.Name" xml:space="preserve">
-    <value>toolStripStatusLabelSpring</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabelSpring.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>
