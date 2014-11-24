@@ -38,6 +38,12 @@ namespace VietOCR.NET
             InitializeComponent();
         }
 
+        protected override void OnLoad(EventArgs ea)
+        {
+            base.OnLoad(ea);
+            toolStripStatusLabelSMvalue.Text = this.screenshotModeToolStripMenuItem.Checked ? "On" : "Off";
+        }
+
         protected override void metadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)
@@ -107,7 +113,7 @@ namespace VietOCR.NET
             {
                 imageList[imageIndex] = image;
                 this.pictureBox1.Image = new Bitmap(image);
-            }    
+            }
         }
 
         private void UpdatedContrast(object sender, TrackbarDialog.ValueChangedEventArgs e)
@@ -137,7 +143,7 @@ namespace VietOCR.NET
             {
                 originalImage = imageList[imageIndex];
                 stack.Push(originalImage);
-                imageList[imageIndex] = ImageHelper.Rotate((Bitmap) originalImage, -imageSkewAngle);
+                imageList[imageIndex] = ImageHelper.Rotate((Bitmap)originalImage, -imageSkewAngle);
                 this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             }
             this.Cursor = Cursors.Default;
@@ -229,6 +235,7 @@ namespace VietOCR.NET
         {
             ToolStripMenuItem mi = (ToolStripMenuItem)sender;
             mi.Checked ^= true;
+            toolStripStatusLabelSMvalue.Text = mi.Checked ? "On" : "Off";
         }
 
         protected override void undoToolStripMenuItem_Click(object sender, EventArgs e)
