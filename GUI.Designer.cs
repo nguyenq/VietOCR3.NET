@@ -114,6 +114,8 @@ namespace VietOCR.NET
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabelSpring = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelSM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelPSM = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -723,6 +725,8 @@ namespace VietOCR.NET
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
             this.toolStripStatusLabelSpring,
+            this.toolStripStatusLabelSM,
+            this.toolStripStatusLabelSMvalue,
             this.toolStripStatusLabelPSM,
             this.toolStripStatusLabelPSMvalue});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
@@ -744,6 +748,18 @@ namespace VietOCR.NET
             this.toolStripStatusLabelSpring.Name = "toolStripStatusLabelSpring";
             resources.ApplyResources(this.toolStripStatusLabelSpring, "toolStripStatusLabelSpring");
             this.toolStripStatusLabelSpring.Spring = true;
+            // 
+            // toolStripStatusLabelSM
+            // 
+            this.toolStripStatusLabelSM.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.toolStripStatusLabelSM.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabelSM.Name = "toolStripStatusLabelSM";
+            resources.ApplyResources(this.toolStripStatusLabelSM, "toolStripStatusLabelSM");
+            // 
+            // toolStripStatusLabelSMvalue
+            // 
+            this.toolStripStatusLabelSMvalue.Name = "toolStripStatusLabelSMvalue";
+            resources.ApplyResources(this.toolStripStatusLabelSMvalue, "toolStripStatusLabelSMvalue");
             // 
             // toolStripStatusLabelPSM
             // 
@@ -1028,5 +1044,7 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpring;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSMvalue;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSM;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSM;
+        protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSMvalue;
     }
 }

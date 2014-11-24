@@ -160,6 +160,7 @@ namespace VietOCR.NET
             {
                 string tessdataDir = Path.Combine(baseDir, "tessdata");
                 installedLanguageCodes = Directory.GetFiles(tessdataDir, "*.traineddata");
+                //installedLanguageCodes = installedLanguageCodes.Where(val => val != "osd.traineddata").ToArray(); // LINQ
                 string xmlFilePath = Path.Combine(baseDir, "Data/ISO639-3.xml");
                 Utilities.Utilities.LoadFromXML(lookupISO639, xmlFilePath);
                 xmlFilePath = Path.Combine(baseDir, "Data/ISO639-1.xml");
@@ -999,7 +1000,7 @@ namespace VietOCR.NET
 
         protected virtual void loadThumbnails()
         {
-
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
         
         protected virtual void metadataToolStripMenuItem_Click(object sender, EventArgs e)
