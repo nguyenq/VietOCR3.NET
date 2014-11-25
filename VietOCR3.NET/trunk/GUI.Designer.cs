@@ -113,6 +113,9 @@ namespace VietOCR.NET
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelDim = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelDimValue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSM = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
@@ -724,6 +727,9 @@ namespace VietOCR.NET
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabelDim,
+            this.toolStripStatusLabelDimValue,
             this.toolStripStatusLabelSpring,
             this.toolStripStatusLabelSM,
             this.toolStripStatusLabelSMvalue,
@@ -742,6 +748,26 @@ namespace VietOCR.NET
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
+            this.toolStripStatusLabel2.Spring = true;
+            // 
+            // toolStripStatusLabelDim
+            // 
+            this.toolStripStatusLabelDim.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.toolStripStatusLabelDim.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabelDim.Name = "toolStripStatusLabelDim";
+            resources.ApplyResources(this.toolStripStatusLabelDim, "toolStripStatusLabelDim");
+            // 
+            // toolStripStatusLabelDimValue
+            // 
+            this.toolStripStatusLabelDimValue.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabelDimValue.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabelDimValue.Name = "toolStripStatusLabelDimValue";
+            resources.ApplyResources(this.toolStripStatusLabelDimValue, "toolStripStatusLabelDimValue");
             // 
             // toolStripStatusLabelSpring
             // 
@@ -1046,5 +1072,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSM;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSM;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSMvalue;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDim;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDimValue;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }

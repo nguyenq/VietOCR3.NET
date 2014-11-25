@@ -699,6 +699,7 @@ namespace VietOCR.NET
             this.toolStripLabelPageNum.Enabled = true;
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
+            this.toolStripStatusLabelDimValue.Text = string.Format("{0} × {1}px", this.pictureBox1.Size.Width, this.pictureBox1.Size.Height);
 
             if (this.isFitImageSelected)
             {
