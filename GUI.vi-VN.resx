@@ -478,4 +478,16 @@
   <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
     <value>Chế độ phân trang</value>
   </data>
+  <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
+    <value>Kích thước:</value>
+  </data>
+  <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
+    <value>Kích thước ảnh</value>
+  </data>
+  <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
+    <value>Mốt screenshot:</value>
+  </data>
+  <data name="toolStripStatusLabelSM.ToolTipText" xml:space="preserve">
+    <value>Mốt screenshot</value>
+  </data>
 </root>
