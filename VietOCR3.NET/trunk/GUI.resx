@@ -1055,7 +1055,7 @@
     <value>False</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 19</value>
+    <value>188, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 19</value>
@@ -1063,11 +1063,17 @@
   <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
     <value>Dimension:</value>
   </data>
+  <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
+    <value>Image Dimension</value>
+  </data>
   <data name="toolStripStatusLabelDimValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>4, 19</value>
+    <value>49, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
+    <value>0 × 0px</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 19</value>
+    <value>188, 19</value>
   </data>
   <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
