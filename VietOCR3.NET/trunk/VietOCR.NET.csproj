@@ -92,6 +92,12 @@
     <Compile Include="BulkDialog.Designer.cs">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\NonblinkingToolStripStatusLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NonblinkingToolStripStatusLabel.Designer.cs">
+      <DependentUpon>NonblinkingToolStripStatusLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>

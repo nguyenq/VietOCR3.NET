@@ -1,3 +1,4 @@
+using VietOCR.NET.Controls;
 namespace VietOCR.NET
 {
     partial class GUI
@@ -114,12 +115,13 @@ namespace VietOCR.NET
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelDim = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelDim = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStripStatusLabelDimValue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpring = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelSM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelPSM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelPSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripBtnOpen = new System.Windows.Forms.ToolStripButton();
@@ -136,7 +138,6 @@ namespace VietOCR.NET
             this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
@@ -751,9 +752,8 @@ namespace VietOCR.NET
             // 
             // toolStripStatusLabel2
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
-            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             // 
             // toolStripStatusLabelDim
             // 
@@ -761,6 +761,7 @@ namespace VietOCR.NET
             this.toolStripStatusLabelDim.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelDim.Name = "toolStripStatusLabelDim";
             resources.ApplyResources(this.toolStripStatusLabelDim, "toolStripStatusLabelDim");
+            this.toolStripStatusLabelDim.ToolTip = this.toolTip1;
             // 
             // toolStripStatusLabelDimValue
             // 
@@ -781,6 +782,7 @@ namespace VietOCR.NET
             this.toolStripStatusLabelSM.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelSM.Name = "toolStripStatusLabelSM";
             resources.ApplyResources(this.toolStripStatusLabelSM, "toolStripStatusLabelSM");
+            this.toolStripStatusLabelSM.ToolTip = this.toolTip1;
             // 
             // toolStripStatusLabelSMvalue
             // 
@@ -793,6 +795,7 @@ namespace VietOCR.NET
             this.toolStripStatusLabelPSM.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelPSM.Name = "toolStripStatusLabelPSM";
             resources.ApplyResources(this.toolStripStatusLabelPSM, "toolStripStatusLabelPSM");
+            this.toolStripStatusLabelPSM.ToolTip = this.toolTip1;
             // 
             // toolStripStatusLabelPSMvalue
             // 
@@ -1069,11 +1072,11 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpring;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSMvalue;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSM;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSM;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSMvalue;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDim;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDimValue;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private NonblinkingToolStripStatusLabel toolStripStatusLabelPSM;
+        private NonblinkingToolStripStatusLabel toolStripStatusLabelSM;
+        private NonblinkingToolStripStatusLabel toolStripStatusLabelDim;
     }
 }
