@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="no" indent="yes" />
-    <xsl:template match="root">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="no" indent="yes" />
+	<xsl:template match="root">
 		<root>
 			<xsl:copy-of select="/root/xsd:schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
 			<xsl:copy-of select="/root/resheader"/>
@@ -13,5 +12,5 @@
 				</xsl:if>
 			</xsl:for-each>
 		</root>
-    </xsl:template>
+	</xsl:template>
 </xsl:stylesheet>
