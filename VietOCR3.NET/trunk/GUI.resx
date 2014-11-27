@@ -1061,22 +1061,22 @@
     <value>300, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
+    <value>47, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
-    <value>Dimension:</value>
+    <value>Image:</value>
   </data>
   <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
-    <value>Image Dimension</value>
+    <value>Image Dimensions &amp; Bit Depth</value>
   </data>
   <data name="toolStripStatusLabelDimValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
+    <value>82, 19</value>
   </data>
   <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
-    <value>0 × 0px</value>
+    <value>0 × 0px  0bpp</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 19</value>
+    <value>67, 19</value>
   </data>
   <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
