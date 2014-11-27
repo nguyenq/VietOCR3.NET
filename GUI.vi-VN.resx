@@ -479,10 +479,10 @@
     <value>Chế độ phân trang</value>
   </data>
   <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
-    <value>Kích thước:</value>
+    <value>Ảnh:</value>
   </data>
   <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
-    <value>Kích thước ảnh</value>
+    <value>Kích thước ảnh &amp; Bit Depth</value>
   </data>
   <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
     <value>Mốt screenshot:</value>
