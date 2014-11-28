@@ -100,14 +100,11 @@
   <data name="buttonRun.Text" xml:space="preserve">
     <value>Run</value>
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 89</value>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 85</value>
   </data>
-  <data name="checkBoxHocr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
-  </data>
-  <data name="checkBoxHocr.Text" xml:space="preserve">
-    <value>hocr</value>
+  <data name="comboBoxOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 21</value>
   </data>
   <data name="labelInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 24</value>
@@ -126,6 +123,15 @@
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Output Folder:</value>
+  </data>
+  <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 88</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Output Format</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 21</value>

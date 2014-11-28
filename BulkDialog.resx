@@ -382,7 +382,7 @@
     <value>24</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>OutputFormat</value>
+    <value>Output Format</value>
   </data>
   <data name="&gt;&gt;labelOutputFormat.Name" xml:space="preserve">
     <value>labelOutputFormat</value>
