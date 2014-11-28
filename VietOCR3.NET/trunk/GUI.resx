@@ -1054,11 +1054,8 @@
   <data name="toolStripProgressBar1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripStatusLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 19</value>
+    <value>166, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 19</value>
@@ -1075,8 +1072,11 @@
   <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
     <value>0 × 0px  0bpp</value>
   </data>
+  <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 19</value>
+  </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
+    <value>166, 19</value>
   </data>
   <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
@@ -2057,6 +2057,12 @@
     <value>toolStripStatusLabelDimValue</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabelDimValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel3.Name" xml:space="preserve">
+    <value>toolStripStatusLabel3</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabelSpring.Name" xml:space="preserve">
