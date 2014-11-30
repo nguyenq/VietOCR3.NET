@@ -41,5 +41,6 @@ Version 3.5 (25 January 2014)
 - Additional translations
 - Update NHunspell to 1.1.1
 
-Version 4.0 Beta (29 November 2014)
-- Add thumbnail bar for navigation
+Version 3.6 Beta (30 November 2014)
+- Add thumbnail bar for ease of page navigation
+- Display useful info in statusbar
