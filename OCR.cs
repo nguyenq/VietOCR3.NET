@@ -47,7 +47,13 @@ namespace VietOCR.NET
         public string OutputFormat
         {
             get { return outputFormat; }
-            set { outputFormat = value; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    outputFormat = value;
+                }
+            }
         }
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]

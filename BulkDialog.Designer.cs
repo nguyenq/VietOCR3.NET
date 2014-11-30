@@ -103,8 +103,7 @@
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
-            resources.GetString("comboBoxOutputFormat.Items2"),
-            resources.GetString("comboBoxOutputFormat.Items3")});
+            resources.GetString("comboBoxOutputFormat.Items2")});
             resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
             this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);

@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsDialog));
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxDangAmbigs = new System.Windows.Forms.CheckBox();
+            this.labelPath = new System.Windows.Forms.Label();
+            this.btnDangAmbigs = new System.Windows.Forms.Button();
+            this.textBoxDangAmbigs = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.labelOutputFormat = new System.Windows.Forms.Label();
             this.comboBoxOutputFormat = new System.Windows.Forms.ComboBox();
@@ -41,19 +46,14 @@
             this.btnWatch = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.textBoxWatch = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBoxDangAmbigs = new System.Windows.Forms.CheckBox();
-            this.labelPath = new System.Windows.Forms.Label();
-            this.btnDangAmbigs = new System.Windows.Forms.Button();
-            this.textBoxDangAmbigs = new System.Windows.Forms.TextBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -63,6 +63,41 @@
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.checkBoxDangAmbigs);
+            this.tabPage2.Controls.Add(this.labelPath);
+            this.tabPage2.Controls.Add(this.btnDangAmbigs);
+            this.tabPage2.Controls.Add(this.textBoxDangAmbigs);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxDangAmbigs
+            // 
+            resources.ApplyResources(this.checkBoxDangAmbigs, "checkBoxDangAmbigs");
+            this.checkBoxDangAmbigs.Name = "checkBoxDangAmbigs";
+            this.checkBoxDangAmbigs.UseVisualStyleBackColor = true;
+            // 
+            // labelPath
+            // 
+            resources.ApplyResources(this.labelPath, "labelPath");
+            this.labelPath.Name = "labelPath";
+            // 
+            // btnDangAmbigs
+            // 
+            resources.ApplyResources(this.btnDangAmbigs, "btnDangAmbigs");
+            this.btnDangAmbigs.Name = "btnDangAmbigs";
+            this.btnDangAmbigs.UseVisualStyleBackColor = true;
+            this.btnDangAmbigs.Click += new System.EventHandler(this.btnDangAmbigs_Click);
+            // 
+            // textBoxDangAmbigs
+            // 
+            this.textBoxDangAmbigs.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            resources.ApplyResources(this.textBoxDangAmbigs, "textBoxDangAmbigs");
+            this.textBoxDangAmbigs.Name = "textBoxDangAmbigs";
+            this.textBoxDangAmbigs.ReadOnly = true;
             // 
             // tabPage1
             // 
@@ -91,8 +126,7 @@
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
-            resources.GetString("comboBoxOutputFormat.Items2"),
-            resources.GetString("comboBoxOutputFormat.Items3")});
+            resources.GetString("comboBoxOutputFormat.Items2")});
             resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
             this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
@@ -141,41 +175,6 @@
             this.textBoxWatch.Name = "textBoxWatch";
             this.textBoxWatch.ReadOnly = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.checkBoxDangAmbigs);
-            this.tabPage2.Controls.Add(this.labelPath);
-            this.tabPage2.Controls.Add(this.btnDangAmbigs);
-            this.tabPage2.Controls.Add(this.textBoxDangAmbigs);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxDangAmbigs
-            // 
-            resources.ApplyResources(this.checkBoxDangAmbigs, "checkBoxDangAmbigs");
-            this.checkBoxDangAmbigs.Name = "checkBoxDangAmbigs";
-            this.checkBoxDangAmbigs.UseVisualStyleBackColor = true;
-            // 
-            // labelPath
-            // 
-            resources.ApplyResources(this.labelPath, "labelPath");
-            this.labelPath.Name = "labelPath";
-            // 
-            // btnDangAmbigs
-            // 
-            resources.ApplyResources(this.btnDangAmbigs, "btnDangAmbigs");
-            this.btnDangAmbigs.Name = "btnDangAmbigs";
-            this.btnDangAmbigs.UseVisualStyleBackColor = true;
-            this.btnDangAmbigs.Click += new System.EventHandler(this.btnDangAmbigs_Click);
-            // 
-            // textBoxDangAmbigs
-            // 
-            this.textBoxDangAmbigs.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.textBoxDangAmbigs, "textBoxDangAmbigs");
-            this.textBoxDangAmbigs.Name = "textBoxDangAmbigs";
-            this.textBoxDangAmbigs.ReadOnly = true;
-            // 
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -210,10 +209,10 @@
             this.MinimizeBox = false;
             this.Name = "OptionsDialog";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
