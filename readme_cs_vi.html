@@ -43,44 +43,44 @@
         <h3>
             CÀI ĐẶT</h3>
         <p>
-            Nếu bạn không có quyền cài đặt (install) dưới <tt>C:\Program Files</tt> folder,
+            Nếu bạn không có quyền cài đặt (install) dưới <code>C:\Program Files</code> folder,
             bạn hãy chỉ định một folder khác trong Install Installation Folder dialog.</p>
         <p>
             Hỗ trợ quét văn bản được cung cấp qua Windows Image Acquisition Library v2.0, thư
             viện này đòi hỏi Windows XP Service Pack 1 (SP1) hoặc mới hơn; thư viện này đã được
-            tích hợp sẵn trong Vista and 7. Để cài đặt WIA Library, copy file <tt>wiaaut.dll</tt>
-            vào <tt>System32</tt> directory (thường đặt ở <tt>C:\Windows\System32</tt>) và chạy
+            tích hợp sẵn trong Vista and 7. Để cài đặt WIA Library, copy file <code>wiaaut.dll</code>
+            vào <code>System32</code> directory (thường đặt ở <code>C:\Windows\System32</code>) và chạy
             lệnh từ command line:</p>
         <blockquote>
             <p>
-                <tt>regsvr32 C:\Windows\System32\wiaaut.dll</tt></p>
+                <code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
         <p>
             Hỗ trợ cho PDF được khả thi qua <a href="http://sourceforge.net/projects/ghostscript/">
                 GPL Ghostscript</a>. Sau khi cài đặt thư viện, hãy bảo đảm dynamic load library
-            <tt>gsdll32.dll</tt> nằm trong search path bằng cách chỉnh biến môi trường <tt>Path</tt>,
+            <code>gsdll32.dll</code> nằm trong search path bằng cách chỉnh biến môi trường <code>Path</code>,
             có thể truy cập được qua Windows&#39; Control Panel &gt; System &gt; Advanced tab
             &gt; Environment Variables. Ví dụ, tiếp đuôi (append) đoạn sau đây vào giá trị hiện
-            tại của biến <tt>Path</tt> cho GS version 9.10:</p>
+            tại của biến <code>Path</code> cho GS version 9.15:</p>
         <blockquote>
             <p>
-                <tt>;C:\Program Files\gs\gs9.10\bin</tt></p>
+                <code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
         <p>
             Tính năng Duyệt chính tả (spellcheck) có được qua Hunspell, mà các <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-                dictionary</a> files trực thuộc (<tt>.aff</tt>, <tt>.dic</tt>) nên được đặt
-            trong <tt>dict</tt> folder của VietOCR.</p>
+                dictionary</a> files trực thuộc (<code>.aff</code>, <code>.dic</code>) nên được đặt
+            trong <code>dict</code> folder của VietOCR.</p>
         <h3>
             HƯỚNG DẪN</h3>
         <p>
             Các gói data ngôn ngữ (<a href="http://code.google.com/p/tesseract-ocr/downloads/list">language
-                data packs</a>) cho Tesseract nên được giải nén vào <tt>tesseract</tt> installation
-            folder; các data files, có tên bắt đầu với mã ISO639-3, sẽ được đặt vào <tt>tessdata</tt>
+                data packs</a>) cho Tesseract nên được giải nén vào <code>tesseract</code> installation
+            folder; các data files, có tên bắt đầu với mã ISO639-3, sẽ được đặt vào <code>tessdata</code>
             subdirectory. VietOCR cũng có cung cấp hỗ trợ tải xuống và cài đặt các language
             packs được chọn qua <em>Tải dữ liệu ngôn ngữ</em> menu item. Tùy theo địa điểm của
-            thư mục <tt>tessdata</tt>, bạn có thể được yêu cầu chạy chương trình với quyền admin
+            thư mục <code>tessdata</code>, bạn có thể được yêu cầu chạy chương trình với quyền admin
             để có thể cài đặt dữ liệu đã được tải vào thư mục đó nếu nó nằm trong một system
-            folder, như là trong <tt>C:\Program Files</tt>.</p>
+            folder, như là trong <code>C:\Program Files</code>.</p>
         <p>
             Bộ Vietnamese language data được tạo cho các font Times New Roman, Arial, Verdana,
             và Courier New. Do đó, việc nhận dạng sẽ có kết quả cao hơn cho các ảnh có font
@@ -103,9 +103,12 @@
             300 DPI.</p>
         <p>
             Ngoài thuật toán hậu xử lý xây trong chương trình, bạn có thể thêm cách thức thay
-            thế từ ngữ đặc riêng của bạn qua một tập tin text có tên <tt>x.DangAmbigs.txt</tt>,
+            thế từ ngữ đặc riêng của bạn qua một tập tin text có tên <code>x.DangAmbigs.txt</code>,
             mà x là ISO639-3 language code. File này, được mã hóa trong UTF-8, chứa các cặp
-            <tt>giáTrịCũ=giáTrịMới</tt> phân cách bởi dấu bằng.</p>
+            <code>giáTrịCũ=giáTrịMới</code> phân cách bởi dấu bằng.</p>
+        <p>
+            Bạn có thể đặt control parameters trong file <code>tessdata/configs/tess_configs</code> 
+            để biến đổi hành vi của Tesseract engine.</p>
         <p>
             Vài công cụ gắn liền được cung cấp để nối nhiều file ảnh hoặc PDF vào một file đơn
             để thuận tiện cho các tác vụ OCR, hoặc tách một file PDF thành nhiều file nhỏ hơn

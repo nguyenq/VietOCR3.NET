@@ -1,6 +1,6 @@
-<html>
+﻿<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>VietOCR.NET - Un 'interfaccia grafica per Tesseract OCR</title>
 <style type="text/css">
         .style1
@@ -35,38 +35,38 @@
             <a href="http://www.microsoft.com/downloads/details.aspx?familyid=BA9257CA-337F-4B40-8C14-157CFDFFEE4E&amp;displaylang=en">
                 x64</a>).</p>
         <h3>INSTALLAZIONE</h3>
-        <p>Se non hai l'autorizzazione per installare il programma nella cartella <tt>C:\Program
-                Files</tt>, puoi specificare un'altra cartella di installazione nell'aposito
+        <p>Se non hai l'autorizzazione per installare il programma nella cartella <code>C:\Program
+                Files</code>, puoi specificare un'altra cartella di installazione nell'aposito
             box di dialogo.</p>
         <p>Il supporto per lo scnnering viene fornito da Windows Image Acquisition Library
             v2.0, che richiede Windows XP Service Pack 1 (SP1) o superiore; la libreria è inclusa
-            in Windows Vista e 7. Per installare la libreria WIA , copia il file <tt>wiaaut.dll</tt>
-            nella cartella <tt>System32</tt> (posta in <tt>C:\Windows\System32</tt>) ed esegui
+            in Windows Vista e 7. Per installare la libreria WIA , copia il file <code>wiaaut.dll</code>
+            nella cartella <code>System32</code> (posta in <code>C:\Windows\System32</code>) ed esegui
             tramite linea di comando:</p>
         <blockquote>
-            <p><tt>regsvr32 C:\Windows\System32\wiaaut.dll</tt></p>
+            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
         <p>Il supporto PDF è possibile grazie a <a href="http://sourceforge.net/projects/ghostscript/">
                 GPL Ghostscript</a>. Dopo l'installazione della libreria, verificare la dinamica
-            del caricamento della libreria <tt>gsdll32.dll</tt> è nel percorso di ricerca impostando
-            nel campo <tt>Path</tt> variabile , che è accessibile tramite il Pannello di controllo
+            del caricamento della libreria <code>gsdll32.dll</code> è nel percorso di ricerca impostando
+            nel campo <code>Path</code> variabile , che è accessibile tramite il Pannello di controllo
             di Windows System &gt; Advanced tab &gt; Environment Variables.Per esempio aggiungere
-            <tt>Path</tt> alla variabile per GS version 9.10:</p>
+            <code>Path</code> alla variabile per GS version 9.15:</p>
         <blockquote>
-            <p><tt>;C:\Program Files\gs\gs9.10\bin</tt></p>
+            <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
         <p>La funzionalità di controllo ortografico è disponibile attraverso Hunspell, il cui
-            <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">dizionario</a> (<tt>.aff</tt>,
-            <tt>.dic</tt>) deve essere posto nella cartella <tt>dict</tt> di VietOCR.</p>
+            <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">dizionario</a> (<code>.aff</code>,
+            <code>.dic</code>) deve essere posto nella cartella <code>dict</code> di VietOCR.</p>
         <h3>ISTRUZIONI</h3>
         <p>Il <a href="http://code.google.com/p/tesseract-ocr/downloads/list">Pacchetto Lingue</a>
-            per Tesseract dovrebbe essere decompresso nella cartella di installazione <tt>tesseract</tt>
+            per Tesseract dovrebbe essere decompresso nella cartella di installazione <code>tesseract</code>
             , i file, i cui nomi iniziano con le lettere ISO639-3 , verranno inseriti nella
-            sottocartella <tt>tessdata</tt>. VietOCR fornisce anche il supporto per il download
+            sottocartella <code>tessdata</code>. VietOCR fornisce anche il supporto per il download
             e l'installazione dei pacchetti lingua selezionata attraverso il <em>Download Pacchetti
-                Dati</em>, che si trova nel menù. A seconda della posizione della cartella <tt>tessdata</tt>,
+                Dati</em>, che si trova nel menù. A seconda della posizione della cartella <code>tessdata</code>,
             è possibile che venga richiesto di eseguire il programma come amministratore per
-            essere in grado di installare i dati scaricati, come ad esempio in <tt>C:\Program Files</tt>.</p>
+            essere in grado di installare i dati scaricati, come ad esempio in <code>C:\Program Files</code>.</p>
         <p>I dati nella lingua vietnamita sono stati generati per Times New Roman, Arial, Verdana,
             e font Courier New. Pertanto, il riconoscimento risulta migliore per le immagini
             che hanno le grafie di caratteri simili. Per le immagini OCR che hanno grafia dei
@@ -86,9 +86,9 @@
         <p>La modalità <em>Screenshot</em> offre risultati migliori per immagini con risoluzione
             più bassa, come serigrafie, che vengono riscalate a 300 DPI.</p>
         <p>Oltre all' algoritmo integrato di post-elaborazione del testo, è possibile aggiungere
-            il proprio schema personalizzato del testo tramite un file di testo denominato <tt>x.DangAmbigs.txt</tt>,
+            il proprio schema personalizzato del testo tramite un file di testo denominato <code>x.DangAmbigs.txt</code>,
             dove x è il codice ISO639-3 della lingua. La codifica UTF-8 deve contenere lo stesso
-            numero di coppie <tt>vecchiValori = nuoviValori</tt>.</p>
+            numero di coppie <code>vecchiValori = nuoviValori</code>.</p>
         <p>Alcuni strumenti integrati sono forniti per unire più immagini o file PDF in un
             unico documento. Altre per comode operazioni di OCR, o per dividere un file PDF
             in qdocumenti più piccoli se è troppo grande, che può causare rallentamenti al programma.</p>
@@ -123,7 +123,7 @@
             un redattore umano per essere corretti attraverso il confronto con l'immagine originale.</p>
         <p>Se hai qualche domanda scrivila sul <a href="http://sourceforge.net/projects/vietocr/forums">
                 Forum di VietOCR</a>.</p>
-        <hr>
+        <hr />
 </div>
 </body>
 </html>
