@@ -1,6 +1,6 @@
-<html>
+﻿<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Uživatelské rozhraní VietOCR.NET - .NET pro Tesseract OCR</title>
 <style type="text/css">
         .style1
@@ -35,38 +35,38 @@
             <a href="http://www.microsoft.com/downloads/details.aspx?familyid=BA9257CA-337F-4B40-8C14-157CFDFFEE4E&amp;displaylang=en">
                 x64</a>).</p>
         <h3>INSTALACE</h3>
-        <p>Pokud nemáte oprávnění pro instalování do složky <tt>C:\Program Files</tt>, můžete
+        <p>Pokud nemáte oprávnění pro instalování do složky <code>C:\Program Files</code>, můžete
             při instalaci vybrat i jinou instalační složku.</p>
         <p>Podpora snímání je zabezpečena přes knihovnu Windows Image Acquisition Library v2.0,
             která vyžaduje Windows XP Service Pack 1 (SP1) anebo vyšší; Knihovna je zahrnuta
-            ve Windows Vista a 7. Pro instalaci knihovny WIA zkopírujte soubor <tt>wiaaut.dll</tt>
-            do vašeho adresáře <tt>System32</tt> (obyčejně je umístěn v <tt>C:\Windows\System32</tt>)
+            ve Windows Vista a 7. Pro instalaci knihovny WIA zkopírujte soubor <code>wiaaut.dll</code>
+            do vašeho adresáře <code>System32</code> (obyčejně je umístěn v <code>C:\Windows\System32</code>)
             a spusťte v příkazovém řádku:</p>
         <blockquote>
-            <p><tt>regsvr32 C:\Windows\System32\wiaaut.dll</tt></p>
+            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
         <p>Podpora PDF je možná přes <a href="http://sourceforge.net/projects/ghostscript/">GPL
                 Ghostscript</a>. Po instalaci knihovny se, prosím, ujistěte, že dynamicky nahrávaná
-            knihovna <tt>gsdll32.dll</tt> je v prohledávané cestě; nastavením proměnné prostředí
-            <tt>Path</tt>, což je přístupné přes ovládací panel Windows &gt; Systém -&gt; karta
+            knihovna <code>gsdll32.dll</code> je v prohledávané cestě; nastavením proměnné prostředí
+            <code>Path</code>, což je přístupné přes ovládací panel Windows &gt; Systém -&gt; karta
             Pokročilé &gt; Proměnné prostředí. Například přidejte následující k hodnotě proměnné
-            <tt>Path</tt> pro GS verze 9.10:</p>
+            <code>Path</code> pro GS verze 9.15:</p>
         <blockquote>
-            <p><tt>;C:\Program Files\gs\gs9.10\bin</tt></p>
+            <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
         <p>Kontrola překlepů (spellcheck) je dostupná přes projekt Hunspell, kterého <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-                slovníkové</a> soubory <tt>.aff</tt>, <tt>.dic</tt>) by měly být umístěny v
-            <tt>dict</tt> priečinku VietOCR. <tt>user.dic</tt> je soubor kódovaný v UTF-8-encoded,
+                slovníkové</a> soubory <code>.aff</code>, <code>.dic</code>) by měly být umístěny v
+            <code>dict</code> priečinku VietOCR. <code>user.dic</code> je soubor kódovaný v UTF-8-encoded,
             který obsahuje seznam vlastních slov - jedno slovo na řádek.</p>
         <h3>POKYNY</h3>
         <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Jazykové datové balíčky</a>
-            pro Tesseract-ocr by měly být dekomprimované do instalační složky programu <tt>tesseract</tt>;
+            pro Tesseract-ocr by měly být dekomprimované do instalační složky programu <code>tesseract</code>;
             datové soubory, jejichž názvy začínají kódy ISO639-3, mají být umístěny do podadresáře
-            <tt>tessdata</tt>. VietOCR též poskytuje podporu pro stahování a instalaci zvolených
+            <code>tessdata</code>. VietOCR též poskytuje podporu pro stahování a instalaci zvolených
             jazykových balíků přes položku nabídky <em>Stáhnout jazyková data</em>. V závislosti
-            na umístění složky <tt>tessdata</tt> možná budou požadována administrátorská práva
+            na umístění složky <code>tessdata</code> možná budou požadována administrátorská práva
             při instalaci stáhnutých dat, pokud se tato složka nachází v systémové složce, jako
-            je např. <tt>C:\Program Files</tt>.</p>
+            je např. <code>C:\Program Files</code>.</p>
         <p>Obrázky určené pro rozpoznávání by měly být snímány v rozlišení aspoň 200 DPI (bodů
             na palec - dots per inch) až 400 DPI v monochromatickém (černobílém) režimu anebo
             v odstínech šedé. Snímání ve vyšším rozlišení nepřináší při rozpoznávání znaků vyšší
@@ -76,9 +76,9 @@
         <p>Nový <em>Režim snímku obrazovky</em> nabízí lepší míru přesnosti pro obrázky s nízkým
             rozlišením, jako např. snímky obrazovky, pomocí zvětšení rozlišení na 300 DPI.</p>
         <p>Vedle vestavěného algoritmu pro další zpracování textu si můžete přidat vlastní
-            schéma nahrazování textu - textový soubor s názvem <tt>x.DangAmbigs.txt</tt>, kde
+            schéma nahrazování textu - textový soubor s názvem <code>x.DangAmbigs.txt</code>, kde
             x je kód jazyka ISO639-3. Tento soubor v kódovaní UTF-8 by měl obsahovat páry oddělené
-            znakem „rovná se“ ve tvaru <tt>staráHodnota=nováHodnota</tt>.</p>
+            znakem „rovná se“ ve tvaru <code>staráHodnota=nováHodnota</code>.</p>
         <p>Některé vestavěné nástroje poskytují funkce spojování (slučování) několika obrázků
             anebo souborů PDF do jednoho (pro pohodlnější rozpoznávání znaků), anebo dělení
             souborů PDF na menší, pokud jsou příliš veliké a způsobují „out-of-memory exceptions“.</p>
@@ -110,7 +110,7 @@
             aby byl výsledný dokument bez chyb.</p>
         <p>Pokud máte nějaké otázky, položte je ve <a href="http://sourceforge.net/projects/vietocr/forums">
                 fóru VietOCR</a>.</p>
-        <hr>
+        <hr />
 </div>
 </body>
 </html>
