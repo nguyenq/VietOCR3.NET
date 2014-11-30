@@ -91,7 +91,7 @@ namespace VietOCR.NET
                 {
                     try
                     {
-                        string[] keyValuePair = line.Trim().Split(@" \t".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                        string[] keyValuePair = line.Trim().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
                         engine.SetVariable(keyValuePair[0], keyValuePair[1]);
                     }
                     catch
