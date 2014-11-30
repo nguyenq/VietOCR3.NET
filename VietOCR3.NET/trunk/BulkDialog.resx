@@ -343,9 +343,6 @@
     <value>txt+</value>
   </data>
   <data name="comboBoxOutputFormat.Items2" xml:space="preserve">
-    <value>pdf</value>
-  </data>
-  <data name="comboBoxOutputFormat.Items3" xml:space="preserve">
     <value>hocr</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
@@ -376,7 +373,7 @@
     <value>12, 88</value>
   </data>
   <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
+    <value>74, 13</value>
   </data>
   <data name="labelOutputFormat.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>

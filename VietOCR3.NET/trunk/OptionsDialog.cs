@@ -61,7 +61,11 @@ namespace VietOCR.NET
         public string OutputFormat
         {
             get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
-            set { this.comboBoxOutputFormat.SelectedItem = value; }
+            set 
+            {
+                this.comboBoxOutputFormat.SelectedItem = value;
+                if (this.comboBoxOutputFormat.SelectedIndex == -1) this.comboBoxOutputFormat.SelectedIndex = 0;
+            }
         }
 
         public OptionsDialog()
