@@ -529,20 +529,14 @@
   <data name="toolStripBtnNext.ToolTipText" xml:space="preserve">
     <value>Next Page</value>
   </data>
-  <data name="toolStripTextBoxCurPage.Enabled" type="System.Boolean, mscorlib">
+  <data name="toolStripComboBoxPageNum.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolStripTextBoxCurPage.MaxLength" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="toolStripComboBoxPageNum.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="toolStripTextBoxCurPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 39</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.TextBoxTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="toolStripLabelPageNum.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1163,30 +1157,30 @@
   <data name="toolStripButtonRemoveLineBreaks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
         AAAASUVORK5CYII=
 </value>
   </data>
@@ -2107,11 +2101,11 @@
   <data name="&gt;&gt;toolStripBtnNext.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripTextBoxCurPage.Name" xml:space="preserve">
-    <value>toolStripTextBoxCurPage</value>
+  <data name="&gt;&gt;toolStripComboBoxPageNum.Name" xml:space="preserve">
+    <value>toolStripComboBoxPageNum</value>
   </data>
-  <data name="&gt;&gt;toolStripTextBoxCurPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripComboBoxPageNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripLabelPageNum.Name" xml:space="preserve">
     <value>toolStripLabelPageNum</value>
