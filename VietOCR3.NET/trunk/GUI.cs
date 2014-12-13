@@ -665,6 +665,15 @@ namespace VietOCR.NET
             scaleX = scaleY = 1f;
             isFitImageSelected = false;
 
+            this.toolStripComboBoxPageNum.Enabled = true;
+            this.toolStripComboBoxPageNum.Items.Clear();
+            for (int i = 0; i < imageTotal; i++)
+            {
+                this.toolStripComboBoxPageNum.Items.Add(i + 1);
+            }
+            this.toolStripLabelPageNum.Text = " / " + imageTotal.ToString();
+            this.toolStripLabelPageNum.Enabled = true;
+
             displayImage();
             loadThumbnails();
 
@@ -703,10 +712,7 @@ namespace VietOCR.NET
 
         protected void displayImage()
         {
-            this.toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
-            this.toolStripTextBoxCurPage.Enabled = true;
-            this.toolStripLabelPageNum.Text = " / " + imageTotal.ToString();
-            this.toolStripLabelPageNum.Enabled = true;
+            this.toolStripComboBoxPageNum.SelectedItem = (imageIndex + 1);
             Image currentImage = imageList[imageIndex];
             this.pictureBox1.Image = new Bitmap(currentImage);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
@@ -1215,56 +1221,9 @@ namespace VietOCR.NET
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        private void toolStripTextBoxCurPage_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                int pageNum;
-                try
-                {
-                    pageNum = Int32.Parse(toolStripTextBoxCurPage.Text.Trim());
-
-                    if (pageNum == imageIndex + 1)
-                    {
-                        return; // no change
-                    }
-                    else if (pageNum < 1 || pageNum > imageTotal)
-                    {
-                        throw new ArgumentException(); // out of range
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show(string.Format(Properties.Resources.InvalidPageMessage, toolStripTextBoxCurPage.Text));
-                    toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
-                    return;
-                }
-
-                this.pictureBox1.Deselect();
-                imageIndex = pageNum - 1;
-                this.toolStripStatusLabel1.Text = null;
-                displayImage();
-                clearStack();
-
-                // recalculate scale factors if in Fit Image mode
-                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
-                {
-                    scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
-                    scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
-                }
-
-                setButton();
-            }
-        }
-
-        private void toolStripTextBoxCurPage_Leave(object sender, EventArgs e)
-        {
-            this.toolStripTextBoxCurPage.Text = (imageIndex + 1).ToString();
-        }
-
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            if (!this.pictureBox1.Focused && this.FindForm().ContainsFocus && !this.toolStripTextBoxCurPage.Focused)
+            if (!this.pictureBox1.Focused && this.FindForm().ContainsFocus)
             {
                 this.pictureBox1.Focus();
             }
@@ -1289,6 +1248,25 @@ namespace VietOCR.NET
         private void GUI_Activated(object sender, EventArgs e)
         {
             this.toolStripButtonPasteImage.Enabled = ImageHelper.GetClipboardImage() != null;
+        }
+
+        private void toolStripComboBoxPageNum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int pageNum = Int32.Parse(this.toolStripComboBoxPageNum.SelectedItem.ToString());
+            this.pictureBox1.Deselect();
+            imageIndex = pageNum - 1;
+            this.toolStripStatusLabel1.Text = null;
+            displayImage();
+            clearStack();
+
+            // recalculate scale factors if in Fit Image mode
+            if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
+            {
+                scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
+                scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+            }
+
+            setButton();
         }
     }
 }

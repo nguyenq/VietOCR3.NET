@@ -47,7 +47,7 @@ namespace VietOCR.NET
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnPrev = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnNext = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTextBoxCurPage = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBoxPageNum = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabelPageNum = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnFitImage = new System.Windows.Forms.ToolStripButton();
@@ -243,7 +243,7 @@ namespace VietOCR.NET
             this.toolStripSeparator4,
             this.toolStripBtnPrev,
             this.toolStripBtnNext,
-            this.toolStripTextBoxCurPage,
+            this.toolStripComboBoxPageNum,
             this.toolStripLabelPageNum,
             this.toolStripSeparator1,
             this.toolStripBtnFitImage,
@@ -317,12 +317,13 @@ namespace VietOCR.NET
             this.toolStripBtnNext.Name = "toolStripBtnNext";
             this.toolStripBtnNext.Click += new System.EventHandler(this.toolStripBtnNext_Click);
             // 
-            // toolStripTextBoxCurPage
+            // toolStripComboBoxPageNum
             // 
-            resources.ApplyResources(this.toolStripTextBoxCurPage, "toolStripTextBoxCurPage");
-            this.toolStripTextBoxCurPage.Name = "toolStripTextBoxCurPage";
-            this.toolStripTextBoxCurPage.Leave += new System.EventHandler(this.toolStripTextBoxCurPage_Leave);
-            this.toolStripTextBoxCurPage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBoxCurPage_KeyPress);
+            resources.ApplyResources(this.toolStripComboBoxPageNum, "toolStripComboBoxPageNum");
+            this.toolStripComboBoxPageNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBoxPageNum.DropDownWidth = 40;
+            this.toolStripComboBoxPageNum.Name = "toolStripComboBoxPageNum";
+            this.toolStripComboBoxPageNum.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxPageNum_SelectedIndexChanged);
             // 
             // toolStripLabelPageNum
             // 
@@ -1126,7 +1127,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem splitTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem13;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxCurPage;
         private System.Windows.Forms.ToolStripLabel toolStripLabelPageNum;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.Panel panelArrow;
@@ -1148,5 +1148,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripButton toolStripButtonRemoveLineBreaks;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxPageNum;
     }
 }
