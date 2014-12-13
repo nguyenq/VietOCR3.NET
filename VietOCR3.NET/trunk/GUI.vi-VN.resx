@@ -490,4 +490,13 @@
   <data name="toolStripStatusLabelSM.ToolTipText" xml:space="preserve">
     <value>Mốt screenshot</value>
   </data>
+  <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
+    <value>Dán ảnh từ clipboard</value>
+  </data>
+  <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
+    <value>Hậu xử lý</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
+    <value>Nối dòng</value>
+  </data>
 </root>
