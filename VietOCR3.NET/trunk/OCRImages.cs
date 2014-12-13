@@ -78,13 +78,13 @@ namespace VietOCR.NET
         /// <param name="engine"></param>
         void ControlParameters(TesseractEngine engine)
         {
-            string datapath = Path.Combine(basedir, CONFIGS_FILE);
-            if (!File.Exists(datapath))
+            string configsFilePath = Path.Combine(basedir, CONFIGS_FILE);
+            if (!File.Exists(configsFilePath))
             {
                 return;
             }
 
-            string[] lines = File.ReadAllLines(datapath);
+            string[] lines = File.ReadAllLines(configsFilePath);
             foreach (string line in lines)
             {
                 if (!line.Trim().StartsWith("#"))
