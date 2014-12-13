@@ -448,6 +448,16 @@ namespace VietOCR.NET
                 mi.PerformClick();
         }
 
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (!(e.ClickedItem is ToolStripButton)) return;
+
+            ToolStripButton tsb = (ToolStripButton)e.ClickedItem;
+            ToolStripMenuItem mi = (ToolStripMenuItem)tsb.Tag;
+            if (mi != null)
+                mi.PerformClick();
+        }
+
         private void toolStripBtnClear_Click(object sender, EventArgs e)
         {
             if (textFilename == null || OkToTrash())
@@ -917,19 +927,24 @@ namespace VietOCR.NET
         {
             if (e.Control && e.KeyCode == Keys.V)
             {
-                Image image = ImageHelper.GetClipboardImage();
-                if (image != null)
-                {
-                    string tempFileName = Path.GetTempFileName();
-                    File.Delete(tempFileName);
-                    tempFileName = Path.ChangeExtension(tempFileName, ".png");
-                    tempFileCollection.AddFile(tempFileName, false);
-                    image.Save(tempFileName, ImageFormat.Png);
-                    openFile(tempFileName);
-                    e.Handled = true;
-                }
+                PasteImage();
+                e.Handled = true;
             }
             base.OnKeyDown(e);
+        }
+
+        void PasteImage()
+        {
+            Image image = ImageHelper.GetClipboardImage();
+            if (image != null)
+            {
+                string tempFileName = Path.GetTempFileName();
+                File.Delete(tempFileName);
+                tempFileName = Path.ChangeExtension(tempFileName, ".png");
+                tempFileCollection.AddFile(tempFileName, false);
+                image.Save(tempFileName, ImageFormat.Png);
+                openFile(tempFileName);
+            }
         }
 
         protected override void OnResize(EventArgs e)
@@ -1264,6 +1279,11 @@ namespace VietOCR.NET
         protected virtual void splitContainerImage_SplitterMoved(object sender, SplitterEventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        private void toolStripButtonPasteImage_Click(object sender, EventArgs e)
+        {
+            PasteImage();
         }
     }
 }
