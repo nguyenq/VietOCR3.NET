@@ -1285,5 +1285,10 @@ namespace VietOCR.NET
         {
             PasteImage();
         }
+
+        private void GUI_Activated(object sender, EventArgs e)
+        {
+            this.toolStripButtonPasteImage.Enabled = ImageHelper.GetClipboardImage() != null;
+        }
     }
 }

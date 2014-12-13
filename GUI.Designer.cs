@@ -35,6 +35,9 @@ namespace VietOCR.NET
             this.flowLayoutPanelThumbnail = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new VietOCR.NET.Controls.ScrollablePictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelImage = new System.Windows.Forms.Panel();
+            this.panelArrow = new System.Windows.Forms.Panel();
+            this.buttonCollapseExpand = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripBtnOpen = new System.Windows.Forms.ToolStripButton();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,13 +62,14 @@ namespace VietOCR.NET
             this.toolStripBtnOCR = new System.Windows.Forms.ToolStripButton();
             this.oCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButtonCancelOCR = new System.Windows.Forms.ToolStripButton();
-            this.panelImage = new System.Windows.Forms.Panel();
-            this.panelArrow = new System.Windows.Forms.Panel();
-            this.buttonCollapseExpand = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonSpellCheck = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPostProcess = new System.Windows.Forms.ToolStripButton();
+            this.postprocessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButtonRemoveLineBreaks = new System.Windows.Forms.ToolStripButton();
+            this.removeLineBreaksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnSave = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,8 +77,6 @@ namespace VietOCR.NET
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripCbLang = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabelLanguage = new System.Windows.Forms.ToolStripLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +89,6 @@ namespace VietOCR.NET
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.bulkOCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripSeparator();
-            this.postprocessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metadataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
@@ -110,7 +111,6 @@ namespace VietOCR.NET
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.changeCaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeLineBreaksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vietInputMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInputMethod = new System.Windows.Forms.ToolStripSeparator();
@@ -152,9 +152,9 @@ namespace VietOCR.NET
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.panelImage.SuspendLayout();
             this.panelArrow.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -202,14 +202,37 @@ namespace VietOCR.NET
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.toolStrip1);
             this.splitContainer1.Panel1.Controls.Add(this.panelImage);
+            this.splitContainer1.Panel1.Controls.Add(this.toolStrip1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
             this.splitContainer1.TabStop = false;
+            // 
+            // panelImage
+            // 
+            this.panelImage.Controls.Add(this.splitContainerImage);
+            this.panelImage.Controls.Add(this.panelArrow);
+            resources.ApplyResources(this.panelImage, "panelImage");
+            this.panelImage.Name = "panelImage";
+            // 
+            // panelArrow
+            // 
+            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelArrow.Controls.Add(this.buttonCollapseExpand);
+            resources.ApplyResources(this.panelArrow, "panelArrow");
+            this.panelArrow.Name = "panelArrow";
+            // 
+            // buttonCollapseExpand
+            // 
+            this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
+            this.buttonCollapseExpand.Name = "buttonCollapseExpand";
+            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
+            this.buttonCollapseExpand.UseVisualStyleBackColor = true;
+            this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
             // 
             // toolStrip1
             // 
@@ -396,28 +419,23 @@ namespace VietOCR.NET
             this.toolStripButtonCancelOCR.Name = "toolStripButtonCancelOCR";
             this.toolStripButtonCancelOCR.Click += new System.EventHandler(this.toolStripButtonCancelOCR_Click);
             // 
-            // panelImage
+            // textBox1
             // 
-            this.panelImage.Controls.Add(this.splitContainerImage);
-            this.panelImage.Controls.Add(this.panelArrow);
-            resources.ApplyResources(this.panelImage, "panelImage");
-            this.panelImage.Name = "panelImage";
+            this.textBox1.AllowDrop = true;
+            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ModifiedChanged += new System.EventHandler(this.textBox1_ModifiedChanged);
+            this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
+            this.textBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
+            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
+            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             // 
-            // panelArrow
+            // contextMenuStrip1
             // 
-            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelArrow.Controls.Add(this.buttonCollapseExpand);
-            resources.ApplyResources(this.panelArrow, "panelArrow");
-            this.panelArrow.Name = "panelArrow";
-            // 
-            // buttonCollapseExpand
-            // 
-            this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
-            this.buttonCollapseExpand.Name = "buttonCollapseExpand";
-            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
-            this.buttonCollapseExpand.UseVisualStyleBackColor = true;
-            this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
+            this.contextMenuStrip1.Name = "standardTextBoxContextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStrip2
             // 
@@ -451,12 +469,24 @@ namespace VietOCR.NET
             this.toolStripButtonPostProcess.Name = "toolStripButtonPostProcess";
             this.toolStripButtonPostProcess.Tag = this.postprocessToolStripMenuItem;
             // 
+            // postprocessToolStripMenuItem
+            // 
+            this.postprocessToolStripMenuItem.Name = "postprocessToolStripMenuItem";
+            resources.ApplyResources(this.postprocessToolStripMenuItem, "postprocessToolStripMenuItem");
+            this.postprocessToolStripMenuItem.Click += new System.EventHandler(this.postprocessToolStripMenuItem_Click);
+            // 
             // toolStripButtonRemoveLineBreaks
             // 
             this.toolStripButtonRemoveLineBreaks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.toolStripButtonRemoveLineBreaks, "toolStripButtonRemoveLineBreaks");
             this.toolStripButtonRemoveLineBreaks.Name = "toolStripButtonRemoveLineBreaks";
             this.toolStripButtonRemoveLineBreaks.Tag = this.removeLineBreaksToolStripMenuItem;
+            // 
+            // removeLineBreaksToolStripMenuItem
+            // 
+            this.removeLineBreaksToolStripMenuItem.Name = "removeLineBreaksToolStripMenuItem";
+            resources.ApplyResources(this.removeLineBreaksToolStripMenuItem, "removeLineBreaksToolStripMenuItem");
+            this.removeLineBreaksToolStripMenuItem.Click += new System.EventHandler(this.removeLineBreaksToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -503,24 +533,6 @@ namespace VietOCR.NET
             this.toolStripLabelLanguage.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabelLanguage.Name = "toolStripLabelLanguage";
             resources.ApplyResources(this.toolStripLabelLanguage, "toolStripLabelLanguage");
-            // 
-            // textBox1
-            // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ModifiedChanged += new System.EventHandler(this.textBox1_ModifiedChanged);
-            this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
-            this.textBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
-            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
-            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "standardTextBoxContextMenuStrip1";
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // menuStrip1
             // 
@@ -609,12 +621,6 @@ namespace VietOCR.NET
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             resources.ApplyResources(this.toolStripMenuItem11, "toolStripMenuItem11");
-            // 
-            // postprocessToolStripMenuItem
-            // 
-            this.postprocessToolStripMenuItem.Name = "postprocessToolStripMenuItem";
-            resources.ApplyResources(this.postprocessToolStripMenuItem, "postprocessToolStripMenuItem");
-            this.postprocessToolStripMenuItem.Click += new System.EventHandler(this.postprocessToolStripMenuItem_Click);
             // 
             // imageToolStripMenuItem
             // 
@@ -765,12 +771,6 @@ namespace VietOCR.NET
             this.changeCaseToolStripMenuItem.Name = "changeCaseToolStripMenuItem";
             resources.ApplyResources(this.changeCaseToolStripMenuItem, "changeCaseToolStripMenuItem");
             this.changeCaseToolStripMenuItem.Click += new System.EventHandler(this.changeCaseToolStripMenuItem_Click);
-            // 
-            // removeLineBreaksToolStripMenuItem
-            // 
-            this.removeLineBreaksToolStripMenuItem.Name = "removeLineBreaksToolStripMenuItem";
-            resources.ApplyResources(this.removeLineBreaksToolStripMenuItem, "removeLineBreaksToolStripMenuItem");
-            this.removeLineBreaksToolStripMenuItem.Click += new System.EventHandler(this.removeLineBreaksToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -1006,6 +1006,7 @@ namespace VietOCR.NET
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI";
+            this.Activated += new System.EventHandler(this.GUI_Activated);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_KeyDown);
             this.splitContainerImage.Panel1.ResumeLayout(false);
             this.splitContainerImage.Panel2.ResumeLayout(false);
@@ -1016,10 +1017,10 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             this.splitContainer1.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.panelImage.ResumeLayout(false);
             this.panelArrow.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
