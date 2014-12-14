@@ -24,6 +24,9 @@ namespace VietOCR.NET
 {
     abstract class OCR<T>
     {
+        protected const string CONFIGS_FILE = "tess_configs";
+        protected const string VIET_CONFIGS_FILE = "viet";
+
         protected Rectangle rect = Rectangle.Empty;
         BackgroundWorker worker;
         private string pageSegMode = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
