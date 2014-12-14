@@ -220,7 +220,7 @@
     <value>1</value>
   </data>
   <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>566, 475</value>
+    <value>566, 474</value>
   </data>
   <data name="splitContainerImage.SplitterDistance" type="System.Int32, mscorlib">
     <value>120</value>
@@ -289,7 +289,7 @@
     <value>0, 0</value>
   </data>
   <data name="panelArrow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 475</value>
+    <value>26, 474</value>
   </data>
   <data name="panelArrow.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -313,7 +313,7 @@
     <value>0, 39</value>
   </data>
   <data name="panelImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 475</value>
+    <value>592, 474</value>
   </data>
   <data name="panelImage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1016,7 +1016,7 @@
     <value>Both</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>588, 475</value>
+    <value>588, 474</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1129,31 +1129,31 @@
   <data name="toolStripButtonRemoveLineBreaks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        AAAAAElFTkSuQmCC
+        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
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -1335,7 +1335,7 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 514</value>
+    <value>1184, 513</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>592</value>
@@ -1728,7 +1728,7 @@
     <value>4, 19</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 538</value>
+    <value>0, 537</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1184, 24</value>
@@ -1761,7 +1761,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 562</value>
+    <value>1184, 561</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
