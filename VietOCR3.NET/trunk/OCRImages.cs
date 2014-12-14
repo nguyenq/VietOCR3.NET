@@ -28,7 +28,6 @@ namespace VietOCR.NET
     {
         readonly string basedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         const string TESSDATA = "tessdata/";
-        const string CONFIGS_FILE = "tessdata/configs/tess_configs";
 
         const int oem = 3;
 
@@ -49,7 +48,7 @@ namespace VietOCR.NET
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
                 ControlParameters(engine);
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
- 
+
                 StringBuilder strB = new StringBuilder();
                 int pageNum = 0;
 
@@ -74,11 +73,12 @@ namespace VietOCR.NET
 
         /// <summary>
         /// Reads tessdata/configs/tess_configs and SetVariable on Tesseract engine.
+        /// This only works for non-init parameters (@see <a href="https://code.google.com/p/tesseract-ocr/wiki/ControlParams">ControlParams</a>).
         /// </summary>
         /// <param name="engine"></param>
         void ControlParameters(TesseractEngine engine)
         {
-            string configsFilePath = Path.Combine(basedir, CONFIGS_FILE);
+            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + (Language.StartsWith("vie") ? VIET_CONFIGS_FILE : CONFIGS_FILE));
             if (!File.Exists(configsFilePath))
             {
                 return;
@@ -100,7 +100,7 @@ namespace VietOCR.NET
                         else
                         {
                             engine.SetVariable(keyValuePair[0], keyValuePair[1]);
-                        }                        
+                        }
                     }
                     catch
                     {
@@ -117,7 +117,6 @@ namespace VietOCR.NET
         /// <returns></returns>
         private Pix ConvertBitmapToPix(Image image)
         {
-            
             try
             {
                 return PixConverter.ToPix((Bitmap)image);

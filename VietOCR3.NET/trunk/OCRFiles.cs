@@ -27,8 +27,6 @@ namespace VietOCR.NET
 {
     class OCRFiles : OCR<string>
     {
-        const string CONFIGS_FILE = "tess_configs";
-
         /// <summary>
         /// Recognizes TIFF files.
         /// </summary>
@@ -57,7 +55,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5}", tiffFile, outputFileName, Language, psm, CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5}", tiffFile, outputFileName, Language, psm, Language.StartsWith("vie") ? VIET_CONFIGS_FILE : CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
                 p.Start();
 
                 // Read the output stream first and then wait.
