@@ -220,7 +220,6 @@ namespace VietOCR.NET
             // 
             // panelArrow
             // 
-            this.panelArrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelArrow.Controls.Add(this.buttonCollapseExpand);
             resources.ApplyResources(this.panelArrow, "panelArrow");
             this.panelArrow.Name = "panelArrow";

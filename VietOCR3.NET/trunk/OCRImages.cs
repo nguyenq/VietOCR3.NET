@@ -92,7 +92,15 @@ namespace VietOCR.NET
                     try
                     {
                         string[] keyValuePair = line.Trim().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                        engine.SetVariable(keyValuePair[0], keyValuePair[1]);
+                        string value = keyValuePair[1];
+                        if (value == "T" || value == "F")
+                        {
+                            engine.SetVariable(keyValuePair[0], value == "T" ? true : false);
+                        }
+                        else
+                        {
+                            engine.SetVariable(keyValuePair[0], keyValuePair[1]);
+                        }                        
                     }
                     catch
                     {
