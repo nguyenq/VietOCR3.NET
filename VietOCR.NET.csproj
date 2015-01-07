@@ -125,7 +125,28 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BulkDialog.hi-IN.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.pl-PL.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ru-RU.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.hi-IN.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.pl-PL.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ru-RU.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.fa-IR.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.hi-IN.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ja-JP.resx">
@@ -134,7 +155,16 @@
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.nl-NL.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.pl-PL.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ru-RU.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.fa-IR.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.hi-IN.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.ja-JP.resx">
@@ -143,12 +173,51 @@
     <EmbeddedResource Include="DownloadDialog.nl-NL.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.pl-PL.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ru-RU.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.hi-IN.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.pl-PL.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ru-RU.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIWithThumbnail.resx">
       <DependentUpon>GUIWithThumbnail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.hi-IN.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.pl-PL.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ru-RU.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.hi-IN.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.pl-PL.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ru-RU.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
     <EmbeddedResource Include="readme_cs_fa.html" />
     <EmbeddedResource Include="readme_cs_ja.html" />
     <EmbeddedResource Include="readme_cs_nl.html" />
+    <Content Include="readme_cs_hi.html" />
+    <Content Include="readme_cs_pl.html" />
+    <Content Include="readme_cs_ru.html" />
     <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -342,6 +411,9 @@
     <EmbeddedResource Include="SplitPdfDialog.fa-IR.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.hi-IN.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,6 +421,12 @@
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.pl-PL.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ru-RU.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.tr-TR.resx">
@@ -364,6 +442,9 @@
     <EmbeddedResource Include="TrackbarDialog.fa-IR.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.hi-IN.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.it-IT.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -376,7 +457,13 @@
     <EmbeddedResource Include="TrackbarDialog.nl-NL.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.pl-PL.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.ru-RU.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.sk-SK.resx">
