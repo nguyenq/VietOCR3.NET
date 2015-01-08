@@ -58,49 +58,56 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+            this.toolTip1.SetToolTip(this.tabControl1, resources.GetString("tabControl1.ToolTip"));
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.checkBoxDangAmbigs);
             this.tabPage2.Controls.Add(this.labelPath);
             this.tabPage2.Controls.Add(this.btnDangAmbigs);
             this.tabPage2.Controls.Add(this.textBoxDangAmbigs);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
+            this.toolTip1.SetToolTip(this.tabPage2, resources.GetString("tabPage2.ToolTip"));
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // checkBoxDangAmbigs
             // 
             resources.ApplyResources(this.checkBoxDangAmbigs, "checkBoxDangAmbigs");
             this.checkBoxDangAmbigs.Name = "checkBoxDangAmbigs";
+            this.toolTip1.SetToolTip(this.checkBoxDangAmbigs, resources.GetString("checkBoxDangAmbigs.ToolTip"));
             this.checkBoxDangAmbigs.UseVisualStyleBackColor = true;
             // 
             // labelPath
             // 
             resources.ApplyResources(this.labelPath, "labelPath");
             this.labelPath.Name = "labelPath";
+            this.toolTip1.SetToolTip(this.labelPath, resources.GetString("labelPath.ToolTip"));
             // 
             // btnDangAmbigs
             // 
             resources.ApplyResources(this.btnDangAmbigs, "btnDangAmbigs");
             this.btnDangAmbigs.Name = "btnDangAmbigs";
+            this.toolTip1.SetToolTip(this.btnDangAmbigs, resources.GetString("btnDangAmbigs.ToolTip"));
             this.btnDangAmbigs.UseVisualStyleBackColor = true;
             this.btnDangAmbigs.Click += new System.EventHandler(this.btnDangAmbigs_Click);
             // 
             // textBoxDangAmbigs
             // 
-            this.textBoxDangAmbigs.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.textBoxDangAmbigs, "textBoxDangAmbigs");
+            this.textBoxDangAmbigs.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxDangAmbigs.Name = "textBoxDangAmbigs";
             this.textBoxDangAmbigs.ReadOnly = true;
+            this.toolTip1.SetToolTip(this.textBoxDangAmbigs, resources.GetString("textBoxDangAmbigs.ToolTip"));
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.labelOutputFormat);
             this.tabPage1.Controls.Add(this.comboBoxOutputFormat);
             this.tabPage1.Controls.Add(this.checkBoxWatch);
@@ -110,47 +117,53 @@
             this.tabPage1.Controls.Add(this.btnWatch);
             this.tabPage1.Controls.Add(this.textBoxOutput);
             this.tabPage1.Controls.Add(this.textBoxWatch);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
+            this.toolTip1.SetToolTip(this.tabPage1, resources.GetString("tabPage1.ToolTip"));
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // labelOutputFormat
             // 
             resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
             this.labelOutputFormat.Name = "labelOutputFormat";
+            this.toolTip1.SetToolTip(this.labelOutputFormat, resources.GetString("labelOutputFormat.ToolTip"));
             // 
             // comboBoxOutputFormat
             // 
+            resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOutputFormat.FormattingEnabled = true;
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
             resources.GetString("comboBoxOutputFormat.Items2")});
-            resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
+            this.toolTip1.SetToolTip(this.comboBoxOutputFormat, resources.GetString("comboBoxOutputFormat.ToolTip"));
             this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
             // 
             // checkBoxWatch
             // 
             resources.ApplyResources(this.checkBoxWatch, "checkBoxWatch");
             this.checkBoxWatch.Name = "checkBoxWatch";
+            this.toolTip1.SetToolTip(this.checkBoxWatch, resources.GetString("checkBoxWatch.ToolTip"));
             this.checkBoxWatch.UseVisualStyleBackColor = true;
             // 
             // labelOutput
             // 
             resources.ApplyResources(this.labelOutput, "labelOutput");
             this.labelOutput.Name = "labelOutput";
+            this.toolTip1.SetToolTip(this.labelOutput, resources.GetString("labelOutput.ToolTip"));
             // 
             // labelWatch
             // 
             resources.ApplyResources(this.labelWatch, "labelWatch");
             this.labelWatch.Name = "labelWatch";
+            this.toolTip1.SetToolTip(this.labelWatch, resources.GetString("labelWatch.ToolTip"));
             // 
             // btnOutput
             // 
             resources.ApplyResources(this.btnOutput, "btnOutput");
             this.btnOutput.Name = "btnOutput";
+            this.toolTip1.SetToolTip(this.btnOutput, resources.GetString("btnOutput.ToolTip"));
             this.btnOutput.UseVisualStyleBackColor = true;
             this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
             // 
@@ -158,35 +171,40 @@
             // 
             resources.ApplyResources(this.btnWatch, "btnWatch");
             this.btnWatch.Name = "btnWatch";
+            this.toolTip1.SetToolTip(this.btnWatch, resources.GetString("btnWatch.ToolTip"));
             this.btnWatch.UseVisualStyleBackColor = true;
             this.btnWatch.Click += new System.EventHandler(this.btnWatch_Click);
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.textBoxOutput, "textBoxOutput");
+            this.textBoxOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
+            this.toolTip1.SetToolTip(this.textBoxOutput, resources.GetString("textBoxOutput.ToolTip"));
             // 
             // textBoxWatch
             // 
-            this.textBoxWatch.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.textBoxWatch, "textBoxWatch");
+            this.textBoxWatch.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxWatch.Name = "textBoxWatch";
             this.textBoxWatch.ReadOnly = true;
+            this.toolTip1.SetToolTip(this.textBoxWatch, resources.GetString("textBoxWatch.ToolTip"));
             // 
             // buttonOK
             // 
-            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.buttonOK, "buttonOK");
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonOK.Name = "buttonOK";
+            this.toolTip1.SetToolTip(this.buttonOK, resources.GetString("buttonOK.ToolTip"));
             this.buttonOK.UseVisualStyleBackColor = true;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Name = "buttonCancel";
+            this.toolTip1.SetToolTip(this.buttonCancel, resources.GetString("buttonCancel.ToolTip"));
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // openFileDialog1
@@ -194,6 +212,10 @@
             this.openFileDialog1.DefaultExt = "txt";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.RestoreDirectory = true;
+            // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             // 
             // OptionsDialog
             // 
@@ -208,6 +230,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OptionsDialog";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
