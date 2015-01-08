@@ -48,16 +48,19 @@
             // 
             resources.ApplyResources(this.labelOutput, "labelOutput");
             this.labelOutput.Name = "labelOutput";
+            this.toolTip1.SetToolTip(this.labelOutput, resources.GetString("labelOutput.ToolTip"));
             // 
             // labelInput
             // 
             resources.ApplyResources(this.labelInput, "labelInput");
             this.labelInput.Name = "labelInput";
+            this.toolTip1.SetToolTip(this.labelInput, resources.GetString("labelInput.ToolTip"));
             // 
             // btnOutput
             // 
             resources.ApplyResources(this.btnOutput, "btnOutput");
             this.btnOutput.Name = "btnOutput";
+            this.toolTip1.SetToolTip(this.btnOutput, resources.GetString("btnOutput.ToolTip"));
             this.btnOutput.UseVisualStyleBackColor = true;
             this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
             // 
@@ -65,53 +68,64 @@
             // 
             resources.ApplyResources(this.btnInput, "btnInput");
             this.btnInput.Name = "btnInput";
+            this.toolTip1.SetToolTip(this.btnInput, resources.GetString("btnInput.ToolTip"));
             this.btnInput.UseVisualStyleBackColor = true;
             this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.textBoxOutput, "textBoxOutput");
+            this.textBoxOutput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
+            this.toolTip1.SetToolTip(this.textBoxOutput, resources.GetString("textBoxOutput.ToolTip"));
             // 
             // textBoxInput
             // 
-            this.textBoxInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.textBoxInput, "textBoxInput");
+            this.textBoxInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.ReadOnly = true;
+            this.toolTip1.SetToolTip(this.textBoxInput, resources.GetString("textBoxInput.ToolTip"));
             // 
             // buttonCancel
             // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Name = "buttonCancel";
+            this.toolTip1.SetToolTip(this.buttonCancel, resources.GetString("buttonCancel.ToolTip"));
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonRun
             // 
-            this.buttonRun.DialogResult = System.Windows.Forms.DialogResult.OK;
             resources.ApplyResources(this.buttonRun, "buttonRun");
+            this.buttonRun.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonRun.Name = "buttonRun";
+            this.toolTip1.SetToolTip(this.buttonRun, resources.GetString("buttonRun.ToolTip"));
             this.buttonRun.UseVisualStyleBackColor = true;
+            // 
+            // folderBrowserDialog1
+            // 
+            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             // 
             // comboBoxOutputFormat
             // 
+            resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOutputFormat.FormattingEnabled = true;
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
             resources.GetString("comboBoxOutputFormat.Items2")});
-            resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
+            this.toolTip1.SetToolTip(this.comboBoxOutputFormat, resources.GetString("comboBoxOutputFormat.ToolTip"));
             this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
             // 
             // labelOutputFormat
             // 
             resources.ApplyResources(this.labelOutputFormat, "labelOutputFormat");
             this.labelOutputFormat.Name = "labelOutputFormat";
+            this.toolTip1.SetToolTip(this.labelOutputFormat, resources.GetString("labelOutputFormat.ToolTip"));
             // 
             // BulkDialog
             // 
@@ -132,6 +146,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BulkDialog";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.ResumeLayout(false);
             this.PerformLayout();
 
