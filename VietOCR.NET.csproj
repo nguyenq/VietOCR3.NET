@@ -215,9 +215,9 @@
     <EmbeddedResource Include="readme_cs_fa.html" />
     <EmbeddedResource Include="readme_cs_ja.html" />
     <EmbeddedResource Include="readme_cs_nl.html" />
-    <Content Include="readme_cs_hi.html" />
-    <Content Include="readme_cs_pl.html" />
-    <Content Include="readme_cs_ru.html" />
+    <EmbeddedResource Include="readme_cs_hi.html" />
+    <EmbeddedResource Include="readme_cs_pl.html" />
+    <EmbeddedResource Include="readme_cs_ru.html" />
     <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
