@@ -397,18 +397,6 @@
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
     <value>Размывание</value>
   </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 63</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 475</value>
-  </data>
-  <data name="splitContainerImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 0</value>
-  </data>
-  <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 475</value>
-  </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
