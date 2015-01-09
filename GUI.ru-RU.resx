@@ -140,7 +140,7 @@
     <value>147, 22</value>
   </data>
   <data name="brightenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Яркость</value>
+    <value>Яркость...</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
@@ -176,7 +176,7 @@
     <value>147, 22</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>Контраст</value>
+    <value>Контраст...</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -212,7 +212,7 @@
     <value>220, 22</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
-    <value>Шрифт</value>
+    <value>Шрифт...</value>
   </data>
   <data name="formatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
