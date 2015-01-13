@@ -70,9 +70,7 @@ namespace VietOCR.NET
                 return;
             }
             imageIndex = index;
-            displayImage();
-            clearStack();
-            setButton();
+            this.toolStripComboBoxPageNum.SelectedItem = (imageIndex + 1);
         }
 
         protected override void splitContainerImage_SplitterMoved(object sender, SplitterEventArgs e)

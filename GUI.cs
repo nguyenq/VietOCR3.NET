@@ -671,6 +671,10 @@ namespace VietOCR.NET
             {
                 this.toolStripComboBoxPageNum.Items.Add(i + 1);
             }
+            this.toolStripComboBoxPageNum.Enabled = false;
+            this.toolStripComboBoxPageNum.SelectedIndex = 0;
+            this.toolStripComboBoxPageNum.Enabled = true;
+
             this.toolStripLabelPageNum.Text = " / " + imageTotal.ToString();
             this.toolStripLabelPageNum.Enabled = true;
 
@@ -712,7 +716,6 @@ namespace VietOCR.NET
 
         protected void displayImage()
         {
-            this.toolStripComboBoxPageNum.SelectedItem = (imageIndex + 1);
             Image currentImage = imageList[imageIndex];
             this.pictureBox1.Image = new Bitmap(currentImage);
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
@@ -1252,6 +1255,8 @@ namespace VietOCR.NET
 
         private void toolStripComboBoxPageNum_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!this.toolStripComboBoxPageNum.Enabled) return;
+
             int pageNum = Int32.Parse(this.toolStripComboBoxPageNum.SelectedItem.ToString());
             this.pictureBox1.Deselect();
             imageIndex = pageNum - 1;

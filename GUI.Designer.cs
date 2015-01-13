@@ -1147,6 +1147,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripButton toolStripButtonRemoveLineBreaks;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxPageNum;
+        protected System.Windows.Forms.ToolStripComboBox toolStripComboBoxPageNum;
     }
 }
