@@ -29,17 +29,8 @@ namespace VietOCR.NET
             else
             {
                 this.toolStripStatusLabel1.Text = null;
-                displayImage();
-                clearStack();
-
-                // recalculate scale factors if in Fit Image mode
-                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
-                {
-                    scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
-                    scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
-                }
+                this.toolStripComboBoxPageNum.SelectedItem = (imageIndex + 1);
             }
-            setButton();
         }
 
         protected override void toolStripBtnNext_Click(object sender, EventArgs e)
@@ -53,17 +44,8 @@ namespace VietOCR.NET
             else
             {
                 this.toolStripStatusLabel1.Text = null;
-                displayImage();
-                clearStack();
-
-                // recalculate scale factors if in Fit Image mode
-                if (this.pictureBox1.SizeMode == PictureBoxSizeMode.Zoom)
-                {
-                    scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
-                    scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
-                }
+                this.toolStripComboBoxPageNum.SelectedItem = (imageIndex + 1);
             }
-            setButton();
         }
         protected override void toolStripBtnFitImage_Click(object sender, EventArgs e)
         {
