@@ -26,8 +26,6 @@ namespace VietOCR.NET
 {
     class OCRImages : OCR<Image>
     {
-        const string TESSDATA = "tessdata/";
-
         const int oem = 3;
 
         /// <summary>
@@ -40,13 +38,11 @@ namespace VietOCR.NET
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override string RecognizeText(IList<Image> images)
         {
-            string tessdata = Path.Combine(basedir, TESSDATA);
+            IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
 
-            using (TesseractEngine engine = new TesseractEngine(tessdata, Language, EngineMode.Default))
+            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode.Default, configs_file))
             {
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
-                //setConfigs CONFIGS_FILE
-                // ...
                 ControlParameters(engine);
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
 
@@ -79,7 +75,7 @@ namespace VietOCR.NET
         /// <param name="engine"></param>
         void ControlParameters(TesseractEngine engine)
         {
-            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + CONFIGVARS_FILE);
+            string configsFilePath = Path.Combine(Datapath, "tessdata/configs/" + CONFIGVARS_FILE);
             if (!File.Exists(configsFilePath))
             {
                 return;

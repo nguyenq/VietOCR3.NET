@@ -93,7 +93,7 @@ namespace VietOCR.NET
         /// <param name="engine"></param>
         string ControlParameters()
         {
-            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + CONFIGVARS_FILE);
+            string configsFilePath = Path.Combine(Datapath, "tessdata/configs/" + CONFIGVARS_FILE);
             if (!File.Exists(configsFilePath))
             {
                 return string.Empty;

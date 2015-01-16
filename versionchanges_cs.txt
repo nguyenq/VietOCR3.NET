@@ -41,9 +41,11 @@ Version 3.5 (25 January 2014)
 - Additional translations
 - Update NHunspell to 1.1.1
 
-Version 3.6 Beta (15 January 2015)
+Version 3.6 Beta (16 January 2015)
 - Add Split TIFF function
 - Add thumbnail bar for ease of page navigation
 - Display useful info in statusbar
 - Update URL of OpenOffice dictionaries
 - Update NHunspell to 1.2.5359
+- Update Tesseract.NET to 2.1.1.1
+- Add support for reading specific configs files for setting control parameters
