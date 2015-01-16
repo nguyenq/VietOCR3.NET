@@ -28,7 +28,7 @@ namespace VietOCR.NET
         protected const string CONFIGS_FILE = "tess_configs";
         protected const string CONFIGVARS_FILE = "tess_configvars";
 
-        protected readonly string basedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        protected readonly string Datapath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         protected Rectangle rect = Rectangle.Empty;
         BackgroundWorker worker;
