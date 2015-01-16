@@ -535,7 +535,7 @@
     <Content Include="tessdata\configs\pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="tessdata\configs\viet">
+    <Content Include="tessdata\configs\tess_configvars">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

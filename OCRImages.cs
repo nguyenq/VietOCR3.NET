@@ -46,6 +46,8 @@ namespace VietOCR.NET
             using (TesseractEngine engine = new TesseractEngine(tessdata, Language, EngineMode.Default))
             {
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
+                //setConfigs CONFIGS_FILE
+                // ...
                 ControlParameters(engine);
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
 
@@ -78,7 +80,7 @@ namespace VietOCR.NET
         /// <param name="engine"></param>
         void ControlParameters(TesseractEngine engine)
         {
-            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + (Language.StartsWith("vie") ? VIET_CONFIGS_FILE : CONFIGS_FILE));
+            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + CONFIGVARS_FILE);
             if (!File.Exists(configsFilePath))
             {
                 return;
