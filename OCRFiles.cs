@@ -109,7 +109,7 @@ namespace VietOCR.NET
                     try
                     {
                         string[] keyValuePair = line.Trim().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                        configvars.AppendFormat("-c {0} {1} ", keyValuePair[0], keyValuePair[1]);
+                        configvars.AppendFormat("-c {0}={1} ", keyValuePair[0], keyValuePair[1]);
                     }
                     catch
                     {
