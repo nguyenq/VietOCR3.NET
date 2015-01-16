@@ -25,7 +25,7 @@ namespace VietOCR.NET
     abstract class OCR<T>
     {
         protected const string CONFIGS_FILE = "tess_configs";
-        protected const string VIET_CONFIGS_FILE = "viet";
+        protected const string CONFIGVARS_FILE = "tess_configvars";
 
         protected Rectangle rect = Rectangle.Empty;
         BackgroundWorker worker;
