@@ -26,7 +26,6 @@ namespace VietOCR.NET
 {
     class OCRImages : OCR<Image>
     {
-        readonly string basedir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         const string TESSDATA = "tessdata/";
 
         const int oem = 3;
@@ -74,7 +73,7 @@ namespace VietOCR.NET
         }
 
         /// <summary>
-        /// Reads tessdata/configs/tess_configs and SetVariable on Tesseract engine.
+        /// Reads tessdata/configs/tess_configvars and SetVariable on Tesseract engine.
         /// This only works for non-init parameters (@see <a href="https://code.google.com/p/tesseract-ocr/wiki/ControlParams">ControlParams</a>).
         /// </summary>
         /// <param name="engine"></param>

@@ -30,10 +30,10 @@ namespace VietOCR.NET
                 {
                     outputFormat = "hocr";
                 } 
-                else if ("pdf" == arg) 
-                {
-                    outputFormat = "pdf";
-                }
+                //else if ("pdf" == arg) 
+                //{
+                //    outputFormat = "pdf";
+                //}
                 else if ("txt+" == arg)
                 {
                     outputFormat = "txt+";

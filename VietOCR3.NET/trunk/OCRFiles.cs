@@ -55,7 +55,7 @@ namespace VietOCR.NET
 
             foreach (string tiffFile in tiffFiles)
             {
-                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5}", tiffFile, outputFileName, Language, psm, CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
+                p.StartInfo.Arguments = string.Format("\"{0}\" \"{1}\" -l {2} -psm {3} {4} {5} {6}", tiffFile, outputFileName, Language, psm, ControlParameters(), CONFIGS_FILE, OutputFormat == "hocr" ? "hocr" : OutputFormat == "pdf" ? "pdf" : string.Empty);
                 p.Start();
 
                 // Read the output stream first and then wait.
@@ -84,6 +84,41 @@ namespace VietOCR.NET
 
             File.Delete(tempTessOutputFile);
             return result.ToString().Replace("\n", Environment.NewLine);
+        }
+
+        /// <summary>
+        /// Reads tessdata/configs/tess_configvars and SetVariable on Tesseract engine.
+        /// This only works for non-init parameters (@see <a href="https://code.google.com/p/tesseract-ocr/wiki/ControlParams">ControlParams</a>).
+        /// </summary>
+        /// <param name="engine"></param>
+        string ControlParameters()
+        {
+            string configsFilePath = Path.Combine(basedir, "tessdata/configs/" + CONFIGVARS_FILE);
+            if (!File.Exists(configsFilePath))
+            {
+                return string.Empty;
+            }
+
+            StringBuilder configvars = new StringBuilder();
+
+            string[] lines = File.ReadAllLines(configsFilePath);
+            foreach (string line in lines)
+            {
+                if (!line.Trim().StartsWith("#"))
+                {
+                    try
+                    {
+                        string[] keyValuePair = line.Trim().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                        configvars.AppendFormat("-c {0} {1} ", keyValuePair[0], keyValuePair[1]);
+                    }
+                    catch
+                    {
+                        //ignore and continue on
+                    }
+                }
+            }
+
+            return configvars.ToString();
         }
     }
 }

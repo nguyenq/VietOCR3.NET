@@ -25,7 +25,7 @@ namespace VietOCR.NET
             try
             {
                 DirectoryInfo dir = Directory.GetParent(outputFile);
-                if (!dir.Exists)
+                if (dir != null && !dir.Exists)
                 {
                     dir.Create();
                 }
