@@ -16,7 +16,28 @@ namespace VietOCR.NET
         Dictionary<string, string> availableLanguageCodes;
         Dictionary<string, string> availableDictionaries;
         Dictionary<string, string> lookupISO_3_1_Codes;
+
+        public Dictionary<string, string> LookupISO_3_1_Codes
+        {
+            get { return lookupISO_3_1_Codes; }
+            set { lookupISO_3_1_Codes = value; }
+        }
         Dictionary<string, string> lookupISO639;
+
+        public Dictionary<string, string> LookupISO639
+        {
+            get { return lookupISO639; }
+            set { lookupISO639 = value; }
+        }
+        
+        private string[] installedLanguages;
+
+        public string[] InstalledLanguages
+        {
+            get { return installedLanguages; }
+            set { installedLanguages = value; }
+        }
+        
         List<WebClient> clients;
         Dictionary<string, long> downloadTracker;
         int numberOfDownloads, numOfConcurrentTasks;
@@ -38,9 +59,6 @@ namespace VietOCR.NET
         {
             base.OnLoad(ea);
 
-            lookupISO639 = ((GUI)this.Owner).LookupISO639;
-            lookupISO_3_1_Codes = ((GUI)this.Owner).LookupISO_3_1_Codes;
-
             String xmlFilePath = Path.Combine(baseDir, "Data/Tess3DataURL.xml");
             availableLanguageCodes = new Dictionary<string, string>();
             Utilities.Utilities.LoadFromXML(availableLanguageCodes, xmlFilePath);
@@ -61,7 +79,7 @@ namespace VietOCR.NET
             this.listBox1.Items.Clear();
             this.listBox1.Items.AddRange(names.ToArray());
 
-            foreach (string installed in ((GUI)this.Owner).InstalledLanguages)
+            foreach (string installed in installedLanguages)
             {
                 for (int i = 0; i < names.Count; ++i)
                 {
