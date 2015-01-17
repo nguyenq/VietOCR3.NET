@@ -82,6 +82,9 @@ namespace VietOCR.NET
         {
             DownloadDialog downloadDialog = new DownloadDialog();
             downloadDialog.Owner = this;
+            downloadDialog.LookupISO639 = LookupISO639;
+            downloadDialog.LookupISO_3_1_Codes = LookupISO_3_1_Codes;
+            downloadDialog.InstalledLanguages = InstalledLanguages;
             downloadDialog.ShowDialog();
         }
 
