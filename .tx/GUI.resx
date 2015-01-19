@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>844, 562</value>
+    <value>1184, 561</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VietOCR.NET</value>
@@ -89,7 +89,7 @@
     <value>&amp;Bulk OCR...</value>
   </data>
   <data name="buttonCollapseExpand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>2, 3</value>
   </data>
   <data name="buttonCollapseExpand.Size" type="System.Drawing.Size, System.Drawing">
     <value>22, 23</value>
@@ -146,7 +146,7 @@
     <value>0, 0</value>
   </data>
   <data name="flowLayoutPanelThumbnail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 475</value>
+    <value>116, 470</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -194,7 +194,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 24</value>
+    <value>1184, 24</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -251,13 +251,13 @@
     <value>0, 0</value>
   </data>
   <data name="panelArrow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 475</value>
+    <value>26, 474</value>
   </data>
   <data name="panelImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 39</value>
   </data>
   <data name="panelImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 475</value>
+    <value>592, 474</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -338,16 +338,16 @@
     <value>Sm&amp;ooth</value>
   </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 63</value>
+    <value>0, 24</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 475</value>
+    <value>1184, 513</value>
   </data>
   <data name="splitContainerImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 0</value>
+    <value>26, 0</value>
   </data>
   <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 475</value>
+    <value>566, 474</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
@@ -362,19 +362,19 @@
     <value>Split TIFF...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 538</value>
+    <value>0, 537</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 24</value>
+    <value>1184, 24</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 39</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 475</value>
+    <value>588, 474</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -383,13 +383,22 @@
     <value>&amp;Tools</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
+    <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 39</value>
+    <value>592, 39</value>
   </data>
   <data name="toolStrip1.Text" xml:space="preserve">
     <value>toolStrip1</value>
+  </data>
+  <data name="toolStrip2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 39</value>
+  </data>
+  <data name="toolStrip2.Text" xml:space="preserve">
+    <value>toolStrip2</value>
   </data>
   <data name="toolStripBtnActualSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -511,6 +520,24 @@
   <data name="toolStripButtonCancelOCR.Text" xml:space="preserve">
     <value>Cancel OCR</value>
   </data>
+  <data name="toolStripButtonPasteImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
+    <value>Paste Image from Clipboard</value>
+  </data>
+  <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
+    <value>Post-process</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
+    <value>Remove Line Breaks</value>
+  </data>
   <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
@@ -519,6 +546,9 @@
   </data>
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 39</value>
+  </data>
+  <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
@@ -592,17 +622,23 @@
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 19</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
+    <value>297, 19</value>
   </data>
   <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
+    <value>297, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 19</value>
@@ -644,13 +680,7 @@
     <value>0, 19</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 39</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.Text" xml:space="preserve">
-    <value>0</value>
+    <value>297, 19</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
