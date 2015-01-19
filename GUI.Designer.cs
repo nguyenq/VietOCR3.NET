@@ -59,9 +59,7 @@ namespace VietOCR.NET
             this.toolStripBtnRotateCCW = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnRotateCW = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnOCR = new System.Windows.Forms.ToolStripButton();
             this.oCRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripButtonCancelOCR = new System.Windows.Forms.ToolStripButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new VietOCR.NET.Controls.TextBoxContextMenuStrip(this.components);
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -71,7 +69,6 @@ namespace VietOCR.NET
             this.toolStripButtonRemoveLineBreaks = new System.Windows.Forms.ToolStripButton();
             this.removeLineBreaksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnSave = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripBtnClear = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
@@ -145,6 +142,9 @@ namespace VietOCR.NET
             this.toolStripStatusLabelPSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
+            this.toolStripBtnSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnOCR = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelOCR = new System.Windows.Forms.ToolStripButton();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
@@ -239,6 +239,7 @@ namespace VietOCR.NET
             this.toolStripBtnOpen,
             this.toolStripBtnScan,
             this.toolStripButtonPasteImage,
+            this.toolStripBtnSave,
             this.toolStripSeparator4,
             this.toolStripBtnPrev,
             this.toolStripBtnNext,
@@ -253,9 +254,7 @@ namespace VietOCR.NET
             this.toolStripSeparator3,
             this.toolStripBtnRotateCCW,
             this.toolStripBtnRotateCW,
-            this.toolStripSeparator6,
-            this.toolStripBtnOCR,
-            this.toolStripButtonCancelOCR});
+            this.toolStripSeparator6});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -397,27 +396,11 @@ namespace VietOCR.NET
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             // 
-            // toolStripBtnOCR
-            // 
-            this.toolStripBtnOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnOCR, "toolStripBtnOCR");
-            this.toolStripBtnOCR.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
-            this.toolStripBtnOCR.Name = "toolStripBtnOCR";
-            this.toolStripBtnOCR.Tag = this.oCRToolStripMenuItem;
-            // 
             // oCRToolStripMenuItem
             // 
             this.oCRToolStripMenuItem.Name = "oCRToolStripMenuItem";
             resources.ApplyResources(this.oCRToolStripMenuItem, "oCRToolStripMenuItem");
             this.oCRToolStripMenuItem.Click += new System.EventHandler(this.ocrToolStripMenuItem_Click);
-            // 
-            // toolStripButtonCancelOCR
-            // 
-            this.toolStripButtonCancelOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButtonCancelOCR, "toolStripButtonCancelOCR");
-            this.toolStripButtonCancelOCR.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
-            this.toolStripButtonCancelOCR.Name = "toolStripButtonCancelOCR";
-            this.toolStripButtonCancelOCR.Click += new System.EventHandler(this.toolStripButtonCancelOCR_Click);
             // 
             // textBox1
             // 
@@ -440,12 +423,13 @@ namespace VietOCR.NET
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripBtnOCR,
+            this.toolStripButtonCancelOCR,
+            this.toolStripBtnClear,
+            this.toolStripSeparator5,
             this.toolStripButtonSpellCheck,
             this.toolStripButtonPostProcess,
             this.toolStripButtonRemoveLineBreaks,
-            this.toolStripSeparator5,
-            this.toolStripBtnSave,
-            this.toolStripBtnClear,
             this.toolStripSeparator7,
             this.toolStripCbLang,
             this.toolStripLabelLanguage});
@@ -492,14 +476,6 @@ namespace VietOCR.NET
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-            // 
-            // toolStripBtnSave
-            // 
-            this.toolStripBtnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripBtnSave, "toolStripBtnSave");
-            this.toolStripBtnSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
-            this.toolStripBtnSave.Name = "toolStripBtnSave";
-            this.toolStripBtnSave.Tag = this.saveToolStripMenuItem;
             // 
             // saveToolStripMenuItem
             // 
@@ -996,6 +972,29 @@ namespace VietOCR.NET
             this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
             // 
+            // toolStripBtnSave
+            // 
+            this.toolStripBtnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnSave, "toolStripBtnSave");
+            this.toolStripBtnSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
+            this.toolStripBtnSave.Name = "toolStripBtnSave";
+            this.toolStripBtnSave.Tag = this.saveToolStripMenuItem;
+            // 
+            // toolStripBtnOCR
+            // 
+            this.toolStripBtnOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripBtnOCR, "toolStripBtnOCR");
+            this.toolStripBtnOCR.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
+            this.toolStripBtnOCR.Name = "toolStripBtnOCR";
+            this.toolStripBtnOCR.Tag = this.oCRToolStripMenuItem;
+            // 
+            // toolStripButtonCancelOCR
+            // 
+            this.toolStripButtonCancelOCR.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButtonCancelOCR, "toolStripButtonCancelOCR");
+            this.toolStripButtonCancelOCR.Margin = new System.Windows.Forms.Padding(1, 1, 1, 2);
+            this.toolStripButtonCancelOCR.Name = "toolStripButtonCancelOCR";
+            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
@@ -1043,7 +1042,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripBtnOpen;
-        protected System.Windows.Forms.ToolStripButton toolStripBtnOCR;
         private System.Windows.Forms.ToolStripButton toolStripBtnClear;
         private System.Windows.Forms.SplitContainer splitContainer1;
         protected System.Windows.Forms.TextBox textBox1;
@@ -1086,12 +1084,10 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem mergeTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem splitPdfToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorkerLoad;
-        protected System.Windows.Forms.ToolStripButton toolStripButtonCancelOCR;
         private System.Windows.Forms.ToolStripMenuItem mergePdfToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripBtnSave;
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem metadataToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
@@ -1148,5 +1144,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         protected System.Windows.Forms.ToolStripComboBox toolStripComboBoxPageNum;
+        private System.Windows.Forms.ToolStripButton toolStripBtnSave;
+        protected System.Windows.Forms.ToolStripButton toolStripBtnOCR;
+        protected System.Windows.Forms.ToolStripButton toolStripButtonCancelOCR;
     }
 }
