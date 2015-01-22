@@ -133,6 +133,7 @@ namespace VietOCR.NET
             scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
             this.centerPicturebox();
             isFitImageSelected = false;
+            this.toolStripBtnActualSize.Enabled = true;
         }
 
         protected override void toolStripBtnZoomOut_Click(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace VietOCR.NET
             scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
             this.centerPicturebox();
             isFitImageSelected = false;
+            this.toolStripBtnActualSize.Enabled = true;
         }
 
         // This method makes the image fit properly in the PictureBox. You might think 
