@@ -218,6 +218,9 @@
     <EmbeddedResource Include="readme_cs_hi.html" />
     <EmbeddedResource Include="readme_cs_pl.html" />
     <EmbeddedResource Include="readme_cs_ru.html" />
+    <Content Include="gsdll32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
