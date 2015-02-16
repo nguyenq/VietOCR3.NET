@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>844, 562</value>
+    <value>1184, 561</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>विएतओसीआर.नेट</value>
@@ -74,7 +74,7 @@
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Auto &amp;Crop</value>
+    <value>&amp;C ऑटो क्रॉप</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -86,10 +86,10 @@
     <value>183, 22</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Bulk OCR...</value>
+    <value>&amp;B बल्क ओसीआर</value>
   </data>
   <data name="buttonCollapseExpand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>2, 3</value>
   </data>
   <data name="buttonCollapseExpand.Size" type="System.Drawing.Size, System.Drawing">
     <value>22, 23</value>
@@ -101,13 +101,13 @@
     <value>220, 22</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Change Case...</value>
+    <value>&amp;C केस बदले</value>
   </data>
   <data name="commandToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 20</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Command</value>
+    <value>&amp;C कमांड</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 148</value>
@@ -116,7 +116,7 @@
     <value>147, 22</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Contrast...</value>
+    <value>&amp;C कन्ट्रास्ट</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -128,7 +128,7 @@
     <value>219, 22</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;D भाषा डेटा डाउनलोड करें </value>
+    <value>&amp;D लैंग्वेज डेटा डाउनलोड करें </value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -140,61 +140,61 @@
     <value>166, 22</value>
   </data>
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Filters</value>
+    <value>&amp;F फिल्टर्स</value>
   </data>
   <data name="flowLayoutPanelThumbnail.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="flowLayoutPanelThumbnail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 475</value>
+    <value>116, 470</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Font...</value>
+    <value>&amp;F फॉन्ट</value>
   </data>
   <data name="formatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 20</value>
   </data>
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
-    <value>F&amp;ormat</value>
+    <value>&amp;O फॉर्मेट</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Grayscale</value>
+    <value>&amp;G ग्रेस्केल</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Help</value>
+    <value>&amp;H सहायता </value>
   </data>
   <data name="helpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
   </data>
   <data name="helpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>VietOCR.NET &amp;Help</value>
+    <value>&amp;H विएतओसीआर डॉट नेट सहायता </value>
   </data>
   <data name="imageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
   </data>
   <data name="imageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Image</value>
+    <value>&amp;I छवि</value>
   </data>
   <data name="invertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Invert</value>
+    <value>&amp;I इन्वर्ट</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 24</value>
+    <value>1184, 24</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>मेनुस्ट्रिप1</value>
@@ -215,7 +215,7 @@
     <value>166, 22</value>
   </data>
   <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Properties...</value>
+    <value>&amp;P प्रोपर्टीज़</value>
   </data>
   <data name="monochromeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -233,31 +233,31 @@
     <value>183, 22</value>
   </data>
   <data name="oCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;OCR</value>
+    <value>&amp;O ओसीआर</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open...</value>
+    <value>&amp;O खोलें</value>
   </data>
   <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Options...</value>
+    <value>&amp;O विकल्प</value>
   </data>
   <data name="panelArrow.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="panelArrow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 475</value>
+    <value>26, 474</value>
   </data>
   <data name="panelImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 39</value>
   </data>
   <data name="panelImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 475</value>
+    <value>592, 474</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -269,7 +269,7 @@
     <value>183, 22</value>
   </data>
   <data name="postprocessToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;P बाद की प्रक्रिया</value>
+    <value>&amp;P पोस्ट-प्रोसेस (बाद की प्रक्रिया)</value>
   </data>
   <data name="psmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
@@ -281,7 +281,7 @@
     <value>195, 22</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
-    <value>E&amp;xit</value>
+    <value>&amp;X निकास</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
@@ -293,76 +293,88 @@
     <value>220, 22</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Remove Line Breaks</value>
+    <value>&amp;R लाइन ब्रेक हटायें</value>
   </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save &amp;As...</value>
+    <value>&amp;A इस नाम से सहेजें</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save</value>
+    <value>&amp;S सहेजें</value>
   </data>
   <data name="scanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="scanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sca&amp;n...</value>
+    <value>&amp;N स्कैन</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Screenshot Mode</value>
+    <value>&amp;S स्क्रीनशॉट मोड</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Settings</value>
+    <value>&amp;S सेटिंग्स</value>
   </data>
   <data name="sharpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="sharpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Sharpen</value>
+    <value>&amp;S शार्पेन</value>
   </data>
   <data name="smoothToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sm&amp;ooth</value>
+    <value>&amp;o स्मूथ</value>
+  </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 513</value>
+  </data>
+  <data name="splitContainerImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 0</value>
+  </data>
+  <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 474</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Split PDF...</value>
+    <value>&amp;S पीडीऍफ़ विभाजित करें</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>टिफ के पन्ने अलग करें</value>
+    <value>टिफ विभाजित  करें</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 538</value>
+    <value>0, 537</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 24</value>
+    <value>1184, 24</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+    <value>स्टेटसस्ट्रिप1</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 39</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>446, 475</value>
+    <value>588, 474</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -371,13 +383,22 @@
     <value>&amp;T टूल्स</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
+    <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>844, 39</value>
+    <value>592, 39</value>
   </data>
   <data name="toolStrip1.Text" xml:space="preserve">
-    <value>toolStrip1</value>
+    <value>टूलस्ट्रिप1</value>
+  </data>
+  <data name="toolStrip2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 39</value>
+  </data>
+  <data name="toolStrip2.Text" xml:space="preserve">
+    <value>टूलस्ट्रिप2</value>
   </data>
   <data name="toolStripBtnActualSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -389,10 +410,10 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripBtnClear.Text" xml:space="preserve">
-    <value>Clear</value>
+    <value>साफ करें</value>
   </data>
   <data name="toolStripBtnClear.ToolTipText" xml:space="preserve">
-    <value>Clear Textbox</value>
+    <value>टेक्स्टबॉक्स साफ करें</value>
   </data>
   <data name="toolStripBtnFitImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -443,7 +464,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripBtnRotateCCW.Text" xml:space="preserve">
-    <value>RCCW</value>
+    <value>आरसीसीडब्ल्यू</value>
   </data>
   <data name="toolStripBtnRotateCCW.ToolTipText" xml:space="preserve">
     <value>वामावर्त घुमाएँ </value>
@@ -452,7 +473,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripBtnRotateCW.Text" xml:space="preserve">
-    <value>RCW</value>
+    <value>आरसीडब्ल्यू</value>
   </data>
   <data name="toolStripBtnRotateCW.ToolTipText" xml:space="preserve">
     <value>दक्षिणावर्त घुमाएँ</value>
@@ -499,6 +520,24 @@
   <data name="toolStripButtonCancelOCR.Text" xml:space="preserve">
     <value>ओसीआर रद्द करें </value>
   </data>
+  <data name="toolStripButtonPasteImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
+    <value>क्लिपबोर्ड से छवि पेस्ट करें</value>
+  </data>
+  <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
+    <value>पोस्ट-प्रोसेस (बाद की प्रक्रिया)</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
+    <value>लाइन ब्रेक हटायें</value>
+  </data>
   <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
@@ -507,6 +546,9 @@
   </data>
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 39</value>
+  </data>
+  <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
@@ -580,17 +622,23 @@
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 39</value>
   </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 19</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
+    <value>297, 19</value>
   </data>
   <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
+    <value>297, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 19</value>
@@ -632,36 +680,30 @@
     <value>0, 19</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 19</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 39</value>
-  </data>
-  <data name="toolStripTextBoxCurPage.Text" xml:space="preserve">
-    <value>0</value>
+    <value>297, 19</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;User Interface Language</value>
+    <value>&amp;U यूसर इंटरफेस की भाषा</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Undo</value>
+    <value>&amp;U वापस करें </value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Viet Input &amp;Method</value>
+    <value>&amp;M विएत इनपुट मेथड </value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Word Wrap</value>
+    <value>&amp;W वर्ड रैप</value>
   </data>
 </root>
