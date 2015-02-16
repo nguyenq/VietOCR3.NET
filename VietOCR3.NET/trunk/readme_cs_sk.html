@@ -1,13 +1,7 @@
-﻿<html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>VietOCR.NET - .NET GUI Frontend for Tesseract OCR</title>
-<style type="text/css">
-        .style1
-        {
-            font-size: x-small;
-        }
-    </style>
 </head>
 <body>
     <div>
@@ -26,65 +20,71 @@
         <h3>SYSTÉMOVÉ POŽIADAVKY</h3>
         <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">
                 Microsoft .NET Framework 2.0 Redistributable</a>.</p>
-        <p>Ak sa stretnete s chybovou správou FileLoadException "<i>Could not load file or
-                assembly 'tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
-                or one of its dependencies. This application has failed to start because the application
+        <p>If you encounter a FileLoadException with message &quot;<i>Could not load file or assembly
+                &#39;tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&#39; or one
+                of its dependencies. This application has failed to start because the application
                 configuration is incorrect. Reinstalling the application may fix this problem. (Exception
-                from HRESULT: 0x800736B1)</i>" pri behu VietOCR.NET, nainštalujte si balík
+                from HRESULT: 0x800736B1)</i>&quot; while running VietOCR.NET, please install
             <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
         <h3>INŠTALÁCIA</h3>
-        <p>Ak nemáte práva na inštalovanie do priečinku <code>C:\Program Files</code>, môžete vybrať
-            aj iný inštalačný priečinok pri inštalácií.</p>
-        <p>Podpora skenovania je zabezpečená cez knižnicu Windows Image Acquisition Library
-            v2.0, ktorý vyžaduje Windows XP Service Pack 1 (SP1) alebo vyšší; Knižnica je integrovaný vo Windows Vista a 7. WIA knižnicu môže
-            nainštalovať skopírovaním <code>wiaaut.dll</code> súboru do vášho adresára <code>System32</code>
-            (zvyčajne je umiestnený v <code>C:\Windows\System32</code>) a spustite v príkazovom
-            riadku:</p>
+        <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
+            you can specify another folder in Install Installation Folder dialog.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
+            requires Windows XP Service Pack 1 (SP1) or later; the library is included in Vista and 7. To install the WIA Library, copy
+            the <code>wiaaut.dll</code> file to your <code>System32</code> directory (usually located
+            at <code>C:\Windows\System32</code>) and run from the command line:</p>
         <blockquote>
             <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
-        <p>PDF podpora je dostupná cez projekt <a href="http://www.ghostscript.com/">
-                GPL Ghostscript</a>. Po jeho inštalácií sa prosím uistite, že zdielaná knižnica
-            (<code>gsdll32.dll</code> alebo <code>libgs.so</code>) je v ceste (PATH), prípadne nastavte
-            patričnú premennú prostredia. Vo Windows, pridajte nasledovný reťazec hodnote <code>Path</code>
-            (prístupná je cez Kontrolný panel &gt; Systém &gt; Pokročilé nastavenia &gt; Premenné
-            prostredia) pre GS verzie 9.15:</p>
+        <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
+                Ghostscript</a>. After installation of the library, please ensure the dynamic
+            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.15:</p>
         <blockquote>
             <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
-        <p>Kontrola preklepov (spellcheck) je dostupná cez projekt Hunspell, ktorého <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-                slovníkové</a> súbory <code>.aff</code>, <code>.dic</code>) by mali byť umiestnené v
-            <code>dict</code> priečinku VietOCR. <code>user.dic</code> je súbor kódovaný v UTF-8-encoded,
-            ktorý obsahuje zoznam vlastných slov - jedno slovo na riadok.</p>
+        <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+                dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
+            folder of VietOCR.</p>
         <h3>INŠTRUKCIE</h3>
-        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Jazykové dátové balíčky</a>
-            pre Tesseract-ocr by mali byť dekomprimované do inštalačného priečinku programu
-            <code>tesseract</code>; dátové súbory, ktorých názvy začínajú ISO639-3 kódmi majú byť
-            umiestnené do <code>tessdata</code> podadresára. VietOCR tiež poskytuje podporu pre
-            sťahovanie a inštaláciu zvolených jazykových balíkov cez menu položku <em>Stiahnuť jazykové
-                dáta</em>. V závislosti od umiestnenia adresára <code>tessdata</code> možno budú
-            požadované administrátorské práva pri inštalácií stiahnutých dát, ak sa tento adresár
-            nachádza v systémovom adresári, ako je napr. <code>C:\Program Files</code>.</p>
+        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Language data packs</a>
+            for Tesseract should be decompressed into <code>tesseract</code> installation folder;
+            the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
+            subdirectory. VietOCR also provides support for downloading and installing selected
+            language packs via <em>Download Language Data</em> menu item. Depending on the location
+            of the <code>tessdata</code> folder, you may be required to run the program as admin
+            to be able to install the downloaded data into the folder if it is inside a system
+            folder, such as in <code>C:\Program Files</code>.</p>
         <p>Obrázky určené na OCR by mali byť skenované v rozlíšení aspoň 200 DPI (dot per inch)
             až 400 DPI v monochromatickom (čierno&amp;bielom) režime alebo v odtieňoch šedej.
             Skenovanie vo vyššom rozlíšení neprináša vyššiu presnosť pri rozoznávaní znakov.
             Miera presnosti však závisí hlavne na kvalite naskenovaného obrázka. Typické nastavenie
             pre skenovanie je 300 DPI a 1 bpp (bit per pixel) čierno-bielo alebo 8 bpp (odtiene
             šedej) do nekomprimovaného TIFF alebo PNG formátu.</p>
-        <p>Nový <em>Režim snímky obrazovky</em> ponúka lepšiu mieru presnosti pre obrázky s
-            nízkym rozlíšením ako napr. snímky obrazovky, pomocou zväčšenia rozlíšenia na 300
-            DPI.</p>
+        <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per
+            inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher
+            resolutions will not necessarily result in better recognition accuracy, which currently
+            can be higher than 97% for Vietnamese, and the next release of Tesseract may improve
+            it even further. Even so, the actual rates still depend greatly on the quality of
+            the scanned image. The typical settings for scanning are 300 DPI and 1 bpp (bit
+            per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>
         <p>Okrem vstavaného algoritmu pre post-spracovania textu, môžete si pridať vlastnú
-            schému nahradzovania textu textový súbor s názvom <code>x.DangAmbigs.txt</code>, kde
+            schému nahradzovania textu textový súbor s názvom <tt>x.DangAmbigs.txt</tt>, kde
             x je ISO639-3 kód jazyka. Tento súbor v UTF-8 kódovaní by mal obsahovať páry oddelené
-            znakom „rovná sa“ v tvare <code>staráHodnota=nováHodnota</code>.</p>
-        <p>Niektoré vstavané nástroje poskytujú funkcie spájania niekoľkých obrázkov alebo
-            PDF súborov do jedného (pre pohodlnejšie rozoznávanie znakov), alebo delenie PDF
-            súborov na menšie, ak sú príliš veľké a spôsobujú „out-of-memory exceptions“.</p>
-        <h3>POST-SPRACOVANIE</h3>
-        <p>Chyby pri rozoznávaní znakov sa dajú rozdeliť do troch kategórií. Časté sú zámeny
+            znakom „rovná sa“ v tvare <tt>staráHodnota=nováHodnota</tt>.</p>
+        <p>In addition to the built-in text postprocessing algorithm, you can add your own
+            custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
+            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
+            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+        <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
+            and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
+            behaviour.</p>
+        <p>POST-SPRACOVANIE</p>
+        <h3>Chyby pri rozoznávaní znakov sa dajú rozdeliť do troch kategórií. Časté sú zámeny
             veľkosti písmen napr. „O“ — „o“, „Z“ — „z“, „S“ — „s“. Tieto chyby sa dajú opraviť
-            pomocou populárnych Unicode textových editorov.</p>
+            pomocou populárnych Unicode textových editorov.</h3>
         <p>Ďalšie chyby sú spôsobené OCR procesom - napríklad chýbajúce diakritické znamienka,
             zamenené znaky („1“ — „l“). Takéto chyby je možné pomerne ľahko opraviť pomocou
             kontroly preklepov (spellechecker). Vstavané funkcie pre post-spracovanie vám môžu
@@ -109,7 +109,7 @@
             dokument bez chýb.</p>
         <p>Ak máte nejaké otázky, položte ich na <a href="http://sourceforge.net/projects/vietocr/forums">
                 VietOCR fórum</a>.</p>
-        <hr />
+        <hr>
 </div>
 </body>
 </html>
