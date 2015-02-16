@@ -65,13 +65,13 @@
     <value>122, 22</value>
   </data>
   <data name="miCopy.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
+    <value>&amp;C कॉपी</value>
   </data>
   <data name="miCut.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
   </data>
   <data name="miCut.Text" xml:space="preserve">
-    <value>Cu&amp;t</value>
+    <value>&amp;t काटें</value>
   </data>
   <data name="miDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
@@ -83,13 +83,13 @@
     <value>122, 22</value>
   </data>
   <data name="miPaste.Text" xml:space="preserve">
-    <value>&amp;Paste</value>
+    <value>&amp;P पेस्ट करें</value>
   </data>
   <data name="miSelectAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 22</value>
   </data>
   <data name="miSelectAll.Text" xml:space="preserve">
-    <value>Select &amp;All</value>
+    <value>&amp;A सब सिलेक्ट करें </value>
   </data>
   <data name="miSeparator.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 6</value>
@@ -101,6 +101,6 @@
     <value>122, 22</value>
   </data>
   <data name="miUndo.Text" xml:space="preserve">
-    <value>&amp;Undo</value>
+    <value>&amp;U वापस करें </value>
   </data>
 </root>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <root>
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,6 +58,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 561</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>VietOCR.NET</value>
   </data>
@@ -84,6 +87,15 @@
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
     <value>OCR &amp;massiu...</value>
+  </data>
+  <data name="buttonCollapseExpand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="buttonCollapseExpand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 23</value>
+  </data>
+  <data name="buttonCollapseExpand.Text" xml:space="preserve">
+    <value>»</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -130,6 +142,12 @@
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Filtres</value>
   </data>
+  <data name="flowLayoutPanelThumbnail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanelThumbnail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 470</value>
+  </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
@@ -172,17 +190,11 @@
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Inverteix</value>
   </data>
-  <data name="lblCurIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 5</value>
-  </data>
-  <data name="lblCurIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 24</value>
+    <value>1184, 24</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
@@ -235,14 +247,20 @@
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Opcions...</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 0</value>
+  <data name="panelArrow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 481</value>
+  <data name="panelArrow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 474</value>
+  </data>
+  <data name="panelImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
+  </data>
+  <data name="panelImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 474</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 50</value>
@@ -319,32 +337,56 @@
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
     <value>Suau</value>
   </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 513</value>
+  </data>
+  <data name="splitContainerImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 0</value>
+  </data>
+  <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 474</value>
+  </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Divideix el PDF...</value>
   </data>
+  <data name="splitTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 22</value>
+  </data>
+  <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
+    <value>Divideix el TIFF...</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 544</value>
+    <value>0, 537</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 22</value>
+    <value>1184, 24</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 39</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 481</value>
+    <value>588, 474</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Eines</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
+    <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 39</value>
+    <value>592, 39</value>
   </data>
   <data name="toolStrip1.Text" xml:space="preserve">
     <value>toolStrip1</value>
@@ -353,13 +395,13 @@
     <value>0, 0</value>
   </data>
   <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 481</value>
+    <value>588, 39</value>
   </data>
   <data name="toolStrip2.Text" xml:space="preserve">
     <value>toolStrip2</value>
   </data>
   <data name="toolStripBtnActualSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnActualSize.ToolTipText" xml:space="preserve">
     <value>Mida actual</value>
@@ -374,7 +416,7 @@
     <value>Neteja la caixa de text</value>
   </data>
   <data name="toolStripBtnFitImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnFitImage.Text" xml:space="preserve">
     <value>┼</value>
@@ -383,7 +425,7 @@
     <value>Encaixa la imatge</value>
   </data>
   <data name="toolStripBtnNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnNext.Text" xml:space="preserve">
     <value>&gt;</value>
@@ -407,10 +449,10 @@
     <value>Obre</value>
   </data>
   <data name="toolStripBtnOpen.ToolTipText" xml:space="preserve">
-    <value>Obre el fitxer d'imatge</value>
+    <value>Obre el fitxer d&apos;imatge</value>
   </data>
   <data name="toolStripBtnPrev.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnPrev.Text" xml:space="preserve">
     <value>&lt;</value>
@@ -419,7 +461,7 @@
     <value>Pàgina anterior</value>
   </data>
   <data name="toolStripBtnRotateCCW.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnRotateCCW.Text" xml:space="preserve">
     <value>RCCW</value>
@@ -428,7 +470,7 @@
     <value>Gira en sentit antihorari</value>
   </data>
   <data name="toolStripBtnRotateCW.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnRotateCW.Text" xml:space="preserve">
     <value>RCW</value>
@@ -455,28 +497,46 @@
     <value>Escaneja el document</value>
   </data>
   <data name="toolStripBtnZoomIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnZoomIn.Text" xml:space="preserve">
     <value>(+)</value>
   </data>
   <data name="toolStripBtnZoomIn.ToolTipText" xml:space="preserve">
-    <value>Apropa't</value>
+    <value>Apropa&apos;t</value>
   </data>
   <data name="toolStripBtnZoomOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnZoomOut.Text" xml:space="preserve">
     <value>(-)</value>
   </data>
   <data name="toolStripBtnZoomOut.ToolTipText" xml:space="preserve">
-    <value>Allunya't</value>
+    <value>Allunya&apos;t</value>
   </data>
   <data name="toolStripButtonCancelOCR.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonCancelOCR.Text" xml:space="preserve">
-    <value>Cancel·la l'OCR</value>
+    <value>Cancel·la l&apos;OCR</value>
+  </data>
+  <data name="toolStripButtonPasteImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
+    <value>Enganxa la imatge al porta-retalls</value>
+  </data>
+  <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
+    <value>Post-processament</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
+    <value>Suprimeix els salts de línia</value>
   </data>
   <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -487,14 +547,23 @@
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 39</value>
   </data>
+  <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
   </data>
   <data name="toolStripLabelLanguage.Text" xml:space="preserve">
-    <value>Llengua de l'OCR</value>
+    <value>Llengua de l&apos;OCR</value>
   </data>
   <data name="toolStripLabelLanguage.ToolTipText" xml:space="preserve">
-    <value>Llengua de l'OCR</value>
+    <value>Llengua de l&apos;OCR</value>
+  </data>
+  <data name="toolStripLabelPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 36</value>
+  </data>
+  <data name="toolStripLabelPageNum.Text" xml:space="preserve">
+    <value> / 0</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -507,6 +576,9 @@
   </data>
   <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 6</value>
+  </data>
+  <data name="toolStripMenuItem13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 6</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 6</value>
@@ -536,31 +608,85 @@
     <value>216, 6</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+    <value>100, 18</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 6</value>
+    <value>6, 39</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 6</value>
+    <value>6, 39</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 6</value>
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
   </data>
   <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
+    <value>0, 19</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
+  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
   </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Eines</value>
+  <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
+    <value>Imatge:</value>
+  </data>
+  <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
+    <value>Dimensions de la imatge i profunditat de color</value>
+  </data>
+  <data name="toolStripStatusLabelDimValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
+    <value>0 × 0px  0bpp</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 19</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.Text" xml:space="preserve">
+    <value>PSM:</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
+    <value>Mode de segmentació de pàgina</value>
+  </data>
+  <data name="toolStripStatusLabelPSMvalue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 19</value>
+  </data>
+  <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
+  </data>
+  <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
+    <value>Mode captura de pantalla:</value>
+  </data>
+  <data name="toolStripStatusLabelSM.ToolTipText" xml:space="preserve">
+    <value>Mode captura de pantalla</value>
+  </data>
+  <data name="toolStripStatusLabelSMvalue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Llengua d'interfícies de l'&amp;usuari</value>
+    <value>Llengua d&apos;interfícies de l&apos;&amp;usuari</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -572,7 +698,7 @@
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Mètode d'entrada vietnamita</value>
+    <value>&amp;Mètode d&apos;entrada vietnamita</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
