@@ -1,13 +1,7 @@
-﻿<html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>VietOCR.NET - Un 'interfaccia grafica per Tesseract OCR</title>
-<style type="text/css">
-        .style1
-        {
-            font-size: x-small;
-        }
-    </style>
 </head>
 <body>
     <div>
@@ -26,44 +20,43 @@
         <h3>REQUISITI DEL SISTEMA</h3>
         <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">
                 Microsoft .NET Framework 2.0 Redistributable</a>.</p>
-        <p>Se incontri un messaggio d'errore del tipo: "<i>Impossibile caricare il file 'tesseract,
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' o precedenti. Questa applicazione
-                non può essere avviata in quanto la sua configurazione non è corretta. Reinstalla
-                l'applicazione per risolvere il problema. (Exception from HRESULT: 0x800736B1)</i>"
-            mentre si avvia VietOCR.NET, è necessario installare: <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
+        <p>If you encounter a FileLoadException with message &quot;<i>Could not load file or assembly
+                &#39;tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&#39; or one
+                of its dependencies. This application has failed to start because the application
+                configuration is incorrect. Reinstalling the application may fix this problem. (Exception
+                from HRESULT: 0x800736B1)</i>&quot; while running VietOCR.NET, please install
+            <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
         <h3>INSTALLAZIONE</h3>
-        <p>Se non hai l'autorizzazione per installare il programma nella cartella <code>C:\Program
-                Files</code>, puoi specificare un'altra cartella di installazione nell'aposito
-            box di dialogo.</p>
-        <p>Il supporto per lo scnnering viene fornito da Windows Image Acquisition Library
-            v2.0, che richiede Windows XP Service Pack 1 (SP1) o superiore; la libreria è inclusa
-            in Windows Vista e 7. Per installare la libreria WIA , copia il file <code>wiaaut.dll</code>
-            nella cartella <code>System32</code> (posta in <code>C:\Windows\System32</code>) ed esegui
-            tramite linea di comando:</p>
+        <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
+            you can specify another folder in Install Installation Folder dialog.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
+            requires Windows XP Service Pack 1 (SP1) or later; the library is included in Vista and 7. To install the WIA Library, copy
+            the <code>wiaaut.dll</code> file to your <code>System32</code> directory (usually located
+            at <code>C:\Windows\System32</code>) and run from the command line:</p>
         <blockquote>
             <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
-        <p>Il supporto PDF è possibile grazie a <a href="http://www.ghostscript.com/">
-                GPL Ghostscript</a>. Dopo l'installazione della libreria, verificare la dinamica
-            del caricamento della libreria <code>gsdll32.dll</code> è nel percorso di ricerca impostando
-            nel campo <code>Path</code> variabile , che è accessibile tramite il Pannello di controllo
-            di Windows System &gt; Advanced tab &gt; Environment Variables.Per esempio aggiungere
-            <code>Path</code> alla variabile per GS version 9.15:</p>
+        <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
+                Ghostscript</a>. After installation of the library, please ensure the dynamic
+            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.15:</p>
         <blockquote>
             <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
-        <p>La funzionalità di controllo ortografico è disponibile attraverso Hunspell, il cui
-            <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">dizionario</a> (<code>.aff</code>,
-            <code>.dic</code>) deve essere posto nella cartella <code>dict</code> di VietOCR.</p>
+        <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+                dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
+            folder of VietOCR.</p>
         <h3>ISTRUZIONI</h3>
-        <p>Il <a href="http://code.google.com/p/tesseract-ocr/downloads/list">Pacchetto Lingue</a>
-            per Tesseract dovrebbe essere decompresso nella cartella di installazione <code>tesseract</code>
-            , i file, i cui nomi iniziano con le lettere ISO639-3 , verranno inseriti nella
-            sottocartella <code>tessdata</code>. VietOCR fornisce anche il supporto per il download
-            e l'installazione dei pacchetti lingua selezionata attraverso il <em>Download Pacchetti
-                Dati</em>, che si trova nel menù. A seconda della posizione della cartella <code>tessdata</code>,
-            è possibile che venga richiesto di eseguire il programma come amministratore per
-            essere in grado di installare i dati scaricati, come ad esempio in <code>C:\Program Files</code>.</p>
+        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Language data packs</a>
+            for Tesseract should be decompressed into <code>tesseract</code> installation folder;
+            the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
+            subdirectory. VietOCR also provides support for downloading and installing selected
+            language packs via <em>Download Language Data</em> menu item. Depending on the location
+            of the <code>tessdata</code> folder, you may be required to run the program as admin
+            to be able to install the downloaded data into the folder if it is inside a system
+            folder, such as in <code>C:\Program Files</code>.</p>
         <p>I dati nella lingua vietnamita sono stati generati per Times New Roman, Arial, Verdana,
             e font Courier New. Pertanto, il riconoscimento risulta migliore per le immagini
             che hanno le grafie di caratteri simili. Per le immagini OCR che hanno grafia dei
@@ -71,21 +64,22 @@
                 creare</a> un altro pacchetto di lingua dati appositamente per quei caratteri
             tipografici. Dati linguistici per alcune tipografie VNI e TCVN3 (ABC) sono stati
             anche aggiunti nelle ultime versioni.</p>
-        <p>Le immagini da acquisire devono essere scansionate ad una risoluzione di almeno
-            200 dpi fino a 400 DPI in modo monocromatico (bianco e nero) o in scala di grigi.
-            La scansione a risoluzioni più elevate non necessariamente si traduce in una migliore
-            precisione del riconoscimento, che attualmente può essere superiore al 97% per i
-            linguaggi Vietnamiti, e che per la prossima versione di Tesseractsono previsti miglioramenti.
-            Anche così, i risulatati effettivi dipendono ancora molto dalla qualità del dell'immagine
-            acquisita. Le impostazioni tipiche per la scansione sono 300 DPI e 1 bpp (bit per
-            pixel) in bianco e nero oppure in scala di grigi a 8 bpp tramite immagini TIFF o
-            PNG.</p>
+        <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per
+            inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher
+            resolutions will not necessarily result in better recognition accuracy, which currently
+            can be higher than 97% for Vietnamese, and the next release of Tesseract may improve
+            it even further. Even so, the actual rates still depend greatly on the quality of
+            the scanned image. The typical settings for scanning are 300 DPI and 1 bpp (bit
+            per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>
         <p>La modalità <em>Screenshot</em> offre risultati migliori per immagini con risoluzione
             più bassa, come serigrafie, che vengono riscalate a 300 DPI.</p>
-        <p>Oltre all' algoritmo integrato di post-elaborazione del testo, è possibile aggiungere
-            il proprio schema personalizzato del testo tramite un file di testo denominato <code>x.DangAmbigs.txt</code>,
-            dove x è il codice ISO639-3 della lingua. La codifica UTF-8 deve contenere lo stesso
-            numero di coppie <code>vecchiValori = nuoviValori</code>.</p>
+        <p>In addition to the built-in text postprocessing algorithm, you can add your own
+            custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
+            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
+            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+        <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
+            and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
+            behaviour.</p>
         <p>Alcuni strumenti integrati sono forniti per unire più immagini o file PDF in un
             unico documento. Altre per comode operazioni di OCR, o per dividere un file PDF
             in qdocumenti più piccoli se è troppo grande, che può causare rallentamenti al programma.</p>
@@ -120,7 +114,7 @@
             un redattore umano per essere corretti attraverso il confronto con l'immagine originale.</p>
         <p>Se hai qualche domanda scrivila sul <a href="http://sourceforge.net/projects/vietocr/forums">
                 Forum di VietOCR</a>.</p>
-        <hr />
+        <hr>
 </div>
 </body>
 </html>

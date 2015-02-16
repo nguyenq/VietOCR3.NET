@@ -1,13 +1,7 @@
-﻿<html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>„VietOCR.NET“ – .NET grafinė sąsaja „Tesseract OCR“ moduliui</title>
-<style type="text/css">
-        .style1
-        {
-            font-size: x-small;
-        }
-    </style>
 </head>
 <body>
     <div>
@@ -27,20 +21,10 @@ tekstus įrašyti į rezultatams talpinti nurodytą aplanką.</p>
         <h3>REIKALAVIMAI SISTEMAI</h3>
         <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">
 „Microsoft .NET Framework 2.0“ platforma</a>.</p>
-        <p>Jeigu, leisdami „VietOCR.NET“, susiduriate su failo įkėlimo klaida, apie kurią pranešama
-taip: „<i>Could not load file or assembly 'tesseract, Version=1.0.0.0, Culture=neutral,
-PublicKeyToken=null' or one of its dependencies. This application has failed to
-start because the application configuration is incorrect. Reinstalling the application
-may fix this problem. (Exception from HRESULT: 0x800736B1)</i>“, prašom įdiegti
-Jūsų naudojamai operacinei sistemai tinkamą <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
+        <p>Jeigu, bandydami paleisti „VietOCR.NET“, susiduriate su „FileLoadException“ tipo klaidos pranešimu „<i>Could not load file or assembly &#39;tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&#39; or one of its dependencies. This application has failed to start because the application configuration is incorrect. Reinstalling the application may fix this problem. (Exception from HRESULT: 0x800736B1)</i>“, kompiuteryje turėtumėte įdiegti <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">„Microsoft Visual C++ 2010 SP1 Redistributable Package“ platinamąjį paketą</a>.</p>
         <h3>PROGRAMOS ĮDIEGIMAS</h3>
-        <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code>
-aplanką, diegimo metu galėsite nurodyti kitą disko vietą.</p>
-        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library
-(WIA) v2.0“ biblioteka, kuriai būtina „Windows XP SP1“ ar naujesnė „Windows“ laida; biblioteka yra įtraukta į Vista ir 7.
-WIA biblioteka įdiegiama, nukopijuojant failą <code>wiaaut.dll</code> į sistemos <code>System32</code>
-aplanką (dažniausiai jo kelias – <code>C:\Windows\System32</code>) ir jį užregistruojant
-tokia komanda:</p>
+        <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code> aplanką, diegimo metu galėsite nurodyti kitą paskirties aplanką.</p>
+        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library (WIA) v2.0“ biblioteka, kuriai būtina „Windows XP SP1“ ar naujesnė „Windows“ laida (ši biblioteka yra gamykliškai įtraukta į „Windows Vista“ ir „Windows 7“). WIA biblioteka įdiegiama, nukopijuojant failą <code>wiaaut.dll</code> į sistemos <code>System32</code> aplanką (dažniausiai jo kelias – <code>C:\Windows\System32</code>) ir jį užregistruojant tokia komanda:</p>
         <blockquote>
             <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
@@ -48,18 +32,9 @@ tokia komanda:</p>
         <blockquote>
             <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
         </blockquote>
-        <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-žodynų</a> failai (<code>.aff</code>, <code>.dic</code>) turėtų būti patalpinti į aplanką
-<code>dict</code>, esantį „VietOCR“ programos aplanke.</p>
+        <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">žodynų</a> failai (<code>.aff</code>, <code>.dic</code>) turėtų būti patalpinti į aplanką <code>dict</code>, esantį „VietOCR“ programos aplanke.</p>
         <h3>INSTRUKCIJOS</h3>
-        <p>„Tesseract“ programos <a href="http://code.google.com/p/tesseract-ocr/downloads/list">
-kalbinių duomenų paketai</a> turėtų būti išskleisti į <code>tesseract</code> diegimo
-aplanke. Duomenų failai, kurių vardai prasideda ISO639-3 kodais, bus patalpinti
-į poaplankį <code>tessdata</code>. „VietOCR“ geba parsiųsti ir įdiegti kalbinių duomenų
-paketus kai kurioms kalboms; šia funkcija galite pasinaudoti, iškviesdami meniu
-„<i>Nuostatos</i>“ punktą „<i>Parsiųsti kalbinius duomenis</i>“. Jeigu <code>tessdata</code>
-aplankas yra sisteminio aplanko (pvz., <code>C:\Program Files</code>) viduje, kalbiniams
-duomenims įdiegti programą gali tekti vykdyti administratoriaus teisėmis.</p>
+        <p>„Tesseract“ programos <a href="http://code.google.com/p/tesseract-ocr/downloads/list">kalbinių duomenų paketai</a> turėtų būti išskleisti į <code>tesseract</code> diegimo aplanke. Duomenų failai, kurių vardai prasideda ISO639-3 kodais, bus patalpinti į poaplankį <code>tessdata</code>. „VietOCR“ geba parsiųsti ir įdiegti kalbinių duomenų paketus kai kurioms kalboms; šia funkcija galite pasinaudoti, iškviesdami meniu <em>„Nuostatos“</em> punktą <em>„Parsiųsti kalbinius duomenis“</em>. Jeigu <code>tessdata</code> aplankas yra sisteminio aplanko (pvz., <code>C:\Program Files</code>) viduje, kalbiniams duomenims įdiegti programą gali reikėti vykdyti administratoriaus teisėmis.</p>
         <p>Kalbinių duomenų failai yra generuojami konkretiems šriftams, todėl programai geriausiai
 sekasi atpažinti jai žinomais ar panašių glifų šriftais rašytus tekstus. Prireikus vaizduose
 atpažinti kitais šriftais rašytą tekstą, reikės „Tesseract“ programą papildomai
@@ -67,21 +42,18 @@ atpažinti kitais šriftais rašytą tekstą, reikės „Tesseract“ programą 
 sukuriant naujus kalbos duomenų failus. Kiek išsamiau lietuviškai apie „Tesseract“ galite
 paskaityti <a href="http://dg.lapas.info/?page_id=239">Donato Glodenio tinklaraštyje</a>.</p>
         <p>Ženklų atpažinimui teksto failo vaizdai turi būti nuskaitomi nuo 200 iki 400 taškų
-colyje raiška, naudojant juodai baltą arba pilkumo tonų veikseną. Aukštesnės raiškos
-vaizdai nebūtinai pagerins ženklų atpažinimo kokybę, kuri ir taip yra pakankamai
-aukšta, ir kitose „Tesseract“ laidose gali dar pagerėti. Ženklų atpažinimo kokybė
-kiekvienu atveju priklauso nuo nuskenuoto vaizdo kokybės. Rekomenduojamos
-nuostatos skenuojamam vaizdui yra tokios: 300 taškų colyje, juodai balta veiksena (1bpp)
-arba 8 bitai taškui (8bpp; pilkumo tonai), vaizdą įrašant į neglaudintą TIFF arba
-PNG formato failą.</p>
+            colyje raiška, naudojant juodai baltą arba pilkumo tonų veikseną. Aukštesnės raiškos
+            vaizdai nebūtinai pagerins ženklų atpažinimo kokybę, kuri ir taip yra pakankamai
+            aukšta, ir kitose „Tesseract“ laidose gali dar pagerėti. Reali ženklų atpažinimo
+            kokybė priklauso nuo nuskenuoto vaizdo kokybės. Rekomenduojamos nuostatos skenuojamam
+            vaizdui yra tokios: 300 taškų colyje, 1 bitas taškui (1bpp; juodai balta veiksena)
+            arba 8 bitai taškui (8bpp; pilkumo tonai), vaizdą įrašant į neglaudintą TIFF arba
+            PNG formato failą.</p>
         <p><em>Žemos raiškos (ekranvaizdžio) veiksena</em> įgalina pagerinti žemos raiškos vaizdų 
 atpažinimo kokybę. Šioje veiksenoje, prieš atpažįstant tekstą, žemos raiškos (pvz. ekrano)
 vaizdų raiška padidinama iki 300 taškų colyje.</p>
-        <p>Programa numato galimybę jau esamą teksto apdorojimo algoritmą papildyti savuoju.
-Tam tiesiog pridėkite savo pritaikytą teksto ženklų pakeitimo schemą įrašytą faile <code>x.DangAmbigs.txt</code>,
-simbolį „x“ pakeisdami ISO639-3 standarto kalbos kodu (pvz., lietuvių kalbos kodas
-– „lit“). UTF-8 koduotės teksto faile lygybės ženklu „=“ atskirkite keistinų teksto
-fragmentų poras taip: <code>senaReikšmė=naujaReikšmė</code>.</p>
+        <p>Programa numato galimybę jau esamą teksto apdorojimo algoritmą papildyti savuoju. Pridėkite savo pritaikytą teksto ženklų pakeitimo schemą įrašytą faile <code>x.DangAmbigs.txt</code>, simbolį „x“ pakeisdami ISO639-3 standarto kalbos kodu (pvz., lietuvių kalbos kodas – „lit“). UTF-8 koduotės teksto faile lygybės ženklu „=“ atskirkite keistinų teksto fragmentų poras taip: <code>senaReikšmė=naujaReikšmė</code>.</p>
+        <p>Papildomai įtakoti „Tesseract“ veikimą galite, įrašydami papildomus valdymo parametrus Į failus <code>tessdata/configs/tess_configs</code> (tik inicijavimo parametrus) ir <code>tess_configvars</code> (ne inicijavimo parametrus).</p>
         <p>Programoje įtaisyti įrankiai, skirti sujungti vaizdams ar PDF formato failams bei
 skaidyti PDF failams. Kartais patogiau apdoroti vieną failą, bet ne daug smulkių,
 o kartais, siekiant išvengti atminties stygiaus problemų, tenka padalinti vieną
@@ -116,7 +88,7 @@ skaitys originalo tekstą ir ištaisys tas vietas, kuriose automatinis klaidų �
 negalėjo padėti.</p>
         <p>Jeigu turite kokių nors klausimų, kviečiame kreiptis į <a href="http://forumai.akl.lt/">AKL biuro programų forumą</a>
 arba angliškai į <a href="http://sourceforge.net/projects/vietocr/forums">šios programos naudotojų forumą</a>.</p>
-        <hr />
+        <hr>
 </div>
 </body>
 </html>
