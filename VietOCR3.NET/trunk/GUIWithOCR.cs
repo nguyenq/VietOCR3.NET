@@ -48,7 +48,7 @@ namespace VietOCR.NET
                 try
                 {
                     rect = new Rectangle((int)(rect.X * scaleX), (int)(rect.Y * scaleY), (int)(rect.Width * scaleX), (int)(rect.Height * scaleY));
-                    performOCR(imageList, imageIndex, rect);
+                    performOCR(imageList, inputfilename, imageIndex, rect);
                 }
                 catch (Exception ex)
                 {
@@ -57,7 +57,7 @@ namespace VietOCR.NET
             }
             else
             {
-                performOCR(imageList, imageIndex, Rectangle.Empty);
+                performOCR(imageList, inputfilename, imageIndex, Rectangle.Empty);
             }
         }
 
@@ -72,7 +72,7 @@ namespace VietOCR.NET
             this.toolStripBtnOCR.Visible = false;
             this.toolStripButtonCancelOCR.Visible = true;
             this.toolStripButtonCancelOCR.Enabled = true;
-            performOCR(imageList, -1, Rectangle.Empty);
+            performOCR(imageList, inputfilename , -1, Rectangle.Empty);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace VietOCR.NET
         /// <param name="imageList"></param>
         /// <param name="index">-1 for all pages</param>
         /// <param name="rect">selection rectangle</param>
-        void performOCR(IList<Image> imageList, int index, Rectangle rect)
+        void performOCR(IList<Image> imageList, string inputfilename, int index, Rectangle rect)
         {
             try
             {
@@ -102,7 +102,7 @@ namespace VietOCR.NET
                 this.toolStripProgressBar1.Visible = true;
                 this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
 
-                OCRImageEntity entity = new OCRImageEntity(imageList, index, rect, curLangCode);
+                OCRImageEntity entity = new OCRImageEntity(imageList, inputfilename, index, rect, curLangCode);
                 entity.ScreenshotMode = this.screenshotModeToolStripMenuItem.Checked;
 
                 // Start the asynchronous operation.
@@ -144,7 +144,7 @@ namespace VietOCR.NET
                     break;
                 }
 
-                string result = ocrEngine.RecognizeText(((List<Image>)images).GetRange(i, 1), entity.Rect, worker, e);
+                string result = ocrEngine.RecognizeText(((List<Image>)images).GetRange(i, 1), entity.Inputfilename, entity.Rect, worker, e);
                 worker.ReportProgress(i, result); // i is not really percentage
             }
         }
@@ -175,7 +175,7 @@ namespace VietOCR.NET
         //            break;
         //        }
 
-        //        string result = ocrEngine.RecognizeText(((List<string>)workingImageFiles).GetRange(i, 1), worker, e);
+        //        string result = ocrEngine.RecognizeText(((List<string>)workingImageFiles).GetRange(i, 1), entity.Inputfilename, worker, e);
         //        worker.ReportProgress(i, result); // i is not really percentage
         //    }
         //}

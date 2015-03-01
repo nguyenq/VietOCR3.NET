@@ -33,6 +33,14 @@ namespace VietOCR.NET
             set { images = value; }
         }
 
+        string inputfilename;
+
+        public string Inputfilename
+        {
+            get { return inputfilename; }
+            set { inputfilename = value; }
+        }
+
         public IList<Image> ClonedImages
         {
             get { return Clone(images); }
@@ -72,9 +80,10 @@ namespace VietOCR.NET
         /** Vertical Resolution */
         private int dpiY;
 
-        public OCRImageEntity(IList<Image> images, int index, Rectangle rect, String lang)
+        public OCRImageEntity(IList<Image> images, string inputfilename, int index, Rectangle rect, String lang)
         {
             this.images = images;
+            this.inputfilename = inputfilename;
             this.index = index;
             this.rect = rect;
             this.lang = lang;

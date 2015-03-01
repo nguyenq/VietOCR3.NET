@@ -41,7 +41,7 @@ namespace VietOCR.NET
             }
 
             FileInfo imageFile = new FileInfo(args[0]);
-            FileInfo outputFile = new FileInfo(args[1] + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt"));
+            FileInfo outputFile = new FileInfo(args[1]);
 
             if (!imageFile.Exists)
             {

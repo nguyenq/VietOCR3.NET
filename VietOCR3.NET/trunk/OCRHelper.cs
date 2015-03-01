@@ -13,11 +13,11 @@ namespace VietOCR.NET
         /// <summary>
         /// Performs OCR for bulk/batch and console operations.
         /// </summary>
-        /// <param name="imageFile"></param>
-        /// <param name="outputFile"></param>
-        /// <param name="langCode"></param>
-        /// <param name="pageSegMode"></param>
-        /// <param name="outputFormat"></param>
+        /// <param name="imageFile">Image file</param>
+        /// <param name="outputFile">Output file without extension</param>
+        /// <param name="langCode">language code</param>
+        /// <param name="pageSegMode">page segmentation mode</param>
+        /// <param name="outputFormat">format of output file. Possible values: <code>text</code>, <code>text+</code> (with post-corrections), <code>hocr</code></param>
         public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat)
         {
             IList<Image> imageList;
@@ -44,7 +44,7 @@ namespace VietOCR.NET
                 }
 
                 imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
-                string result = ocrEngine.RecognizeText(imageList);
+                string result = ocrEngine.RecognizeText(imageList, imageFile);
 
                 // post-corrections for text+ output
                 if (postprocess)
@@ -64,7 +64,8 @@ namespace VietOCR.NET
                 //} 
                 //else 
                 {
-                    using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
+                    string filename = outputFile + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt").Replace("hocr", "html");
+                    using (StreamWriter sw = new StreamWriter(filename, false, new System.Text.UTF8Encoding()))
                     {
                         sw.Write(result);
                     }

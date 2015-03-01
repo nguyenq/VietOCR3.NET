@@ -74,9 +74,9 @@ namespace TestProject
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
             string outfile = "out";
-            string[] args = { "samples/vietsample2.png", outfile, "-l", "vie" };
+            string[] args = { "samples/vietsample2.png", outfile, "-l", "vie", "hocr" };
             ConsoleApp.Main(args);
-            Assert.IsTrue(File.Exists(Path.Combine(path, outfile + ".txt")));
+            Assert.IsTrue(File.Exists(Path.Combine(path, outfile + ".html")));
         }
     }
 }

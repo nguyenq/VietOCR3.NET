@@ -62,6 +62,7 @@ namespace VietOCR.NET
         protected int imageIndex;
         protected int imageTotal;
         protected IList<Image> imageList;
+        protected string inputfilename;
 
         private Rectangle rect = Rectangle.Empty;
         private Rectangle box = Rectangle.Empty;
@@ -610,8 +611,8 @@ namespace VietOCR.NET
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void backgroundWorkerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-            string selectedImageFile = (string)e.Argument;
-            FileInfo imageFile = new FileInfo(selectedImageFile);
+            inputfilename = (string)e.Argument;
+            FileInfo imageFile = new FileInfo(inputfilename);
             imageList = ImageIOHelper.GetImageList(imageFile);
             e.Result = imageFile;
         }

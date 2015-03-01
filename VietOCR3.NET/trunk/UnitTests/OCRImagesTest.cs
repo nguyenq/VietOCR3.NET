@@ -53,14 +53,10 @@ namespace TestProject
         //}
         //
         //Use TestInitialize to run code before running each test
-        [TestInitialize()]
-        public void MyTestInitialize()
-        {
-            string selectedImageFile = "samples/vietsample1.tif";
-            FileInfo imageFile = new FileInfo(selectedImageFile);
-            IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
-            entity = new OCRImageEntity(imageList, -1, Rectangle.Empty, lang);
-        }
+        //[TestInitialize()]
+        //public void MyTestInitialize()
+        //{
+        //}
         //
         //Use TestCleanup to run code after each test has run
         //[TestCleanup()]
@@ -80,12 +76,16 @@ namespace TestProject
         [DeploymentItem("tessdata", "tessdata")]
         public void RecognizeTextTest()
         {
+            string selectedImageFile = "samples/vietsample1.tif";
+            FileInfo imageFile = new FileInfo(selectedImageFile);
+            IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
+            entity = new OCRImageEntity(imageList, selectedImageFile, - 1, Rectangle.Empty, lang);
             OCRImages target = new OCRImages();
             target.Language = entity.Language;
             IList<Image> images = entity.ClonedImages;
             string expected = "Tôi từ chinh chiến cũng ra đi";
             string actual;
-            actual = target.RecognizeText(images);
+            actual = target.RecognizeText(images, selectedImageFile);
             Assert.IsTrue(actual.Contains(expected));
         }
     }
