@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="ConsoleAppTest.cs" />
     <Compile Include="ImageHelperTest.cs" />
+    <Compile Include="OCRImagesTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViePPTest.cs" />
   </ItemGroup>
