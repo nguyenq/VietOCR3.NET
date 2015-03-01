@@ -228,7 +228,7 @@ namespace VietOCR.NET
             base.LoadRegistryInfo(regkey);
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            outputFormat = (string)regkey.GetValue(strBulkOutputFormat, "txt");
+            outputFormat = (string)regkey.GetValue(strBulkOutputFormat, "text");
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)

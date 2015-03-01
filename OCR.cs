@@ -48,7 +48,7 @@ namespace VietOCR.NET
             set { language = value; }
         }
 
-        private string outputFormat = "txt";
+        private string outputFormat = "text";
 
         public string OutputFormat
         {

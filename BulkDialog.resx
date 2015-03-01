@@ -149,7 +149,7 @@
     <value>Run</value>
   </data>
   <data name="comboBoxOutputFormat.Items1" xml:space="preserve">
-    <value>txt+</value>
+    <value>text+</value>
   </data>
   <data name="&gt;&gt;labelOutput.Name" xml:space="preserve">
     <value>labelOutput</value>
@@ -187,7 +187,7 @@
     <value>textBoxOutput</value>
   </data>
   <data name="comboBoxOutputFormat.Items" xml:space="preserve">
-    <value>txt</value>
+    <value>text</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 21</value>
