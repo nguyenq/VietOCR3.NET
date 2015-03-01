@@ -1,18 +1,22 @@
 ﻿using VietOCR.NET;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Drawing;
+using System.Collections.Generic;
 using System.IO;
+using VietOCR.NET.Utilities;
 
 namespace TestProject
-{   
+{     
     /// <summary>
-    ///This is a test class for ConsoleAppTest and is intended
-    ///to contain all ConsoleAppTest Unit Tests
+    ///This is a test class for OCRImagesTest and is intended
+    ///to contain all OCRImagesTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class ConsoleAppTest
+    public class OCRImagesTest
     {
-
+        String lang = "vie";
+        OCRImageEntity entity;
 
         private TestContext testContextInstance;
 
@@ -49,10 +53,14 @@ namespace TestProject
         //}
         //
         //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
+        [TestInitialize()]
+        public void MyTestInitialize()
+        {
+            string selectedImageFile = "samples/vietsample1.tif";
+            FileInfo imageFile = new FileInfo(selectedImageFile);
+            IList<Image> imageList = ImageIOHelper.GetImageList(imageFile);
+            entity = new OCRImageEntity(imageList, -1, Rectangle.Empty, lang);
+        }
         //
         //Use TestCleanup to run code after each test has run
         //[TestCleanup()]
@@ -64,19 +72,21 @@ namespace TestProject
 
 
         /// <summary>
-        ///A test for Main
+        ///A test for RecognizeText
         ///</summary>
         [TestMethod()]
-        [DeploymentItem("samples/vietsample2.png", "samples")]
+        [DeploymentItem("samples/vietsample1.tif", "samples")]
         [DeploymentItem("x86", "x86")]
         [DeploymentItem("tessdata", "tessdata")]
-        public void MainTest()
+        public void RecognizeTextTest()
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            string outfile = "out";
-            string[] args = { "samples/vietsample2.png", outfile, "-l", "vie" };
-            ConsoleApp.Main(args);
-            Assert.IsTrue(File.Exists(Path.Combine(path, outfile + ".txt")));
+            OCRImages target = new OCRImages();
+            target.Language = entity.Language;
+            IList<Image> images = entity.ClonedImages;
+            string expected = "Tôi từ chinh chiến cũng ra đi";
+            string actual;
+            actual = target.RecognizeText(images);
+            Assert.IsTrue(actual.Contains(expected));
         }
     }
 }
