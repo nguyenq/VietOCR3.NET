@@ -109,7 +109,7 @@ namespace VietOCR.NET
             watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnable, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            outputFormat = (string)regkey.GetValue(strBatchOutputFormat, "txt");
+            outputFormat = (string)regkey.GetValue(strBatchOutputFormat, "text");
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
