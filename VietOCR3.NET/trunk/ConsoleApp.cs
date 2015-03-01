@@ -23,7 +23,7 @@ namespace VietOCR.NET
                 return;
             }
 
-            string outputFormat = "txt";
+            string outputFormat = "text";
             foreach (string arg in args)
             {
                 if ("hocr" == arg)
@@ -34,14 +34,14 @@ namespace VietOCR.NET
                 //{
                 //    outputFormat = "pdf";
                 //}
-                else if ("txt+" == arg)
+                else if ("text+" == arg)
                 {
-                    outputFormat = "txt+";
+                    outputFormat = "text+";
                 }
             }
 
             FileInfo imageFile = new FileInfo(args[0]);
-            FileInfo outputFile = new FileInfo(args[1] + "." + outputFormat.Replace("+", string.Empty));
+            FileInfo outputFile = new FileInfo(args[1] + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt"));
 
             if (!imageFile.Exists)
             {
