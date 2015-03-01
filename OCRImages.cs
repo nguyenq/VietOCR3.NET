@@ -32,11 +32,12 @@ namespace VietOCR.NET
         /// Recognize text.
         /// </summary>
         /// <param name="images"></param>
+        /// <param name="inputName">input filename</param>
         /// <param name="index"></param>
         /// <param name="lang"></param>
         /// <returns></returns>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override string RecognizeText(IList<Image> images)
+        public override string RecognizeText(IList<Image> images, string inputName)
         {
             IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
 
@@ -54,7 +55,7 @@ namespace VietOCR.NET
                     pageNum++;
                     using (Pix pix = ConvertBitmapToPix(image))
                     {
-                        using (Page page = engine.Process(pix, psm))
+                        using (Page page = engine.Process(pix, inputName, psm))
                         {
                             string text = OutputFormat == "hocr" ? page.GetHOCRText(pageNum - 1) : page.GetText();
 

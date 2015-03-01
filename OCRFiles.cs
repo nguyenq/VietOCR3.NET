@@ -31,10 +31,11 @@ namespace VietOCR.NET
         /// Recognizes TIFF files.
         /// </summary>
         /// <param name="tiffFiles"></param>
+        /// <param name="inputName">input filename; not used</param>
         /// <param name="lang"></param>
         /// <returns></returns>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public override string RecognizeText(IList<string> tiffFiles)
+        public override string RecognizeText(IList<string> tiffFiles, string inputName)
         {
             string tempTessOutputFile = Path.GetTempFileName();
             File.Delete(tempTessOutputFile);

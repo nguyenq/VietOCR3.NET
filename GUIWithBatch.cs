@@ -107,7 +107,7 @@ namespace VietOCR.NET
 
             try
             {
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt")), curLangCode, selectedPSM, outputFormat);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, imageFile.Name), curLangCode, selectedPSM, outputFormat);
             }
             catch
             {
