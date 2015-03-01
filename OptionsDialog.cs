@@ -150,10 +150,10 @@ namespace VietOCR.NET
             string val = this.comboBoxOutputFormat.SelectedItem.ToString();
             switch (val)
             {
-                case "txt+":
+                case "text+":
                     val = "Text with postprocessing";
                     break;
-                case "txt":
+                case "text":
                     val = "Text with no postprocessing";
                     break;
                 case "pdf":

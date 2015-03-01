@@ -30,7 +30,7 @@ namespace VietOCR.NET
                     dir.Create();
                 }
 
-                bool postprocess = "txt+" == outputFormat;
+                bool postprocess = "text+" == outputFormat;
 
                 OCR<Image> ocrEngine = new OCRImages();
                 ocrEngine.PageSegMode = pageSegMode;
@@ -46,7 +46,7 @@ namespace VietOCR.NET
                 imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
                 string result = ocrEngine.RecognizeText(imageList);
 
-                // post-corrections for txt+ output
+                // post-corrections for text+ output
                 if (postprocess)
                 {
                     // postprocess to correct common OCR errors
@@ -57,12 +57,12 @@ namespace VietOCR.NET
                     result = TextUtilities.CorrectLetterCases(result);
                 }
 
-                if (outputFormat == "pdf")
-                {
-                    byte[] bytes = null; // get the byte array
-                    File.WriteAllBytes(outputFile, bytes);
-                } 
-                else 
+                //if (outputFormat == "pdf") // not yet supported
+                //{
+                //    byte[] bytes = null; // get the byte array
+                //    File.WriteAllBytes(outputFile, bytes);
+                //} 
+                //else 
                 {
                     using (StreamWriter sw = new StreamWriter(outputFile, false, new System.Text.UTF8Encoding()))
                     {
