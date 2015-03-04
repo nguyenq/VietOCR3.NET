@@ -117,80 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 102</value>
+  <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>পর্যবেক্ষণ</value>
+  <data name="labelPath.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 128</value>
+  <data name="btnDangAmbigs.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 74</value>
+  <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 74</value>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
+  <data name="labelOutputFormat.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>কার্যকর</value>
+  <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
+  <data name="checkBoxWatch.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>আউটপুট ফোল্ডার:</value>
+  <data name="labelOutput.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+  <data name="labelWatch.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelWatch.Text" xml:space="preserve">
-    <value>ওয়াচ ফোল্ডারঃ</value>
+  <data name="btnOutput.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 37</value>
+  <data name="btnWatch.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 11</value>
+  <data name="textBoxOutput.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 39</value>
+  <data name="textBoxWatch.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 13</value>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 17</value>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>কার্যকর</value>
+  <data name="buttonOK.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 13</value>
+  <data name="buttonCancel.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>পথঃ</value>
-  </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 134</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>ঠিক</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 134</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>বাতিল</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>322, 168</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>বিকল্পসমূহ</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>
