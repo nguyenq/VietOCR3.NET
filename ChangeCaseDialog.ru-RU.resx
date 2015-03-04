@@ -143,22 +143,22 @@
     <value>Все Слова С Прописной</value>
   </data>
   <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 132</value>
+    <value>20, 132</value>
   </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Изменить</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 132</value>
+    <value>101, 132</value>
   </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Закрыть</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 118</value>
+    <value>176, 118</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>188, 169</value>
+    <value>196, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Изменить регистр</value>

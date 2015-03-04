@@ -142,11 +142,23 @@
   <data name="radioButton4.Text" xml:space="preserve">
     <value>Wyraz Wielką</value>
   </data>
+  <data name="buttonChange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 132</value>
+  </data>
   <data name="buttonChange.Text" xml:space="preserve">
     <value>Zamień</value>
   </data>
+  <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 132</value>
+  </data>
   <data name="buttonClose.Text" xml:space="preserve">
     <value>Zamknij </value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 118</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>181, 169</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Małe i wielkie litery</value>
