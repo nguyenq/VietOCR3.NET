@@ -154,11 +154,17 @@
   <data name="buttonRun.Text" xml:space="preserve">
     <value>Executa</value>
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 89</value>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 85</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Format de sortida</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>341, 126</value>
+    <value>338, 126</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>OCR massiu</value>

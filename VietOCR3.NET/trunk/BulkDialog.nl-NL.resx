@@ -130,34 +130,10 @@
   <data name="labelInput.Text" xml:space="preserve">
     <value>Bronmap:</value>
   </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 45</value>
-  </data>
-  <data name="btnInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 19</value>
-  </data>
-  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 47</value>
-  </data>
-  <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 21</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 85</value>
-  </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Annuleren</value>
   </data>
-  <data name="buttonRun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 85</value>
-  </data>
   <data name="buttonRun.Text" xml:space="preserve">
     <value>Uitvoeren</value>
-  </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 89</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>302, 126</value>
   </data>
 </root>

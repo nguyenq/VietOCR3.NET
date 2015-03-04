@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>317, 126</value>
+  </data>
   <data name="buttonRun.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="&gt;&gt;textBoxInput.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
   </data>
   <data name="&gt;&gt;labelOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -135,9 +135,6 @@
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 85</value>
-  </data>
-  <data name="&gt;&gt;labelInput.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;comboBoxOutputFormat.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -153,6 +150,12 @@
   </data>
   <data name="&gt;&gt;labelOutput.Name" xml:space="preserve">
     <value>labelOutput</value>
+  </data>
+  <data name="&gt;&gt;textBoxOutput.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnInput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -173,6 +176,9 @@
   </data>
   <data name="textBoxInput.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
+  </data>
+  <data name="comboBoxOutputFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;labelInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -204,9 +210,6 @@
   <data name="labelOutput.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="btnOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;labelOutputFormat.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -215,6 +218,9 @@
   </data>
   <data name="&gt;&gt;btnOutput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelOutput.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value />
@@ -227,9 +233,6 @@
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 85</value>
-  </data>
-  <data name="textBoxInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
     <value>buttonCancel</value>
@@ -245,9 +248,6 @@
   </data>
   <data name="&gt;&gt;comboBoxOutputFormat.Name" xml:space="preserve">
     <value>comboBoxOutputFormat</value>
-  </data>
-  <data name="&gt;&gt;buttonRun.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;textBoxInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -285,29 +285,26 @@
   <data name="btnOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
   </data>
-  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;buttonRun.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="labelOutput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
   </data>
   <data name="comboBoxOutputFormat.Items2" xml:space="preserve">
     <value>hocr</value>
   </data>
-  <data name="btnOutput.Text" xml:space="preserve">
-    <value>...</value>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Output Format</value>
   </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 47</value>
+  </data>
+  <data name="labelOutputFormat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;buttonRun.Name" xml:space="preserve">
     <value>buttonRun</value>
@@ -333,14 +330,11 @@
   <data name="&gt;&gt;labelOutput.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnInput.Name" xml:space="preserve">
-    <value>btnInput</value>
+  <data name="textBoxInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 20</value>
   </data>
-  <data name="labelOutputFormat.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="comboBoxOutputFormat.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="btnInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 23</value>
   </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 45</value>
@@ -348,14 +342,14 @@
   <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
     <value>folderBrowserDialog1</value>
   </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 50</value>
   </data>
   <data name="&gt;&gt;btnInput.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;textBoxOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -366,6 +360,9 @@
   <data name="labelOutputFormat.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="labelInput.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -375,11 +372,14 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>BulkDialog</value>
   </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
+  <data name="&gt;&gt;buttonRun.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="labelOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;textBoxOutput.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -390,8 +390,8 @@
   <data name="textBoxOutput.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;textBoxOutput.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -411,8 +411,8 @@
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Bulk OCR</value>
@@ -426,14 +426,14 @@
   <data name="btnOutput.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>317, 126</value>
+  <data name="btnOutput.Text" xml:space="preserve">
+    <value>...</value>
   </data>
   <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Output Folder:</value>
@@ -444,11 +444,11 @@
   <data name="&gt;&gt;textBoxInput.Name" xml:space="preserve">
     <value>textBoxInput</value>
   </data>
-  <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Output Format</value>
+  <data name="&gt;&gt;btnInput.Name" xml:space="preserve">
+    <value>btnInput</value>
   </data>
-  <data name="&gt;&gt;textBoxOutput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelInput.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

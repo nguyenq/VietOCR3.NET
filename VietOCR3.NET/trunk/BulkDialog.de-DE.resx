@@ -137,7 +137,7 @@
     <value>Starten</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 88</value>
+    <value>2, 90</value>
   </data>
   <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 13</value>

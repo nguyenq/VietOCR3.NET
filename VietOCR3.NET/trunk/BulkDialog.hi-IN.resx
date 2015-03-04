@@ -131,35 +131,34 @@
     <value>इनपुट फोल्डर</value>
   </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 45</value>
+    <value>285, 45</value>
   </data>
   <data name="btnOutput.Text" xml:space="preserve">
-    <value>...
-</value>
+    <value>...</value>
   </data>
   <data name="btnInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 19</value>
+    <value>285, 19</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 47</value>
+    <value>97, 47</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 21</value>
+    <value>97, 21</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 85</value>
+    <value>240, 85</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
   <data name="buttonRun.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 85</value>
+    <value>159, 85</value>
   </data>
   <data name="buttonRun.Text" xml:space="preserve">
     <value>चलायें</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 85</value>
+    <value>97, 85</value>
   </data>
   <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -171,6 +170,6 @@
     <value>330, 126</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>बल्क ocr</value>
+    <value>बल्क ओसीआर</value>
   </data>
 </root>
