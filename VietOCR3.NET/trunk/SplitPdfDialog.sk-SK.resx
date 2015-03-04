@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 77</value>
+    <value>141, 77</value>
   </data>
   <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 80</value>
@@ -134,7 +134,7 @@
     <value>Strany</value>
   </data>
   <data name="labelFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 82</value>
+    <value>123, 82</value>
   </data>
   <data name="labelFrom.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 13</value>

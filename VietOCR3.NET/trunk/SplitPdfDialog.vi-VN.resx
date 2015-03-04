@@ -124,14 +124,14 @@
     <value>Bãi</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 77</value>
+  </data>
   <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
   </data>
   <data name="radioButtonPages.Text" xml:space="preserve">
     <value>Trang</value>
-  </data>
-  <data name="labelFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 82</value>
   </data>
   <data name="labelFrom.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
