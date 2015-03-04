@@ -225,16 +225,16 @@ Bitte führen Sie das Programm mit Administratorrechte aus.</value>
     <value>Mehrfachseiten-TIFF speichern</value>
   </data>
   <data name="Scancompleted" xml:space="preserve">
-    <value>Scan completed.</value>
+    <value>Scannen ageschlossen.</value>
   </data>
   <data name="Scanning" xml:space="preserve">
     <value>Wird gescannt...</value>
   </data>
   <data name="ScanningOperation" xml:space="preserve">
-    <value>Scanning Operation</value>
+    <value>Scan-Vorgang</value>
   </data>
   <data name="Select" xml:space="preserve">
-    <value>Select</value>
+    <value>Auswählen</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
     <value>Eingangsbild auswählen</value>
