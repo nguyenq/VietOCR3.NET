@@ -118,23 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 102</value>
+  </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 102</value>
+    <value>331, 102</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Vigila</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 102</value>
-  </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 128</value>
+    <value>339, 128</value>
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 74</value>
+  <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 17</value>
   </data>
-  <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 74</value>
+  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
+    <value>Habilita</value>
+  </data>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Camí:</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Format de sortida</value>
+  </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 72</value>
   </data>
   <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -166,18 +181,6 @@
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 13</value>
   </data>
-  <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 17</value>
-  </data>
-  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>Habilita</value>
-  </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>Camí:</value>
-  </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>168, 136</value>
   </data>
@@ -191,7 +194,7 @@
     <value>Cancel·la</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>337, 168</value>
+    <value>339, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Opcions</value>

@@ -118,23 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 102</value>
+  </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 102</value>
+    <value>321, 102</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Sledovat</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 102</value>
-  </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>328, 128</value>
+    <value>329, 128</value>
   </data>
-  <data name="checkBoxHocr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 74</value>
+  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
+    <value>Povoliť</value>
   </data>
-  <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 74</value>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Cesta:</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Výstupní formát</value>
+  </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 70</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>Povoliť</value>
@@ -163,15 +175,6 @@
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 13</value>
   </data>
-  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>Povoliť</value>
-  </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>Cesta:</value>
-  </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 134</value>
   </data>
@@ -182,7 +185,7 @@
     <value>Zrušit</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>328, 168</value>
+    <value>329, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Volby</value>
