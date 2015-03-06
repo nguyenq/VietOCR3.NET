@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value> z </value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>O VietOCR.NET</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Nemáte právo pre zápis do zložky &quot;{0}&quot;.
+Prosím spustite program ako administrátor.</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>Pridať do slovníka</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>Stav procesu dávkového spracovania</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Sputenie úlohy</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Jas</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Prezerať</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>Hromadné OCR</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Stav hromadného spracovania</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Prerušiť hromadné OCR</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>zrušené.</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>Nie je možné načítať obrázok.</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>Nie je možné spracovať</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>Skontrolujte prosím výstupný súbor v </value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>&amp;Vyčistiť Nedávne súbory</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Kontrast</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>Oprava ukončená.</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>Opravovanie rozoznaných chýb...</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value> bol vytvorený.</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>Chcete uložiť zmeny do </value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>Sťahovanie zrušené.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>Sťahovanie ukončené.</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>Chyba pri sťahovaní.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Sťahovanie…</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Uplynulý čas</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>Koniec úlohy</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>Ignorovať všetky</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>Vstup je nekompletný.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>Vstup je neplatný.</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>V tomto obrázku nie je strana číslo &apos;{0}&apos;.</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>Načítať obrázok</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>Načítajte prosím obrázok.</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>Načítanie ukončené.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>Načítavanie obrázka…</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>Prebieha spájanie PDF…</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>Spojenie PDF ukončené. </value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>Prebieha spájanie TIFF…</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>Spojenie TIFF ukončené. </value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>Nedávne súbory neexistujú</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>OCR ukončené.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>OCR operácia</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>Prebieha OCR…</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Otvoriť</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>Otvoriť obrázkový súbor</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>Strana </value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>Reštartujte prosím program, nech môže zaregistrovať nové jazykové balíky.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI rozhranie pre tesseract 3.02 OCR</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs_sk.html</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>Zdroj neexistuje.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Uložiť</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>Uložiť ako</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Uložiť spojené PDF</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Uložiť viacstránkový TIFF obrázok</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>Skenovanie ukončené.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Skenovanie…</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>Skenovacia operácia</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Výber</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>Vyberte vstupné obrázky</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>Vyberte vstupné PDF</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>Vyberte vstupný viac-stranový TIFF</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Vyberte prosím jazyk.</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>Rozdelenie PDF ukončené.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>Prebieha delenie PDF…</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>Prebieha delenie TIFF-u...</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>Delenie TIFF-u ukončené.</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>Možno bude potrebné, aby ste pred spracovaním rozdelili PDF na menšie súbory.</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Úloha prerušená</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Nepomenovaný</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET pomocník</value>
+  </data>
+</root>

@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - Tesseract OCRの.NET製GUIフロントエンド</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>概要</h3>
+        <p><a href="http://sourceforge.net/project/showfiles.php?group_id=153105">VietOCR</a>は.NET で書かれた<a href="http://code.google.com/p/tesseract-ocr/">Tesseract OCRエンジン</a>のGUIフロントエンドです。一般的な画像形式やマルチページTIFF形式の文字認識をサポートします。このプログラムはOCR処理につきまとう誤認識を修正する後処理をし、認識結果の正解率を向上させます。コマンドラインから実行すればコンソールアプリケーションとしても機能します。</p>
+        <p>バッチ処理がサポートされるようになりました。プログラムは監視フォルダ内の新しい画像ファイルを監視し、OCRエンジンを通して自動処理し出力フォルダに認識結果を出力します。</p>
+        <h3>システム要件</h3>
+        <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">Microsoft .NET Framework 2.0 再配布可能パッケージ</a>。</p>
+        <p>If you encounter a FileLoadException with message &quot;<i>Could not load file or assembly
+                &#39;tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&#39; or one
+                of its dependencies. This application has failed to start because the application
+                configuration is incorrect. Reinstalling the application may fix this problem. (Exception
+                from HRESULT: 0x800736B1)</i>&quot; while running VietOCR.NET, please install
+            <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
+        <h3>インストール</h3>
+        <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
+            you can specify another folder in Install Installation Folder dialog.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
+            requires Windows XP Service Pack 1 (SP1) or later; the library is included in Vista and 7. To install the WIA Library, copy
+            the <code>wiaaut.dll</code> file to your <code>System32</code> directory (usually located
+            at <code>C:\Windows\System32</code>) and run from the command line:</p>
+        <blockquote>
+            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
+        </blockquote>
+        <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
+                Ghostscript</a>. After installation of the library, please ensure the dynamic
+            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.15:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
+        </blockquote>
+        <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+                dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
+            folder of VietOCR.</p>
+        <h3>説明</h3>
+        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Language data packs</a>
+            for Tesseract should be decompressed into <code>tesseract</code> installation folder;
+            the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
+            subdirectory. VietOCR also provides support for downloading and installing selected
+            language packs via <em>Download Language Data</em> menu item. Depending on the location
+            of the <code>tessdata</code> folder, you may be required to run the program as admin
+            to be able to install the downloaded data into the folder if it is inside a system
+            folder, such as in <code>C:\Program Files</code>.</p>
+        <p>ベトナム語の言語データはTimes New Roman、Arial、Verdana、Courier Newのフォントで生成されています。そのためよく似たフォントグリフを持つ画像ではより良い認識成功率を示すでしょう。サポートしているフォントと違った見かけのフォントグリフを持つ画像をOCRするには、一般的に、特別にそれらの書体をTesseractに<a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract">学習</a>させた別の言語データパックを生成してください。一部のVNI、TCVN3(ABC)フォントの言語データも最新バージョンにバンドルされています。</p>
+        <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per
+            inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher
+            resolutions will not necessarily result in better recognition accuracy, which currently
+            can be higher than 97% for Vietnamese, and the next release of Tesseract may improve
+            it even further. Even so, the actual rates still depend greatly on the quality of
+            the scanned image. The typical settings for scanning are 300 DPI and 1 bpp (bit
+            per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>
+        <p><em>スクリーンショット モード</em>は低解像度の画像に対して、スクリーン プリントのように300dpiで再スケーリングし認識率を向上させます。</p>
+        <p>In addition to the built-in text postprocessing algorithm, you can add your own
+            custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
+            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
+            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+        <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
+            and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
+            behaviour.</p>
+        <p>組込みのツールにはOCR操作が便利になるように複数の画像やPDFファイルを単一のものに結合したり、メモリ不足例外が発生しそうな大きなPDFファイルを小さく分割したりする機能があります。</p>
+        <h3>後処理</h3>
+        <p>誤認識は一般的に3つのカテゴリに分類できます。誤認識の多くは文字の大文字/小文字に関係し（例 HOA、nhắC）、一般的なUnicode用テキストエディタで簡単に修正できます。他の多くの誤認識は、ダイアクリティカルマークの欠落、似ている形状の間違った文字など（huu – hưu、mang – marg、h0a – hoa、la – 1a、uhìu - nhìn）のOCR処理結果です。またこれらはスペルチェッカプログラムによって簡単に修正できます。組込みの後処理機能は前述の誤りの多くを修正するのに役立ちます。</p>
+        <p>誤認識の最後のカテゴリはセマンティックエラーであり、検出するのが最も困難です。これはその単語が辞書内では有効なエントリですが、文脈としては間違っていることを意味します。（例 tinh – tình、vân – vấn）これらのエラーはエディタを通して読み、元画像に応じてそれらを手作業で修正する必要があります。</p>
+        <p>組込み機能を使用してOCR誤認識の最初の2つのカテゴリを修正する方法は次のとおりです。</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>行をグループ化します。各行が別々の1行段落としてOCRされるように、行が属する段落にグループ化してください。<i>書式</i>メニュー下の<i>改行を削除</i>機能を使用します。詩ではこの操作が必要ない場合があるので注意してください。</li>
+            <li>文字ケースエラーの大部分を修正するために、同じく<i>書式</i>メニュー下の<i>文字ケースを変更</i>を選択し<i>［センテンスケース］</i>を選択します。残った文字ケースエラーの部分を見つけて修正します。</li>
+            <li>統合<i>スペルチェック</i>を使用してスペルミスエラーを修正します。</li>
+        </ol>
+<p>以上の処理により一般的な誤認識の大部分を除去できます。残るセマンティックエラーは少ないですが、人間がエディタを通して読み、スキャン元の文書のようにその文書を編集する必要があります。</p>
+        <p>質問がある場合は <a href="http://sourceforge.net/projects/vietocr/forums">VietOCRフォーラム</a>に投稿してください。</p>
+        <hr>
+</div>
+</body>
+</html>

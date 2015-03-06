@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - Un 'interfaccia grafica per Tesseract OCR</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>DESCRIZIONE</h3>
+        <p><a href="http://sourceforge.net/project/showfiles.php?group_id=153105">VietOCR.NET</a>
+            è un'interfaccia grafica per <a href="http://code.google.com/p/tesseract-ocr/">Tesseract
+                OCR engine</a>, fornisce supporto per il riconoscimento dei caratteri per i
+            formati immagine più comuni. Il programma dispone di software di post-elaborazione
+            che aiuta a correggere gli errori che susseguono nel processo di riconoscimento,
+            aumentando il grado di precisione del risultato. Il programma può anche funzionare
+            come applicazione console, eseguendo i comandi tramite linea di comando.</p>
+        <p>L'elaborazione in batch è ora supportata. Il programma controlla una cartella per
+            ricercare il file della nuova immagine, che elabora automaticamente attraverso il
+            motore OCR, e salva i risultati in una cartella di output.</p>
+        <h3>REQUISITI DEL SISTEMA</h3>
+        <p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=5B2C0358-915B-4EB5-9B1D-10E506DA9D0F&amp;displaylang=en">
+                Microsoft .NET Framework 2.0 Redistributable</a>.</p>
+        <p>If you encounter a FileLoadException with message &quot;<i>Could not load file or assembly
+                &#39;tesseract, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null&#39; or one
+                of its dependencies. This application has failed to start because the application
+                configuration is incorrect. Reinstalling the application may fix this problem. (Exception
+                from HRESULT: 0x800736B1)</i>&quot; while running VietOCR.NET, please install
+            <a href="http://www.microsoft.com/en-us/download/details.aspx?id=26999">Microsoft Visual C++ 2010 SP1 Redistributable Package</a>.</p>
+        <h3>INSTALLAZIONE</h3>
+        <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
+            you can specify another folder in Install Installation Folder dialog.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
+            requires Windows XP Service Pack 1 (SP1) or later; the library is included in Vista and 7. To install the WIA Library, copy
+            the <code>wiaaut.dll</code> file to your <code>System32</code> directory (usually located
+            at <code>C:\Windows\System32</code>) and run from the command line:</p>
+        <blockquote>
+            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
+        </blockquote>
+        <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
+                Ghostscript</a>. After installation of the library, please ensure the dynamic
+            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.15:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
+        </blockquote>
+        <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+                dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
+            folder of VietOCR.</p>
+        <h3>ISTRUZIONI</h3>
+        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Language data packs</a>
+            for Tesseract should be decompressed into <code>tesseract</code> installation folder;
+            the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
+            subdirectory. VietOCR also provides support for downloading and installing selected
+            language packs via <em>Download Language Data</em> menu item. Depending on the location
+            of the <code>tessdata</code> folder, you may be required to run the program as admin
+            to be able to install the downloaded data into the folder if it is inside a system
+            folder, such as in <code>C:\Program Files</code>.</p>
+        <p>I dati nella lingua vietnamita sono stati generati per Times New Roman, Arial, Verdana,
+            e font Courier New. Pertanto, il riconoscimento risulta migliore per le immagini
+            che hanno le grafie di caratteri simili. Per le immagini OCR che hanno grafia dei
+            caratteri diversi dai caratteri supportati generalmente bisognerà <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract">
+                creare</a> un altro pacchetto di lingua dati appositamente per quei caratteri
+            tipografici. Dati linguistici per alcune tipografie VNI e TCVN3 (ABC) sono stati
+            anche aggiunti nelle ultime versioni.</p>
+        <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per
+            inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher
+            resolutions will not necessarily result in better recognition accuracy, which currently
+            can be higher than 97% for Vietnamese, and the next release of Tesseract may improve
+            it even further. Even so, the actual rates still depend greatly on the quality of
+            the scanned image. The typical settings for scanning are 300 DPI and 1 bpp (bit
+            per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>
+        <p>La modalità <em>Screenshot</em> offre risultati migliori per immagini con risoluzione
+            più bassa, come serigrafie, che vengono riscalate a 300 DPI.</p>
+        <p>In addition to the built-in text postprocessing algorithm, you can add your own
+            custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
+            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
+            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+        <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
+            and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
+            behaviour.</p>
+        <p>Alcuni strumenti integrati sono forniti per unire più immagini o file PDF in un
+            unico documento. Altre per comode operazioni di OCR, o per dividere un file PDF
+            in qdocumenti più piccoli se è troppo grande, che può causare rallentamenti al programma.</p>
+        <h3>POST ELABORAZIONE</h3>
+        <p>Gli errori di riconoscimento possono generalmente essere classificati in tre categorie.
+            Molti degli errori sono legati ai caratteri maiuscoli e minuscoli - per esempio:
+            mamma, mAmma - che possono essere facilmente corretti da editor di testo Unicode.
+            Molti altri errori sono il risultato del processo OCR, ad esempio mancano segni
+            diacritici, lettere sbagliate con forme simili, ecc - cane - canè, patata - pataca,
+            scur0 - scuro, la - 1a, è - é. Questi possono anche essere facilmente corretti dai
+            programmi di controllo ortografico. La funzione di post elaborazione può aiutare
+            a correggere gli errori elencati sopra.</p>
+        <p>L'ultima categoria di errori è la più difficile da rilevare perché sono errori di
+            semantica, il che significa che le parole sono voci valide nel dizionario, ma sono
+            sbagliate in quel determinato contesto - ad esempio, ce - c'è, fa - fà. Questi errori
+            devono essere corretti manualmente attraverso il confronto con l'immagine originale.</p>
+        <p>Di seguito sono riportate le istruzioni su come correggere le prime due categorie
+            di errori OCR utilizzando le funzionalità implementate:</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>Gruppo linee. Le linee devono essere raggruppate al paragrafo a cui appartengono,
+                una volta eseguito l'OCR, ogni riga diventa un carattere di separazione all'interno
+                del paragrafo. Utilizzare <i>Rimuovere le interruzioni di riga</i> che si trova
+                sotto la voce <i>Formato</i> del menu. Si noti che questa operazione potrebbe non
+                essere necessaria per le poesie.</li>
+            <li>Selezionare <i>Modifica carattere</i>, che si trova nel menù <i>Formato</i> scegliere
+                <i>Carattere Frase</i> per correggere la maggior parte degli errori riguardanti
+                il carattere delle lettere.</li>
+            <li>Correggere gli errori di ortografia con l'opzione <i>Controlla Ortografia</i>.</li>
+        </ol>
+<p>Attraverso il processo sopra citato, la maggior parte degli errori comuni possono
+            essere eliminati. I restanti errori semantici sono di norma pochi, ma richiedono
+            un redattore umano per essere corretti attraverso il confronto con l'immagine originale.</p>
+        <p>Se hai qualche domanda scrivila sul <a href="http://sourceforge.net/projects/vietocr/forums">
+                Forum di VietOCR</a>.</p>
+        <hr>
+</div>
+</body>
+</html>

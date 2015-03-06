@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value>nin</value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>VietOCR.NET Hakkında</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Hiçbir &quot;{0}&quot; klasörüne yazma erişimi yok. �?� Lütfen programı yönetici olarak çalıştırın.</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>Sözlük ekle</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>Toplu İşlem Durumu</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Görev başlangıcı</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Gözat</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>Toplu OCR</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Toplu işlem durumu</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Toplu OCR İptal Et</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>iptal edildi.</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>Resim yüklenemiyor.</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>İşlem yapılamıyor</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>Çıktı dosyasını(ları) kontrol edin</value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>&amp;Son Dosyaları Temizle</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>Düzeltme tamamlandı.</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>Tanıma hatalarını düzeltme...</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>oluşturuldu.</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>Değişiklikleri kaydetmek istiyor musunuz</value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>İndirme iptal edildi.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>İndirme tamamlandı.</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>İndirme hatası.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>İndiriliyor...</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Geçen süre</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>Görev sonu</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>Tümünü Yoksay</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>Eksik Girdi.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>Geçersiz giriş.</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>There is no page numbered &apos;{0}&apos; in this image.</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>Resim Yükle</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>lütfen bir resim yükleyin.</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>Yükleme tamamlandı.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>Resim yükleniyor...</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>PDF birleştirme çalışıyor...</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>PDF birleştirme tamamlandı.</value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>TIFF birleştirme çalışıyor...</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>TIFF Birleştirme tamamladı.</value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>Son dosya yok</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>OCR tamamladı.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>OCR işlemi</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>OCR çalışıyor...</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>Resim dosyası açın</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>Sayfa</value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>Bu yeni dil paketi(ler)i kayıt edildikten sonra programı yeniden başlatın.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs_tr.html</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>Kaynak yok.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Birleştirilmiş PDF Kaydet</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Çok Sayfalı TIFF Kaydet</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>Tarama tamamlandı.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Taranıyor...</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>Tarama İşlemi</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Seçi</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>Giriş Görüntüleri Seç</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>Giriş PDF&apos;leri seçin</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>Select Input Multi-page TIFF</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Lütfen bir dil seçin.</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>PDF bölme tamamlandı.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>PDF bölme çalışıyor</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>Split TIFF running...</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>Split TIFF completed.</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>Devam etmeden önce küçük dosyalar halinde PDF dosyasını bölmeniz gerekebilir.</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Görevi iptal et</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Başlıksız</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET Yardım</value>
+  </data>
+</root>

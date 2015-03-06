@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value> of </value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>About VietOCR.NET</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>You have no write access to &quot;{0}&quot; folder.
+Please run the program as administrator.</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>অভিধানে যোগ</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>Batch Process Status</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Beginning of task</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>ব্রাউজ করুন</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>বাল্ক OCR</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Bulk Process Status</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Cancel Bulk OCR</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>বাতিল হলো।</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>ছবিলোড হচ্ছে না।</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>Cannot process </value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>Please check output file(s) in </value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>&amp;Clear Recent Files</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Contrast</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>সংশোধনকাজ শেষ হয়েছে।</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>চেনার ভুলসমূহ সংশোধন হচ্ছে...</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>প্রণীত হয়েছে।</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>Do you want to save the changes to </value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>Download canceled.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>ডাউনলোড সমাপ্ত</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>Download error.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>ডাউনলোড হচ্ছে...</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Elapsed time</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>End of task</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>সব উপেক্ষা করুন</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>Input incomplete.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>Input invalid.</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>There is no page numbered &apos;{0}&apos; in this image.</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>Load Image</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>Please load an image.</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>Loading completed.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>Loading image...</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>Merge PDF running...</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>Merge PDF completed. </value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>Merge TIFF running...</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>Merge TIFF completed. </value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>No Recent Files</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>OCR completed.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>OCR Operation</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>OCR running...</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>চিত্রনথি খুলুন</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>Page </value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>নতুন ভাষা (সমূহ) নিবন্ধনের জন্য দয়া করে প্রোগ্রামটি পুনঃ চালু করুন।</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs_bn.html</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>Resource does not exist.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Save Merged PDF</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Save Multi-page TIFF Image</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>Scan completed.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Scanning...</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>Scanning Operation</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>Select Input Images</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>Select Input PDFs</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>Select Input Multi-page TIFF</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Please select a language.</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>Split PDF completed.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>Split PDF running...</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>Split TIFF running...</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>Split TIFF completed.</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>You may need to split the PDF file into smaller files before proceed.</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Task canceled</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET Help</value>
+  </data>
+</root>

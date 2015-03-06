@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value> iš </value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>Apie „VietOCR.NET“</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>Jūs neturite teisių, būtinų rašyti į „{0}“ aplanką.
+Paleiskite šią programą administratoriaus teisėmis.</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>Įtraukti į žodyną</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>Paketinio apdorojimo būsena</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>Užduotis pradedama vykdyti</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>Šviesis</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Parinkti</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>Urminis atpažinimas</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>Urminės užduoties būsena</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>Atsisakyti urminio atpažinimo</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>atsisakyta.</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>Nepavyko įkelti vaizdo.</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>Apdoroti nepavyko</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>Patikrinkite išvesties failus, esančius aplanke </value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>Išvalyti paskiausių &amp;failų sąrašą</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>Kontrastas</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>Taisymas baigtas.</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>Taisomos atpažinimo klaidos…</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value> buvo sukurtas.</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>Ar norite įrašyti pakeitimus į </value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>Parsiuntimo atsisakyta.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>Parsiuntimas baigtas</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>Parsiuntimo klaida</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Parsiunčiama…</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>Sugaištas laikas</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>Užduotis baigiama vykdyti</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Klaida</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>Nepaisyti visų pasikartojimų</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>Įvesta ne visa reikalinga informacija.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>Įvestis klaidinga.</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>Šiame paveiksle nėra puslapio Nr. {0}.</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>Įkelti vaizdą</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>Prašom įkelti vaizdo failą</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>Vaizdas įkeltas.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>Įkeliamas vaizdas…</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>Vyksta PDF sujungimas…</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>PDF sujungimas baigtas. </value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>Vyksta TIFF sujungimas…</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>TIFF sujungimas baigtas. </value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>Paskiausių failų nėra</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>Optinis ženklų atpažinimas baigtas.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>Klaida vykdant optinį ženklų atpažinimą</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>Vyksta optinis ženklų atpažinimas…</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Atverti</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>Atverti vaizdo failą</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>Puslapis </value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>Pakartotinai paleiskite programą, kad naujai įdiegti kalbų paketai būtų užregistruoti.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET grafinė sąsaja „Tesseract 3.02“ optinio ženklų atpažinimo moduliui.</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs_lt.html</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>Išteklius nerastas.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Įrašyti</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>Įrašyti kaip</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Sujungto PDF failo įrašymas</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Puslapiuoto TIFF failo įrašymas</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>Skenavimas baigtas.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Skenuojama…</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>Klaida skenuojant</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Parinkti</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>Parinkite sujungtinus grafinius failus</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>Parinkite sujungtinus PDF failus</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>Parinkite puslapiuotą TIFF failą</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Pasirinkite kalbą.</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>PDF skaidymas baigtas.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>Vyksta PDF skaidymas…</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>Vyksta TIFF skaidymas…</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>TIFF skaidymas baigtas.</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>Prieš apdorojant, PDF failą Jums gali tekti suskaidyti į mažesnes dalis.</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>Užduoties vykdymas nutrauktas</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Be pavadinimo</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>„VietOCR.NET“ žinynas</value>
+  </data>
+</root>

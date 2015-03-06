@@ -1,0 +1,70 @@
+[main]
+host = https://www.transifex.com
+lang_map = bn: bn-IN, ca: ca-ES, cs: cs-CZ, de: de-DE, fa: fa-IR, hi: hi-IN, it: it-IT, ja: ja-JP, lt: lt-LT, nl: nl-NL, pl: pl-PL, ru: ru-RU, sk: sk-SK, tr: tr-TR, vi: vi-VN
+
+[vietocr.BulkDialog_resx]
+file_filter = BulkDialog.<lang>.resx
+source_file = .tx/BulkDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.ChangeCaseDialog_resx]
+file_filter = ChangeCaseDialog.<lang>.resx
+source_file = .tx/ChangeCaseDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.TextBoxContextMenuStrip_resx]
+file_filter = Controls/TextBoxContextMenuStrip.<lang>.resx
+source_file = .tx/TextBoxContextMenuStrip.resx
+source_lang = en
+type = RESX
+
+[vietocr.DownloadDialog_resx]
+file_filter = DownloadDialog.<lang>.resx
+source_file = .tx/DownloadDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.GUI_resx]
+file_filter = GUI.<lang>.resx
+source_file = .tx/GUI.resx
+source_lang = en
+type = RESX
+
+[vietocr.ImageInfoDialog_resx]
+file_filter = ImageInfoDialog.<lang>.resx
+source_file = .tx/ImageInfoDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.OptionsDialog_resx]
+file_filter = OptionsDialog.<lang>.resx
+source_file = .tx/OptionsDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.Resources_resx]
+file_filter = Properties/Resources.<lang>.resx
+source_file = Properties/Resources.resx
+source_lang = en
+type = RESX
+
+[vietocr.SplitPdfDialog_resx]
+file_filter = SplitPdfDialog.<lang>.resx
+source_file = .tx/SplitPdfDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.TrackbarDialog_resx]
+file_filter = TrackbarDialog.<lang>.resx
+source_file = .tx/TrackbarDialog.resx
+source_lang = en
+type = RESX
+
+[vietocr.readme_cs_html]
+file_filter = readme_cs_<lang>.html
+source_file = readme_cs.html
+source_lang = en
+type = HTML
+lang_map = bn: bn, ca: ca, cs: cs, de: de, fa: fa, hi: hi, it: it, ja: ja, lt: lt, nl: nl, pl: pl, ru: ru, sk: sk, tr: tr, vi: vi
