@@ -1,104 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,7 +58,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 561</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>VietOCR.NET</value>
+  </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 22</value>
   </data>
@@ -142,6 +88,15 @@
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
     <value>OCR hàng &amp;loạt...</value>
   </data>
+  <data name="buttonCollapseExpand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 3</value>
+  </data>
+  <data name="buttonCollapseExpand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 23</value>
+  </data>
+  <data name="buttonCollapseExpand.Text" xml:space="preserve">
+    <value>»</value>
+  </data>
   <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
     <value>Trang thu nhỏ</value>
   </data>
@@ -151,8 +106,14 @@
   <data name="changeCaseToolStripMenuItem.Text" xml:space="preserve">
     <value>Đổi ngữ &amp;cách...</value>
   </data>
+  <data name="commandToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Mệnh lệnh</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 148</value>
   </data>
   <data name="contrastToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -183,6 +144,12 @@
   </data>
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Bộ lọc</value>
+  </data>
+  <data name="flowLayoutPanelThumbnail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanelThumbnail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 470</value>
   </data>
   <data name="fontToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 22</value>
@@ -226,8 +193,14 @@
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
     <value>Đảo &amp;màu</value>
   </data>
-  <data name="lblCurIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 24</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
@@ -262,6 +235,9 @@
   <data name="oCRToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
   </data>
+  <data name="oCRToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;OCR</value>
+  </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 22</value>
   </data>
@@ -273,6 +249,24 @@
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
     <value>Tùy &amp;chọn...</value>
+  </data>
+  <data name="panelArrow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelArrow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 474</value>
+  </data>
+  <data name="panelImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
+  </data>
+  <data name="panelImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 474</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 50</value>
   </data>
   <data name="postprocessToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
@@ -346,11 +340,44 @@
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Dịu mờ</value>
   </data>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 513</value>
+  </data>
+  <data name="splitContainerImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 0</value>
+  </data>
+  <data name="splitContainerImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 474</value>
+  </data>
   <data name="splitPdfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>Tác&amp;h PDF...</value>
+  </data>
+  <data name="splitTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
+    <value>Split TIFF...</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 537</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 24</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 474</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
@@ -358,17 +385,68 @@
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Công cụ</value>
   </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 39</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="toolStrip2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 39</value>
+  </data>
+  <data name="toolStrip2.Text" xml:space="preserve">
+    <value>toolStrip2</value>
+  </data>
+  <data name="toolStripBtnActualSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnActualSize.ToolTipText" xml:space="preserve">
+    <value>Actual Size</value>
+  </data>
+  <data name="toolStripBtnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
   <data name="toolStripBtnClear.Text" xml:space="preserve">
     <value>Xóa</value>
   </data>
   <data name="toolStripBtnClear.ToolTipText" xml:space="preserve">
     <value>Xóa textbox</value>
   </data>
+  <data name="toolStripBtnFitImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnFitImage.Text" xml:space="preserve">
+    <value>┼</value>
+  </data>
+  <data name="toolStripBtnFitImage.ToolTipText" xml:space="preserve">
+    <value>Fit Image</value>
+  </data>
+  <data name="toolStripBtnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnNext.Text" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
   <data name="toolStripBtnNext.ToolTipText" xml:space="preserve">
     <value>Trang sau</value>
   </data>
+  <data name="toolStripBtnOCR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnOCR.Text" xml:space="preserve">
+    <value>OCR</value>
+  </data>
   <data name="toolStripBtnOCR.ToolTipText" xml:space="preserve">
     <value>Thực thi nhận dạng</value>
+  </data>
+  <data name="toolStripBtnOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnOpen.Text" xml:space="preserve">
     <value>Mở</value>
@@ -376,14 +454,35 @@
   <data name="toolStripBtnOpen.ToolTipText" xml:space="preserve">
     <value>Mở tập tin ảnh</value>
   </data>
+  <data name="toolStripBtnPrev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnPrev.Text" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
   <data name="toolStripBtnPrev.ToolTipText" xml:space="preserve">
     <value>Trang trước</value>
+  </data>
+  <data name="toolStripBtnRotateCCW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnRotateCCW.Text" xml:space="preserve">
+    <value>RCCW</value>
   </data>
   <data name="toolStripBtnRotateCCW.ToolTipText" xml:space="preserve">
     <value>Quay ngược chiều đồng hồ</value>
   </data>
+  <data name="toolStripBtnRotateCW.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnRotateCW.Text" xml:space="preserve">
+    <value>RCW</value>
+  </data>
   <data name="toolStripBtnRotateCW.ToolTipText" xml:space="preserve">
     <value>Quay theo chiều đồng hồ</value>
+  </data>
+  <data name="toolStripBtnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
   </data>
   <data name="toolStripBtnSave.Text" xml:space="preserve">
     <value>Lưu</value>
@@ -391,26 +490,68 @@
   <data name="toolStripBtnSave.ToolTipText" xml:space="preserve">
     <value>Lưu tập tin text</value>
   </data>
+  <data name="toolStripBtnScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
   <data name="toolStripBtnScan.Text" xml:space="preserve">
     <value>Quét</value>
   </data>
   <data name="toolStripBtnScan.ToolTipText" xml:space="preserve">
     <value>Quét văn bản</value>
   </data>
+  <data name="toolStripBtnZoomIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnZoomIn.Text" xml:space="preserve">
+    <value>(+)</value>
+  </data>
+  <data name="toolStripBtnZoomIn.ToolTipText" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="toolStripBtnZoomOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
+  <data name="toolStripBtnZoomOut.Text" xml:space="preserve">
+    <value>(-)</value>
+  </data>
+  <data name="toolStripBtnZoomOut.ToolTipText" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="toolStripButtonCancelOCR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
   <data name="toolStripButtonCancelOCR.Text" xml:space="preserve">
     <value>Hủy OCR</value>
+  </data>
+  <data name="toolStripButtonPasteImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
   </data>
   <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
     <value>Dán ảnh từ clipboard</value>
   </data>
+  <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
   <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
     <value>Hậu xử lý</value>
+  </data>
+  <data name="toolStripButtonRemoveLineBreaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
     <value>Nối dòng</value>
   </data>
+  <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 36</value>
+  </data>
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Duyệt chính tả</value>
+  </data>
+  <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 39</value>
+  </data>
+  <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 36</value>
@@ -420,6 +561,12 @@
   </data>
   <data name="toolStripLabelLanguage.ToolTipText" xml:space="preserve">
     <value>Ngôn ngữ OCR</value>
+  </data>
+  <data name="toolStripLabelPageNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 36</value>
+  </data>
+  <data name="toolStripLabelPageNum.Text" xml:space="preserve">
+    <value> / 0</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 6</value>
@@ -432,6 +579,9 @@
   </data>
   <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 6</value>
+  </data>
+  <data name="toolStripMenuItem13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 6</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 6</value>
@@ -460,20 +610,80 @@
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 6</value>
   </data>
+  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
+  </data>
+  <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
+  </data>
   <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
     <value>Ảnh:</value>
   </data>
   <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
     <value>Kích thước ảnh &amp; Bit Depth</value>
   </data>
+  <data name="toolStripStatusLabelDimValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 19</value>
+  </data>
+  <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
+    <value>0 × 0px  0bpp</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 19</value>
+  </data>
+  <data name="toolStripStatusLabelPSM.Text" xml:space="preserve">
+    <value>PSM:</value>
+  </data>
   <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
     <value>Chế độ phân trang</value>
+  </data>
+  <data name="toolStripStatusLabelPSMvalue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 19</value>
+  </data>
+  <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
   </data>
   <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
     <value>Mốt screenshot:</value>
   </data>
   <data name="toolStripStatusLabelSM.ToolTipText" xml:space="preserve">
     <value>Mốt screenshot</value>
+  </data>
+  <data name="toolStripStatusLabelSMvalue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 19</value>
+  </data>
+  <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 19</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
