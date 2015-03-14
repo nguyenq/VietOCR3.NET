@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Thuộc tính ảnh</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Bãi</value>
+  </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>Được</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="labelHeight.Text" xml:space="preserve">
+    <value>Chiều cao</value>
+  </data>
+  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="labelWidth.Text" xml:space="preserve">
+    <value>Chiều rộng</value>
+  </data>
   <data name="labelXRes.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 74</value>
   </data>
@@ -138,23 +156,5 @@
   </data>
   <data name="labelYRes.Text" xml:space="preserve">
     <value>Độ phân giải Y</value>
-  </data>
-  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Chiều rộng</value>
-  </data>
-  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Chiều cao</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Bãi</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Thuộc tính ảnh</value>
   </data>
 </root>
