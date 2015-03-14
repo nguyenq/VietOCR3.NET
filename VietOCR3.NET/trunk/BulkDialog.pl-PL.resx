@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,29 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>340, 126</value>
   </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>Folder wyjściowy: </value>
-  </data>
-  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
-  </data>
-  <data name="labelInput.Text" xml:space="preserve">
-    <value>Folder wejściowy: </value>
-  </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 45</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Masowe OCR</value>
   </data>
   <data name="btnInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>293, 19</value>
   </data>
-  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 47</value>
-  </data>
-  <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 21</value>
+  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 45</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>248, 85</value>
@@ -157,16 +145,28 @@
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>105, 85</value>
   </data>
+  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="labelInput.Text" xml:space="preserve">
+    <value>Folder wejściowy: </value>
+  </data>
+  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>Folder wyjściowy: </value>
+  </data>
   <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 13</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
     <value>Format wyjściowy </value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>340, 126</value>
+  <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 21</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Masowe OCR</value>
+  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 47</value>
   </data>
 </root>
