@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,11 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Afbeelding eigenschappen</value>
+  </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 160</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>Oke</value>
+  </data>
+  <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="labelBitDepth.Text" xml:space="preserve">
+    <value>Bitdiepte</value>
+  </data>
+  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="labelHeight.Text" xml:space="preserve">
+    <value>Hoogte</value>
+  </data>
+  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="labelWidth.Text" xml:space="preserve">
+    <value>Breedte</value>
   </data>
   <data name="labelXRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
@@ -135,26 +156,5 @@
   </data>
   <data name="labelYRes.Text" xml:space="preserve">
     <value>Y-resolutie</value>
-  </data>
-  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Breedte</value>
-  </data>
-  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Hoogte</value>
-  </data>
-  <data name="labelBitDepth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
-  </data>
-  <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Bitdiepte</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Afbeelding eigenschappen</value>
   </data>
 </root>
