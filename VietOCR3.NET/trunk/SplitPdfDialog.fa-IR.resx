@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonSplit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 135</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>281, 178</value>
   </data>
-  <data name="buttonSplit.Text" xml:space="preserve">
-    <value>تقسیم</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>تقسیم PDF</value>
+  </data>
+  <data name="buttonBrowseInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 19</value>
+  </data>
+  <data name="buttonBrowseOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 45</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 135</value>
@@ -130,20 +136,11 @@
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>لغو</value>
   </data>
-  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 77</value>
+  <data name="buttonSplit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 135</value>
   </data>
-  <data name="textBoxTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 77</value>
-  </data>
-  <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 80</value>
-  </data>
-  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
-  </data>
-  <data name="radioButtonPages.Text" xml:space="preserve">
-    <value>صفحات</value>
+  <data name="buttonSplit.Text" xml:space="preserve">
+    <value>تقسیم</value>
   </data>
   <data name="labelFrom.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 82</value>
@@ -153,6 +150,33 @@
   </data>
   <data name="labelFrom.Text" xml:space="preserve">
     <value>از:</value>
+  </data>
+  <data name="labelInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 24</value>
+  </data>
+  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="labelInput.Text" xml:space="preserve">
+    <value>ورودی:</value>
+  </data>
+  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 105</value>
+  </data>
+  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
+  </data>
+  <data name="labelNumOfPages.Text" xml:space="preserve">
+    <value>تعداد صفحات در هر پرونده:</value>
+  </data>
+  <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 50</value>
+  </data>
+  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>خروجی:</value>
   </data>
   <data name="labelTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 82</value>
@@ -172,52 +196,28 @@
   <data name="radioButtonFiles.Text" xml:space="preserve">
     <value>پرونده‌ها</value>
   </data>
-  <data name="textBoxNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 100</value>
+  <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 80</value>
   </data>
-  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 105</value>
+  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
   </data>
-  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 13</value>
+  <data name="radioButtonPages.Text" xml:space="preserve">
+    <value>صفحات</value>
   </data>
-  <data name="labelNumOfPages.Text" xml:space="preserve">
-    <value>تعداد صفحات در هر پرونده:</value>
+  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 77</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>69, 21</value>
   </data>
+  <data name="textBoxNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 100</value>
+  </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>69, 47</value>
   </data>
-  <data name="buttonBrowseInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 19</value>
-  </data>
-  <data name="buttonBrowseOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 45</value>
-  </data>
-  <data name="labelInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 24</value>
-  </data>
-  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
-  </data>
-  <data name="labelInput.Text" xml:space="preserve">
-    <value>ورودی:</value>
-  </data>
-  <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 50</value>
-  </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
-  </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>خروجی:</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>281, 178</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>تقسیم PDF</value>
+  <data name="textBoxTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 77</value>
   </data>
 </root>

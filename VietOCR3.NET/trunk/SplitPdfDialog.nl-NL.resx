@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,27 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonSplit.Text" xml:space="preserve">
-    <value>Splitten</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>281, 178</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PDF splitten</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Annuleren</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 77</value>
-  </data>
-  <data name="textBoxTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 77</value>
-  </data>
-  <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 80</value>
-  </data>
-  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
-  </data>
-  <data name="radioButtonPages.Text" xml:space="preserve">
-    <value>Pagina's</value>
+  <data name="buttonSplit.Text" xml:space="preserve">
+    <value>Splitten</value>
   </data>
   <data name="labelFrom.Location" type="System.Drawing.Point, System.Drawing">
     <value>119, 82</value>
@@ -147,6 +138,27 @@
   </data>
   <data name="labelFrom.Text" xml:space="preserve">
     <value>van:</value>
+  </data>
+  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="labelInput.Text" xml:space="preserve">
+    <value>Invoer:</value>
+  </data>
+  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 105</value>
+  </data>
+  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 13</value>
+  </data>
+  <data name="labelNumOfPages.Text" xml:space="preserve">
+    <value>Aantal pagina's per bestand:</value>
+  </data>
+  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>Uitvoer:</value>
   </data>
   <data name="labelTo.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 13</value>
@@ -163,34 +175,22 @@
   <data name="radioButtonFiles.Text" xml:space="preserve">
     <value>Bestanden</value>
   </data>
+  <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 80</value>
+  </data>
+  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 17</value>
+  </data>
+  <data name="radioButtonPages.Text" xml:space="preserve">
+    <value>Pagina's</value>
+  </data>
+  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 77</value>
+  </data>
   <data name="textBoxNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
     <value>242, 100</value>
   </data>
-  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 105</value>
-  </data>
-  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 13</value>
-  </data>
-  <data name="labelNumOfPages.Text" xml:space="preserve">
-    <value>Aantal pagina's per bestand:</value>
-  </data>
-  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="labelInput.Text" xml:space="preserve">
-    <value>Invoer:</value>
-  </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>Uitvoer:</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>281, 178</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>PDF splitten</value>
+  <data name="textBoxTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 77</value>
   </data>
 </root>
