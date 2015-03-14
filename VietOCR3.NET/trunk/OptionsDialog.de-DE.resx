@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,35 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 102</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>347, 168</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 102</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Optionen</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Überwachen</value>
+  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 37</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 128</value>
+  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 11</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 134</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Stornieren</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 134</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>Okay</value>
   </data>
   <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>Aktiviert</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>Pfad:</value>
-  </data>
-  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 13</value>
-  </data>
-  <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Ausgabeformat</value>
-  </data>
-  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 70</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 74</value>
@@ -157,11 +157,23 @@
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>Aktiviert</value>
   </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 70</value>
+  </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Ausgabe:</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Ausgabeformat</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Pfad:</value>
   </data>
   <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 13</value>
@@ -169,34 +181,22 @@
   <data name="labelWatch.Text" xml:space="preserve">
     <value>Ordner überwachen:</value>
   </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 37</value>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 128</value>
   </data>
-  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 11</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 102</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Überwachen</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 102</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 39</value>
   </data>
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 13</value>
-  </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 134</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>Okay</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 134</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Stornieren</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>347, 168</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Optionen</value>
   </data>
 </root>

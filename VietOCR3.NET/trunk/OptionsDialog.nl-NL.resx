@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>Oke</value>
+  </data>
   <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 17</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>Inschakelen</value>
-  </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 13</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>Pad:</value>
   </data>
   <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 17</value>
@@ -142,6 +145,12 @@
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Doelmap:</value>
   </data>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 13</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Pad:</value>
+  </data>
   <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
   </data>
@@ -150,14 +159,5 @@
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Controle</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>Oke</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Annuleren</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Opties</value>
   </data>
 </root>

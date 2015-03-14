@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,34 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelPath.ToolTip" xml:space="preserve">
+  <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="btnDangAmbigs.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabPage2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelOutputFormat.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkBoxWatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelOutput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelWatch.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="btnOutput.ToolTip" xml:space="preserve">
@@ -153,25 +129,49 @@
   <data name="btnWatch.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="textBoxOutput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxWatch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabPage1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabControl1.ToolTip" xml:space="preserve">
+  <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value />
   </data>
   <data name="buttonOK.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="buttonCancel.ToolTip" xml:space="preserve">
+  <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
+  <data name="checkBoxWatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelOutput.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelOutputFormat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelPath.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelWatch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxOutput.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textBoxWatch.ToolTip" xml:space="preserve">
     <value />
   </data>
 </root>

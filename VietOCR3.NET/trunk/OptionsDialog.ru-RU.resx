@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,38 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 102</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>370, 168</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 102</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Параметры</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Автораспознавание</value>
+  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 37</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>370, 128</value>
+  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 11</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 134</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 134</value>
   </data>
   <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>Включить</value>
-  </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>Путь:</value>
-  </data>
-  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Формат вывода</value>
-  </data>
-  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 70</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 74</value>
@@ -160,11 +154,26 @@
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>Включить</value>
   </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 70</value>
+  </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 13</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Папка вывода:</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Формат вывода</value>
+  </data>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Путь:</value>
   </data>
   <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 13</value>
@@ -172,31 +181,22 @@
   <data name="labelWatch.Text" xml:space="preserve">
     <value>Папка для наблюдения:</value>
   </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 37</value>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 128</value>
   </data>
-  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 11</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 102</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Автораспознавание</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 102</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 39</value>
   </data>
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>133, 13</value>
-  </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 134</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 134</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Отмена</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>370, 168</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Параметры</value>
   </data>
 </root>

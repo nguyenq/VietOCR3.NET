@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,38 +118,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 102</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>330, 168</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 102</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>विकल्प</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>वाच</value>
+  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 37</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 128</value>
+  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 11</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 134</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 134</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>ओके</value>
   </data>
   <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 17</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>लागू करें</value>
-  </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
-  </data>
-  <data name="labelPath.Text" xml:space="preserve">
-    <value>पाथ :</value>
-  </data>
-  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
-  </data>
-  <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>आउटपुट फॉर्मेट </value>
-  </data>
-  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 70</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>216, 74</value>
@@ -160,11 +157,26 @@
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>लागू करें</value>
   </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 70</value>
+  </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 13</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>आउटपुट फोल्डर :</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>आउटपुट फॉर्मेट </value>
+  </data>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>पाथ :</value>
   </data>
   <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -172,34 +184,22 @@
   <data name="labelWatch.Text" xml:space="preserve">
     <value>वाच फोल्डर :</value>
   </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 37</value>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>330, 128</value>
   </data>
-  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 11</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 102</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>वाच</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 102</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 39</value>
   </data>
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 13</value>
-  </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 134</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>ओके</value>
-  </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 134</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>रद्द करें</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>330, 168</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>विकल्प</value>
   </data>
 </root>
