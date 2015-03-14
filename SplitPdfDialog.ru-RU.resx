@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,27 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonSplit.Text" xml:space="preserve">
-    <value>Разбить</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Разбить PDF</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 77</value>
-  </data>
-  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
-  </data>
-  <data name="radioButtonPages.Text" xml:space="preserve">
-    <value>Страницы</value>
+  <data name="buttonSplit.Text" xml:space="preserve">
+    <value>Разбить</value>
   </data>
   <data name="labelFrom.Size" type="System.Drawing.Size, System.Drawing">
     <value>16, 13</value>
   </data>
   <data name="labelFrom.Text" xml:space="preserve">
     <value>с:</value>
+  </data>
+  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="labelInput.Text" xml:space="preserve">
+    <value>Ввод:</value>
+  </data>
+  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 105</value>
+  </data>
+  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="labelNumOfPages.Text" xml:space="preserve">
+    <value>Страниц на файл:</value>
+  </data>
+  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>Вывод:</value>
   </data>
   <data name="labelTo.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 82</value>
@@ -154,28 +169,13 @@
   <data name="radioButtonFiles.Text" xml:space="preserve">
     <value>Файлы</value>
   </data>
-  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 105</value>
+  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 17</value>
   </data>
-  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 13</value>
+  <data name="radioButtonPages.Text" xml:space="preserve">
+    <value>Страницы</value>
   </data>
-  <data name="labelNumOfPages.Text" xml:space="preserve">
-    <value>Страниц на файл:</value>
-  </data>
-  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
-  </data>
-  <data name="labelInput.Text" xml:space="preserve">
-    <value>Ввод:</value>
-  </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>Вывод:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Разбить PDF</value>
+  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 77</value>
   </data>
 </root>
