@@ -229,7 +229,7 @@ namespace VietOCR.NET
             this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
             this.buttonCollapseExpand.Name = "buttonCollapseExpand";
-            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
+            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTipText"));
             this.buttonCollapseExpand.UseVisualStyleBackColor = true;
             this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
             // 

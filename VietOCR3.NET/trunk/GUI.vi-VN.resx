@@ -97,7 +97,7 @@
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
   </data>
-  <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
     <value>Trang thu nhỏ</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
