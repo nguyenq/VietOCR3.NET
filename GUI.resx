@@ -475,7 +475,7 @@
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
   </data>
-  <data name="buttonCollapseExpand.ToolTip" xml:space="preserve">
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
     <value>Page Thumbnails</value>
   </data>
   <data name="&gt;&gt;buttonCollapseExpand.Type" xml:space="preserve">
