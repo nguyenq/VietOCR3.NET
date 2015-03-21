@@ -73,9 +73,6 @@
   <data name="btnInput.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="btnInput.ToolTip" xml:space="preserve">
-    <value>Xem</value>
-  </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 45</value>
   </data>
@@ -84,9 +81,6 @@
   </data>
   <data name="btnOutput.Text" xml:space="preserve">
     <value>...</value>
-  </data>
-  <data name="btnOutput.ToolTip" xml:space="preserve">
-    <value>Xem</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 85</value>
