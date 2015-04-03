@@ -215,9 +215,13 @@ namespace VietOCR.NET.Utilities
         /// Autocrops an image.
         /// </summary>
         /// <param name="source"></param>
+        /// <param name="tolerance">range from 0.0 to 1.0</param>
         /// <returns></returns>
-        public static Bitmap AutoCrop(Bitmap source) 
+        public static Bitmap AutoCrop(Bitmap source, double tolerance)
         {
+            // Get top-left pixel color as the "baseline" for cropping
+            Color baseColor = source.GetPixel(0, 0);
+
             int width = source.Width;
             int height = source.Height;
 
@@ -227,82 +231,89 @@ namespace VietOCR.NET.Utilities
             int maxY = height;
 
             // Check from top and left. Immediately break the loops when encountering a non-white pixel.
-            for (int y = 0; y < height; y++) 
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x < width; x++) 
+                for (int x = 0; x < width; x++)
                 {
-                    if (source.GetPixel(x, y).R != 255) 
+                    if (colorWithinTolerance(baseColor, source.GetPixel(x, y), tolerance))
                     {
                         minY = y;
                         goto lable1;
                     }
                 }
             }
-            lable1:
+        lable1:
 
-            for (int x = 0; x < width; x++) 
+            for (int x = 0; x < width; x++)
             {
-                for (int y = minY; y < height; y++) 
+                for (int y = minY; y < height; y++)
                 {
-                    if (source.GetPixel(x, y).R != 255)
+                    if (colorWithinTolerance(baseColor, source.GetPixel(x, y), tolerance))
                     {
                         minX = x;
                         goto lable2;
                     }
                 }
             }
-            lable2:
+        lable2:
+			// Get lower-left pixel color as the "baseline" for cropping
+            baseColor = source.GetPixel(minX, height - 1);
 
             for (int y = height - 1; y >= minY; y--)
             {
                 for (int x = minX; x < width; x++)
                 {
-                    if (source.GetPixel(x, y).R != 255)
+                    if (colorWithinTolerance(baseColor, source.GetPixel(x, y), tolerance))
                     {
                         maxY = y;
                         goto lable3;
                     }
                 }
             }
-            lable3:
+        lable3:
 
             for (int x = width - 1; x >= minX; x--)
             {
                 for (int y = minY; y < maxY; y++)
                 {
-                    if (source.GetPixel(x, y).R != 255)
+                    if (colorWithinTolerance(baseColor, source.GetPixel(x, y), tolerance))
                     {
                         maxX = x;
                         goto lable4;
                     }
                 }
             }
-            lable4:
-        
-            if ((minX - margin) >= 0) {
+        lable4:
+
+            if ((minX - margin) >= 0)
+            {
                 minX -= margin;
             }
-        
-            if ((minY - margin) >= 0) {
+
+            if ((minY - margin) >= 0)
+            {
                 minY -= margin;
             }
-        
-            if ((maxX + margin) <= width) {
+
+            if ((maxX + margin) <= width)
+            {
                 maxX += margin;
             }
-        
-            if ((maxY + margin) <= height) {
+
+            if ((maxY + margin) <= height)
+            {
                 maxY += margin;
             }
-        
+
             // if same size, return the original
-            if (minX == 0 && minY == 0 && maxX == width && maxY == height) {
+            if (minX == 0 && minY == 0 && maxX == width && maxY == height)
+            {
                 return source;
             }
-        
+
             int newWidth = maxX - minX + 1;
             int newHeight = maxY - minY + 1;
-        
+
             Bitmap target = new Bitmap(newWidth, newHeight);
             target.SetResolution(source.HorizontalResolution, source.VerticalResolution);
 
@@ -315,6 +326,38 @@ namespace VietOCR.NET.Utilities
             }
 
             return target;
+        }
+
+        /// <summary>
+        /// Determines color distance.
+        /// http://stackoverflow.com/questions/10678015/how-to-auto-crop-an-image-white-border-in-java
+        /// </summary>
+        /// <param name="a">a color</param>
+        /// <param name="b">a color</param>
+        /// <param name="tolerance"></param>
+        /// <returns></returns>
+        private static bool colorWithinTolerance(Color a, Color b, double tolerance)
+        {
+            int aAlpha = (int)a.A;   // Alpha level
+            int aRed = (int)a.R;     // Red level
+            int aGreen = (int)a.G;   // Green level
+            int aBlue = (int)a.B;    // Blue level
+
+            int bAlpha = (int)b.A;   // Alpha level
+            int bRed = (int)b.R;     // Red level
+            int bGreen = (int)b.G;   // Green level
+            int bBlue = (int)b.B;    // Blue level
+
+            double distance = Math.Sqrt((aAlpha - bAlpha) * (aAlpha - bAlpha)
+                    + (aRed - bRed) * (aRed - bRed)
+                    + (aGreen - bGreen) * (aGreen - bGreen)
+                    + (aBlue - bBlue) * (aBlue - bBlue));
+
+            // 510.0 is the maximum distance between two colors 
+            // (0,0,0,0 -> 255,255,255,255)
+            double percentAway = distance / 510.0d;
+
+            return (percentAway > tolerance);
         }
 
         /// <summary>

@@ -76,7 +76,7 @@ namespace TestProject
             Bitmap source = (Bitmap) Image.FromFile("samples/vietsample2.png");
             Size expectedSize = new Size(2265, 2987);
             Bitmap actual;
-            actual = ImageHelper.AutoCrop(source);
+            actual = ImageHelper.AutoCrop(source, 0.1);
             Assert.AreEqual(expectedSize, actual.Size);
         }
     }

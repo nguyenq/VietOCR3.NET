@@ -159,10 +159,8 @@ namespace VietOCR.NET
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
-            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage);
-            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
-            this.pictureBox1.Size = this.pictureBox1.Image.Size;
-            this.centerPicturebox();
+            imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage, 0.1);
+            displayImage();
             this.Cursor = Cursors.Default;
         }
 
@@ -247,7 +245,7 @@ namespace VietOCR.NET
 
             Image image = stack.Pop();
             imageList[imageIndex] = image;
-            this.pictureBox1.Image = new Bitmap(image);
+            displayImage();
         }
 
         protected override void clearStack()
