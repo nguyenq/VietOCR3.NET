@@ -125,14 +125,14 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="x64\liblept168.dll">
+    <Content Include="x64\liblept168.dll" />
+    <Content Include="x64\libtesseract302.dll" />
+    <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract302.dll">
+    <Content Include="x86\libtesseract302.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x86\liblept168.dll" />
-    <Content Include="x86\libtesseract302.dll" />
     <EmbeddedResource Include="BulkDialog.de-DE.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
