@@ -295,24 +295,24 @@ namespace VietOCR.NET.Utilities
                 minY -= margin;
             }
 
-            if ((maxX + margin) <= width)
+            if ((maxX + margin) < width)
             {
                 maxX += margin;
             }
 
-            if ((maxY + margin) <= height)
+            if ((maxY + margin) < height)
             {
                 maxY += margin;
             }
 
+            int newWidth = maxX - minX + 1;
+            int newHeight = maxY - minY + 1;
+
             // if same size, return the original
-            if (minX == 0 && minY == 0 && maxX == width && maxY == height)
+            if (newWidth == width && newHeight == height)
             {
                 return source;
             }
-
-            int newWidth = maxX - minX + 1;
-            int newHeight = maxY - minY + 1;
 
             Bitmap target = new Bitmap(newWidth, newHeight);
             target.SetResolution(source.HorizontalResolution, source.VerticalResolution);
