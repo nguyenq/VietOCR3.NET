@@ -1232,31 +1232,31 @@
   <data name="toolStripButtonRemoveLineBreaks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
-        AAAASUVORK5CYII=
+        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
+        AABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
@@ -1416,19 +1416,25 @@
     <value>&amp;Command</value>
   </data>
   <data name="metadataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Properties...</value>
   </data>
   <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 6</value>
+    <value>199, 6</value>
+  </data>
+  <data name="brightenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+B</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
   <data name="brightenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Brightness...</value>
+  </data>
+  <data name="contrastToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+C</value>
   </data>
   <data name="contrastToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
@@ -1454,17 +1460,26 @@
   <data name="monochromeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Monochrome</value>
   </data>
+  <data name="invertToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+I</value>
+  </data>
   <data name="invertToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Invert</value>
   </data>
+  <data name="sharpenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+N</value>
+  </data>
   <data name="sharpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
   <data name="sharpenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Sharpen</value>
+  </data>
+  <data name="smoothToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+O</value>
   </data>
   <data name="smoothToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
@@ -1473,7 +1488,7 @@
     <value>Sm&amp;ooth</value>
   </data>
   <data name="filterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Filters</value>
@@ -1482,37 +1497,37 @@
     <value>Ctrl+Shift+D</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Deskew</value>
   </data>
   <data name="autocropToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+C</value>
+    <value>Ctrl+Shift+X</value>
   </data>
   <data name="autocropToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
     <value>Auto &amp;Crop</value>
   </data>
   <data name="toolStripMenuItem12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 6</value>
+    <value>199, 6</value>
   </data>
   <data name="undoToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+Z</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Undo</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 6</value>
+    <value>199, 6</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
+    <value>202, 22</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Screenshot Mode</value>
