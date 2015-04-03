@@ -158,9 +158,15 @@ namespace VietOCR.NET
             }
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
-            stack.Push(originalImage);
             imageList[imageIndex] = ImageHelper.AutoCrop((Bitmap)originalImage, 0.1);
-            displayImage();
+
+            // if same image, skip
+            if (originalImage != imageList[imageIndex])
+            {
+                stack.Push(originalImage);
+                displayImage();
+            }
+
             this.Cursor = Cursors.Default;
         }
 
