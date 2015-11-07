@@ -125,6 +125,10 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="gsdll32.dll" />
+    <None Include="gsdll64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="x64\liblept168.dll" />
     <Content Include="x64\libtesseract302.dll" />
     <Content Include="x86\liblept168.dll">
@@ -254,11 +258,7 @@
     <EmbeddedResource Include="readme_cs_hi.html" />
     <EmbeddedResource Include="readme_cs_pl.html" />
     <EmbeddedResource Include="readme_cs_ru.html" />
-    <None Include="gsdll32.dll" />
     <EmbeddedResource Include="readme_cs_de.html" />
-    <Content Include="gsdll64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Hunspellx64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
