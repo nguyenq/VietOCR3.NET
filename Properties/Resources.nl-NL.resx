@@ -65,20 +65,20 @@
     <value>Over VietOCR.NET</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>Je hebt geen schrijfrechten op map &quot;{0}&quot;.
-Voer dit programma uit als administrator. </value>
+    <value>U heeft geen schrijfrechten op map &quot;{0}&quot;.
+Voer dit programma a.u.b. uit als administrator. </value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
-    <value>Toevoegen aan map</value>
+    <value>Toevoegen aan woordenboek</value>
   </data>
   <data name="BatchProcessStatus" xml:space="preserve">
-    <value>Partij proces status</value>
+    <value>Status bulk proces</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
-    <value>Begin van de taak</value>
+    <value>Taak starten</value>
   </data>
   <data name="Brightness" xml:space="preserve">
-    <value>Brightness</value>
+    <value>Helderheid</value>
   </data>
   <data name="Browse" xml:space="preserve">
     <value>Bladeren</value>
@@ -87,10 +87,10 @@ Voer dit programma uit als administrator. </value>
     <value>Bulk OCR</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>Partij proces status</value>
+    <value>Status bulk proces</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
-    <value>Annuleer partij OCR</value>
+    <value>Annuleer bulk OCR</value>
   </data>
   <data name="canceled" xml:space="preserve">
     <value>geannuleerd. </value>
@@ -99,10 +99,10 @@ Voer dit programma uit als administrator. </value>
     <value>Afbeelding kan niet geladen worden.</value>
   </data>
   <data name="Cannotprocess" xml:space="preserve">
-    <value>Kan niet verwerken</value>
+    <value>Verwerken onmogelijk</value>
   </data>
   <data name="check_output_in" xml:space="preserve">
-    <value>Controleer de uitvoerbestand(en) alstublieft in </value>
+    <value>Controleer het resultaat alstublieft in </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
     <value>Recente bestanden &amp;opschonen</value>
@@ -120,7 +120,7 @@ Voer dit programma uit als administrator. </value>
     <value>is aangemaakt.</value>
   </data>
   <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
-    <value>Wil je de wijzigingen opslaan in </value>
+    <value>Wilt u de wijzigingen opslaan in </value>
   </data>
   <data name="Downloadcanceled" xml:space="preserve">
     <value>Download geannuleerd. </value>
@@ -153,7 +153,7 @@ Voer dit programma uit als administrator. </value>
     <value>Ongeldige invoer.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>There is no page numbered &apos;{0}&apos; in this image.</value>
+    <value>Deze afbeelding bevat geen pagina nummer &apos;{0}&apos;</value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>Afbeelding laden</value>
@@ -204,13 +204,13 @@ Voer dit programma uit als administrator. </value>
     <value>Herstart het programma om nieuwe taalpakketten te registreren.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract 3.02 OCR Engine</value>
+    <value>.NET GUI Frontend voor Tesseract 3.02 OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_nl.html</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
-    <value>Hulpbron bestaat niet.</value>
+    <value>Bron bestaat niet.</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Opslaan</value>
@@ -222,7 +222,7 @@ Voer dit programma uit als administrator. </value>
     <value>Samengevoegde PDF opslaan</value>
   </data>
   <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
-    <value>Meerdere pagina TIFF afbeelding opslaan</value>
+    <value>Meervoudig afbeeldingsbestand (TIFF) opslaan</value>
   </data>
   <data name="Scancompleted" xml:space="preserve">
     <value>Scannen voltooid.</value>
@@ -237,13 +237,13 @@ Voer dit programma uit als administrator. </value>
     <value>Selecteer</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
-    <value>Selecteer invoer afbeeldingen</value>
+    <value>Selecteer bron afbeeldingen</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
-    <value>Selecteer invoer PDF&apos;s</value>
+    <value>Selecteer bron PDF&apos;s</value>
   </data>
   <data name="Select_Input_TIFF" xml:space="preserve">
-    <value>Select Input Multi-page TIFF</value>
+    <value>Selecteer meervoudig afbeeldingsbestand (TIFF)</value>
   </data>
   <data name="selectLanguage" xml:space="preserve">
     <value>Selecteer een taal.</value>

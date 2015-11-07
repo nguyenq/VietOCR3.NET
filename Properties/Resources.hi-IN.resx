@@ -71,7 +71,7 @@
     <value>शब्दकोश में जोड़ें</value>
   </data>
   <data name="BatchProcessStatus" xml:space="preserve">
-    <value>इकट्ठा ओसीआर की स्थिति</value>
+    <value>बैच ओसीआर की स्थिति</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>कार्य का आरंभ</value>
@@ -86,7 +86,7 @@
     <value>बल्क ocr</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>बहुफ़ाइल प्रक्रिया की sthiti</value>
+    <value>बहुफ़ाइल प्रक्रिया का हाल</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
     <value>बहुफ़ाइल ओसीआर रद्द करें</value>
@@ -203,7 +203,7 @@
     <value>कृपया प्रोग्राम को बंद करने के बाद फिर से चलायें ताकि वह नए भाषा पैक(s) को रजिस्टर कर सके</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>टेसेरक्ट 3.03 ओसीआर का डॉट.नेट जीयूआई फ्रंटएण्ड </value>
+    <value>टेसेरक्ट 3.02 ओसीआर का डॉट.नेट जीयूआई फ्रंटएण्ड </value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_hi.html</value>
@@ -254,10 +254,10 @@
     <value>पीडीऍफ़ अलगाव चल रहा है </value>
   </data>
   <data name="SplitTIFF_running" xml:space="preserve">
-    <value>टिफ अलगाव चल रहा है </value>
+    <value>टिफ विभाजन चल रहा है </value>
   </data>
   <data name="SplitTIFFcompleted" xml:space="preserve">
-    <value>टिफ अलगाव पूरा हो गया</value>
+    <value>टिफ विभाजन पूरा हो गया</value>
   </data>
   <data name="suggest_split" xml:space="preserve">
     <value>आगे बढ़ने के पहले पीडीऍफ़ फाइल को छोटी फाइलों में विभाजित करें</value>
