@@ -76,9 +76,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tesseract, Version=2.2.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Tesseract.2.2.0.0\lib\net20\Tesseract.dll</HintPath>
+    <Reference Include="Tesseract, Version=2.4.1.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.2.4.1.0\lib\net20\Tesseract.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="VietKeyInput, Version=2.0.3073.22842, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -125,18 +125,22 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="gsdll32.dll" />
-    <None Include="gsdll64.dll">
+    <Content Include="x64\liblept168.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <Content Include="x64\liblept168.dll" />
-    <Content Include="x64\libtesseract302.dll" />
+    </Content>
+    <Content Include="x64\libtesseract302.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="x86\liblept168.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x86\libtesseract302.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="gsdll32.dll" />
+    <None Include="gsdll64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <EmbeddedResource Include="BulkDialog.de-DE.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -546,7 +550,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
