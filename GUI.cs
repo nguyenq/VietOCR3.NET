@@ -821,7 +821,9 @@ namespace VietOCR.NET
         /// <param name="firstTime"></param>
         protected virtual void ChangeUILanguage(string locale)
         {
-            string temp = this.toolStripStatusLabelDimValue.Text; // retain values of image properties in statusbar
+            string imageProperties = this.toolStripStatusLabelDimValue.Text; // retain values of image properties in statusbar
+            string totalPage = this.toolStripLabelPageNum.Text; 
+
             FormLocalizer localizer = new FormLocalizer(this, typeof(GUI));
             localizer.ApplyCulture(new CultureInfo(locale));
 
@@ -840,7 +842,8 @@ namespace VietOCR.NET
 
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTipText"));
-            this.toolStripStatusLabelDimValue.Text = temp; // restore prior values
+            this.toolStripStatusLabelDimValue.Text = imageProperties; // restore prior values
+            this.toolStripLabelPageNum.Text = totalPage;
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
