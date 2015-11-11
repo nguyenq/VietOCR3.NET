@@ -125,6 +125,8 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages\Tesseract.2.4.1.0\lib\net20\Tesseract.dll" />
+    <None Include="packages\Tesseract.2.4.1.0\lib\net20\Tesseract.xml" />
     <Content Include="x64\liblept168.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
