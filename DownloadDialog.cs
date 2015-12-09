@@ -240,6 +240,7 @@ namespace VietOCR.NET
                 request.Timeout = 15000;
                 WebResponse response = request.GetResponse();
                 contentLength += response.ContentLength;
+                response.Close();
                 string filePath = Path.Combine(Path.GetTempPath(), Path.GetFileName(uri.AbsolutePath));
                 client.DownloadFileAsync(uri, filePath, destFolder + filePath);
             }
