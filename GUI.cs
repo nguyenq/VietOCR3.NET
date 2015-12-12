@@ -810,9 +810,15 @@ namespace VietOCR.NET
                         return;
                 }
 
+                this.pictureBox1.Deselect();
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 this.pictureBox1.Width += this.pictureBox1.Width * e.Delta / 1000;
                 this.pictureBox1.Height += this.pictureBox1.Height * e.Delta / 1000;
-                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                scaleX = (float)this.pictureBox1.Image.Width / (float)this.pictureBox1.Width;
+                scaleY = (float)this.pictureBox1.Image.Height / (float)this.pictureBox1.Height;
+                this.centerPicturebox();
+                isFitImageSelected = false;
+                this.toolStripBtnActualSize.Enabled = true;
             }
         }
 
