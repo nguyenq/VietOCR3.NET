@@ -180,6 +180,7 @@ namespace VietOCR.NET
             this.splitContainerImage.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainerImage.Panel2.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragDrop);
             this.splitContainerImage.Panel2.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
+            this.splitContainerImage.Panel2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.splitContainer2_Panel2_MouseWheel);
             this.splitContainerImage.TabStop = false;
             this.splitContainerImage.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainerImage_SplitterMoved);
             // 

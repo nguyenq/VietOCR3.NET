@@ -793,6 +793,29 @@ namespace VietOCR.NET
             }
         }
 
+        private void splitContainer2_Panel2_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+            {
+                if (e.Delta <= 0)
+                {
+                    // set minimum size to zoom
+                    if (this.pictureBox1.Width < 100)
+                        return;
+                }
+                else
+                {
+                    // set maximum size to zoom
+                    if (this.pictureBox1.Width > 10000)
+                        return;
+                }
+
+                this.pictureBox1.Width += this.pictureBox1.Width * e.Delta / 1000;
+                this.pictureBox1.Height += this.pictureBox1.Height * e.Delta / 1000;
+                this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
             if (!this.textBox1.Focused && this.ContainsFocus)
