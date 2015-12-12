@@ -50,7 +50,9 @@ Version 3.6 (4 March 2015)
 - Update Tesseract.NET to 2.2.0.0
 - Add support for reading specific configs files for setting control parameters
 
-Version 3.7 (7 November 2015)
+Version 3.7 (12 December 2015)
 - Update Tesseract.NET to 2.4.1.0
 - Update GhostScipt to 9.18
 - Update translations
+- Fix a hang issue with download of multiple language data packs
+- Image zoom with mousewheel and Ctrl key
