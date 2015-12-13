@@ -52,7 +52,11 @@ Version 3.6 (4 March 2015)
 
 Version 3.7 (12 December 2015)
 - Update Tesseract.NET to 2.4.1.0
-- Update GhostScipt to 9.18
+- Update GhostScript to 9.18
 - Update translations
 - Fix a hang issue with download of multiple language data packs
 - Image zoom with mousewheel and Ctrl key
+
+Version 3.8 Beta (13 December 2015)
+- Upgrade to .NET 4.0
+
