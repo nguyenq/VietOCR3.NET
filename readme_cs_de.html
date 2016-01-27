@@ -24,20 +24,15 @@ in einem Ergebnisordner.</p>
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
             you can specify another folder in Install Installation Folder dialog.</p>
         <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
-            requires Windows XP Service Pack 1 (SP1) or later; the library is included in Vista and 7. To install the WIA Library, copy
-            the <code>wiaaut.dll</code> file to your <code>System32</code> directory (usually located
-            at <code>C:\Windows\System32</code>) and run from the command line:</p>
-        <blockquote>
-            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
-        </blockquote>
+            is included in Vista and 7.</p>
         <p>Die PDF Unterstützung ist möglich via <a href="http://www.ghostscript.com/">GPL
 Ghostscript</a>. Stellen Sie sicher, dass nach der Installation, die Datei
 <code>gsdll32.dll</code> sich in dem Suchpfad <code>Path</code> der
 Umgebungsvariable befindet, welches auch erreichbar ist durch Windows&#39; Systemsteuerung &gt; System &gt; Erweiterte Systemeinstellungen &gt; Umgebungsvariablen.
 Fügen Sie folgenden Wert ein zu der
-<code>Path</code> Variable für die GS version 9.15:</p>
+<code>Path</code> Variable für die GS version 9.18:</p>
         <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.15\bin</code></p>
+            <p><code>;C:\Program Files\gs\gs9.18\bin</code></p>
         </blockquote>
         <p>Die Rechtschreibprüfung ist wird mit Hunspell umgesetzt <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
 Wörterbücher-Dateien</a> (<code>.aff</code>, <code>.dic</code>) sollten in dem Ordner <code>dict</code>
