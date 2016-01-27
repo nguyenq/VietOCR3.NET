@@ -57,6 +57,7 @@ Version 3.7 (12 December 2015)
 - Fix a hang issue with download of multiple language data packs
 - Image zoom with mousewheel and Ctrl key
 
-Version 3.8 Beta (13 December 2015)
+Version 4.0 (30 January 2016)
+- Upgrade Tesseract.NET to 3.0.1.0 (Tesseract 3.04)
 - Upgrade to .NET 4.0
 
