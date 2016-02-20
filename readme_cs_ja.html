@@ -31,7 +31,7 @@
                 dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
             folder of VietOCR.</p>
         <h3>説明</h3>
-        <p><a href="http://code.google.com/p/tesseract-ocr/downloads/list">Language data packs</a>
+        <p><a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a>
             for Tesseract should be decompressed into <code>tesseract</code> installation folder;
             the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
             subdirectory. VietOCR also provides support for downloading and installing selected
@@ -39,7 +39,7 @@
             of the <code>tessdata</code> folder, you may be required to run the program as admin
             to be able to install the downloaded data into the folder if it is inside a system
             folder, such as in <code>C:\Program Files</code>.</p>
-        <p>ベトナム語の言語データはTimes New Roman、Arial、Verdana、Courier Newのフォントで生成されています。そのためよく似たフォントグリフを持つ画像ではより良い認識成功率を示すでしょう。サポートしているフォントと違った見かけのフォントグリフを持つ画像をOCRするには、一般的に、特別にそれらの書体をTesseractに<a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract">学習</a>させた別の言語データパックを生成してください。一部のVNI、TCVN3(ABC)フォントの言語データも最新バージョンにバンドルされています。</p>
+        <p>ベトナム語の言語データはTimes New Roman、Arial、Verdana、Courier Newのフォントで生成されています。そのためよく似たフォントグリフを持つ画像ではより良い認識成功率を示すでしょう。サポートしているフォントと違った見かけのフォントグリフを持つ画像をOCRするには、一般的に、特別にそれらの書体をTesseractに<a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">学習</a>させた別の言語データパックを生成してください。一部のVNI、TCVN3(ABC)フォントの言語データも最新バージョンにバンドルされています。</p>
         <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per
             inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher
             resolutions will not necessarily result in better recognition accuracy, which currently
