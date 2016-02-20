@@ -29,7 +29,7 @@ namespace VietOCR.NET
             get { return lookupISO639; }
             set { lookupISO639 = value; }
         }
-        
+
         private string[] installedLanguages;
 
         public string[] InstalledLanguages
@@ -37,7 +37,7 @@ namespace VietOCR.NET
             get { return installedLanguages; }
             set { installedLanguages = value; }
         }
-        
+
         List<WebClient> clients;
         Dictionary<string, long> downloadTracker;
         int numberOfDownloads, numOfConcurrentTasks;
@@ -100,24 +100,28 @@ namespace VietOCR.NET
             if (numberOfDownloads > 0)
             {
                 string destFolder = Path.Combine(baseDir, TESS_DATA);
-
-                //In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
-                //After extraction, move them up two levels
-                string[] files = Directory.GetFiles(Path.Combine(destFolder, @"tesseract-ocr\tessdata"));
-                foreach (string file in files)
-                {
-                    string destFile = Path.Combine(destFolder, Path.GetFileName(file));
-                    // Ensure that the target does not exist
-                    if (File.Exists(destFile))
-                    {
-                        File.Delete(destFile);
-                    }
-                    File.Move(file, destFile);
-                }
                 try
                 {
-                    //remove extraneous directories left by file extraction
-                    Directory.Delete(Path.Combine(destFolder, "tesseract-ocr"), true);
+                    string downloadFolder = Path.Combine(destFolder, @"tesseract-ocr\tessdata");
+                    if (Directory.Exists(downloadFolder))
+                    {
+                        //In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
+                        //After extraction, move them up two levels
+                        string[] files = Directory.GetFiles(downloadFolder);
+                        foreach (string file in files)
+                        {
+                            string destFile = Path.Combine(destFolder, Path.GetFileName(file));
+                            // Ensure that the target does not exist
+                            if (File.Exists(destFile))
+                            {
+                                File.Delete(destFile);
+                            }
+                            File.Move(file, destFile);
+                        }
+
+                        //remove extraneous directories left by file extraction
+                        Directory.Delete(Path.Combine(destFolder, "tesseract-ocr"), true);
+                    }
                 }
                 catch
                 {
