@@ -106,7 +106,13 @@ namespace VietOCR.NET
                 string[] files = Directory.GetFiles(Path.Combine(destFolder, @"tesseract-ocr\tessdata"));
                 foreach (string file in files)
                 {
-                    File.Move(file, Path.Combine(destFolder, Path.GetFileName(file)));
+                    string destFile = Path.Combine(destFolder, Path.GetFileName(file));
+                    // Ensure that the target does not exist
+                    if (File.Exists(destFile))
+                    {
+                        File.Delete(destFile);
+                    }
+                    File.Move(file, destFile);
                 }
                 try
                 {

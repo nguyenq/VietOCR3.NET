@@ -30,6 +30,17 @@ namespace VietOCR.NET.Utilities
             {
                 ExtractGZip(compressedArchiveName, destFolder);
             }
+            else
+            {
+                string destFile = Path.Combine(destFolder, Path.GetFileName(compressedArchiveName));
+                // Ensure that the target does not exist
+                if (File.Exists(destFile))
+                {
+                    File.Delete(destFile);
+                }
+                    
+                File.Move(compressedArchiveName, destFile);
+            }
         }
         
         public static void ExtractTGZ(String gzArchiveName, String destFolder)
