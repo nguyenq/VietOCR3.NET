@@ -35,7 +35,10 @@ namespace VietOCR.NET.Utilities
             XmlNodeList list = doc.GetElementsByTagName("entry");
             foreach (XmlNode node in list)
             {
-                table.Add(node.Attributes[0].Value, node.InnerText);
+                if (!table.ContainsKey(node.Attributes[0].Value))
+                {
+                    table.Add(node.Attributes[0].Value, node.InnerText);
+                }
             }
         }
     }
