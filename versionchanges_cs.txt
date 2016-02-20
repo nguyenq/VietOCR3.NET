@@ -61,3 +61,5 @@ Version 4.0 (30 January 2016)
 - Upgrade Tesseract.NET to 3.0.1.0 (Tesseract 3.04)
 - Upgrade to .NET 4.0
 
+Version 4.1 (20 February 2016)
+- Update Tesseract.NET to 3.0.2.0
