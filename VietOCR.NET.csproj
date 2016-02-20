@@ -131,12 +131,8 @@
     </Content>
     <Content Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
     <Content Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
-    <Content Include="x64\liblept172.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x64\libtesseract304.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="x64\liblept172.dll" />
+    <None Include="x64\libtesseract304.dll" />
     <Content Include="x86\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
