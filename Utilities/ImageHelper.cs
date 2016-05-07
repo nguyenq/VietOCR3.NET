@@ -21,6 +21,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
+using Tesseract;
 
 namespace VietOCR.NET.Utilities
 {
@@ -256,7 +257,7 @@ namespace VietOCR.NET.Utilities
                 }
             }
         lable2:
-			// Get lower-left pixel color as the "baseline" for cropping
+            // Get lower-left pixel color as the "baseline" for cropping
             baseColor = source.GetPixel(minX, height - 1);
 
             for (int y = height - 1; y >= minY; y--)
@@ -712,6 +713,30 @@ namespace VietOCR.NET.Utilities
             }
 
             return bmpNew;
+        }
+
+        public static Bitmap RemoveLines(Bitmap image)
+        {
+            using (Pix pix = PixConverter.ToPix((Bitmap)image))
+            {
+                // remove horizontal lines
+                using (Pix result = pix.RemoveLines())
+                {
+                    // rotate 90 degrees CW
+                    using (Pix result1 = result.Rotate90(1))
+                    {
+                        // effectively remove vertical lines
+                        using (Pix result2 = result1.RemoveLines())
+                        {
+                            // rotate 90 degrees CCW
+                            using (Pix result3 = result2.Rotate90(-1))
+                            {
+                                return PixConverter.ToBitmap(result3);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }

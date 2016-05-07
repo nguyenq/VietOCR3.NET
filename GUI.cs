@@ -1306,5 +1306,10 @@ namespace VietOCR.NET
 
             setButton();
         }
+
+        protected virtual void removeLinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
     }
 }

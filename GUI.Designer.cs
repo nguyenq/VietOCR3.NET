@@ -102,6 +102,7 @@ namespace VietOCR.NET
             this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deskewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeLinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
@@ -145,10 +146,12 @@ namespace VietOCR.NET
             this.toolStripStatusLabelPSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerImage)).BeginInit();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
             this.splitContainerImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -230,12 +233,13 @@ namespace VietOCR.NET
             this.buttonCollapseExpand.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.buttonCollapseExpand, "buttonCollapseExpand");
             this.buttonCollapseExpand.Name = "buttonCollapseExpand";
-            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTipText"));
+            this.toolTip1.SetToolTip(this.buttonCollapseExpand, resources.GetString("buttonCollapseExpand.ToolTip"));
             this.buttonCollapseExpand.UseVisualStyleBackColor = true;
             this.buttonCollapseExpand.Click += new System.EventHandler(this.buttonCollapseExpand_Click);
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnOpen,
             this.toolStripBtnScan,
@@ -425,12 +429,14 @@ namespace VietOCR.NET
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "standardTextBoxContextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // toolStrip2
             // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnOCR,
             this.toolStripButtonCancelOCR,
@@ -536,6 +542,7 @@ namespace VietOCR.NET
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.commandToolStripMenuItem,
@@ -630,6 +637,7 @@ namespace VietOCR.NET
             this.filterToolStripMenuItem,
             this.deskewToolStripMenuItem,
             this.autocropToolStripMenuItem,
+            this.removeLinesToolStripMenuItem,
             this.toolStripMenuItem12,
             this.undoToolStripMenuItem,
             this.toolStripMenuItem8,
@@ -714,6 +722,12 @@ namespace VietOCR.NET
             this.autocropToolStripMenuItem.Name = "autocropToolStripMenuItem";
             resources.ApplyResources(this.autocropToolStripMenuItem, "autocropToolStripMenuItem");
             this.autocropToolStripMenuItem.Click += new System.EventHandler(this.autocropToolStripMenuItem_Click);
+            // 
+            // removeLinesToolStripMenuItem
+            // 
+            this.removeLinesToolStripMenuItem.Name = "removeLinesToolStripMenuItem";
+            resources.ApplyResources(this.removeLinesToolStripMenuItem, "removeLinesToolStripMenuItem");
+            this.removeLinesToolStripMenuItem.Click += new System.EventHandler(this.removeLinesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem12
             // 
@@ -902,6 +916,7 @@ namespace VietOCR.NET
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
@@ -1010,12 +1025,14 @@ namespace VietOCR.NET
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GUI_KeyDown);
             this.splitContainerImage.Panel1.ResumeLayout(false);
             this.splitContainerImage.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerImage)).EndInit();
             this.splitContainerImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelImage.ResumeLayout(false);
             this.panelArrow.ResumeLayout(false);
@@ -1148,5 +1165,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripButton toolStripBtnSave;
         protected System.Windows.Forms.ToolStripButton toolStripBtnOCR;
         protected System.Windows.Forms.ToolStripButton toolStripButtonCancelOCR;
+        private System.Windows.Forms.ToolStripMenuItem removeLinesToolStripMenuItem;
     }
 }
