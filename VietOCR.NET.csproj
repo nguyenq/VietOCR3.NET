@@ -746,6 +746,8 @@
       <DependentUpon>HtmlHelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\gmseDeskew.cs" />
+    <Compile Include="Utilities\GrayBMP_File.cs" />
+    <Compile Include="Utilities\ImageConverter.cs" />
     <Compile Include="Utilities\ImageHelper.cs" />
     <Compile Include="Utilities\PdfUtilities.cs" />
     <Compile Include="ImageInfoDialog.cs">
