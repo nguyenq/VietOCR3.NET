@@ -119,6 +119,8 @@ namespace VietOCR.NET
             GetInstalledLanguagePacks();
             PopulateOCRLanguageBox();
 
+            this.toolStripDropDownButtonSegmentedRegions.Visible = false;
+
             //rectNormal = DesktopBounds;
 
             //// Set system event.
@@ -1412,6 +1414,31 @@ namespace VietOCR.NET
             {
                 //Logger.getLogger(Gui.class.getName()).log(Level.INFO, null, ex);
             }
+        }
+
+        private void toolStripMenuItemSymbol_Click(object sender, EventArgs e)
+        {
+            setSegmentedRegions();
+        }
+
+        private void toolStripMenuItemWord_Click(object sender, EventArgs e)
+        {
+            setSegmentedRegions();
+        }
+
+        private void toolStripMenuItemTextLine_Click(object sender, EventArgs e)
+        {
+            setSegmentedRegions();
+        }
+
+        private void toolStripMenuItemPara_Click(object sender, EventArgs e)
+        {
+            setSegmentedRegions();
+        }
+
+        private void toolStripMenuItemBlock_Click(object sender, EventArgs e)
+        {
+            setSegmentedRegions();
         }
     }
 }

@@ -1004,30 +1004,35 @@ namespace VietOCR.NET
             this.toolStripMenuItemSymbol.CheckOnClick = true;
             this.toolStripMenuItemSymbol.Name = "toolStripMenuItemSymbol";
             resources.ApplyResources(this.toolStripMenuItemSymbol, "toolStripMenuItemSymbol");
+            this.toolStripMenuItemSymbol.Click += new System.EventHandler(this.toolStripMenuItemSymbol_Click);
             // 
             // toolStripMenuItemWord
             // 
             this.toolStripMenuItemWord.CheckOnClick = true;
             this.toolStripMenuItemWord.Name = "toolStripMenuItemWord";
             resources.ApplyResources(this.toolStripMenuItemWord, "toolStripMenuItemWord");
+            this.toolStripMenuItemWord.Click += new System.EventHandler(this.toolStripMenuItemWord_Click);
             // 
             // toolStripMenuItemTextLine
             // 
             this.toolStripMenuItemTextLine.CheckOnClick = true;
             this.toolStripMenuItemTextLine.Name = "toolStripMenuItemTextLine";
             resources.ApplyResources(this.toolStripMenuItemTextLine, "toolStripMenuItemTextLine");
+            this.toolStripMenuItemTextLine.Click += new System.EventHandler(this.toolStripMenuItemTextLine_Click);
             // 
             // toolStripMenuItemPara
             // 
             this.toolStripMenuItemPara.CheckOnClick = true;
             this.toolStripMenuItemPara.Name = "toolStripMenuItemPara";
             resources.ApplyResources(this.toolStripMenuItemPara, "toolStripMenuItemPara");
+            this.toolStripMenuItemPara.Click += new System.EventHandler(this.toolStripMenuItemPara_Click);
             // 
             // toolStripMenuItemBlock
             // 
             this.toolStripMenuItemBlock.CheckOnClick = true;
             this.toolStripMenuItemBlock.Name = "toolStripMenuItemBlock";
             resources.ApplyResources(this.toolStripMenuItemBlock, "toolStripMenuItemBlock");
+            this.toolStripMenuItemBlock.Click += new System.EventHandler(this.toolStripMenuItemBlock_Click);
             // 
             // toolStripStatusLabel3
             // 
