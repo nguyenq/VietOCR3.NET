@@ -107,6 +107,8 @@ namespace VietOCR.NET
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.screenshotModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripSeparator();
+            this.segmentedRegionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wordWrapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,6 +141,12 @@ namespace VietOCR.NET
             this.toolStripStatusLabelDim = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStripStatusLabelDimValue = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButtonSegmentedRegions = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItemSymbol = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemWord = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemTextLine = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemPara = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemBlock = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
@@ -641,7 +649,9 @@ namespace VietOCR.NET
             this.toolStripMenuItem12,
             this.undoToolStripMenuItem,
             this.toolStripMenuItem8,
-            this.screenshotModeToolStripMenuItem});
+            this.screenshotModeToolStripMenuItem,
+            this.toolStripMenuItem14,
+            this.segmentedRegionsToolStripMenuItem});
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
             resources.ApplyResources(this.imageToolStripMenuItem, "imageToolStripMenuItem");
             // 
@@ -750,6 +760,18 @@ namespace VietOCR.NET
             this.screenshotModeToolStripMenuItem.Name = "screenshotModeToolStripMenuItem";
             resources.ApplyResources(this.screenshotModeToolStripMenuItem, "screenshotModeToolStripMenuItem");
             this.screenshotModeToolStripMenuItem.Click += new System.EventHandler(this.screenshotModeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            resources.ApplyResources(this.toolStripMenuItem14, "toolStripMenuItem14");
+            // 
+            // segmentedRegionsToolStripMenuItem
+            // 
+            this.segmentedRegionsToolStripMenuItem.CheckOnClick = true;
+            this.segmentedRegionsToolStripMenuItem.Name = "segmentedRegionsToolStripMenuItem";
+            resources.ApplyResources(this.segmentedRegionsToolStripMenuItem, "segmentedRegionsToolStripMenuItem");
+            this.segmentedRegionsToolStripMenuItem.Click += new System.EventHandler(this.segmentedRegionsToolStripMenuItem_Click);
             // 
             // formatToolStripMenuItem
             // 
@@ -923,6 +945,7 @@ namespace VietOCR.NET
             this.toolStripStatusLabel2,
             this.toolStripStatusLabelDim,
             this.toolStripStatusLabelDimValue,
+            this.toolStripDropDownButtonSegmentedRegions,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabelSpring,
             this.toolStripStatusLabelSM,
@@ -963,6 +986,48 @@ namespace VietOCR.NET
             this.toolStripStatusLabelDimValue.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelDimValue.Name = "toolStripStatusLabelDimValue";
             resources.ApplyResources(this.toolStripStatusLabelDimValue, "toolStripStatusLabelDimValue");
+            // 
+            // toolStripDropDownButtonSegmentedRegions
+            // 
+            this.toolStripDropDownButtonSegmentedRegions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButtonSegmentedRegions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemSymbol,
+            this.toolStripMenuItemWord,
+            this.toolStripMenuItemTextLine,
+            this.toolStripMenuItemPara,
+            this.toolStripMenuItemBlock});
+            resources.ApplyResources(this.toolStripDropDownButtonSegmentedRegions, "toolStripDropDownButtonSegmentedRegions");
+            this.toolStripDropDownButtonSegmentedRegions.Name = "toolStripDropDownButtonSegmentedRegions";
+            // 
+            // toolStripMenuItemSymbol
+            // 
+            this.toolStripMenuItemSymbol.CheckOnClick = true;
+            this.toolStripMenuItemSymbol.Name = "toolStripMenuItemSymbol";
+            resources.ApplyResources(this.toolStripMenuItemSymbol, "toolStripMenuItemSymbol");
+            // 
+            // toolStripMenuItemWord
+            // 
+            this.toolStripMenuItemWord.CheckOnClick = true;
+            this.toolStripMenuItemWord.Name = "toolStripMenuItemWord";
+            resources.ApplyResources(this.toolStripMenuItemWord, "toolStripMenuItemWord");
+            // 
+            // toolStripMenuItemTextLine
+            // 
+            this.toolStripMenuItemTextLine.CheckOnClick = true;
+            this.toolStripMenuItemTextLine.Name = "toolStripMenuItemTextLine";
+            resources.ApplyResources(this.toolStripMenuItemTextLine, "toolStripMenuItemTextLine");
+            // 
+            // toolStripMenuItemPara
+            // 
+            this.toolStripMenuItemPara.CheckOnClick = true;
+            this.toolStripMenuItemPara.Name = "toolStripMenuItemPara";
+            resources.ApplyResources(this.toolStripMenuItemPara, "toolStripMenuItemPara");
+            // 
+            // toolStripMenuItemBlock
+            // 
+            this.toolStripMenuItemBlock.CheckOnClick = true;
+            this.toolStripMenuItemBlock.Name = "toolStripMenuItemBlock";
+            resources.ApplyResources(this.toolStripMenuItemBlock, "toolStripMenuItemBlock");
             // 
             // toolStripStatusLabel3
             // 
@@ -1166,5 +1231,13 @@ namespace VietOCR.NET
         protected System.Windows.Forms.ToolStripButton toolStripBtnOCR;
         protected System.Windows.Forms.ToolStripButton toolStripButtonCancelOCR;
         private System.Windows.Forms.ToolStripMenuItem removeLinesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem segmentedRegionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonSegmentedRegions;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSymbol;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWord;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTextLine;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemPara;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBlock;
     }
 }

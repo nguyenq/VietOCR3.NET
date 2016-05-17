@@ -851,7 +851,7 @@ namespace VietOCR.NET
         protected virtual void ChangeUILanguage(string locale)
         {
             string imageProperties = this.toolStripStatusLabelDimValue.Text; // retain values of image properties in statusbar
-            string totalPage = this.toolStripLabelPageNum.Text; 
+            string totalPage = this.toolStripLabelPageNum.Text;
 
             FormLocalizer localizer = new FormLocalizer(this, typeof(GUI));
             localizer.ApplyCulture(new CultureInfo(locale));
@@ -1063,7 +1063,7 @@ namespace VietOCR.NET
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
-        
+
         protected virtual void metadataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
@@ -1310,6 +1310,108 @@ namespace VietOCR.NET
         protected virtual void removeLinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        private void segmentedRegionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.toolStripDropDownButtonSegmentedRegions.Visible = this.segmentedRegionsToolStripMenuItem.Checked;
+            setSegmentedRegions();
+        }
+
+        void setSegmentedRegions()
+        {
+            //if (!this.segmentedRegionsToolStripMenuItem.Checked || iioImageList == null || this.buttonActualSize.isEnabled()) {
+            //    ((JImageLabel) jImageLabel).setSegmentedRegions(null);
+            //    return;
+            //}
+
+            try
+            {
+                OCR<Image> ocrEngine = new OCRImages();
+                //ocrEngine.setDatapath(datapath);
+                Dictionary<Color, List<Rectangle>> map = null; //((JImageLabel) jImageLabel).getSegmentedRegions();
+                if (map == null)
+                {
+                    map = new Dictionary<Color, List<Rectangle>>();
+                }
+
+                Image image = imageList[imageIndex];
+
+                List<Rectangle> regions = new List<Rectangle>();
+
+                if (toolStripMenuItemBlock.Checked)
+                {
+                    if (!map.ContainsKey(Color.Gray))
+                    {
+                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_BLOCK);
+                        map.Add(Color.Gray, regions);
+                    }
+                }
+                else
+                {
+                    map.Remove(Color.Gray);
+                }
+
+                if (toolStripMenuItemPara.Checked)
+                {
+                    if (!map.ContainsKey(Color.Green))
+                    {
+                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_PARA);
+                        map.Add(Color.Green, regions);
+                    }
+                }
+                else
+                {
+                    map.Remove(Color.Green);
+                }
+
+                if (toolStripMenuItemTextLine.Checked)
+                {
+                    if (!map.ContainsKey(Color.Red))
+                    {
+                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_TEXTLINE);
+                        map.Add(Color.Red, regions);
+                    }
+                }
+                else
+                {
+                    map.Remove(Color.Red);
+                }
+
+                if (toolStripMenuItemWord.Checked)
+                {
+                    if (!map.ContainsKey(Color.Blue))
+                    {
+                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_WORD);
+                        map.Add(Color.Blue, regions);
+                    }
+                }
+                else
+                {
+                    map.Remove(Color.Blue);
+                }
+
+                if (toolStripMenuItemSymbol.Checked)
+                {
+                    if (!map.ContainsKey(Color.Magenta))
+                    {
+                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_SYMBOL);
+                        map.Add(Color.Magenta, regions);
+                    }
+                }
+                else
+                {
+                    map.Remove(Color.Magenta);
+                }
+
+                //((JImageLabel) jImageLabel).setSegmentedRegions(map);
+                //jImageLabel.repaint();
+                //jImageLabel.revalidate();
+            }
+            catch (Exception ex)
+            {
+                //Logger.getLogger(Gui.class.getName()).log(Level.INFO, null, ex);
+            }
         }
     }
 }
