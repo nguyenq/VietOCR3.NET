@@ -1326,6 +1326,7 @@ namespace VietOCR.NET
             if (!this.segmentedRegionsToolStripMenuItem.Checked || imageList == null || this.toolStripBtnActualSize.Enabled)
             {
                 pictureBox1.SegmentedRegions = null;
+                pictureBox1.Refresh();
                 return;
             }
 
@@ -1406,8 +1407,8 @@ namespace VietOCR.NET
             }
 
             pictureBox1.SegmentedRegions = map;
-            //jImageLabel.repaint();
-            //jImageLabel.revalidate();
+            pictureBox1.Refresh();
+            //pictureBox1.Update();
         }
 
         private void toolStripMenuItemSymbol_Click(object sender, EventArgs e)

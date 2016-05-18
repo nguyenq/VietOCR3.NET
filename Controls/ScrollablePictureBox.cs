@@ -107,6 +107,28 @@ namespace VietOCR.NET.Controls
             //Graphics g = (Graphics)pe.Graphics;
             //g.DrawImage(this.Image, this.ClientRectangle);
 
+            // draw segmented regions
+            if (SegmentedRegions != null)
+            {
+                //int x = (this.getWidth() - this.getIcon().getIconWidth()) / 2;
+                //int y = (this.getHeight() - this.getIcon().getIconHeight()) / 2;
+
+                Graphics g = (Graphics)pe.Graphics;
+
+                foreach (Color color in SegmentedRegions.Keys)
+                {
+                    // Create pen
+                    Pen pen = new Pen(color);
+
+                    foreach (Rectangle region in SegmentedRegions[color])
+                    {
+                        g.DrawRectangle(pen, region);
+                    }
+
+                    pen.Dispose();
+                }
+            }
+
             if (rect != Rectangle.Empty)
             {
                 Graphics g = (Graphics)pe.Graphics;
