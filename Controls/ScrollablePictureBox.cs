@@ -90,6 +90,12 @@ namespace VietOCR.NET.Controls
             rect = Rectangle.Empty;
         }
 
+        /// <summary>
+        /// Segmented regions.
+        /// </summary>
+        public Dictionary<Color, List<Rectangle>> SegmentedRegions
+        { get; set; }
+
         protected override void OnPaint(PaintEventArgs pe)
         {
             // Calling the base class OnPaint
@@ -149,7 +155,7 @@ namespace VietOCR.NET.Controls
             }
         }
 
-        private void ScrollablePictureBox_GotFocus(object sender, EventArgs e) 
+        private void ScrollablePictureBox_GotFocus(object sender, EventArgs e)
         {
             ((Panel)this.Parent).AutoScrollPosition = new Point(Math.Abs(currentScrollPos.X), Math.Abs(currentScrollPos.Y));
         }

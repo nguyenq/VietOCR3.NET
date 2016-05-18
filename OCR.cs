@@ -20,6 +20,7 @@ using System.Drawing;
 using System.Threading;
 using System.ComponentModel;
 using System.IO;
+using Tesseract;
 
 namespace VietOCR.NET
 {
@@ -115,6 +116,14 @@ namespace VietOCR.NET
 
             return RecognizeText(imageEntities, inputName);
         }
+
+        /// <summary>
+        /// Gets segmented regions at specified page iterator level.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="tessPageIteratorLevel"></param>
+        /// <returns></returns>
+        public abstract List<Rectangle> GetSegmentedRegions(Bitmap image, PageIteratorLevel level);
 
         void ProgressEvent(int percent)
         {

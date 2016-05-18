@@ -139,5 +139,20 @@ namespace VietOCR.NET
 
             return pix;
         }
+
+        /// <summary>
+        /// Gets segmented regions at specified page iterator level.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="level"></param>
+        /// <returns></returns>
+        public override List<Rectangle> GetSegmentedRegions(Bitmap image, PageIteratorLevel level)
+        {
+            using (var engine = new TesseractEngine(Datapath, Language, EngineMode.Default))
+            {
+                List<Rectangle> boxes = engine.GetSegmentedRegions(image, level);
+                return boxes;
+            }
+        }
     }
 }

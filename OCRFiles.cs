@@ -121,5 +121,16 @@ namespace VietOCR.NET
 
             return configvars.ToString();
         }
+
+        /// <summary>
+        /// Gets segmented regions at specified page iterator level.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="level"></param>
+        /// <returns></returns>
+        public override List<Rectangle> GetSegmentedRegions(Bitmap image, PageIteratorLevel level)
+        {
+            return null;
+        }
     }
 }

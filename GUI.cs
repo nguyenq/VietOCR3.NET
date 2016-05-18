@@ -27,6 +27,7 @@ using System.Threading;
 using System.Drawing.Imaging;
 using Net.SourceForge.Vietpad.InputMethod;
 using VietOCR.NET.Utilities;
+using Tesseract;
 
 namespace VietOCR.NET
 {
@@ -986,7 +987,7 @@ namespace VietOCR.NET
                 File.Delete(tempFileName);
                 tempFileName = Path.ChangeExtension(tempFileName, ".png");
                 tempFileCollection.AddFile(tempFileName, false);
-                image.Save(tempFileName, ImageFormat.Png);
+                image.Save(tempFileName, System.Drawing.Imaging.ImageFormat.Png);
                 openFile(tempFileName);
             }
         }
@@ -1322,98 +1323,91 @@ namespace VietOCR.NET
 
         void setSegmentedRegions()
         {
-            //if (!this.segmentedRegionsToolStripMenuItem.Checked || iioImageList == null || this.buttonActualSize.isEnabled()) {
-            //    ((JImageLabel) jImageLabel).setSegmentedRegions(null);
-            //    return;
-            //}
-
-            try
+            if (!this.segmentedRegionsToolStripMenuItem.Checked || imageList == null || this.toolStripBtnActualSize.Enabled)
             {
-                OCR<Image> ocrEngine = new OCRImages();
-                //ocrEngine.setDatapath(datapath);
-                Dictionary<Color, List<Rectangle>> map = null; //((JImageLabel) jImageLabel).getSegmentedRegions();
-                if (map == null)
-                {
-                    map = new Dictionary<Color, List<Rectangle>>();
-                }
-
-                Image image = imageList[imageIndex];
-
-                List<Rectangle> regions = new List<Rectangle>();
-
-                if (toolStripMenuItemBlock.Checked)
-                {
-                    if (!map.ContainsKey(Color.Gray))
-                    {
-                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_BLOCK);
-                        map.Add(Color.Gray, regions);
-                    }
-                }
-                else
-                {
-                    map.Remove(Color.Gray);
-                }
-
-                if (toolStripMenuItemPara.Checked)
-                {
-                    if (!map.ContainsKey(Color.Green))
-                    {
-                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_PARA);
-                        map.Add(Color.Green, regions);
-                    }
-                }
-                else
-                {
-                    map.Remove(Color.Green);
-                }
-
-                if (toolStripMenuItemTextLine.Checked)
-                {
-                    if (!map.ContainsKey(Color.Red))
-                    {
-                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_TEXTLINE);
-                        map.Add(Color.Red, regions);
-                    }
-                }
-                else
-                {
-                    map.Remove(Color.Red);
-                }
-
-                if (toolStripMenuItemWord.Checked)
-                {
-                    if (!map.ContainsKey(Color.Blue))
-                    {
-                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_WORD);
-                        map.Add(Color.Blue, regions);
-                    }
-                }
-                else
-                {
-                    map.Remove(Color.Blue);
-                }
-
-                if (toolStripMenuItemSymbol.Checked)
-                {
-                    if (!map.ContainsKey(Color.Magenta))
-                    {
-                        //regions = ocrEngine.getSegmentedRegions(image, ITessAPI.TessPageIteratorLevel.RIL_SYMBOL);
-                        map.Add(Color.Magenta, regions);
-                    }
-                }
-                else
-                {
-                    map.Remove(Color.Magenta);
-                }
-
-                //((JImageLabel) jImageLabel).setSegmentedRegions(map);
-                //jImageLabel.repaint();
-                //jImageLabel.revalidate();
+                pictureBox1.SegmentedRegions = null;
+                return;
             }
-            catch (Exception ex)
+
+            OCR<Image> ocrEngine = new OCRImages();
+            Dictionary<Color, List<Rectangle>> map = pictureBox1.SegmentedRegions;
+            if (map == null)
             {
-                //Logger.getLogger(Gui.class.getName()).log(Level.INFO, null, ex);
+                map = new Dictionary<Color, List<Rectangle>>();
             }
+
+            Bitmap image = (Bitmap)imageList[imageIndex];
+
+            List<Rectangle> regions = new List<Rectangle>();
+
+            if (toolStripMenuItemBlock.Checked)
+            {
+                if (!map.ContainsKey(Color.Gray))
+                {
+                    regions = ocrEngine.GetSegmentedRegions(image, PageIteratorLevel.Block);
+                    map.Add(Color.Gray, regions);
+                }
+            }
+            else
+            {
+                map.Remove(Color.Gray);
+            }
+
+            if (toolStripMenuItemPara.Checked)
+            {
+                if (!map.ContainsKey(Color.Green))
+                {
+                    regions = ocrEngine.GetSegmentedRegions(image, PageIteratorLevel.Para);
+                    map.Add(Color.Green, regions);
+                }
+            }
+            else
+            {
+                map.Remove(Color.Green);
+            }
+
+            if (toolStripMenuItemTextLine.Checked)
+            {
+                if (!map.ContainsKey(Color.Red))
+                {
+                    regions = ocrEngine.GetSegmentedRegions(image, PageIteratorLevel.TextLine);
+                    map.Add(Color.Red, regions);
+                }
+            }
+            else
+            {
+                map.Remove(Color.Red);
+            }
+
+            if (toolStripMenuItemWord.Checked)
+            {
+                if (!map.ContainsKey(Color.Blue))
+                {
+                    regions = ocrEngine.GetSegmentedRegions(image, PageIteratorLevel.Word);
+                    map.Add(Color.Blue, regions);
+                }
+            }
+            else
+            {
+                map.Remove(Color.Blue);
+            }
+
+            if (toolStripMenuItemSymbol.Checked)
+            {
+                if (!map.ContainsKey(Color.Magenta))
+                {
+                    regions = ocrEngine.GetSegmentedRegions(image, PageIteratorLevel.Symbol);
+                    map.Add(Color.Magenta, regions);
+                }
+            }
+            else
+            {
+                map.Remove(Color.Magenta);
+            }
+
+            pictureBox1.SegmentedRegions = map;
+            //jImageLabel.repaint();
+            //jImageLabel.revalidate();
         }
 
         private void toolStripMenuItemSymbol_Click(object sender, EventArgs e)
