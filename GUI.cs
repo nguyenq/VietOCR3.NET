@@ -89,6 +89,12 @@ namespace VietOCR.NET
         const string strBackColor = "BackColor";
         const string strFilterIndex = "FilterIndex";
         const string strMruList = "MruList";
+        const string strSegmentedRegions = "SegmentedRegions";
+        const string strSegmentedRegionsPara = "SegmentedRegionsPara";
+        const string strSegmentedRegionsTextLine = "SegmentedRegionsTextLine";
+        const string strSegmentedRegionsSymbol = "SegmentedRegionsSymbol";
+        const string strSegmentedRegionsBlock = "SegmentedRegionsBlock";
+        const string strSegmentedRegionsWord = "SegmentedRegionsWord";
 
         protected bool isFitImageSelected;
         protected Point curScrollPos;
@@ -119,8 +125,6 @@ namespace VietOCR.NET
 
             GetInstalledLanguagePacks();
             PopulateOCRLanguageBox();
-
-            this.toolStripDropDownButtonSegmentedRegions.Visible = false;
 
             //rectNormal = DesktopBounds;
 
@@ -904,6 +908,14 @@ namespace VietOCR.NET
             {
                 mruList.Add(fileName);
             }
+
+            this.segmentedRegionsToolStripMenuItem.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegions, Convert.ToInt32(false)));
+            this.toolStripDropDownButtonSegmentedRegions.Visible = this.segmentedRegionsToolStripMenuItem.Checked;
+            this.toolStripMenuItemPara.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegionsPara, Convert.ToInt32(false)));
+            this.toolStripMenuItemTextLine.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegionsTextLine, Convert.ToInt32(false)));
+            this.toolStripMenuItemSymbol.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegionsSymbol, Convert.ToInt32(false)));
+            this.toolStripMenuItemBlock.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegionsBlock, Convert.ToInt32(false)));
+            this.toolStripMenuItemWord.Checked = Convert.ToBoolean((int)regkey.GetValue(strSegmentedRegionsWord, Convert.ToInt32(false)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -920,6 +932,13 @@ namespace VietOCR.NET
             regkey.SetValue(strBackColor, this.textBox1.BackColor.ToArgb());
             regkey.SetValue(strFilterIndex, filterIndex);
             regkey.SetValue(strUILang, selectedUILanguage);
+            regkey.SetValue(strSegmentedRegions, Convert.ToInt32(this.segmentedRegionsToolStripMenuItem.Checked));
+            regkey.SetValue(strSegmentedRegionsPara, Convert.ToInt32(this.toolStripMenuItemPara.Checked));
+            regkey.SetValue(strSegmentedRegionsTextLine, Convert.ToInt32(this.toolStripMenuItemTextLine.Checked));
+            regkey.SetValue(strSegmentedRegionsSymbol, Convert.ToInt32(this.toolStripMenuItemSymbol.Checked));
+            regkey.SetValue(strSegmentedRegionsBlock, Convert.ToInt32(this.toolStripMenuItemBlock.Checked));
+            regkey.SetValue(strSegmentedRegionsWord, Convert.ToInt32(this.toolStripMenuItemWord.Checked));
+
             StringBuilder strB = new StringBuilder();
             foreach (string name in mruList)
             {
