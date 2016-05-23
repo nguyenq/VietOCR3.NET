@@ -102,6 +102,7 @@ namespace VietOCR.NET
             this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deskewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeLinesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -646,6 +647,7 @@ namespace VietOCR.NET
             this.filterToolStripMenuItem,
             this.deskewToolStripMenuItem,
             this.autocropToolStripMenuItem,
+            this.cropToolStripMenuItem,
             this.removeLinesToolStripMenuItem,
             this.toolStripMenuItem12,
             this.undoToolStripMenuItem,
@@ -733,6 +735,12 @@ namespace VietOCR.NET
             this.autocropToolStripMenuItem.Name = "autocropToolStripMenuItem";
             resources.ApplyResources(this.autocropToolStripMenuItem, "autocropToolStripMenuItem");
             this.autocropToolStripMenuItem.Click += new System.EventHandler(this.autocropToolStripMenuItem_Click);
+            // 
+            // cropToolStripMenuItem
+            // 
+            this.cropToolStripMenuItem.Name = "cropToolStripMenuItem";
+            resources.ApplyResources(this.cropToolStripMenuItem, "cropToolStripMenuItem");
+            this.cropToolStripMenuItem.Click += new System.EventHandler(this.cropToolStripMenuItem_Click);
             // 
             // removeLinesToolStripMenuItem
             // 
@@ -1245,5 +1253,6 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemTextLine;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemPara;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBlock;
+        private System.Windows.Forms.ToolStripMenuItem cropToolStripMenuItem;
     }
 }

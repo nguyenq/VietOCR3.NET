@@ -170,6 +170,30 @@ namespace VietOCR.NET
             this.Cursor = Cursors.Default;
         }
 
+        protected override void cropToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            Rectangle rect = this.pictureBox1.GetRect();
+
+            if (rect == Rectangle.Empty)
+            { 
+                return;
+            }
+
+            rect = new Rectangle((int)(rect.X * scaleX), (int)(rect.Y * scaleY), (int)(rect.Width * scaleX), (int)(rect.Height * scaleY));
+ 
+            this.Cursor = Cursors.WaitCursor;
+            originalImage = imageList[imageIndex];
+            imageList[imageIndex] = ImageHelper.Crop(originalImage, rect);
+            stack.Push(originalImage);
+            displayImage();
+            this.Cursor = Cursors.Default;
+        }
+
         protected override void removeLinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (imageList == null)

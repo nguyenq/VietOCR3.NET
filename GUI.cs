@@ -743,6 +743,9 @@ namespace VietOCR.NET
             }
             curScrollPos = Point.Empty;
             this.centerPicturebox();
+
+            this.pictureBox1.SegmentedRegions = null;
+            setSegmentedRegions();
         }
 
         protected void centerPicturebox()
@@ -1453,6 +1456,11 @@ namespace VietOCR.NET
         private void toolStripMenuItemBlock_Click(object sender, EventArgs e)
         {
             setSegmentedRegions();
+        }
+
+        protected virtual void cropToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
     }
 }
