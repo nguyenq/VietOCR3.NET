@@ -744,6 +744,7 @@ namespace VietOCR.NET
             curScrollPos = Point.Empty;
             this.centerPicturebox();
 
+            this.pictureBox1.Deselect();
             this.pictureBox1.SegmentedRegions = null;
             setSegmentedRegions();
         }
