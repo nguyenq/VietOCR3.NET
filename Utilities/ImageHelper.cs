@@ -397,7 +397,7 @@ namespace VietOCR.NET.Utilities
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static Bitmap ConvertGrayscale(Bitmap input)
+        public static Image ConvertGrayscale(Image input)
         {
             if (input.PixelFormat == PixelFormat.Format8bppIndexed)
             {
@@ -406,8 +406,9 @@ namespace VietOCR.NET.Utilities
 
             byte[] gray = GrayBMP_File.CreateGrayBitmapArray(input);
             Image result = ImageConverter.byteArrayToImage(gray);
+            ((Bitmap)result).SetResolution(input.HorizontalResolution, input.VerticalResolution);
             
-            return (Bitmap) result;
+            return result;
         }
 
         ///// <summary>

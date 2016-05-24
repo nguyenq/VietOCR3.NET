@@ -188,7 +188,12 @@ namespace VietOCR.NET
  
             this.Cursor = Cursors.WaitCursor;
             originalImage = imageList[imageIndex];
-            imageList[imageIndex] = ImageHelper.Crop(originalImage, rect);
+            Image croppedImage = ImageHelper.Crop(originalImage, rect);
+            if (originalImage.PixelFormat == PixelFormat.Format8bppIndexed)
+            {
+                croppedImage = ImageHelper.ConvertGrayscale(croppedImage);
+            }
+            imageList[imageIndex] = croppedImage;
             stack.Push(originalImage);
             displayImage();
             this.Cursor = Cursors.Default;
