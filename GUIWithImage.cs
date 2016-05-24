@@ -201,10 +201,19 @@ namespace VietOCR.NET
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
             }
-            originalImage = imageList[imageIndex];
-            stack.Push(originalImage);
-            imageList[imageIndex] = ImageHelper.RemoveLines((Bitmap)originalImage);
-            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+            
+            try
+            {
+                originalImage = imageList[imageIndex];
+                imageList[imageIndex] = ImageHelper.RemoveLines((Bitmap)originalImage);
+                this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+                stack.Push(originalImage);
+            }
+            catch
+            {
+                MessageBox.Show(this, Properties.Resources.Require_grayscale, strProgName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         protected override void grayscaleToolStripMenuItem_Click(object sender, EventArgs e)

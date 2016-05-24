@@ -74,7 +74,7 @@
     <value>264, 26</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Auto &amp;Crop</value>
+    <value>&amp;Auto Crop</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 26</value>
@@ -113,13 +113,19 @@
     <value>&amp;Command</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 160</value>
+    <value>147, 172</value>
   </data>
   <data name="contrastToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 26</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Contrast...</value>
+  </data>
+  <data name="cropToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 26</value>
+  </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Crop</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 26</value>
@@ -629,7 +635,7 @@
     <value>264, 6</value>
   </data>
   <data name="toolStripMenuItemBlock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>151, 26</value>
   </data>
   <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
     <value>Block</value>
@@ -638,25 +644,25 @@
     <value>264, 6</value>
   </data>
   <data name="toolStripMenuItemPara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>151, 26</value>
   </data>
   <data name="toolStripMenuItemPara.Text" xml:space="preserve">
     <value>Paragraph</value>
   </data>
   <data name="toolStripMenuItemSymbol.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>151, 26</value>
   </data>
   <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
     <value>Character</value>
   </data>
   <data name="toolStripMenuItemTextLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>151, 26</value>
   </data>
   <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
     <value>Text Line</value>
   </data>
   <data name="toolStripMenuItemWord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 26</value>
+    <value>151, 26</value>
   </data>
   <data name="toolStripMenuItemWord.Text" xml:space="preserve">
     <value>Word</value>
@@ -689,10 +695,10 @@
     <value>0, 24</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
+    <value>353, 24</value>
   </data>
   <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
+    <value>353, 24</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 24</value>
@@ -734,7 +740,7 @@
     <value>0, 24</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
+    <value>353, 24</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 26</value>

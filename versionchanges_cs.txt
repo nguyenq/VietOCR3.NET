@@ -64,6 +64,6 @@ Version 4.0 (30 January 2016)
 Version 4.1 (20 February 2016)
 - Update Tesseract.NET to 3.0.2.0
 
-Version 4.2 (18 May 2016)
-- Implement remove lines function
+Version 4.2 RC (23 May 2016)
+- Implement remove lines & crop image function
 - Display segmented regions

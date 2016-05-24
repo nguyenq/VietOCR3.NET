@@ -494,7 +494,7 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .NET GUI Frontend for Tesseract 3.02 OCR Engine.
+        ///   Looks up a localized string similar to .NET GUI Frontend for Tesseract 3.04 OCR Engine.
         /// </summary>
         internal static string Program_desc {
             get {
@@ -508,6 +508,15 @@ namespace VietOCR.NET.Properties {
         internal static string readme {
             get {
                 return ResourceManager.GetString("readme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image may require conversion to grayscale..
+        /// </summary>
+        internal static string Require_grayscale {
+            get {
+                return ResourceManager.GetString("Require_grayscale", resourceCulture);
             }
         }
         
