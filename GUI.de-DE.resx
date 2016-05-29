@@ -371,7 +371,7 @@
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>TIFF&amp; Auftrennen...</value>
+    <value>TIFF &amp;Auftrennen...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
