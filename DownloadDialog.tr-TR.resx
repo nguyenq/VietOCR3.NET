@@ -62,7 +62,7 @@
     <value>263, 180</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Dil Verilerini İndirin</value>
+    <value>Dil Verilerini İndir</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 54</value>
@@ -71,7 +71,7 @@
     <value>75, 23</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
-    <value>İptal</value>
+    <value>Vazgeç</value>
   </data>
   <data name="buttonClose.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 109</value>
@@ -98,7 +98,7 @@
     <value>158, 142</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
-    <value>Mevcut Diller</value>
+    <value>Kullanılabilir Diller</value>
   </data>
   <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 18</value>
@@ -113,7 +113,7 @@
     <value>263, 22</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
-    <value>durumŞeridi1</value>
+    <value>statusStrip1</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>

@@ -95,7 +95,7 @@
     <value>139, 17</value>
   </data>
   <data name="radioButton1.Text" xml:space="preserve">
-    <value>Begin hoofdletter per zin</value>
+    <value>Start zin met hoofdletter</value>
   </data>
   <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 42</value>
@@ -113,7 +113,7 @@
     <value>82, 17</value>
   </data>
   <data name="radioButton3.Text" xml:space="preserve">
-    <value>Hoofdletters</value>
+    <value>HOOFDLETTERS</value>
   </data>
   <data name="radioButton4.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 90</value>
@@ -122,6 +122,6 @@
     <value>161, 17</value>
   </data>
   <data name="radioButton4.Text" xml:space="preserve">
-    <value>Begin Hoofdletter Per Woord</value>
+    <value>Hoofdletter Per Woord</value>
   </data>
 </root>

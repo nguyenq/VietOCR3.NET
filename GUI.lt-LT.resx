@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
@@ -74,7 +74,7 @@
     <value>279, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Automatiškai ap&amp;kirpti</value>
+    <value>A&amp;utomatiškai apkirpti</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -97,11 +97,14 @@
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
   </data>
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
+    <value>Puslapių miniatiūros</value>
+  </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pakeisti raidžių &amp;registrą…</value>
+    <value>Keisti raidžių &amp;registrą…</value>
   </data>
   <data name="commandToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
@@ -117,6 +120,9 @@
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Kontrastas…</value>
+  </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ap&amp;kirpti</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 22</value>
@@ -293,7 +299,10 @@
     <value>247, 22</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pašalinti eilučių &amp;skirtukus</value>
+    <value>Šalinti eilučių &amp;skirtukus</value>
+  </data>
+  <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Šalinti linijas</value>
   </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 22</value>
@@ -319,6 +328,9 @@
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Žemos raiškos (ekranvaizdžio) veiksena</value>
   </data>
+  <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Indikuoti s&amp;egmentus</value>
+  </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 20</value>
   </data>
@@ -329,7 +341,7 @@
     <value>147, 22</value>
   </data>
   <data name="sharpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Paryškinti</value>
+    <value>Pa&amp;ryškinti</value>
   </data>
   <data name="smoothToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -359,7 +371,7 @@
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Skaidyti TIFF…</value>
+    <value>S&amp;kaidyti TIFF…</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
@@ -413,7 +425,7 @@
     <value>Valyti</value>
   </data>
   <data name="toolStripBtnClear.ToolTipText" xml:space="preserve">
-    <value>Išvalyti teksto lauką</value>
+    <value>Valyti teksto lauką</value>
   </data>
   <data name="toolStripBtnFitImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -422,7 +434,7 @@
     <value>┼</value>
   </data>
   <data name="toolStripBtnFitImage.ToolTipText" xml:space="preserve">
-    <value>Sutalpinti visą vaizdą</value>
+    <value>Talpinti visą vaizdą</value>
   </data>
   <data name="toolStripBtnNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -467,7 +479,7 @@
     <value>RCCW</value>
   </data>
   <data name="toolStripBtnRotateCCW.ToolTipText" xml:space="preserve">
-    <value>Pasukti prieš laikrodžio rodyklę</value>
+    <value>Sukti prieš laikrodžio rodyklę</value>
   </data>
   <data name="toolStripBtnRotateCW.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -476,7 +488,7 @@
     <value>RCW</value>
   </data>
   <data name="toolStripBtnRotateCW.ToolTipText" xml:space="preserve">
-    <value>Pasukti pagal laikrodžio rodyklę</value>
+    <value>Sukti pagal laikrodžio rodyklę</value>
   </data>
   <data name="toolStripBtnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -491,7 +503,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripBtnScan.Text" xml:space="preserve">
-    <value>Nuskenuoti</value>
+    <value>Skenuoti</value>
   </data>
   <data name="toolStripBtnScan.ToolTipText" xml:space="preserve">
     <value>Skenuoti dokumentą</value>
@@ -503,7 +515,7 @@
     <value>(+)</value>
   </data>
   <data name="toolStripBtnZoomIn.ToolTipText" xml:space="preserve">
-    <value>Padidinti</value>
+    <value>Didinti</value>
   </data>
   <data name="toolStripBtnZoomOut.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -512,7 +524,7 @@
     <value>(-)</value>
   </data>
   <data name="toolStripBtnZoomOut.ToolTipText" xml:space="preserve">
-    <value>Sumažinti</value>
+    <value>Mažinti</value>
   </data>
   <data name="toolStripButtonCancelOCR.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 36</value>
@@ -536,7 +548,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
-    <value>Pašalinti eilučių skirtukus</value>
+    <value>Šalinti eilučių skirtukus</value>
   </data>
   <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -549,6 +561,9 @@
   </data>
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
+  </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
+    <value>Indikuoti segmentus</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 36</value>
@@ -604,8 +619,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 6</value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Blokai</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>261, 6</value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Pastraipos</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Rašmenys</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Teksto eilutės</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Žodžiai</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>

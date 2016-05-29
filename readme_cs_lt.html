@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>„VietOCR.NET“ – .NET grafinė sąsaja „Tesseract OCR“ moduliui</title>
@@ -19,15 +19,11 @@
 aplanką ir, jame atsiradus naujų failų, automatiškai juos apdoroti, o atpažintus
 tekstus įrašyti į rezultatams talpinti nurodytą aplanką.</p>
         <h3>REIKALAVIMAI SISTEMAI</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=17851">
-„Microsoft .NET Framework 4.0“ platforma</a>.</p>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=17851">„Microsoft .NET Framework 4.0“ platforma</a>.</p>
         <p>Jeigu, bandydami paleisti „VietOCR.NET“, susiduriate su „FileLoadException“ tipo klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">„Microsoft Visual C++ 2015 Redistributable Package“ platinamąjį paketą</a>.</p>
         <h3>PROGRAMOS ĮDIEGIMAS</h3>
         <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code> aplanką, diegimo metu galėsite nurodyti kitą paskirties aplanką.</p>
-        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library (WIA) v2.0“ biblioteka, kuriai būtina „Windows XP SP1“ ar naujesnė „Windows“ laida (ši biblioteka yra gamykliškai įtraukta į „Windows Vista“ ir „Windows 7“). WIA biblioteka įdiegiama, nukopijuojant failą <code>wiaaut.dll</code> į sistemos <code>System32</code> aplanką (dažniausiai jo kelias – <code>C:\Windows\System32</code>) ir jį užregistruojant tokia komanda:</p>
-        <blockquote>
-            <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
-        </blockquote>
+        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library (WIA) v2.0“ biblioteka, gamykliškai įtraukta į „Windows Vista“ ir „Windows 7“ sistemas.</p>
         <p>PDF failų palaikymas galimas naudojant „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonę. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll32.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atverę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.19“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
         <blockquote>
             <p><code>;C:\Program Files\gs\gs9.19\bin</code></p>

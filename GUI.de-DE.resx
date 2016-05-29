@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
@@ -68,13 +68,13 @@
     <value>179, 22</value>
   </data>
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;über VietOCR.NET</value>
+    <value>Über VietOCR.NET</value>
   </data>
   <data name="autocropToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Auto &amp;Ausschneiden</value>
+    <value>Automatisch zuschneiden</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -97,6 +97,9 @@
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
   </data>
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
+    <value>Miniaturansicht</value>
+  </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
   </data>
@@ -118,11 +121,14 @@
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Kontrast...</value>
   </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Zuschneiden</value>
+  </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ent&amp;zerren</value>
+    <value>Entzerren</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
@@ -295,6 +301,9 @@
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Zeilenumbrüche entfernen</value>
   </data>
+  <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Zeilen entfernen</value>
+  </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
@@ -318,6 +327,9 @@
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Screenshot-Modus</value>
+  </data>
+  <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Zeige se&amp;gmentierte Regionen an</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -359,7 +371,7 @@
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>TIFF &amp;Auftrennen...</value>
+    <value>TIFF&amp; Auftrennen...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
@@ -550,6 +562,9 @@
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
   </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
+    <value>Segmentierte Regionen</value>
+  </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
   </data>
@@ -604,8 +619,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Block</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Paragraph</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Charakter</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Textzeile</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Wort</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>

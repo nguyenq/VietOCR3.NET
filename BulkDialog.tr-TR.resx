@@ -89,7 +89,7 @@
     <value>75, 23</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
-    <value>İptal</value>
+    <value>Vazgeç</value>
   </data>
   <data name="buttonRun.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 85</value>
@@ -113,7 +113,7 @@
     <value>68, 13</value>
   </data>
   <data name="labelInput.Text" xml:space="preserve">
-    <value>Giriş Klasörü:</value>
+    <value>Girdi Klasörü:</value>
   </data>
   <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 50</value>
@@ -122,7 +122,7 @@
     <value>70, 13</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
-    <value>Çıkış Klasörü:</value>
+    <value>Çıktı Klasörü:</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 88</value>
@@ -131,7 +131,7 @@
     <value>78, 13</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Output Format</value>
+    <value>Çıktı Biçimi</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 21</value>

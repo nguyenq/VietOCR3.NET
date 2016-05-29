@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
@@ -96,6 +96,9 @@
   </data>
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
+  </data>
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
+    <value>Náhledy na strany</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -295,6 +298,9 @@
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Odstranit zalomení řádků</value>
   </data>
+  <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Odstranit řádky</value>
+  </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
@@ -318,6 +324,9 @@
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Režim snímku obrazovky</value>
+  </data>
+  <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ukázat &amp;rozdělené oblasti</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -359,7 +368,7 @@
     <value>133, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rozdělit TIFF...</value>
+    <value>Roz&amp;dělit TIFF...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
@@ -524,7 +533,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
-    <value>Paste Image from Clipboard</value>
+    <value>Vložit obrázek ze schránky</value>
   </data>
   <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -549,6 +558,9 @@
   </data>
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
+  </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
+    <value>Rozdělené oblasti</value>
   </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
@@ -604,8 +616,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Blok</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Odstavec</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Znak</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Řádek textu</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Slovo</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>
