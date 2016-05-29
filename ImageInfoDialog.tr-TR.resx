@@ -92,7 +92,7 @@
     <value>25, 13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>DPI</value>
+    <value>İnç Başına Nokta</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>145, 100</value>
@@ -101,7 +101,7 @@
     <value>25, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
-    <value>DPI</value>
+    <value>İnç Başına Nokta</value>
   </data>
   <data name="labelBitDepth.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 126</value>
@@ -137,7 +137,7 @@
     <value>76, 13</value>
   </data>
   <data name="labelXRes.Text" xml:space="preserve">
-    <value>X-Çözünürlüğü</value>
+    <value>X-Çözünürlük</value>
   </data>
   <data name="labelYRes.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 100</value>
@@ -146,7 +146,7 @@
     <value>76, 13</value>
   </data>
   <data name="labelYRes.Text" xml:space="preserve">
-    <value>Y-Çözünürlüğü</value>
+    <value>Y-Çözünürlük</value>
   </data>
   <data name="textBoxBitDepth.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 123</value>

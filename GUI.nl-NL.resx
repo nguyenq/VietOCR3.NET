@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
@@ -74,19 +74,19 @@
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Auto &amp;Crop</value>
+    <value>&amp;Auto Crop</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="brightenToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Brightness...</value>
+    <value>&amp;Helderheid</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Partij OCR...</value>
+    <value>&amp;Bulk OCR</value>
   </data>
   <data name="buttonCollapseExpand.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 3</value>
@@ -96,6 +96,9 @@
   </data>
   <data name="buttonCollapseExpand.Text" xml:space="preserve">
     <value>»</value>
+  </data>
+  <data name="buttonCollapseExpand.ToolTipText" xml:space="preserve">
+    <value>Paginaminiaturen</value>
   </data>
   <data name="changeCaseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -107,7 +110,7 @@
     <value>76, 20</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Command</value>
+    <value>&amp;Uitvoeren</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 148</value>
@@ -116,7 +119,10 @@
     <value>147, 22</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Contrast...</value>
+    <value>&amp;Contrast</value>
+  </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Crop</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -134,7 +140,7 @@
     <value>37, 20</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
+    <value>&amp;Bestand</value>
   </data>
   <data name="filterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -164,7 +170,7 @@
     <value>147, 22</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Grayscale</value>
+    <value>&amp;Grijstinten</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -176,7 +182,7 @@
     <value>179, 22</value>
   </data>
   <data name="helpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>VietOCR.NET &amp;Help</value>
+    <value>VietOCR.NET &amp;help</value>
   </data>
   <data name="imageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -188,7 +194,7 @@
     <value>147, 22</value>
   </data>
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Invert</value>
+    <value>&amp;Omkeren</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -203,31 +209,31 @@
     <value>142, 22</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Merge &amp;PDF...</value>
+    <value>&amp;PDF samenvoegen</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Merge &amp;TIFF...</value>
+    <value>&amp;TIFF samenvoegen</value>
   </data>
   <data name="metadataToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Properties...</value>
+    <value>&amp;Eigenschappen...</value>
   </data>
   <data name="monochromeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
   <data name="monochromeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Monochrome</value>
+    <value>&amp;Monochroom</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR &amp;All Pages</value>
+    <value>OCR &amp;alle pagina&apos;s</value>
   </data>
   <data name="oCRToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 22</value>
@@ -239,13 +245,13 @@
     <value>195, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open...</value>
+    <value>&amp;Openen</value>
   </data>
   <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Opties...</value>
+    <value>&amp;Opties</value>
   </data>
   <data name="panelArrow.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -269,25 +275,25 @@
     <value>183, 22</value>
   </data>
   <data name="postprocessToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Post-process</value>
+    <value>&amp;Post-proces</value>
   </data>
   <data name="psmToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pagina &amp;segmentatie mode</value>
+    <value>Pagina &amp;segmentatie modus</value>
   </data>
   <data name="quitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
-    <value>E&amp;xit</value>
+    <value>S&amp;luiten</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Recent Files</value>
+    <value>&amp;Recente bestanden</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
@@ -299,19 +305,19 @@
     <value>195, 22</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save &amp;As...</value>
+    <value>Opslaan &amp;als</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save</value>
+    <value>&amp;Opslaan</value>
   </data>
   <data name="scanToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="scanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sca&amp;n...</value>
+    <value>Sca&amp;nen</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -335,7 +341,7 @@
     <value>147, 22</value>
   </data>
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sm&amp;ooth</value>
+    <value>Af&amp;vlakken</value>
   </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -353,13 +359,13 @@
     <value>142, 22</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Split PDF...</value>
+    <value>&amp;Split PDF</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Split TIFF...</value>
+    <value>Spl&amp;it TIFF...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
@@ -380,7 +386,7 @@
     <value>48, 20</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Gereedschappen</value>
+    <value>&amp;Hulpmiddelen</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -524,7 +530,7 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonPasteImage.ToolTipText" xml:space="preserve">
-    <value>Paste Image from Clipboard</value>
+    <value>Afbeelding plakken vanuit het klembord</value>
   </data>
   <data name="toolStripButtonPostProcess.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -644,10 +650,10 @@
     <value>47, 19</value>
   </data>
   <data name="toolStripStatusLabelDim.Text" xml:space="preserve">
-    <value>Image:</value>
+    <value>Afbeelding:</value>
   </data>
   <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
-    <value>Image Dimensions &amp; Bit Depth</value>
+    <value>Afbeelding afmeting en bitdiepte</value>
   </data>
   <data name="toolStripStatusLabelDimValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 19</value>
@@ -662,7 +668,7 @@
     <value>PSM:</value>
   </data>
   <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
-    <value>Pagina segmentatie mode</value>
+    <value>Pagina segmentatie modus</value>
   </data>
   <data name="toolStripStatusLabelPSMvalue.Size" type="System.Drawing.Size, System.Drawing">
     <value>4, 19</value>
@@ -671,7 +677,7 @@
     <value>106, 19</value>
   </data>
   <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
-    <value>Screenshot Mode:</value>
+    <value>Screenshot modus:</value>
   </data>
   <data name="toolStripStatusLabelSM.ToolTipText" xml:space="preserve">
     <value>Schermafbeelding modus</value>
@@ -686,19 +692,19 @@
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Gebruikersinterface taal</value>
+    <value>&amp;Taal gebruikersinterface</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Ongedaan Maken</value>
+    <value>&amp;Ongedaan maken</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Viet Invoer &amp;Methode</value>
+    <value>Invoermethode Vietnamees</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>
