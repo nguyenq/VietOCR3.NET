@@ -149,7 +149,7 @@
     <value>74, 13</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Output Format</value>
+    <value>Doelformaat</value>
   </data>
   <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 18</value>
@@ -167,7 +167,7 @@
     <value>69, 13</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
-    <value>Controlemap:</value>
+    <value>Bronmap:</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -182,7 +182,7 @@
     <value>304, 102</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>Controle</value>
+    <value>Controleer</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

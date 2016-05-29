@@ -62,7 +62,7 @@
     <value>312, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Seçenekler</value>
+    <value>Ayarlar</value>
   </data>
   <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 13</value>
@@ -98,7 +98,7 @@
     <value>75, 23</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
-    <value>İptal</value>
+    <value>Vazgeç</value>
   </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 136</value>
@@ -116,7 +116,7 @@
     <value>47, 17</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>Aktif</value>
+    <value>Etkinleştir</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 74</value>
@@ -125,7 +125,7 @@
     <value>47, 17</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>Aktif</value>
+    <value>Etkinleştir</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>82, 72</value>
@@ -140,7 +140,7 @@
     <value>70, 13</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
-    <value>Çıkış Klasörü:</value>
+    <value>Çıktı Klasörü:</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 75</value>
@@ -149,7 +149,7 @@
     <value>78, 13</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Output Format</value>
+    <value>Çıktı Biçimi</value>
   </data>
   <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 18</value>
@@ -167,7 +167,7 @@
     <value>78, 13</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
-    <value>İzleme Klasörü:</value>
+    <value>İzlence Klasörü:</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
