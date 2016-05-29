@@ -7,7 +7,7 @@
 			<xsl:copy-of select="/root/resheader"/>
 			<xsl:for-each select="/root/data">
 				<xsl:sort select="@name" />
-				<xsl:if test="(@name and ((substring(@name, string-length(@name) - 4) = '.Text') or (substring(@name, string-length(@name) - 11) = '.ToolTipText')))">
+				<xsl:if test="(@name and ((substring(@name, string-length(@name) - 4) = '.Text') or (substring(@name, string-length(@name) - 11) = '.ToolTipText') or (substring(@name, string-length(@name) - 4) = '.Size') or (substring(@name, string-length(@name) - 8) = '.Location') or (substring(@name, string-length(@name) - 10) = '.ClientSize')))">
 					<xsl:copy-of select="."/>
 				</xsl:if>
 			</xsl:for-each>
