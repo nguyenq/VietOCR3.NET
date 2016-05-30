@@ -64,7 +64,7 @@ namespace VietOCR.NET
                 //} 
                 //else 
                 {
-                    string filename = outputFile + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt").Replace("hocr", "html");
+                    string filename = outputFile + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt");
                     using (StreamWriter sw = new StreamWriter(filename, false, new System.Text.UTF8Encoding()))
                     {
                         sw.Write(result);

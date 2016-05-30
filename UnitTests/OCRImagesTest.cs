@@ -83,7 +83,7 @@ namespace TestProject
             OCRImages target = new OCRImages();
             target.Language = entity.Language;
             IList<Image> images = entity.ClonedImages;
-            string expected = "Tôi từ chinh chiến cũng ra đi";
+            string expected = "Đôi Mắt Người Sơn Tây";
             string actual;
             actual = target.RecognizeText(images, selectedImageFile);
             Assert.IsTrue(actual.Contains(expected));

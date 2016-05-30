@@ -67,16 +67,31 @@ namespace TestProject
 
 
         /// <summary>
-        ///A test for AutoCropBitmap
+        /// A test for AutoCrop Bitmap
         ///</summary>
         [TestMethod()]
         [DeploymentItem("samples/vietsample2.png", "samples")]
-        public void AutoCropBitmapTest()
+        public void AutoCropTest()
         {
             Bitmap source = (Bitmap) Image.FromFile("samples/vietsample2.png");
-            Size expectedSize = new Size(2265, 2987);
+            Size expectedSize = new Size(2275, 2997);
             Bitmap actual;
             actual = ImageHelper.AutoCrop(source, 0.1);
+            Assert.AreEqual(expectedSize, actual.Size);
+        }
+
+        /// <summary>
+        /// A test for Crop Bitmap
+        ///</summary>
+        [TestMethod()]
+        [DeploymentItem("samples/vietsample2.png", "samples")]
+        public void CropTest()
+        {
+            Image source = Image.FromFile("samples/vietsample2.png");
+            Size expectedSize = new Size(100, 100);
+            Image actual;
+            Rectangle cropArea = new Rectangle(100, 100, 100, 100);
+            actual = ImageHelper.Crop(source, cropArea);
             Assert.AreEqual(expectedSize, actual.Size);
         }
     }

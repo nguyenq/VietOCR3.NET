@@ -76,7 +76,7 @@ namespace TestProject
             string outfile = "out";
             string[] args = { "samples/vietsample2.png", outfile, "-l", "vie", "hocr" };
             ConsoleApp.Main(args);
-            Assert.IsTrue(File.Exists(Path.Combine(path, outfile + ".html")));
+            Assert.IsTrue(File.Exists(Path.Combine(path, outfile + ".hocr")));
         }
     }
 }
