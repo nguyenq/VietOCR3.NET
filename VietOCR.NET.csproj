@@ -129,8 +129,8 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
-    <Content Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
+    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
+    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
     <None Include="x64\liblept172.dll" />
     <None Include="x64\libtesseract304.dll" />
     <Content Include="x86\liblept172.dll">

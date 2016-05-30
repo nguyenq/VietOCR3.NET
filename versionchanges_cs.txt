@@ -67,3 +67,5 @@ Version 4.1 (20 February 2016)
 Version 4.2 (30 May 2016)
 - Implement remove lines & crop image function
 - Display segmented regions
+- Update Tesseract.NET library
+- Update GhostScript to 9.19
