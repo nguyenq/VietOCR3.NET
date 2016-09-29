@@ -154,7 +154,6 @@ namespace VietOCR.NET
             this.toolStripStatusLabelSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelPSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
-            this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerImage)).BeginInit();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
@@ -1083,13 +1082,6 @@ namespace VietOCR.NET
             this.toolStripStatusLabelPSMvalue.Name = "toolStripStatusLabelPSMvalue";
             resources.ApplyResources(this.toolStripStatusLabelPSMvalue, "toolStripStatusLabelPSMvalue");
             // 
-            // backgroundWorkerLoad
-            // 
-            this.backgroundWorkerLoad.WorkerReportsProgress = true;
-            this.backgroundWorkerLoad.WorkerSupportsCancellation = true;
-            this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
-            this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
-            // 
             // GUI
             // 
             resources.ApplyResources(this, "$this");
@@ -1165,8 +1157,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.Panel panelImage;
         protected System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         protected VietOCR.NET.Controls.ScrollablePictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripButton toolStripBtnRotateCCW;
-        private System.Windows.Forms.ToolStripButton toolStripBtnRotateCW;
+        protected System.Windows.Forms.ToolStripButton toolStripBtnRotateCCW;
+        protected System.Windows.Forms.ToolStripButton toolStripBtnRotateCW;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -1180,11 +1172,10 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mergeTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem splitPdfToolStripMenuItem;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerLoad;
         private System.Windows.Forms.ToolStripMenuItem mergePdfToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
+        protected System.Windows.Forms.ToolStripMenuItem recentFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem metadataToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
@@ -1219,7 +1210,7 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem splitTiffToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem13;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripLabel toolStripLabelPageNum;
+        protected System.Windows.Forms.ToolStripLabel toolStripLabelPageNum;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.Panel panelArrow;
         private System.Windows.Forms.Button buttonCollapseExpand;
@@ -1228,7 +1219,7 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSpring;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPSMvalue;
         protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSMvalue;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDimValue;
+        protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDimValue;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private NonblinkingToolStripStatusLabel toolStripStatusLabelPSM;
         private NonblinkingToolStripStatusLabel toolStripStatusLabelSM;

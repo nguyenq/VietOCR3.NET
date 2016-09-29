@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace VietOCR.NET
 {
-    public partial class GUIWithThumbnail : VietOCR.NET.GUI
+    public partial class GUIWithThumbnail : VietOCR.NET.GUIWithFile
     {
         GroupBox group = new GroupBox();
 

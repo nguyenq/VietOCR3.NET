@@ -69,3 +69,6 @@ Version 4.2 (30 May 2016)
 - Display segmented regions
 - Update Tesseract.NET library
 - Update GhostScript to 9.19
+
+Version 4.3 Beta (28 September 2016)
+- Refactor
