@@ -56,6 +56,7 @@ namespace VietOCR.NET
             curScrollPos = this.splitContainerImage.Panel2.AutoScrollPosition;
             this.splitContainerImage.Panel2.AutoScrollPosition = Point.Empty;
             this.pictureBox1.Deselect();
+            this.pictureBox1.SegmentedRegions = null;
 
             this.pictureBox1.Dock = DockStyle.None;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -75,6 +76,7 @@ namespace VietOCR.NET
             this.toolStripBtnZoomOut.Enabled = true;
 
             this.pictureBox1.Deselect();
+            setSegmentedRegions();
             this.pictureBox1.Size = this.pictureBox1.Image.Size;
             this.pictureBox1.Dock = DockStyle.None;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
@@ -121,6 +123,7 @@ namespace VietOCR.NET
         protected override void toolStripBtnZoomIn_Click(object sender, EventArgs e)
         {
             this.pictureBox1.Deselect();
+            this.pictureBox1.SegmentedRegions = null;
             //isFitForZoomIn = true;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -139,6 +142,7 @@ namespace VietOCR.NET
         protected override void toolStripBtnZoomOut_Click(object sender, EventArgs e)
         {
             this.pictureBox1.Deselect();
+            this.pictureBox1.SegmentedRegions = null;
             //isFitForZoomIn = false;
             // StretchImage SizeMode works best for zooming.
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

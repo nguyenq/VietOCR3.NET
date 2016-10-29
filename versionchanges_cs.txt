@@ -70,5 +70,6 @@ Version 4.2 (30 May 2016)
 - Update Tesseract.NET library
 - Update GhostScript to 9.19
 
-Version 4.3 Beta (28 September 2016)
+Version 4.3 Beta (29 October 2016)
 - Refactor
+- Update GhostScript to 9.20

@@ -210,6 +210,7 @@ namespace VietOCR.NET
             // 
             // splitContainer1
             // 
+            this.splitContainer1.AllowDrop = true;
             resources.ApplyResources(this.splitContainer1, "splitContainer1");
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -223,6 +224,8 @@ namespace VietOCR.NET
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
             this.splitContainer1.Panel2.Controls.Add(this.toolStrip2);
             this.splitContainer1.TabStop = false;
+            this.splitContainer1.DragDrop += new System.Windows.Forms.DragEventHandler(this.splitContainer1_DragDrop);
+            this.splitContainer1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer1_DragOver);
             // 
             // panelImage
             // 

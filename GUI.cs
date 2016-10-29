@@ -1101,5 +1101,31 @@ namespace VietOCR.NET
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
+
+        private void splitContainer1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] astr = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                if (System.IO.File.Exists(astr[0]))
+                {
+                    openFile(astr[0]);
+                }
+            }
+        }
+
+        private void splitContainer1_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                if ((e.AllowedEffect & DragDropEffects.Move) != 0)
+                    e.Effect = DragDropEffects.Move;
+
+                if (((e.AllowedEffect & DragDropEffects.Copy) != 0) &&
+                    ((e.KeyState & 0x08) != 0))    // Ctrl key
+                    e.Effect = DragDropEffects.Copy;
+            }
+        }
     }
 }

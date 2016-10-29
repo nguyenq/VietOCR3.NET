@@ -203,7 +203,7 @@ namespace VietOCR.NET
             updateMRUList(selectedFile);
         }
 
-                void loadImage(FileInfo imageFile)
+        void loadImage(FileInfo imageFile)
         {
             if (imageList == null)
             {
@@ -402,7 +402,7 @@ namespace VietOCR.NET
             }
         }
 
-        private void toolStripComboBoxPageNum_SelectedIndexChanged(object sender, EventArgs e)
+        protected override void toolStripComboBoxPageNum_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!this.toolStripComboBoxPageNum.Enabled) return;
 
