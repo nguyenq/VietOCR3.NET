@@ -150,8 +150,11 @@ namespace VietOCR.NET
         {
             using (var engine = new TesseractEngine(Datapath, Language, EngineMode.Default))
             {
-                List<Rectangle> boxes = engine.GetSegmentedRegions(image, level);
-                return boxes;
+                using (var page = engine.Process(image))
+                {
+                    List<Rectangle> boxes = page.GetSegmentedRegions(level);
+                    return boxes;
+                }
             }
         }
     }
