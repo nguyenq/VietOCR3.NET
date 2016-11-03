@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -16,7 +16,7 @@
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -46,6 +46,7 @@
     </DocumentationFile>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,6 +57,7 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\VietOCR.ico</ApplicationIcon>
@@ -76,9 +78,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tesseract, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll</HintPath>
+    <Reference Include="Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.3.2.0-alpha2\lib\net451\Tesseract.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="VietKeyInput, Version=2.0.3073.22842, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
@@ -135,16 +136,23 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
-    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
-    <None Include="x64\liblept172.dll" />
-    <None Include="x64\libtesseract304.dll" />
+    <Content Include="x64\liblept172.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libtesseract304.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="x86\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x86\libtesseract304.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
+    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
     <None Include="gsdll64.dll" />
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
@@ -581,9 +589,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages\Tesseract.3.0.2.0\Tesseract.3.0.2.0.nupkg" />
