@@ -24,6 +24,8 @@ namespace Net.SourceForge.Vietpad.Utilities
 {
     class TextUtilities
     {
+        public const string SOFT_HYPHEN = "\u00AD";
+
         /// <summary>
         /// Changes letter case.
         /// </summary>
@@ -111,13 +113,58 @@ namespace Net.SourceForge.Vietpad.Utilities
         /// Removes line breaks.
         /// </summary>
         /// <param name="text"></param>
+        /// <param name="removeSoftHyphens"></param>
         /// <returns></returns>
-        public static string RemoveLineBreaks(string text)
+        public static string RemoveLineBreaks(string text, bool removeSoftHyphens)
         {
-            return Regex.Replace(
+            text = Regex.Replace(
                     Regex.Replace(text.Replace(Environment.NewLine, "\n"),
                     "(?<=\n|^)[\t ]+|[\t ]+(?=$|\n)", string.Empty),
                     "(?<=.)\n(?=.)", " ").Replace("\n", Environment.NewLine);
+
+            if (removeSoftHyphens)
+            {
+                text = text.Replace("\u00AD", "");
+            }
+
+            return text;
+        }
+
+        /// <summary>
+        /// Replaces hard hyphens at end of line with soft hyphens.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ReplaceHyphensWithSoftHyphens(string input)
+        {
+            return input;
+            //SpellCheckHelper spellCheck = new SpellCheckHelper(null, Gui.getCurrentLocaleId());
+            //if (!spellCheck.initializeSpellCheck())
+            //{
+            //    return null;
+            //}
+
+            //Matcher m = Pattern.compile("(\\b\\p{L}+)(-|\u2010|\u2011|\u2012|\u2013|\u2014|\u2015)\n(\\p{L}+\\b)").matcher(input);
+            //StringBuffer strB = new StringBuffer();
+
+            //while (m.find())
+            //{
+            //    String before = m.group(1);
+            //    String after = m.group(3);
+            //    char last = before.charAt(before.length() - 1);
+            //    char first = after.charAt(0);
+            //    if (Character.isUpperCase(first) && Character.isUpperCase(last) || Character.isLowerCase(first) && Character.isLowerCase(last))
+            //    {
+            //        String word = before + after;
+            //        if (!spellCheck.isMispelled(word))
+            //        {
+            //            m.appendReplacement(strB, before + SOFT_HYPHEN + "\n" + after);
+            //        }
+            //    }
+            //}
+            //m.appendTail(strB);
+
+            //return strB.toString();
         }
     }
 }

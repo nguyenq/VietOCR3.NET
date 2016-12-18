@@ -51,8 +51,6 @@ namespace VietOCR.NET
                 {
                     // postprocess to correct common OCR errors
                     result = Processor.PostProcess(result, langCode);
-                    // correct common errors caused by OCR
-                    result = TextUtilities.CorrectOCRErrors(result);
                     // correct letter cases
                     result = TextUtilities.CorrectLetterCases(result);
                 }

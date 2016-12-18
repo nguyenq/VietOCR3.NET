@@ -154,7 +154,7 @@ namespace VietOCR.NET
             }
 
             int start = textBox1.SelectionStart;
-            string result = TextUtilities.RemoveLineBreaks(textBox1.SelectedText);
+            string result = TextUtilities.RemoveLineBreaks(textBox1.SelectedText, removeHyphensEnabled);
             textBox1.SelectedText = result;
             textBox1.Select(start, result.Length);
         }

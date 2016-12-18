@@ -36,31 +36,31 @@ namespace VietOCR.NET.Postprocessing
             //    .Replace("tmg", "úng")
             //    ;
 
-            text =  Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(text,
-                        "(?i)(?<=đ)ă\\b", "ã"),
-                        "(?i)(?<=[ch])ă\\b", "ả"),
-                        "(?i)ă(?![cmnpt])", "à"),
-                        "(?i)ẵ(?=[cpt])", "ắ"),
-                        "(?<=\\b[Tt])m", "rư"),
-                        "(?i)\\bl(?=[rh])", "t"),
-                        "(u|ll|r)(?=[gh])", "n"),
-                        "(iii|ln|rn)", "m"),
-                        "(?i)(?<=[mqrgsv])ll", "u"),
-                        "(?i)(?<=[cknpt])ll", "h"),
-                        "(?i)[oe](?=h)", "c"),
-                        "\\Bđ", "ớ")
-                    ;
+            //text =  Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(
+            //        Regex.Replace(text,
+            //            "(?i)(?<=đ)ă\\b", "ã"),
+            //            "(?i)(?<=[ch])ă\\b", "ả"),
+            //            "(?i)ă(?![cmnpt])", "à"),
+            //            "(?i)ẵ(?=[cpt])", "ắ"),
+            //            "(?<=\\b[Tt])m", "rư"),
+            //            "(?i)\\bl(?=[rh])", "t"),
+            //            "(u|ll|r)(?=[gh])", "n"),
+            //            "(iii|ln|rn)", "m"),
+            //            "(?i)(?<=[mqrgsv])ll", "u"),
+            //            "(?i)(?<=[cknpt])ll", "h"),
+            //            "(?i)[oe](?=h)", "c"),
+            //            "\\Bđ", "ớ")
+            //        ;
 
             string nfdText = text.Normalize(NormalizationForm.FormD);
             nfdText = Regex.Replace(

@@ -58,6 +58,20 @@ namespace VietOCR.NET
             set { dangAmbigsEnabled = value; }
         }
 
+        private bool replaceHyphensEnabled;
+        public bool ReplaceHyphensEnabled
+        {
+            get { return replaceHyphensEnabled; }
+            set { replaceHyphensEnabled = value; }
+        }
+
+        private bool removeHyphensEnabled;
+        public bool RemoveHyphensEnabled
+        {
+            get { return removeHyphensEnabled; }
+            set { removeHyphensEnabled = value; }
+        }
+
         public string OutputFormat
         {
             get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
@@ -82,7 +96,8 @@ namespace VietOCR.NET
             this.checkBoxWatch.Checked = watchEnabled;
             this.textBoxDangAmbigs.Text = dangAmbigsPath;
             this.checkBoxDangAmbigs.Checked = dangAmbigsEnabled;
-
+            this.checkBoxReplaceHyphens.Checked = replaceHyphensEnabled;
+            this.checkBoxRemoveHyphens.Checked = removeHyphensEnabled;
             this.toolTip1.SetToolTip(this.btnWatch, Properties.Resources.Browse);
             this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
             this.toolTip1.SetToolTip(this.btnDangAmbigs, Properties.Resources.Browse);
@@ -97,6 +112,8 @@ namespace VietOCR.NET
             watchEnabled = this.checkBoxWatch.Checked;
             dangAmbigsPath = this.textBoxDangAmbigs.Text;
             dangAmbigsEnabled = this.checkBoxDangAmbigs.Checked;
+            replaceHyphensEnabled = this.checkBoxReplaceHyphens.Checked;
+            removeHyphensEnabled = this.checkBoxRemoveHyphens.Checked;
         }
 
         private void btnWatch_Click(object sender, EventArgs e)

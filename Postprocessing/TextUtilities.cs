@@ -8,7 +8,7 @@ namespace VietOCR.NET.Postprocessing
 {
     class TextUtilities
     {
-        private static Dictionary<string, string> map;
+        private static List<Dictionary<string, string>> map;
         private static DateTime mapLastModified = DateTime.MinValue;
 
         /// <summary>
@@ -35,28 +35,7 @@ namespace VietOCR.NET.Postprocessing
             return m.Value.ToLower();
         }
 
-        /// <summary>
-        /// Corrects common Tesseract OCR errors.
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static string CorrectOCRErrors(String input)
-        {            
-            // substitute letters frequently misrecognized by Tesseract 2.03
-            return Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(
-                    Regex.Replace(input,
-                        "\\b1(?=\\p{L}+\\b)", "l"), // 1 to l
-                        "\\b11(?=\\p{L}+\\b)", "n"), // 11 to n
-                        "\\bI(?![mn]+\\b)", "l"), // I to l
-                        "(?<=\\b\\p{L}*)0(?=\\p{L}*\\b)", "o") // 0 to o
-                //Regex.Replace("(?<!\\.) S(?=\\p{L}*\\b)", " s") // S to s
-                //Regex.Replace("(?<![cn])h\\b", "n")
-            ;
-        }
-
-        public static Dictionary<string, string> LoadMap(string dangAmbigsFile)
+        public static List<Dictionary<string, string>> LoadMap(string dangAmbigsFile)
         {
             try
             {
@@ -65,7 +44,7 @@ namespace VietOCR.NET.Postprocessing
                 DateTime fileLastModified = dataFile.LastWriteTime;
                 if (map == null)
                 {
-                    map = new Dictionary<string, string>();
+                    map = new List<Dictionary<string, string>>();
                 }
                 else
                 {
@@ -77,6 +56,11 @@ namespace VietOCR.NET.Postprocessing
                 }
                 mapLastModified = fileLastModified;
 
+                for (int i = Processor.PLAIN; i <= Processor.REGEX; i++)
+                {
+                    map.Add(new Dictionary<string, string>());
+                }
+
                 StreamReader sr = new StreamReader(dangAmbigsFile, Encoding.UTF8);
                 string str;
 
@@ -87,15 +71,31 @@ namespace VietOCR.NET.Postprocessing
                     {
                         continue;
                     }
-                    int index = str.IndexOf('=');
-                    if (index <= 0)
+
+                    if (!str.Contains("\t"))
                     {
                         continue;
                     }
 
-                    string key = str.Substring(0, index);
-                    string value = str.Substring(index + 1);
-                    map[key] = value;
+                    str = Regex.Replace(str, "(\t)+", "\t");
+                    string[] parts = str.Split('\t');
+                    if (parts.Length < 3)
+                    {
+                        continue;
+                    }
+
+                    int type = int.Parse(parts[0]);
+                    string key = parts[1];
+                    string value = parts[2];
+
+                    if (type < Processor.PLAIN || type > Processor.REGEX)
+                    {
+                        continue;
+                    }
+
+                    Dictionary<string, string> hmap = map[type];
+                    hmap[key] = value;
+                    map[type] = hmap;
                 }
                 sr.Close();   
             }

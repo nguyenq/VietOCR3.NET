@@ -19,9 +19,13 @@ namespace VietOCR.NET.Postprocessing
     using System.Text;
     using System.IO;
     using System.Collections.Generic;
+    using System.Text.RegularExpressions;
 
     public class Processor
     {
+        public const int PLAIN = 0;  // plain replaces
+        public const int REGEX = 1;  // regex replaces
+
         public static string PostProcess(string text, string langCode)
         {
             try
@@ -35,11 +39,16 @@ namespace VietOCR.NET.Postprocessing
             }
         }
 
-        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsOn)
+        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsOn, bool replaceHyphens)
         {
             if (text.Trim().Length == 0)
             {
                 return text;
+            }
+
+            if (replaceHyphens)
+            {
+                text = Net.SourceForge.Vietpad.Utilities.TextUtilities.ReplaceHyphensWithSoftHyphens(text);
             }
 
             // correct using external x.DangAmbigs.txt file first, if enabled
@@ -48,7 +57,7 @@ namespace VietOCR.NET.Postprocessing
                 StringBuilder strB = new StringBuilder(text);
 
                 // replace text based on entries read from an x.DangAmbigs.txt file
-                Dictionary<string, string> replaceRules = TextUtilities.LoadMap(Path.Combine(dangAmbigsPath, langCode + ".DangAmbigs.txt"));
+                List<Dictionary<string, string>> replaceRules = TextUtilities.LoadMap(Path.Combine(dangAmbigsPath, langCode + ".DangAmbigs.txt"));
                 if (replaceRules.Count == 0 && langCode.Length > 3)
                 {
                     replaceRules = TextUtilities.LoadMap(Path.Combine(dangAmbigsPath, langCode.Substring(0, 3) + ".DangAmbigs.txt")); // fall back on base
@@ -59,22 +68,30 @@ namespace VietOCR.NET.Postprocessing
                     throw new NotSupportedException(langCode);
                 }
 
-                Dictionary<string, string>.KeyCollection.Enumerator enumer = replaceRules.Keys.GetEnumerator();
+                Dictionary<string, string> replaceRulesPlain = replaceRules[PLAIN];
+                Dictionary<string, string>.KeyCollection.Enumerator enumer = replaceRulesPlain.Keys.GetEnumerator();
 
                 while (enumer.MoveNext())
                 {
                     string key = enumer.Current;
-                    string value = replaceRules[key];
+                    string value = replaceRulesPlain[key];
                     strB = strB.Replace(key, value);
                 }
                 text = strB.ToString();
+
+                Dictionary<string, string> replaceRulesRegex = replaceRules[REGEX];
+                enumer = replaceRulesRegex.Keys.GetEnumerator();
+
+                while (enumer.MoveNext())
+                {
+                    string key = enumer.Current;
+                    string value = replaceRulesRegex[key];
+                    text = Regex.Replace(text, key, value);
+                }
             }
 
             // postprocessor
             text = PostProcess(text, langCode);
-
-            // correct common errors caused by OCR
-            text = TextUtilities.CorrectOCRErrors(text);
 
             // correct letter cases
             return TextUtilities.CorrectLetterCases(text);
