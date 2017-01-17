@@ -79,5 +79,19 @@ namespace VietOCR.NET
             this.trackBar1.Value = 25;
             this.trackBar1.TickFrequency = 10;
         }
+
+        public void SetForGamma()
+        {
+            this.trackBar1.Minimum = 0;
+            this.trackBar1.Value = 50;
+            this.trackBar1.TickFrequency = 10;
+        }
+
+        public void SetForThreshold()
+        {
+            this.trackBar1.Minimum = 0;
+            this.trackBar1.Value = 50;
+            this.trackBar1.TickFrequency = 10;
+        }
     }
 }

@@ -95,11 +95,14 @@ namespace VietOCR.NET
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.brightenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gammaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thresholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.monochromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sharpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bilateralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deskewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autocropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -438,6 +441,7 @@ namespace VietOCR.NET
             this.textBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.splitContainer2_Panel2_DragOver);
             this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
             this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
+            this.textBox1.MouseWheel += textBox1_MouseWheel;
             // 
             // contextMenuStrip1
             // 
@@ -676,11 +680,14 @@ namespace VietOCR.NET
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.brightenToolStripMenuItem,
             this.contrastToolStripMenuItem,
+            this.gammaToolStripMenuItem,
+            this.thresholdToolStripMenuItem,
             this.grayscaleToolStripMenuItem,
             this.monochromeToolStripMenuItem,
             this.invertToolStripMenuItem,
             this.sharpenToolStripMenuItem,
-            this.smoothToolStripMenuItem});
+            this.smoothToolStripMenuItem,
+            this.bilateralToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             resources.ApplyResources(this.filterToolStripMenuItem, "filterToolStripMenuItem");
             // 
@@ -695,6 +702,18 @@ namespace VietOCR.NET
             this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
             resources.ApplyResources(this.contrastToolStripMenuItem, "contrastToolStripMenuItem");
             this.contrastToolStripMenuItem.Click += new System.EventHandler(this.contrastToolStripMenuItem_Click);
+            // 
+            // gammaToolStripMenuItem
+            // 
+            this.gammaToolStripMenuItem.Name = "gammaToolStripMenuItem";
+            resources.ApplyResources(this.gammaToolStripMenuItem, "gammaToolStripMenuItem");
+            this.gammaToolStripMenuItem.Click += new System.EventHandler(this.gammaToolStripMenuItem_Click);
+            // 
+            // thresholdToolStripMenuItem
+            // 
+            this.thresholdToolStripMenuItem.Name = "thresholdToolStripMenuItem";
+            resources.ApplyResources(this.thresholdToolStripMenuItem, "thresholdToolStripMenuItem");
+            this.thresholdToolStripMenuItem.Click += new System.EventHandler(this.thresholdToolStripMenuItem_Click);
             // 
             // grayscaleToolStripMenuItem
             // 
@@ -725,6 +744,12 @@ namespace VietOCR.NET
             this.smoothToolStripMenuItem.Name = "smoothToolStripMenuItem";
             resources.ApplyResources(this.smoothToolStripMenuItem, "smoothToolStripMenuItem");
             this.smoothToolStripMenuItem.Click += new System.EventHandler(this.smoothToolStripMenuItem_Click);
+            // 
+            // bilateralToolStripMenuItem
+            // 
+            this.bilateralToolStripMenuItem.Name = "bilateralToolStripMenuItem";
+            resources.ApplyResources(this.bilateralToolStripMenuItem, "bilateralToolStripMenuItem");
+            this.bilateralToolStripMenuItem.Click += new System.EventHandler(this.bilateralToolStripMenuItem_Click);
             // 
             // deskewToolStripMenuItem
             // 
@@ -1248,5 +1273,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemPara;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBlock;
         private System.Windows.Forms.ToolStripMenuItem cropToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gammaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thresholdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bilateralToolStripMenuItem;
     }
 }

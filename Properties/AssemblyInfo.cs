@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("4.1.0.0")]
+[assembly: AssemblyFileVersion("4.3.0.0")]
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("TestProject")]

@@ -1,4 +1,8 @@
 /.project
 /bin/Debug
 /obj/Debug
-/UnitTests/obj/Debug
+/.vs
+/bin/Release
+/obj/Release
+/UnitTests/bin
+/UnitTests/obj

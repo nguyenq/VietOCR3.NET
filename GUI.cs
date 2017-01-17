@@ -36,6 +36,7 @@ namespace VietOCR.NET
         public const string strProgName = "VietOCR.NET";
         public const string TO_BE_IMPLEMENTED = "To be implemented";
 
+        protected static string localeId;
         protected string curLangCode;
         private string[] installedLanguageCodes;
         private string[] installedLanguages;
@@ -93,6 +94,10 @@ namespace VietOCR.NET
         protected bool isFitImageSelected;
         protected Point curScrollPos;
         protected Point pointClicked;
+
+        private const int FONT_MIN_SIZE = 6;
+        private const int FONT_MAX_SIZE = 50;
+
         protected readonly string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
         protected System.CodeDom.Compiler.TempFileCollection tempFileCollection = new System.CodeDom.Compiler.TempFileCollection();
@@ -199,6 +204,11 @@ namespace VietOCR.NET
                     }
                 }
             }
+        }
+
+        public static string GetCurrentLocaleId()
+        {
+            return localeId;
         }
 
         /// <summary>
@@ -511,6 +521,20 @@ namespace VietOCR.NET
             }
         }
 
+        private void textBox1_MouseWheel(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if ((Control.ModifierKeys & Keys.Control) == Keys.Control)
+            {
+                Font curFont = this.textBox1.Font;
+                float newSize = curFont.Size + e.Delta / 120;
+                if (newSize > FONT_MIN_SIZE && newSize < FONT_MAX_SIZE)
+                {
+                    this.textBox1.Font = new Font(curFont.Name, newSize, curFont.Style, curFont.Unit);
+                    this.textBox1.Invalidate();
+                }
+            }
+        }
+
         /// <summary>
         /// Changes localized text and messages
         /// </summary>
@@ -637,7 +661,7 @@ namespace VietOCR.NET
 
         protected override void OnKeyDown(KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.V)
+            if (!this.textBox1.Focused && e.Control && e.KeyCode == Keys.V)
             {
                 PasteImage();
                 e.Handled = true;
@@ -1126,6 +1150,21 @@ namespace VietOCR.NET
                     ((e.KeyState & 0x08) != 0))    // Ctrl key
                     e.Effect = DragDropEffects.Copy;
             }
+        }
+
+        protected virtual void gammaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected virtual void thresholdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
+        protected virtual void bilateralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
     }
 }

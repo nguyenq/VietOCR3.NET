@@ -209,8 +209,78 @@ namespace VietOCR.NET.Utilities
             return bmpNew;
         }
 
+        /// <summary>
+        /// Gamma correction.
+        /// </summary>
+        /// <param name="bmp">Source image</param>
+        /// <param name="value">Should be greater than 0.0. Typical values range between 1 and 2.2.</param>
+        /// <returns></returns>
+        public static Image AdjustGamma(Image bmp, float value)
+        {
+            Image bmpNew = null;
+
+            try
+            {
+                ImageAttributes ia = new ImageAttributes();
+                ia.SetGamma(value);
+
+                bmpNew = new Bitmap(bmp.Width, bmp.Height);
+                ((Bitmap)bmpNew).SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
+                using (Graphics g = Graphics.FromImage(bmpNew))
+                {
+                    g.DrawImage(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, ia);
+                    ia.Dispose();
+                }
+            }
+            catch
+            {
+                if (bmpNew != null)
+                {
+                    bmpNew.Dispose();
+                    bmpNew = null;
+                }
+            }
+
+            return bmpNew;
+        }
+
+        /// <summary>
+        /// Adjust threshold to image.
+        /// </summary>
+        /// <param name="bmp"></param>
+        /// <param name="value">a float value between 0 and 1</param>
+        /// <returns></returns>
+        public static Image AdjustThreshold(Image bmp, float value)
+        {
+            Image bmpNew = null;
+
+            try
+            {
+                ImageAttributes ia = new ImageAttributes();
+                ia.SetThreshold(value);
+
+                bmpNew = new Bitmap(bmp.Width, bmp.Height);
+                ((Bitmap)bmpNew).SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
+                using (Graphics g = Graphics.FromImage(bmpNew))
+                {
+                    g.DrawImage(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, ia);
+                    ia.Dispose();
+                }
+            }
+            catch
+            {
+                if (bmpNew != null)
+                {
+                    bmpNew.Dispose();
+                    bmpNew = null;
+                }
+            }
+
+            return bmpNew;
+        }
+
         // allow a 10px-margin
-        private const int margin = 10;
+        private const int MARGIN = 10;
 
         /// <summary>
         /// Autocrops an image.
@@ -286,24 +356,24 @@ namespace VietOCR.NET.Utilities
             }
         lable4:
 
-            if ((minX - margin) >= 0)
+            if ((minX - MARGIN) >= 0)
             {
-                minX -= margin;
+                minX -= MARGIN;
             }
 
-            if ((minY - margin) >= 0)
+            if ((minY - MARGIN) >= 0)
             {
-                minY -= margin;
+                minY -= MARGIN;
             }
 
-            if ((maxX + margin) < width)
+            if ((maxX + MARGIN) < width)
             {
-                maxX += margin;
+                maxX += MARGIN;
             }
 
-            if ((maxY + margin) < height)
+            if ((maxY + MARGIN) < height)
             {
-                maxY += margin;
+                maxY += MARGIN;
             }
 
             int newWidth = maxX - minX + 1;
@@ -407,7 +477,7 @@ namespace VietOCR.NET.Utilities
             byte[] gray = GrayBMP_File.CreateGrayBitmapArray(input);
             Image result = ImageConverter.byteArrayToImage(gray);
             ((Bitmap)result).SetResolution(input.HorizontalResolution, input.VerticalResolution);
-            
+
             return result;
         }
 
@@ -804,13 +874,98 @@ namespace VietOCR.NET.Utilities
         }
 
         private static double[,] GaussianBlur55 =
-                new double[,]  
-                { { 2, 04, 05, 04, 2 }, 
-                  { 4, 09, 12, 09, 4 }, 
+                new double[,]
+                { { 2, 04, 05, 04, 2 },
+                  { 4, 09, 12, 09, 4 },
                   { 5, 12, 15, 12, 5 },
                   { 4, 09, 12, 09, 4 },
                   { 2, 04, 05, 04, 2 }, };
 
+        /// <summary>
+        /// Bilateral filter. (implementation not complete)
+        /// http://cybertron.cg.tu-berlin.de/eitz/bilateral_filtering/
+        /// (searching for a C# implementation of the algorithm)
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="sigmaD"></param>
+        /// <param name="sigmaR"></param>
+        /// <returns></returns>
+        public static Image BilateralFilter(Image source, double sigmaD, double sigmaR)
+        {
+            int width = source.Width;
+            int height = source.Height;
+
+            double sigmaMax = Math.Max(sigmaD, sigmaR);
+            int kernelRadius = (int)Math.Ceiling(2 * sigmaMax);
+            double twoSigmaDSquared = 2 * sigmaD * sigmaD;
+            double twoSigmaRSquared = 2 * sigmaR * sigmaR;
+
+            int kernelSize = kernelRadius * 2 + 1;
+            double[,] kernelD = new double[kernelSize, kernelSize];
+            int center = (kernelSize - 1) / 2;
+            for (int x = -center; x < -center + kernelSize; x++)
+            {
+                for (int y = -center; y < -center + kernelSize; y++)
+                {
+                    kernelD[x + center, y + center] = Math.Exp(-(x * x + y * y) / twoSigmaDSquared);
+                }
+            }
+
+            double[] gaussSimilarity = new double[256];
+            for (int i = 0; i < 256; i++)
+            {
+                gaussSimilarity[i] = Math.Exp(-i / twoSigmaRSquared);
+            }
+
+            //WritableRaster sourceRaster = source.getRaster();
+            Image target = new Bitmap(width, height, source.PixelFormat);
+            //WritableRaster targetRaster = target.getRaster();
+            int numBands = 1; // sourceRaster.getNumBands();
+            //int[] inputPixelBuffer = sourceRaster.getPixels(0, 0, width, height, (int[])null);
+            int[] outputPixelBuffer = new int[width * height * numBands];
+
+            for (int i = 1; i < width - 1; i++)
+            {
+                for (int j = 1; j < height - 1; j++)
+                {
+                    int[] pixelCenter = new int[numBands];
+                    int[] targetColor = new int[numBands];
+                    //System.arraycopy(inputPixelBuffer, (j * width + i) * numBands, pixelCenter, 0, numBands);
+                    int mMin = Math.Max(0, i - kernelRadius);
+                    int mMax = Math.Min(width - 1, i + kernelRadius);
+                    int nMin = Math.Max(0, j - kernelRadius);
+                    int nMax = Math.Min(height - 1, j + kernelRadius);
+                    int kernelWidth = mMax - mMin + 1;
+                    int kernelHeight = nMax - nMin + 1;
+                    //int[] pixelKernelPosBuffer = sourceRaster.getPixels(mMin, nMin, kernelWidth, kernelHeight, (int[])null);
+                    for (int band = 0; band < numBands; band++)
+                    {
+                        //double weight;
+                        double sum = 0;
+                        double totalWeight = 0;
+                        int intensityCenter = pixelCenter[band];
+                        for (int m = mMin; m <= mMax; m++)
+                        {
+                            for (int n = nMin; n <= nMax; n++)
+                            {
+                                int pos = ((n - nMin) * kernelWidth + (m - mMin)) * numBands + band;
+                                //int intensityKernelPos = pixelKernelPosBuffer[pos];
+                                //weight = kernelD[i - m + kernelRadius, j - n + kernelRadius]
+                                //                                    * gaussSimilarity[Math.Abs(intensityKernelPos - intensityCenter)];
+                                //totalWeight += weight;
+                                //sum += weight * intensityKernelPos;
+                            }
+                        }
+                        targetColor[band] = (int)Math.Floor(sum / totalWeight);
+                    }
+                    //System.arraycopy(targetColor, 0, outputPixelBuffer, (j * width + i) * numBands, numBands);
+                }
+            }
+
+            //targetRaster.setPixels(0, 0, width, height, outputPixelBuffer);
+
+            return source; // target;
+        }
 
         /// <summary>
         /// Clones a bitmap using DrawImage.

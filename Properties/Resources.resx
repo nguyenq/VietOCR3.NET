@@ -338,4 +338,13 @@ Please run the program as administrator.</value>
   <data name="Require_grayscale" xml:space="preserve">
     <value>Image may require conversion to grayscale.</value>
   </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Bilateral</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gamma</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Threshold</value>
+  </data>
 </root>

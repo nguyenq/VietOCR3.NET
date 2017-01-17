@@ -286,6 +286,83 @@ namespace VietOCR.NET
             this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
         }
 
+        protected override void gammaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            TrackbarDialog dialog = new TrackbarDialog();
+            dialog.SetForGamma();
+            dialog.LabelText = Properties.Resources.Gamma;
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedGamma);
+
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.pictureBox1.Image = new Bitmap(originalImage);
+            }
+        }
+
+        private void UpdatedGamma(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        {
+            Image image = ImageHelper.AdjustGamma(originalImage, e.NewValue * 0.005f);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.pictureBox1.Image = new Bitmap(image);
+            }
+        }
+
+        protected override void thresholdToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            TrackbarDialog dialog = new TrackbarDialog();
+            dialog.SetForThreshold();
+            dialog.LabelText = Properties.Resources.Threshold;
+            dialog.ValueUpdated += new TrackbarDialog.HandleValueChange(UpdatedThreshold);
+
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.pictureBox1.Image = new Bitmap(originalImage);
+            }
+        }
+
+        private void UpdatedThreshold(object sender, TrackbarDialog.ValueChangedEventArgs e)
+        {
+            Image image = ImageHelper.AdjustThreshold(originalImage, e.NewValue * 0.01f);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.pictureBox1.Image = new Bitmap(image);
+            }
+        }
+
+        protected override void bilateralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            imageList[imageIndex] = ImageHelper.BilateralFilter((Bitmap)originalImage, 3.0, 3.0);
+            this.pictureBox1.Image = new Bitmap(imageList[imageIndex]);
+        }
+
         protected override void screenshotModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem mi = (ToolStripMenuItem)sender;
