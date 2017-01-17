@@ -19,9 +19,9 @@
         <blockquote>
             <p><code>regsvr32 C:\Windows\System32\wiaaut.dll</code></p>
         </blockquote>
-        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Po zainstalowaniu bibliotek upewnij się, że udostępnione biblioteki (<code>gsdll32.dll</code> or <code>libgs.so</code>) &nbsp;są w ścieżce wyszukiwania poprzez ustawienie odpowiednich zmiennych systemowych. W Windows dla GS w wersji 9.19, dodaj poniższy wpis do&nbsp;zmiennej&nbsp;<code>Path</code> (dostępnej poprzez Panel Kontrolny &gt; System &gt; zakładka Zaawansowane &gt; Zmienne środowiskowe...) :</p>
+        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Po zainstalowaniu bibliotek upewnij się, że udostępnione biblioteki (<code>gsdll32.dll</code> or <code>libgs.so</code>) &nbsp;są w ścieżce wyszukiwania poprzez ustawienie odpowiednich zmiennych systemowych. W Windows dla GS w wersji 9.20, dodaj poniższy wpis do&nbsp;zmiennej&nbsp;<code>Path</code> (dostępnej poprzez Panel Kontrolny &gt; System &gt; zakładka Zaawansowane &gt; Zmienne środowiskowe...) :</p>
         <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.19\bin</code></p>
+            <p><code>;C:\Program Files\gs\gs9.20\bin</code></p>
         </blockquote>
         <p>Funkcjonalność sprawdzania pisowni jest dostępna poprzez Hunspell, którego pliki <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">słownika (</a><code>.aff</code> <code>.dic</code>) powinny być umieszczone w folderze <code>dict</code> programu VietOCR.</p>
         <h3>INSTRUKCJA</h3>
@@ -36,7 +36,7 @@ to jeszcze bardziej. Mimo to, wciąż aktualne wyniki, zależą w dużym stopniu
 zeskanowanego obrazu. Typowe ustawienia skanowania to 300 DPI i 1 bpp (bit 
 na piksel) obraz czarno-biały lub 8-bitowa skala szarości w formacie nieskompresowany TIFF lub PNG.</p>
         <p><em>Tryb Zrzutu Ekranu</em> zapewnia lepsze rezultaty dla obrazów niskiej rozdzielczości takich jak zrzuty z ekranów, poprzez przeskalowanie ich do rozdzielczości 300 DPI.</p>
-        <p>W dodatku do wbudowanego algorytmu przetwarzania wtórnego tekstu, można dodać własny zmodyfikowany schemat podmiany tekstu poprzez plik z nazwą <code>x.DangAmbigs.txt</code>, gdzie x jest kodem języka w standardzie ISO639-3. Pliki takie kodowane za pomocą UTF-8 powinny zawierać pary <code>oldValue=newValue</code> rozdzielone znakiem równości.</p>
+        <p>W dodatku do wbudowanego algorytmu przetwarzania wtórnego tekstu, można dodać własny zmodyfikowany schemat podmiany tekstu poprzez plik z nazwą <code>x.DangAmbigs.txt</code>, gdzie x jest kodem języka w standardzie ISO639-3.</p>
         <p>By zmodifikować zachowanie silnika Tesseract możesz wpisać startowe i bieżące parametry kontrolne w pliki konfiguracyjne  - odpowiednio: <code>tessdata/configs/tess_configs</code>
 oraz <code>tess_configvars</code>.</p>
         <p>Niektóre wbudowane narzędzia służą do łączenia kilku zdjęć lub plików PDF w jeden dokument 
