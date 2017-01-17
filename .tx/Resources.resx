@@ -77,6 +77,9 @@ Please run the program as administrator.</value>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>Beginning of task</value>
   </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Bilateral</value>
+  </data>
   <data name="Brightness" xml:space="preserve">
     <value>Brightness</value>
   </data>
@@ -142,6 +145,9 @@ Please run the program as administrator.</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gamma</value>
   </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Ignore All</value>
@@ -268,6 +274,9 @@ Please run the program as administrator.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Task canceled</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Threshold</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Untitled</value>
