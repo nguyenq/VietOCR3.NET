@@ -8,7 +8,7 @@ namespace VietOCR.NET.Postprocessing
 {
     class TextUtilities
     {
-        private static List<Dictionary<string, string>> map;
+        private static List<Dictionary<string, string>> maps;
         private static DateTime mapLastModified = DateTime.MinValue;
 
         /// <summary>
@@ -42,23 +42,23 @@ namespace VietOCR.NET.Postprocessing
                 FileInfo dataFile = new FileInfo(dangAmbigsFile);
 
                 DateTime fileLastModified = dataFile.LastWriteTime;
-                if (map == null)
+                if (maps == null)
                 {
-                    map = new List<Dictionary<string, string>>();
+                    maps = new List<Dictionary<string, string>>();
                 }
                 else
                 {
                     if (fileLastModified <= mapLastModified)
                     {
-                        return map; // no need to reload map
+                        return maps; // no need to reload map
                     }
-                    map.Clear();
+                    maps.Clear();
                 }
                 mapLastModified = fileLastModified;
 
                 for (int i = Processor.PLAIN; i <= Processor.REGEX; i++)
                 {
-                    map.Add(new Dictionary<string, string>());
+                    maps.Add(new Dictionary<string, string>());
                 }
 
                 StreamReader sr = new StreamReader(dangAmbigsFile, Encoding.UTF8);
@@ -66,18 +66,13 @@ namespace VietOCR.NET.Postprocessing
 
                 while ((str = sr.ReadLine()) != null)
                 {
-                    // skip empty line or line starts with #
-                    if (str.Trim().Length == 0 || str.Trim().StartsWith("#"))
+                    // skip empty line or line starts with # or without tab delimiters
+                    if (str.Trim().Length == 0 || str.Trim().StartsWith("#") || !str.Contains("\t"))
                     {
                         continue;
                     }
 
-                    if (!str.Contains("\t"))
-                    {
-                        continue;
-                    }
-
-                    str = Regex.Replace(str, "(\t)+", "\t");
+                    str = Regex.Replace(str, "\t+", "\t");
                     string[] parts = str.Split('\t');
                     if (parts.Length < 3)
                     {
@@ -93,9 +88,8 @@ namespace VietOCR.NET.Postprocessing
                         continue;
                     }
 
-                    Dictionary<string, string> hmap = map[type];
-                    hmap[key] = value;
-                    map[type] = hmap;
+                    Dictionary<string, string> dict = maps[type];
+                    dict[key] = value;
                 }
                 sr.Close();   
             }
@@ -104,7 +98,7 @@ namespace VietOCR.NET.Postprocessing
                 Console.WriteLine(e.StackTrace);
             }
 
-            return map;
+            return maps;
         }
     }
 }

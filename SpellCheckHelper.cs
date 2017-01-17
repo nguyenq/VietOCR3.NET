@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml;
 using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
-using NHunspell;
 using System.Text.RegularExpressions;
 using System.Collections;
+
+using NHunspell;
 using VietOCR.NET.Controls;
 using Net.SourceForge.Vietpad.Utilities;
 
@@ -17,10 +17,10 @@ namespace VietOCR.NET
     {
         TextBoxBase textbox;
         string localeId;
-        String baseDir;
+        string baseDir;
         static ArrayList listeners = new ArrayList();
         static List<CharacterRange> spellingErrorRanges = new List<CharacterRange>();
-        static List<String> userWordList = new List<String>();
+        static List<string> userWordList = new List<string>();
         static DateTime mapLastModified = DateTime.MinValue;
         Hunspell spellChecker;
         CustomPaintTextBox cntl;
@@ -38,29 +38,42 @@ namespace VietOCR.NET
             baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
 
-        public void EnableSpellCheck()
+        public bool InitializeSpellCheck()
         {
             if (localeId == null)
             {
-                return;
+                return false;
             }
             try
             {
                 string dictPath = baseDir + "/dict/" + localeId;
                 spellChecker = new Hunspell(dictPath + ".aff", dictPath + ".dic");
-                LoadUserDictionary();
-
-                listeners.Add(new System.EventHandler(this.textbox_TextChanged));
-
-                this.textbox.TextChanged += (System.EventHandler)listeners[0];
-                cntl = new CustomPaintTextBox(this.textbox, this);
-
-                SpellCheck();
+                if (!LoadUserDictionary())
+                {
+                    return false;
+                }
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                return false;
             }
+
+            return true;
+        }
+
+        public void EnableSpellCheck()
+        {
+            if (!InitializeSpellCheck())
+            {
+                throw new Exception("Spellcheck initialization error!");
+            }
+
+            listeners.Add(new System.EventHandler(this.textbox_TextChanged));
+
+            this.textbox.TextChanged += (System.EventHandler)listeners[0];
+            cntl = new CustomPaintTextBox(this.textbox, this);
+
+            SpellCheck();
         }
 
         public void DisableSpellCheck()
@@ -77,22 +90,22 @@ namespace VietOCR.NET
         {
             this.textbox.Invalidate();
             spellingErrorRanges.Clear();
-            List<String> words = ParseText(textbox.Text);
-            List<String> misspelledWords = SpellCheck(words);
+            List<string> words = ParseText(textbox.Text);
+            List<string> misspelledWords = SpellCheck(words);
             if (misspelledWords.Count == 0)
             {
                 return;
             }
 
             StringBuilder sb = new StringBuilder();
-            foreach (String word in misspelledWords)
+            foreach (string word in misspelledWords)
             {
                 sb.Append(word).Append("|");
             }
             sb.Length -= 1; //remove last |
 
             // build regex
-            String patternStr = "\\b(" + sb.ToString() + ")\\b";
+            string patternStr = "\\b(" + sb.ToString() + ")\\b";
             Regex regex = new Regex(patternStr, RegexOptions.IgnoreCase);
             MatchCollection mc = regex.Matches(textbox.Text);
 
@@ -102,33 +115,42 @@ namespace VietOCR.NET
             {
                 spellingErrorRanges.Add(new CharacterRange(mc[i].Index, mc[i].Length));
             }
-            
+
             //new CustomPaintTextBox(textbox, this);
         }
 
-        List<String> SpellCheck(List<String> words)
+        public bool IsMispelled(string word)
         {
-            List<String> misspelled = new List<String>();
-
-            foreach (String word in words)
+            if (!spellChecker.Spell(word))
             {
-                if (!spellChecker.Spell(word))
+                // is mispelled word in user.dic?
+                if (!userWordList.Contains(word.ToLower()))
                 {
-                    // is mispelled word in user.dic?
-                    if (!userWordList.Contains(word.ToLower()))
-                    {
-                        misspelled.Add(word);
-                    }
+                    return true;
+                }
+            }
 
+            return false;
+        }
+
+        List<string> SpellCheck(List<string> words)
+        {
+            List<string> misspelled = new List<string>();
+
+            foreach (string word in words)
+            {
+                if (IsMispelled(word))
+                {
+                    misspelled.Add(word);
                 }
             }
 
             return misspelled;
         }
 
-        List<String> ParseText(String text)
+        List<string> ParseText(string text)
         {
-            List<String> words = new List<String>();
+            List<string> words = new List<string>();
             BreakIterator boundary = BreakIterator.GetWordInstance();
             boundary.Text = text;
             int start = boundary.First();
@@ -149,9 +171,9 @@ namespace VietOCR.NET
             SpellCheck();
         }
 
-        public List<String> Suggest(string misspelled)
+        public List<string> Suggest(string misspelled)
         {
-            List<String> list = new List<String>();
+            List<string> list = new List<string>();
             list.Add(misspelled);
 
             if (SpellCheck(list).Count == 0)
@@ -177,7 +199,7 @@ namespace VietOCR.NET
             if (!userWordList.Contains(word.ToLower()))
             {
                 userWordList.Add(word.ToLower());
-                String baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
                 string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
 
                 using (StreamWriter sw = new StreamWriter(strUserDictFile, true, Encoding.UTF8))
@@ -187,18 +209,19 @@ namespace VietOCR.NET
                 }
             }
         }
-        void LoadUserDictionary()
+
+        bool LoadUserDictionary()
         {
             try
             {
-                String baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
                 string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
                 FileInfo userDict = new FileInfo(strUserDictFile);
                 DateTime fileLastModified = userDict.LastWriteTime;
 
                 if (fileLastModified <= mapLastModified)
                 {
-                    return; // no need to reload dictionary
+                    return true; // no need to reload dictionary
                 }
 
                 mapLastModified = fileLastModified;
@@ -212,13 +235,14 @@ namespace VietOCR.NET
                     {
                         userWordList.Add(str.ToLower());
                     }
-                    //sr.Close();
                 }
             }
-            catch (IOException e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                return false;
             }
+
+            return true;
         }
     }
 }

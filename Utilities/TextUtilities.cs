@@ -19,6 +19,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Threading;
+using VietOCR.NET;
 
 namespace Net.SourceForge.Vietpad.Utilities
 {
@@ -124,7 +125,7 @@ namespace Net.SourceForge.Vietpad.Utilities
 
             if (removeSoftHyphens)
             {
-                text = text.Replace("\u00AD", "");
+                text = text.Replace(SOFT_HYPHEN, string.Empty);
             }
 
             return text;
@@ -137,34 +138,32 @@ namespace Net.SourceForge.Vietpad.Utilities
         /// <returns></returns>
         public static string ReplaceHyphensWithSoftHyphens(string input)
         {
-            return input;
-            //SpellCheckHelper spellCheck = new SpellCheckHelper(null, Gui.getCurrentLocaleId());
-            //if (!spellCheck.initializeSpellCheck())
-            //{
-            //    return null;
-            //}
+            SpellCheckHelper spellCheck = new SpellCheckHelper(null, GUI.GetCurrentLocaleId());
+            if (!spellCheck.InitializeSpellCheck())
+            {
+                return input;
+            }
 
-            //Matcher m = Pattern.compile("(\\b\\p{L}+)(-|\u2010|\u2011|\u2012|\u2013|\u2014|\u2015)\n(\\p{L}+\\b)").matcher(input);
-            //StringBuffer strB = new StringBuffer();
+            Regex regex = new Regex("(\\b\\p{L}+)(-|\u2010|\u2011|\u2012|\u2013|\u2014|\u2015)\n(\\p{L}+\\b)");
+            return regex.Replace(input, new MatchEvaluator(delegate (Match match) { return ReplaceHyphens(match, spellCheck); }));
+        }
 
-            //while (m.find())
-            //{
-            //    String before = m.group(1);
-            //    String after = m.group(3);
-            //    char last = before.charAt(before.length() - 1);
-            //    char first = after.charAt(0);
-            //    if (Character.isUpperCase(first) && Character.isUpperCase(last) || Character.isLowerCase(first) && Character.isLowerCase(last))
-            //    {
-            //        String word = before + after;
-            //        if (!spellCheck.isMispelled(word))
-            //        {
-            //            m.appendReplacement(strB, before + SOFT_HYPHEN + "\n" + after);
-            //        }
-            //    }
-            //}
-            //m.appendTail(strB);
-
-            //return strB.toString();
+        static string ReplaceHyphens(Match m, SpellCheckHelper spellCheck)
+        {
+            string before = m.Groups[0].Value;
+            string after = m.Groups[3].Value;
+            char last = before[before.Length - 1];
+            char first = after[0];
+            if (Char.IsUpper(first) && Char.IsUpper(last) || Char.IsLower(first) && Char.IsLower(last))
+            {
+                string word = before + after;
+                if (!spellCheck.IsMispelled(word))
+                {
+                    return before + SOFT_HYPHEN + "\n" + after;
+                }
+            }
+            // Return the matched string.
+            return m.Value;
         }
     }
 }

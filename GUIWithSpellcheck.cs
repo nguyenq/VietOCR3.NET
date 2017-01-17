@@ -125,7 +125,7 @@ namespace VietOCR.NET
 
         protected override void toolStripButtonSpellCheck_Click(object sender, EventArgs e)
         {
-            string localeId = null;
+            localeId = null;
 
             if (LookupISO_3_1_Codes.ContainsKey(curLangCode))
             {
@@ -146,7 +146,14 @@ namespace VietOCR.NET
 
             if (this.toolStripButtonSpellCheck.Checked)
             {
-                speller.EnableSpellCheck();
+                try
+                {
+                    speller.EnableSpellCheck();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
             else
             {
