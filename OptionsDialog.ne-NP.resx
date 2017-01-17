@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>468, 259</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>विकल्पहरू</value>
+  </data>
+  <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 20</value>
+  </data>
+  <data name="btnDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 35</value>
+  </data>
+  <data name="btnDangAmbigs.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 58</value>
+  </data>
+  <data name="btnOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 35</value>
+  </data>
+  <data name="btnOutput.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 18</value>
+  </data>
+  <data name="btnWatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 35</value>
+  </data>
+  <data name="btnWatch.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 209</value>
+  </data>
+  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 35</value>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>रद्द</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 209</value>
+  </data>
+  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 35</value>
+  </data>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>हुन्छ</value>
+  </data>
+  <data name="checkBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 79</value>
+  </data>
+  <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
+    <value>सक्षम</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 80</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 24</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
+    <value>Remove soft hyphens</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 37</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 24</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
+    <value>Replace hyphens with soft hyphens</value>
+  </data>
+  <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 114</value>
+  </data>
+  <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="checkBoxWatch.Text" xml:space="preserve">
+    <value>सक्षम</value>
+  </data>
+  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 108</value>
+  </data>
+  <data name="comboBoxOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 28</value>
+  </data>
+  <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 65</value>
+  </data>
+  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 20</value>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>आउटपुट फोल्डर:</value>
+  </data>
+  <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 115</value>
+  </data>
+  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>आउटपुट ढाँचा</value>
+  </data>
+  <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 28</value>
+  </data>
+  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>बाटो:</value>
+  </data>
+  <data name="labelWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 20</value>
+  </data>
+  <data name="labelWatch.Text" xml:space="preserve">
+    <value>दृश्य फोल्डर</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 198</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 165</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>दृश्य</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 165</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>DangAmbigs.txt</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 165</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Hyphens</value>
+  </data>
+  <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="textBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 26</value>
+  </data>
+  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 60</value>
+  </data>
+  <data name="textBoxOutput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 26</value>
+  </data>
+  <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 20</value>
+  </data>
+  <data name="textBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 26</value>
+  </data>
+</root>

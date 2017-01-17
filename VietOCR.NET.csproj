@@ -136,12 +136,8 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\liblept172.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x64\libtesseract304.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="x64\liblept172.dll" />
+    <None Include="x64\libtesseract304.dll" />
     <Content Include="x86\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -163,6 +159,9 @@
     <EmbeddedResource Include="BulkDialog.hi-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ne-NP.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.pl-PL.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +175,9 @@
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.hi-IN.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ne-NP.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.pl-PL.resx">
@@ -197,6 +199,9 @@
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ja-JP.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ne-NP.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.nl-NL.resx">
@@ -223,6 +228,9 @@
     <EmbeddedResource Include="DownloadDialog.ja-JP.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ne-NP.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.nl-NL.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +250,9 @@
     <EmbeddedResource Include="GUI.hi-IN.resx">
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ne-NP.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.pl-PL.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -266,6 +277,9 @@
     <EmbeddedResource Include="ImageInfoDialog.hi-IN.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ne-NP.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.pl-PL.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,16 +295,21 @@
     <EmbeddedResource Include="OptionsDialog.hi-IN.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ne-NP.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.pl-PL.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ru-RU.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bn-IN.resx" />
     <EmbeddedResource Include="Properties\Resources.de-DE.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
+    <EmbeddedResource Include="Properties\Resources.ne-NP.resx" />
     <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
     <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
     <EmbeddedResource Include="readme_cs_fa.html" />
@@ -504,6 +523,9 @@
     <EmbeddedResource Include="SplitPdfDialog.ja-JP.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ne-NP.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -542,6 +564,9 @@
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.lt-LT.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.ne-NP.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.nl-NL.resx">

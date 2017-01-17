@@ -70,8 +70,12 @@ Version 4.2 (30 May 2016)
 - Update Tesseract.NET library
 - Update GhostScript to 9.19
 
-Version 4.3 Beta (02 November 2016)
+Version 4.3 (14 January 2017)
 - Refactor
 - Update GhostScript to 9.20
 - Update Tesseract.NET library to 3.2.0-alpha2
 - Update to .NET Framework 4.5.2
+- Additional image filters
+- Implement improvements made to Java version by John Helour, including:
+  * Expand support to include Regex text replacements from DangAmbigs.txt file
+  * Hyphen replacements
