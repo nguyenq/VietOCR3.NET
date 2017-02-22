@@ -203,7 +203,7 @@
     <value>कृपया प्रोग्राम को बंद करने के बाद फिर से चलायें ताकि वह नए भाषा पैक(s) को रजिस्टर कर सके</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>टेसेरक्ट 3.02 ओसीआर का डॉट.नेट जीयूआई फ्रंटएण्ड </value>
+    <value>टेसेरक्ट {0} ओसीआर का डॉट.नेट जीयूआई फ्रंटएण्ड </value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_hi.html</value>

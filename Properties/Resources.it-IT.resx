@@ -204,7 +204,7 @@ Avvia il programma come amministratore.</value>
     <value>Riavvia il programma per completare la registrazione del nuovo pacchetto linga(e)</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract 3.04 OCR Engine</value>
+    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_it.html</value>

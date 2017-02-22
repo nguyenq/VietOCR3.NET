@@ -204,7 +204,7 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
     <value>Pakartotinai paleiskite programą, kad naujai įdiegti kalbų paketai būtų užregistruoti.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET grafinė sąsaja „Tesseract 3.04“ optinio ženklų atpažinimo moduliui</value>
+    <value>.NET grafinė sąsaja „Tesseract {0}“ optinio ženklų atpažinimo moduliui</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_lt.html</value>

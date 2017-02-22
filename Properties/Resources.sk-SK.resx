@@ -204,7 +204,7 @@ Prosím spustite program ako administrátor.</value>
     <value>Reštartujte prosím program, nech môže zaregistrovať nové jazykové balíky.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI rozhranie pre Tesseract 3.04 OCR</value>
+    <value>.NET GUI rozhranie pre Tesseract {0} OCR</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_sk.html</value>

@@ -204,7 +204,7 @@ Voer dit programma a.u.b. uit als administrator. </value>
     <value>Herstart het programma om nieuwe taalpakketten te registreren.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend voor Tesseract 3.04 OCR Engine</value>
+    <value>.NET GUI Frontend voor Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_nl.html</value>

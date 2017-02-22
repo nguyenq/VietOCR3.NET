@@ -204,7 +204,7 @@ Bitte führen Sie das Programm mit Administratorrechte aus.</value>
     <value>Bitte die Applikation neustarten um die neue Sprache(n) installieren zu können.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend für Tesseract 3.04 OCR Engine</value>
+    <value>.NET GUI Frontend für Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_de.html</value>

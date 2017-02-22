@@ -204,7 +204,7 @@
     <value>新しい言語パックを登録するにはプログラムを再起動してください。</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>Tesseract 3.04 OCR エンジンの.NET製GUIフロントエンド</value>
+    <value>Tesseract {0} OCR エンジンの.NET製GUIフロントエンド</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ja.html</value>

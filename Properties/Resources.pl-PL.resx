@@ -204,7 +204,7 @@ Proszę uruchomić program jako administrator.</value>
     <value>Proszę ponownie uruchomić program, aby można było, zarejestrować nowy pakiet (y) języka.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>Interfejs użytkownika VietOCR.NET - .NET dla silnika Tessaract 3.02 OCR</value>
+    <value>Interfejs użytkownika VietOCR.NET - .NET dla silnika Tessaract {0} OCR</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_pl.html</value>

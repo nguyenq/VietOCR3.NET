@@ -204,7 +204,7 @@ Please run the program as administrator.</value>
     <value>Torneu a iniciar el programa per a poder registrar els nou paquet de llengua.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>Interfície Gràfica d&apos;usuari en .NET per al motor d&apos;OCR Tesseract 3.04</value>
+    <value>Interfície Gràfica d&apos;usuari en .NET per al motor d&apos;OCR Tesseract {0}</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ca.html</value>

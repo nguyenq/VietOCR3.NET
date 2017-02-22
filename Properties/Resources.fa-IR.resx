@@ -204,7 +204,7 @@ Please run the program as administrator.</value>
     <value>لطفا برنامه را بسته و دوباره راه اندازی کنید تا بسته(های) زبانی را اضافه کند.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract 3.04 OCR Engine</value>
+    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_fa.html</value>
