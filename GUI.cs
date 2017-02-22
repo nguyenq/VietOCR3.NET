@@ -275,7 +275,7 @@ namespace VietOCR.NET
             string version = System.Configuration.ConfigurationManager.AppSettings["Version"];
 
             MessageBox.Show(this, strProgName + " " + version + " © 2008\n" +
-                Properties.Resources.Program_desc + "\n" +
+                string.Format(Properties.Resources.Program_desc, System.Configuration.ConfigurationManager.AppSettings["TessVersion"]) + "\n" +
                 DateTime.Parse(releaseDate).ToString("D", System.Threading.Thread.CurrentThread.CurrentUICulture).Normalize() + "\n" +
                 "http://vietocr.sourceforge.net",
                 ((ToolStripMenuItem)sender).Text.Replace("&", string.Empty), MessageBoxButtons.OK, MessageBoxIcon.Information);
