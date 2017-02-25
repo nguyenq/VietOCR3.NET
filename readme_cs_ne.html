@@ -26,17 +26,10 @@
         <h3>स्थापन</h3>&#13;
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,&#13;
             you can specify another folder in Install Installation Folder dialog.</p>&#13;
-        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which&#13;
-            is included in Vista and 7.</p>&#13;
+        <p>Scanning support is provided via the Windows Image Acquisition 
+		Library v2.0.</p>&#13;
         <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL&#13;
-                Ghostscript</a>. After installation of the library, please ensure the dynamic&#13;
-            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>&#13;
-            environment variable, which is accessible through Windows&#39; Control Panel &gt;&#13;
-            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following&#13;
-            to <code>Path</code> variable value for GS version 9.20:</p>&#13;
-        <blockquote>&#13;
-            <p><code>;C:\Program Files\gs\gs9.20\bin</code></p>&#13;
-        </blockquote>&#13;
+                Ghostscript</a>.</p>
         <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">&#13;
                 dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>&#13;
             folder of VietOCR.</p>&#13;
@@ -92,12 +85,9 @@
 <li>Group lines. The lines need to be grouped to the paragraph they belong, as being&#13;
                 OCRed, each line becomes a separate 1-line paragraph. Use <i>Remove Line Breaks</i>&#13;
                 function under <i>Format</i> menu. Note that this operation may not be needed for&#13;
-                poems.</li>&#13;
-            <li>Select <i>Change Case</i>, also under <i>Format</i> menu, and choose <i>Sentence&#13;
+                poems.</li>&#13;<li>Select <i>Change Case</i>, also under <i>Format</i> menu, and choose <i>Sentence&#13;
                 case</i> to correct most of the letter case errors. Locate and fix the rest of remaining&#13;
-                letter case errors.</li>&#13;
-            <li>Correct the misspelled errors using the integrated <i>Spell Check</i>.</li>&#13;
-        </ol>
+                letter case errors.</li>&#13;<li>Correct the misspelled errors using the integrated <i>Spell Check</i>.</li>&#13;</ol>
 <p>Through the above process, most of common errors can be eliminated. The remaining,&#13;
             semantic errors are few, but it requires a human editor to read though and make&#13;
             necessary edits to make the document like the original scanned document.</p>&#13;
