@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
     <value>в</value>
@@ -76,6 +76,9 @@
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>Начало задачи</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Двусторонние</value>
   </data>
   <data name="Brightness" xml:space="preserve">
     <value>Яркость</value>
@@ -143,6 +146,9 @@
   <data name="Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Гамма</value>
+  </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Игнорировать все</value>
   </data>
@@ -153,7 +159,7 @@
     <value>Некорректный ввод.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>There is no page numbered &apos;{0}&apos; in this image.</value>
+    <value>Там нет пронумерованных страниц &apos;{0}&apos; в изображении.</value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>Загрузить изображение</value>
@@ -204,10 +210,13 @@
     <value>Пожалуйста, перезапустите программу, для регистрации новых языковых пакетов.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+    <value>.NET GUI Frontend для Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ru.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Изображению может потребоваться преобразование в оттенки серого.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>Ресурс не существует.</value>
@@ -255,16 +264,19 @@
     <value>Идет разбиение PDF...</value>
   </data>
   <data name="SplitTIFF_running" xml:space="preserve">
-    <value>Split TIFF running...</value>
+    <value>Разбиение TIFF запущено...</value>
   </data>
   <data name="SplitTIFFcompleted" xml:space="preserve">
-    <value>Split TIFF completed.</value>
+    <value>Разбиение TIFF завершено.</value>
   </data>
   <data name="suggest_split" xml:space="preserve">
     <value>Возможно, вы должны разбить PDF файл на файлы меньшего размера, прежде чем продолжить.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Задача отменена</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Порог</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Новый</value>
