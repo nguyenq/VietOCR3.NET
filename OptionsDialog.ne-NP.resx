@@ -125,7 +125,7 @@
     <value>189, 24</value>
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
-    <value>Remove soft hyphens</value>
+    <value>सफ्ट हाइफनहरू हटाउनुहोस्</value>
   </data>
   <data name="checkBoxReplaceHyphens.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 37</value>
@@ -134,7 +134,7 @@
     <value>285, 24</value>
   </data>
   <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
-    <value>Replace hyphens with soft hyphens</value>
+    <value>हाइफनहरूलाई सफ्ट हाइफनहरूले प्रतिस्थापन गर्नुहोस्</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 114</value>

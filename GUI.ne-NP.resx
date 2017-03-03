@@ -569,13 +569,13 @@
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
-    <value>Post-process</value>
+    <value>पश्च-प्रक्रिया</value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
-    <value>Remove Line Breaks</value>
+    <value>पङ्क्ति विरामहरू हटाउनुहोस्</value>
   </data>
   <data name="toolStripButtonSpellCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
