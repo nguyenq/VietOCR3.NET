@@ -26,8 +26,6 @@ namespace VietOCR.NET
 {
     class OCRImages : OCR<Image>
     {
-        const int oem = 3;
-
         /// <summary>
         /// Recognize text.
         /// </summary>
@@ -41,7 +39,7 @@ namespace VietOCR.NET
         {
             IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
 
-            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode.Default, configs_file))
+            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode, configs_file))
             {
                 engine.SetVariable("tessedit_create_hocr", OutputFormat == "hocr" ? "1" : "0");
                 ControlParameters(engine);
@@ -148,7 +146,7 @@ namespace VietOCR.NET
         /// <returns></returns>
         public override List<Rectangle> GetSegmentedRegions(Bitmap image, PageIteratorLevel level)
         {
-            using (var engine = new TesseractEngine(Datapath, Language, EngineMode.Default))
+            using (var engine = new TesseractEngine(Datapath, Language, EngineMode))
             {
                 using (var page = engine.Process(image))
                 {

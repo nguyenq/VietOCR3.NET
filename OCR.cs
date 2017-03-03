@@ -41,6 +41,28 @@ namespace VietOCR.NET
             set { pageSegMode = value; }
         }
 
+        private string ocrEngineMode = "3"; // Default
+
+        public string OcrEngineMode
+        {
+            set { ocrEngineMode = value; }
+        }
+
+        public Tesseract.EngineMode EngineMode
+        {
+            get
+            {
+                try
+                {
+                    return (EngineMode)Enum.Parse(typeof(EngineMode), ocrEngineMode);
+                }
+                catch
+                {
+                    return EngineMode.Default;
+                }
+            }
+        }
+
         private string language = "eng";
 
         public string Language

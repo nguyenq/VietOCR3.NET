@@ -126,6 +126,7 @@ namespace VietOCR.NET
             this.downloadLangDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripSeparator();
             this.psmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -157,6 +158,8 @@ namespace VietOCR.NET
             this.toolStripStatusLabelSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelPSM = new VietOCR.NET.Controls.NonblinkingToolStripStatusLabel(this.components);
             this.toolStripStatusLabelPSMvalue = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelOEM = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelOEMvalue = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerImage)).BeginInit();
             this.splitContainerImage.Panel1.SuspendLayout();
             this.splitContainerImage.Panel2.SuspendLayout();
@@ -854,6 +857,7 @@ namespace VietOCR.NET
             this.downloadLangDataToolStripMenuItem,
             this.toolStripMenuItem10,
             this.psmToolStripMenuItem,
+            this.oemToolStripMenuItem,
             this.toolStripMenuItem7,
             this.optionsToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
@@ -894,6 +898,11 @@ namespace VietOCR.NET
             // 
             this.psmToolStripMenuItem.Name = "psmToolStripMenuItem";
             resources.ApplyResources(this.psmToolStripMenuItem, "psmToolStripMenuItem");
+            // 
+            // oemToolStripMenuItem
+            // 
+            this.oemToolStripMenuItem.Name = "oemToolStripMenuItem";
+            resources.ApplyResources(this.oemToolStripMenuItem, "oemToolStripMenuItem");
             // 
             // toolStripMenuItem7
             // 
@@ -987,7 +996,9 @@ namespace VietOCR.NET
             this.toolStripStatusLabelSM,
             this.toolStripStatusLabelSMvalue,
             this.toolStripStatusLabelPSM,
-            this.toolStripStatusLabelPSMvalue});
+            this.toolStripStatusLabelPSMvalue,
+            this.toolStripStatusLabelOEM,
+            this.toolStripStatusLabelOEMvalue});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.ShowItemToolTips = true;
@@ -1109,6 +1120,16 @@ namespace VietOCR.NET
             this.toolStripStatusLabelPSMvalue.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelPSMvalue.Name = "toolStripStatusLabelPSMvalue";
             resources.ApplyResources(this.toolStripStatusLabelPSMvalue, "toolStripStatusLabelPSMvalue");
+            // 
+            // toolStripStatusLabelOEM
+            // 
+            this.toolStripStatusLabelOEM.Name = "toolStripStatusLabelOEM";
+            resources.ApplyResources(this.toolStripStatusLabelOEM, "toolStripStatusLabelOEM");
+            // 
+            // toolStripStatusLabelOEMvalue
+            // 
+            this.toolStripStatusLabelOEMvalue.Name = "toolStripStatusLabelOEMvalue";
+            resources.ApplyResources(this.toolStripStatusLabelOEMvalue, "toolStripStatusLabelOEMvalue");
             // 
             // GUI
             // 
@@ -1276,5 +1297,8 @@ namespace VietOCR.NET
         private System.Windows.Forms.ToolStripMenuItem gammaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thresholdToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bilateralToolStripMenuItem;
+        protected System.Windows.Forms.ToolStripMenuItem oemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelOEM;
+        protected System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelOEMvalue;
     }
 }

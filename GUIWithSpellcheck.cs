@@ -25,7 +25,7 @@ using Net.SourceForge.Vietpad.Utilities;
 
 namespace VietOCR.NET
 {
-    public partial class GUIWithSpellcheck : VietOCR.NET.GUIWithPSM
+    public partial class GUIWithSpellcheck : VietOCR.NET.GUIWithOEM
     {
         private int start, end;
         private SpellCheckHelper speller;

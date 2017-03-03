@@ -124,6 +124,12 @@
     <Compile Include="GUIWithFile.Designer.cs">
       <DependentUpon>GUIWithFile.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUIWithOEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIWithOEM.Designer.cs">
+      <DependentUpon>GUIWithOEM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUIWithThumbnail.cs">
       <SubType>Form</SubType>
     </Compile>
