@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Net;
@@ -7,7 +8,6 @@ using System.IO;
 using VietOCR.NET.Utilities;
 using System.Xml;
 using System.Threading;
-
 
 namespace VietOCR.NET
 {
@@ -30,9 +30,9 @@ namespace VietOCR.NET
             set { lookupISO639 = value; }
         }
 
-        private string[] installedLanguages;
+        private ObservableCollection<string> installedLanguages;
 
-        public string[] InstalledLanguages
+        public ObservableCollection<string> InstalledLanguages
         {
             get { return installedLanguages; }
             set { installedLanguages = value; }

@@ -15,6 +15,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 using System.Text;
@@ -39,9 +40,9 @@ namespace VietOCR.NET
         protected static string localeId;
         protected string curLangCode;
         private string[] installedLanguageCodes;
-        private string[] installedLanguages;
+        private ObservableCollection<string> installedLanguages;
 
-        public string[] InstalledLanguages
+        public ObservableCollection<string> InstalledLanguages
         {
             get { return installedLanguages; }
             set { installedLanguages = value; }
@@ -181,26 +182,21 @@ namespace VietOCR.NET
             }
             finally
             {
-                if (installedLanguageCodes == null)
+                installedLanguages = new ObservableCollection<string>();
+                if (installedLanguageCodes != null)
                 {
-                    installedLanguages = new String[0];
-                }
-                else
-                {
-                    installedLanguages = new String[installedLanguageCodes.Length];
-                }
-
-                for (int i = 0; i < installedLanguages.Length; i++)
-                {
-                    installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
-                    // translate ISO codes to full English names for user-friendliness
-                    if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
+                    for (int i = 0; i < installedLanguageCodes.Length; i++)
                     {
-                        installedLanguages[i] = lookupISO639[installedLanguageCodes[i]];
-                    }
-                    else
-                    {
-                        installedLanguages[i] = installedLanguageCodes[i];
+                        installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
+                        // translate ISO codes to full English names for user-friendliness
+                        if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
+                        {
+                            installedLanguages.Add(lookupISO639[installedLanguageCodes[i]]);
+                        }
+                        else
+                        {
+                            installedLanguages.Add(installedLanguageCodes[i]);
+                        }
                     }
                 }
             }
@@ -216,7 +212,7 @@ namespace VietOCR.NET
         /// </summary>
         void PopulateOCRLanguageBox()
         {
-            this.toolStripCbLang.Items.AddRange(installedLanguages);
+            this.toolStripCbLang.Items.AddRange(new List<string>(installedLanguages).ToArray());
         }
 
         protected virtual void ocrToolStripMenuItem_Click(object sender, EventArgs e)
