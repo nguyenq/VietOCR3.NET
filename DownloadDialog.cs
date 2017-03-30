@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Net;
@@ -15,27 +14,23 @@ namespace VietOCR.NET
     {
         Dictionary<string, string> availableLanguageCodes;
         Dictionary<string, string> availableDictionaries;
-        Dictionary<string, string> lookupISO_3_1_Codes;
 
         public Dictionary<string, string> LookupISO_3_1_Codes
         {
-            get { return lookupISO_3_1_Codes; }
-            set { lookupISO_3_1_Codes = value; }
+            get;
+            set;
         }
-        Dictionary<string, string> lookupISO639;
 
         public Dictionary<string, string> LookupISO639
         {
-            get { return lookupISO639; }
-            set { lookupISO639 = value; }
+            get;
+            set;
         }
 
-        private ObservableCollection<string> installedLanguages;
-
-        public ObservableCollection<string> InstalledLanguages
+        public List<string> InstalledLanguages
         {
-            get { return installedLanguages; }
-            set { installedLanguages = value; }
+            get;
+            set;
         }
 
         List<WebClient> clients;
@@ -72,14 +67,14 @@ namespace VietOCR.NET
             List<String> names = new List<String>();
             foreach (String key in available)
             {
-                names.Add(this.lookupISO639[key]);
+                names.Add(this.LookupISO639[key]);
             }
             names.Sort();
 
             this.listBox1.Items.Clear();
             this.listBox1.Items.AddRange(names.ToArray());
 
-            foreach (string installed in installedLanguages)
+            foreach (string installed in InstalledLanguages)
             {
                 for (int i = 0; i < names.Count; ++i)
                 {
@@ -162,7 +157,7 @@ namespace VietOCR.NET
 
             foreach (object obj in this.listBox1.SelectedItems)
             {
-                string key = FindKey(lookupISO639, obj.ToString()); // Vietnamese -> vie
+                string key = FindKey(LookupISO639, obj.ToString()); // Vietnamese -> vie
                 if (key != null)
                 {
                     try
@@ -170,9 +165,9 @@ namespace VietOCR.NET
                         Uri uri = new Uri(availableLanguageCodes[key]);
                         DownloadDataFile(uri, TESS_DATA);  // download language data pack. In Tesseract 3.02, data is packaged under tesseract-ocr/tessdata directory
 
-                        if (lookupISO_3_1_Codes.ContainsKey(key))
+                        if (LookupISO_3_1_Codes.ContainsKey(key))
                         {
-                            string iso_3_1_Code = lookupISO_3_1_Codes[key]; // vie -> vi_VN
+                            string iso_3_1_Code = LookupISO_3_1_Codes[key]; // vie -> vi_VN
                             if (availableDictionaries.ContainsKey(iso_3_1_Code))
                             {
                                 uri = new Uri(availableDictionaries[iso_3_1_Code]);

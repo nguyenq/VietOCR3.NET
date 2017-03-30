@@ -23,6 +23,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Globalization;
+using System.Linq;
 
 namespace VietOCR.NET
 {
@@ -88,7 +89,7 @@ namespace VietOCR.NET
             downloadDialog.Owner = this;
             downloadDialog.LookupISO639 = LookupISO639;
             downloadDialog.LookupISO_3_1_Codes = LookupISO_3_1_Codes;
-            downloadDialog.InstalledLanguages = InstalledLanguages;
+            downloadDialog.InstalledLanguages = installedLanguageCodes.Values.ToList();
             downloadDialog.ShowDialog();
         }
 

@@ -15,7 +15,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 using System.Text;
@@ -29,6 +28,7 @@ using System.Drawing.Imaging;
 using Net.SourceForge.Vietpad.InputMethod;
 using VietOCR.NET.Utilities;
 using Tesseract;
+using System.Linq;
 
 namespace VietOCR.NET
 {
@@ -39,14 +39,8 @@ namespace VietOCR.NET
 
         protected static string localeId;
         protected string curLangCode;
-        private string[] installedLanguageCodes;
-        private ObservableCollection<string> installedLanguages;
 
-        public ObservableCollection<string> InstalledLanguages
-        {
-            get { return installedLanguages; }
-            set { installedLanguages = value; }
-        }
+        protected Dictionary<string, string> installedLanguageCodes;
 
         private Dictionary<string, string> lookupISO639;
 
@@ -123,8 +117,9 @@ namespace VietOCR.NET
 
             InitializeComponent();
 
-            GetInstalledLanguagePacks();
-            PopulateOCRLanguageBox();
+            installedLanguageCodes = new Dictionary<string, string>();
+            List<string> installedLanguages = GetInstalledLanguagePacks();
+            PopulateOCRLanguageBox(installedLanguages);
 
             //rectNormal = DesktopBounds;
 
@@ -159,20 +154,42 @@ namespace VietOCR.NET
         /// <summary>
         /// Gets Tesseract's installed language data packs.
         /// </summary>
-        void GetInstalledLanguagePacks()
+        List<string> GetInstalledLanguagePacks()
         {
             lookupISO639 = new Dictionary<string, string>();
             lookupISO_3_1_Codes = new Dictionary<string, string>();
+            List<string> installedLanguages = new List<string>();
 
             try
             {
                 string tessdataDir = Path.Combine(baseDir, "tessdata");
-                installedLanguageCodes = Directory.GetFiles(tessdataDir, "*.traineddata");
+                string[] installedLanguagePacks = Directory.GetFiles(tessdataDir, "*.traineddata");
                 //installedLanguageCodes = installedLanguageCodes.Where(val => val != "osd.traineddata").ToArray(); // LINQ
                 string xmlFilePath = Path.Combine(baseDir, "Data/ISO639-3.xml");
                 Utilities.Utilities.LoadFromXML(lookupISO639, xmlFilePath);
                 xmlFilePath = Path.Combine(baseDir, "Data/ISO639-1.xml");
                 Utilities.Utilities.LoadFromXML(lookupISO_3_1_Codes, xmlFilePath);
+
+                if (installedLanguagePacks != null)
+                {
+                    foreach (string langPack in installedLanguagePacks)
+                    {
+                        string langCode = Path.GetFileNameWithoutExtension(langPack);
+                        // translate ISO codes to full English names for user-friendliness
+                        if (lookupISO639.ContainsKey(langCode))
+                        {
+                            installedLanguageCodes.Add(langCode, lookupISO639[langCode]);
+                        }
+                        else
+                        {
+                            installedLanguageCodes.Add(langCode, langCode);
+                        }
+                    }
+
+                    List<string> lst = installedLanguageCodes.Values.ToList();
+                    lst.Sort();
+                    installedLanguages = lst;
+                }
             }
             catch (Exception e)
             {
@@ -180,26 +197,8 @@ namespace VietOCR.NET
                 // this also applies to missing language data files in tessdata directory
                 Console.WriteLine(e.StackTrace);
             }
-            finally
-            {
-                installedLanguages = new ObservableCollection<string>();
-                if (installedLanguageCodes != null)
-                {
-                    for (int i = 0; i < installedLanguageCodes.Length; i++)
-                    {
-                        installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
-                        // translate ISO codes to full English names for user-friendliness
-                        if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
-                        {
-                            installedLanguages.Add(lookupISO639[installedLanguageCodes[i]]);
-                        }
-                        else
-                        {
-                            installedLanguages.Add(installedLanguageCodes[i]);
-                        }
-                    }
-                }
-            }
+
+            return installedLanguages;
         }
 
         public static string GetCurrentLocaleId()
@@ -210,9 +209,9 @@ namespace VietOCR.NET
         /// <summary>
         /// Populates OCR Language box.
         /// </summary>
-        void PopulateOCRLanguageBox()
+        void PopulateOCRLanguageBox(List<string> installedLanguages)
         {
-            this.toolStripCbLang.Items.AddRange(new List<string>(installedLanguages).ToArray());
+            this.toolStripCbLang.Items.AddRange(installedLanguages.ToArray());
         }
 
         protected virtual void ocrToolStripMenuItem_Click(object sender, EventArgs e)
@@ -292,7 +291,7 @@ namespace VietOCR.NET
 
         private void toolStripCbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            curLangCode = installedLanguageCodes[this.toolStripCbLang.SelectedIndex];
+            curLangCode = installedLanguageCodes.FirstOrDefault(x => x.Value == this.toolStripCbLang.SelectedItem.ToString()).Key;
 
             // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
             bool vie = curLangCode.Contains("vie");
