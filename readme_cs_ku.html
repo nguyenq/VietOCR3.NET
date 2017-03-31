@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - .NET GUI Frontend for Tesseract OCR</title>
+</head>
+<body>&#13;
+    <div>&#13;
+        <h2 align="center">VietOCR.NET</h2>&#13;
+        <h3>DESCRIPTION</h3>&#13;
+        <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>&#13;
+            is a .NET GUI frontend for <a href="https://github.com/tesseract-ocr">Tesseract&#13;
+                OCR engine</a>, providing character recognition support for common image formats,&#13;
+            and multi-page images. The program has postprocessing which helps correct errors&#13;
+            regularly encountered in the OCR process, boosting the accuracy rate on the result.&#13;
+            The program can also function as a console application, executing from the command&#13;
+            line.</p>&#13;
+        <p>Batch processing is now supported. The program monitors a watch folder for new image&#13;
+            files, automatically processes them through the OCR engine, and outputs recognition&#13;
+            results to an output folder.</p>&#13;
+        <h3>SYSTEM REQUIREMENTS</h3>&#13;
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">&#13;
+                Microsoft .NET Framework 4.5.2 Redistributable&#13;
+            </a>.</p>&#13;
+        <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install&#13;
+            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>&#13;
+        <h3>INSTALLATION</h3>&#13;
+        <p>If you do not have authority to install under <code>C:\Program Files</code> folder,&#13;
+            you can specify another folder in Install Installation Folder dialog.</p>&#13;
+        <p>Scanning support is provided via the Windows Image Acquisition &#13;
+			Library v2.0.</p>&#13;
+        <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL&#13;
+                Ghostscript</a>.</p>&#13;
+        <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">&#13;
+                dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>&#13;
+            folder of VietOCR.</p>&#13;
+        <h3>INSTRUCTIONS</h3>&#13;
+        <p><a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a>&#13;
+            for Tesseract should be decompressed into <code>tesseract</code> installation folder;&#13;
+            the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>&#13;
+            subdirectory. VietOCR also provides support for downloading and installing selected&#13;
+            language packs via <em>Download Language Data</em> menu item. Depending on the location&#13;
+            of the <code>tessdata</code> folder, you may be required to run the program as admin&#13;
+            to be able to install the downloaded data into the folder if it is inside a system&#13;
+            folder, such as in <code>C:\Program Files</code>.</p>&#13;
+        <p>The Vietnamese language data were generated for Times New Roman, Arial, Verdana,&#13;
+            and Courier New fonts. Therefore, the recognition would have better success rate&#13;
+            for images having similar font glyphs. OCRing images that have font glyphs look&#13;
+            different from the supported fonts generally will require <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">&#13;
+                training</a> Tesseract to create another language data pack specifically for&#13;
+            those typefaces. Language data for some VNI and TCVN3 (ABC) fonts have also been&#13;
+            bundled in latest versions.</p>&#13;
+        <p>Images to be OCRed should be scanned at resolution from at least 200 DPI (dot per&#13;
+            inch) to 400 DPI in monochrome (black&amp;white) or grayscale. Scanning at higher&#13;
+            resolutions will not necessarily result in better recognition accuracy, which currently&#13;
+            can be higher than 97% for Vietnamese, and the next release of Tesseract may improve&#13;
+            it even further. Even so, the actual rates still depend greatly on the quality of&#13;
+            the scanned image. The typical settings for scanning are 300 DPI and 1 bpp (bit&#13;
+            per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>&#13;
+        <p>The <em>Screenshot Mode</em> offers better recognition rates for low-resolution&#13;
+            images, such as screen prints, by rescaling them to 300 DPI.</p>&#13;
+        <p>In addition to the built-in text postprocessing algorithm, you can add your own&#13;
+            custom text replacement scheme via a UTF-8-encoded tab-delimited text file named <code>x.DangAmbigs.txt</code>,&#13;
+            where x is the ISO639-3 language code. Both plain and Regex text replacements are supported.</p>&#13;
+        <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>&#13;
+            and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s&#13;
+            behaviour.</p>&#13;
+        <p>Some built-in tools are provided to merge several images or PDF files into a single&#13;
+            one for convenient OCR operations, or to split a PDF file into smaller ones if it&#13;
+            is too large, which can cause out-of-memory exceptions.</p>&#13;
+        <h3>POSTPROCESSING</h3>&#13;
+        <p>The recognition errors can generally be classified into three categories. Many of&#13;
+            the errors are related to the letter cases — for example: hOa, nhắC — which can&#13;
+            be easily corrected by popular Unicode text editors. Many other errors are a result&#13;
+            of the OCR process, such as missing diacritical marks, wrong letters with similar&#13;
+            shape, etc. — huu – hưu, mang – marg, h0a – hoa, la – 1a, uhìu - nhìn. These can&#13;
+            also be easily fixed by spell checker programs. The built-in Postprocessing function&#13;
+            can help correct many of the aforementioned errors.</p>&#13;
+        <p>The last category of errors is the most difficult to detect because they are semantic&#13;
+            errors, which means that the words are valid entries in the dictionary but are wrong&#13;
+            in the context — e.g., tinh – tình, vân – vấn. These errors require the editor to&#13;
+            read though and manually correct them according to the original image.</p>&#13;
+        <p>Following are instructions on how to correct the first two categories of OCR errors&#13;
+            using the built-in functionality:</p>&#13;
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>Group lines. The lines need to be grouped to the paragraph they belong, as being&#13;
+                OCRed, each line becomes a separate 1-line paragraph. Use <i>Remove Line Breaks</i>&#13;
+                function under <i>Format</i> menu. Note that this operation may not be needed for&#13;
+                poems.</li>&#13;
+            <li>Select <i>Change Case</i>, also under <i>Format</i> menu, and choose <i>Sentence&#13;
+                case</i> to correct most of the letter case errors. Locate and fix the rest of remaining&#13;
+                letter case errors.</li>&#13;
+            <li>Correct the misspelled errors using the integrated <i>Spell Check</i>.</li>&#13;
+        </ol>
+<p>Through the above process, most of common errors can be eliminated. The remaining,&#13;
+            semantic errors are few, but it requires a human editor to read though and make&#13;
+            necessary edits to make the document like the original scanned document.</p>&#13;
+        <p>If there is any questions, please post in <a href="http://sourceforge.net/projects/vietocr/forums">&#13;
+                VietOCR Forum</a>.</p>&#13;
+        <hr>
+</div>&#13;
+</body>
+</html>

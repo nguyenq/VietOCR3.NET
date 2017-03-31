@@ -117,7 +117,6 @@ namespace VietOCR.NET
 
             InitializeComponent();
 
-            installedLanguageCodes = new Dictionary<string, string>();
             List<string> installedLanguages = GetInstalledLanguagePacks();
             PopulateOCRLanguageBox(installedLanguages);
 
@@ -158,6 +157,7 @@ namespace VietOCR.NET
         {
             lookupISO639 = new Dictionary<string, string>();
             lookupISO_3_1_Codes = new Dictionary<string, string>();
+            installedLanguageCodes = new Dictionary<string, string>();
             List<string> installedLanguages = new List<string>();
 
             try

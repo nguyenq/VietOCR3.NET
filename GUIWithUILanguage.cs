@@ -40,7 +40,7 @@ namespace VietOCR.NET
 
             List<ToolStripRadioButtonMenuItem> ar = new List<ToolStripRadioButtonMenuItem>();
 
-            String[] uiLangs = { "bn-IN", "ca-ES", "cs-CZ", "en-US", "de-DE", "fa-IR", "hi-IN", "it-IT", "lt-LT", "ja-JP", "ne-NP", "nl-NL", "pl-PL", "ru-RU", "sk-SK", "tr-TR", "vi-VN" }; // "bn-IN" caused exception on WinXP .NET 2.0
+            String[] uiLangs = { "bn-IN", "ca-ES", "cs-CZ", "en-US", "de-DE", "fa-IR", "hi-IN", "it-IT", "lt-LT", "ja-JP", "ku-Arab-IQ", "ne-NP", "nl-NL", "pl-PL", "ru-RU", "sk-SK", "tr-TR", "vi-VN" }; // "bn-IN" caused exception on WinXP .NET 2.0
             foreach (string uiLang in uiLangs)
             {
                 ToolStripRadioButtonMenuItem miuil = new ToolStripRadioButtonMenuItem();

@@ -142,9 +142,11 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="README.md" />
     <None Include="x64\liblept172.dll" />
     <None Include="x64\libtesseract304.dll" />
     <Content Include="readme_cs_bn.html" />
+    <Content Include="readme_cs_ku.html" />
     <Content Include="readme_cs_ne.html" />
     <Content Include="x86\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -167,6 +169,9 @@
     <EmbeddedResource Include="BulkDialog.hi-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ku-Arab-IQ.resx">
+      <DependentUpon>BulkDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.ne-NP.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +188,9 @@
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.hi-IN.resx">
+      <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ku-Arab-IQ.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.ne-NP.resx">
@@ -207,6 +215,9 @@
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ja-JP.resx">
+      <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ku-Arab-IQ.resx">
       <DependentUpon>TextBoxContextMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextBoxContextMenuStrip.ne-NP.resx">
@@ -236,6 +247,9 @@
     <EmbeddedResource Include="DownloadDialog.ja-JP.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ku-Arab-IQ.resx">
+      <DependentUpon>DownloadDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.ne-NP.resx">
       <DependentUpon>DownloadDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +272,9 @@
     <EmbeddedResource Include="GUI.hi-IN.resx">
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ku-Arab-IQ.resx">
+      <DependentUpon>GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.ne-NP.resx">
       <DependentUpon>GUI.cs</DependentUpon>
@@ -284,6 +301,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.hi-IN.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ku-Arab-IQ.resx">
+      <DependentUpon>ImageInfoDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.ne-NP.resx">
       <DependentUpon>ImageInfoDialog.cs</DependentUpon>
@@ -302,6 +323,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.hi-IN.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ku-Arab-IQ.resx">
+      <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ne-NP.resx">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
@@ -317,6 +342,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
+    <EmbeddedResource Include="Properties\Resources.ku-Arab-IQ.resx" />
     <EmbeddedResource Include="Properties\Resources.ne-NP.resx" />
     <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
     <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
@@ -497,8 +523,12 @@
       <DependentUpon>OptionsDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />
-    <EmbeddedResource Include="Properties\Resources.cs-CZ.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca-ES.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.cs-CZ.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.fa-IR.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
@@ -529,6 +559,9 @@
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ja-JP.resx">
+      <DependentUpon>SplitPdfDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ku-Arab-IQ.resx">
       <DependentUpon>SplitPdfDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ne-NP.resx">
@@ -569,6 +602,9 @@
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.ja-JP.resx">
+      <DependentUpon>TrackbarDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackbarDialog.ku-Arab-IQ.resx">
       <DependentUpon>TrackbarDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackbarDialog.lt-LT.resx">

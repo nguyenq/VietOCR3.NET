@@ -62,7 +62,7 @@
     <value>468, 259</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>विकल्पहरू</value>
+    <value>هەڵبژاردەکان</value>
   </data>
   <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 20</value>
@@ -98,7 +98,7 @@
     <value>112, 35</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
-    <value>रद्द</value>
+    <value>پاشگەزبوونەوە</value>
   </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>216, 209</value>
@@ -107,7 +107,7 @@
     <value>112, 35</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
-    <value>हुन्छ</value>
+    <value>باشە</value>
   </data>
   <data name="checkBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 79</value>
@@ -116,7 +116,7 @@
     <value>85, 24</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>सक्षम</value>
+    <value>چالاککردن</value>
   </data>
   <data name="checkBoxRemoveHyphens.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 80</value>
@@ -125,7 +125,7 @@
     <value>189, 24</value>
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
-    <value>सफ्ट हाइफनहरू हटाउनुहोस्</value>
+    <value>Remove soft hyphens</value>
   </data>
   <data name="checkBoxReplaceHyphens.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 37</value>
@@ -134,7 +134,7 @@
     <value>285, 24</value>
   </data>
   <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
-    <value>हाइफनहरूलाई सफ्ट हाइफनहरूले प्रतिस्थापन गर्नुहोस्</value>
+    <value>Replace hyphens with soft hyphens</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 114</value>
@@ -143,7 +143,7 @@
     <value>85, 24</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>सक्षम</value>
+    <value>چالاککردن</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 108</value>
@@ -158,7 +158,7 @@
     <value>111, 20</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
-    <value>आउटपुट फोल्डर:</value>
+    <value>Output Folder:</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 115</value>
@@ -167,7 +167,7 @@
     <value>113, 20</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>आउटपुट प्रारूप</value>
+    <value>Output Format</value>
   </data>
   <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 28</value>
@@ -176,7 +176,7 @@
     <value>46, 20</value>
   </data>
   <data name="labelPath.Text" xml:space="preserve">
-    <value>बाटो:</value>
+    <value>Path:</value>
   </data>
   <data name="labelWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
@@ -185,7 +185,7 @@
     <value>108, 20</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
-    <value>दृश्य फोल्डर:</value>
+    <value>Watch Folder:</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -200,7 +200,7 @@
     <value>460, 165</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>दृश्य</value>
+    <value>Watch</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
@@ -218,7 +218,7 @@
     <value>460, 165</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>हाइफनहरू</value>
+    <value>Hyphens</value>
   </data>
   <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 22</value>

@@ -512,7 +512,7 @@ namespace VietOCR.NET.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .NET GUI Frontend for Tesseract 3.04 OCR Engine.
+        ///   Looks up a localized string similar to .NET GUI Frontend for Tesseract {0} OCR Engine.
         /// </summary>
         internal static string Program_desc {
             get {
