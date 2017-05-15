@@ -53,10 +53,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
     <value>nin</value>
@@ -75,6 +75,9 @@
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>Görev başlangıcı</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>İkili</value>
   </data>
   <data name="Brightness" xml:space="preserve">
     <value>Brightness</value>
@@ -142,6 +145,9 @@
   <data name="Error" xml:space="preserve">
     <value>Hata</value>
   </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Kontrast</value>
+  </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Tümünü Yoksay</value>
   </data>
@@ -203,10 +209,13 @@
     <value>Bu yeni dil paketi(ler)i kayıt edildikten sonra programı yeniden başlatın.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+    <value>Tesseract {0} OCR Motoru için .NET Arayüzü</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_tr.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Resimin gri tonlamalı hale dönüştürülmesi gerekebilir.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>Kaynak yok.</value>
@@ -264,6 +273,9 @@
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Görevi iptal et</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Eşik</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Başlıksız</value>
