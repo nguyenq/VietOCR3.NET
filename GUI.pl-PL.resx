@@ -74,7 +74,7 @@
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Automatyczne przyci&amp;nanie </value>
+    <value>&amp;Automatyczne przycinanie </value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -120,6 +120,9 @@
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Kontrast ...</value>
+  </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Przycinanie</value>
   </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22 </value>
@@ -298,6 +301,9 @@
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Usuń podziały wiersza</value>
   </data>
+  <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Usuń &amp;linie</value>
+  </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22  </value>
   </data>
@@ -321,6 +327,9 @@
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>Tryb Zrzutu &amp;Ekranu</value>
+  </data>
+  <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pokaż Pos&amp;egmentowane Regiony</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -362,7 +371,7 @@
     <value>142, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Podział TIFF ... </value>
+    <value>Rozdz&amp;iel TIFF...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>
@@ -553,6 +562,9 @@
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
   </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
+    <value>Posegmentowane Regiony</value>
+  </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
   </data>
@@ -607,8 +619,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6 </value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Blok</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6 </value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Akapit</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Znak</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Linia tekstu</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Słowo</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>

@@ -209,6 +209,9 @@ Proszę uruchomić program jako administrator.</value>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_pl.html</value>
   </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Obraz może wymagać konwersji na obraz w odcieniach szarości.</value>
+  </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>Zasób nie istnieje.</value>
   </data>

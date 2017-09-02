@@ -77,6 +77,9 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>Užduotis pradedama vykdyti</value>
   </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Slopinti triukšmus</value>
+  </data>
   <data name="Brightness" xml:space="preserve">
     <value>Šviesis</value>
   </data>
@@ -143,6 +146,9 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
   <data name="Error" xml:space="preserve">
     <value>Klaida</value>
   </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gama korekcija</value>
+  </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Nepaisyti visų pasikartojimų</value>
   </data>
@@ -204,7 +210,7 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
     <value>Pakartotinai paleiskite programą, kad naujai įdiegti kalbų paketai būtų užregistruoti.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET grafinė sąsaja „Tesseract {0}“ optinio ženklų atpažinimo moduliui</value>
+    <value>„.NET“ grafinė sąsaja „Tesseract {0}“ optinio ženklų atpažinimo moduliui.</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_lt.html</value>
@@ -268,6 +274,9 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Užduoties vykdymas nutrauktas</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Slenkstis</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Be pavadinimo</value>

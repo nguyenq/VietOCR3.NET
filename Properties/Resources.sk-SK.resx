@@ -77,6 +77,9 @@ Prosím spustite program ako administrátor.</value>
   <data name="Beginning_of_task" xml:space="preserve">
     <value>Sputenie úlohy</value>
   </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Bilaterálny</value>
+  </data>
   <data name="Brightness" xml:space="preserve">
     <value>Jas</value>
   </data>
@@ -143,6 +146,9 @@ Prosím spustite program ako administrátor.</value>
   <data name="Error" xml:space="preserve">
     <value>Chyba</value>
   </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gamma</value>
+  </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Ignorovať všetky</value>
   </data>
@@ -204,10 +210,13 @@ Prosím spustite program ako administrátor.</value>
     <value>Reštartujte prosím program, nech môže zaregistrovať nové jazykové balíky.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI rozhranie pre Tesseract {0} OCR</value>
+    <value>.NET rozhranie pre Tesseract {0} OCR</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_sk.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Obrázok vyžaduje konverziu do odtieňov šedej.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>Zdroj neexistuje.</value>
@@ -265,6 +274,9 @@ Prosím spustite program ako administrátor.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Úloha prerušená</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Prah (threshold)</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Nepomenovaný</value>
