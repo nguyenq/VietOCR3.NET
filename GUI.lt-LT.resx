@@ -76,6 +76,9 @@
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
     <value>A&amp;utomatiškai apkirpti</value>
   </data>
+  <data name="bilateralToolStripMenuItem.Text" xml:space="preserve">
+    <value>Slopinti &amp;triukšmus</value>
+  </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
   </data>
@@ -165,6 +168,9 @@
   </data>
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
     <value>F&amp;ormatas</value>
+  </data>
+  <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Gama korekcija…</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -320,10 +326,10 @@
     <value>211, 22</value>
   </data>
   <data name="scanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nu&amp;skenuoti…</value>
+    <value>&amp;Skenuoti…</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 22</value>
+    <value>312, 30</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Žemos raiškos (ekranvaizdžio) veiksena</value>
@@ -335,7 +341,7 @@
     <value>73, 20</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Nuostatos</value>
+    <value>&amp;Nustatymai</value>
   </data>
   <data name="sharpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -347,7 +353,7 @@
     <value>147, 22</value>
   </data>
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Sulieti</value>
+    <value>Su&amp;lieti</value>
   </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -387,6 +393,9 @@
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>588, 474</value>
+  </data>
+  <data name="thresholdToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Slenkstis…</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>

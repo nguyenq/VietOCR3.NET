@@ -71,8 +71,7 @@
     <value>45, 35</value>
   </data>
   <data name="btnDangAmbigs.Text" xml:space="preserve">
-    <value>...
-</value>
+    <value>...</value>
   </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>399, 58</value>
@@ -137,7 +136,7 @@
     <value>285, 24</value>
   </data>
   <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
-    <value>Replace hyphens with soft hyphens</value>
+    <value>हायफ़न को सॉफ्ट हायफ़न में बदलें</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 114</value>
@@ -221,7 +220,7 @@
     <value>460, 165</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Hyphens</value>
+    <value>हायफ़न</value>
   </data>
   <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 22</value>

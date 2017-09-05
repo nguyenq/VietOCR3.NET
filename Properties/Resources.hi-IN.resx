@@ -76,6 +76,9 @@
   <data name="Beginning_of_task" xml:space="preserve">
     <value>कार्य का आरंभ</value>
   </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>बाईलेटरल</value>
+  </data>
   <data name="Brightness" xml:space="preserve">
     <value>ब्राइटनेस</value>
   </data>
@@ -142,6 +145,9 @@
   <data name="Error" xml:space="preserve">
     <value>त्रुटि</value>
   </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>गामा</value>
+  </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>सबकी  उपेक्षा करें </value>
   </data>
@@ -203,10 +209,13 @@
     <value>कृपया प्रोग्राम को बंद करने के बाद फिर से चलायें ताकि वह नए भाषा पैक(s) को रजिस्टर कर सके</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>टेसेरक्ट {0} ओसीआर का डॉट.नेट जीयूआई फ्रंटएण्ड </value>
+    <value>टेसेरक्ट {0}ओसीआर इंजन का डॉटनेट जीयूआई फ्रंटएंड </value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_hi.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>छवि को ग्रेस्केल में बदलने की आवश्यकता है .</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>रिसोर्स उपलब्ध नहीं है .</value>
@@ -264,6 +273,9 @@
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>कार्य रद्द किया गया</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>थ्रेशहोल्ड</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>बेनाम</value>

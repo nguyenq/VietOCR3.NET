@@ -209,6 +209,9 @@ Please run the program as administrator.</value>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ca.html</value>
   </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Potser cal convertir la imatge a escala de grisos.</value>
+  </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>El recurs no existeix.</value>
   </data>

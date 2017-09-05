@@ -74,7 +74,10 @@
     <value>166, 22</value>
   </data>
   <data name="autocropToolStripMenuItem.Text" xml:space="preserve">
-    <value>Es&amp;capçat automàtic</value>
+    <value>Escapçat &amp;automàtic</value>
+  </data>
+  <data name="bilateralToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bilate&amp;ral</value>
   </data>
   <data name="brightenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -121,6 +124,9 @@
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Contrast...</value>
   </data>
+  <data name="cropToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Escapça</value>
+  </data>
   <data name="deskewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
@@ -162,6 +168,9 @@
   </data>
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
     <value>F&amp;ormat</value>
+  </data>
+  <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
+    <value>G&amp;amma...</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>147, 22</value>
@@ -298,6 +307,9 @@
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Suprimeix els finals de línia</value>
   </data>
+  <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Suprimeix les línies</value>
+  </data>
   <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
@@ -321,6 +333,9 @@
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
     <value>Mode &amp;captura de pantalla</value>
+  </data>
+  <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mostra les &amp;regions segmentades</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -378,6 +393,9 @@
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>588, 474</value>
+  </data>
+  <data name="thresholdToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Threshold...</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -553,6 +571,9 @@
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
   </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
+    <value>Regions segmentades</value>
+  </data>
   <data name="toolStripLabelLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 36</value>
   </data>
@@ -607,8 +628,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Bloc</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Paràgraf</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Caràcter</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Línia de text</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Paraula</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>

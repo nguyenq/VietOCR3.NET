@@ -122,7 +122,7 @@
     <value>147, 22</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Kontrast...</value>
+    <value>&amp;Karşıtlık...</value>
   </data>
   <data name="cropToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Kırp</value>
@@ -173,7 +173,7 @@
     <value>147, 22</value>
   </data>
   <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Men&amp;zil...</value>
+    <value>K&amp;ontrast...</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Grayscale</value>
@@ -377,7 +377,7 @@
     <value>133, 22</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>TIFF Bö&amp;lme...</value>
+    <value>TIFF dosyasını Bö&amp;l ...</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 537</value>

@@ -118,6 +118,12 @@
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>Povoliť</value>
   </data>
+  <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
+    <value>Odstrániť mäkké spojovníky</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
+    <value>Nahradiť spojovníky s mäkkými spojovníkmi</value>
+  </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 74</value>
   </data>
@@ -192,6 +198,9 @@
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>DangAmbigs.txt</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Hyphens</value>
   </data>
   <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 15</value>
