@@ -132,5 +132,10 @@ namespace VietOCR.NET
         {
             return null;
         }
+
+        public override void ProcessFile(string filename)
+        {
+
+        }
     }
 }

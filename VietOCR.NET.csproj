@@ -76,10 +76,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
-      <HintPath>packages\Tesseract.3.2.0-alpha2\lib\net451\Tesseract.dll</HintPath>
+      <HintPath>packages\Tesseract.3.2.0-alpha4\lib\net451\Tesseract.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="VietKeyInput, Version=2.0.3073.22842, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
@@ -142,23 +143,23 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="x64\liblept1742.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libtesseract3051.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\liblept1742.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libtesseract3051.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
     <None Include="README.md" />
-    <None Include="x64\liblept172.dll" />
-    <None Include="x64\libtesseract304.dll" />
     <Content Include="readme_cs_bn.html" />
     <Content Include="readme_cs_ku.html" />
     <Content Include="readme_cs_ne.html" />
-    <Content Include="x86\liblept172.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x86\libtesseract304.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.dll" />
-    <None Include="packages\Tesseract.3.0.2.0\lib\net40\Tesseract.xml" />
     <None Include="gsdll64.dll" />
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
@@ -660,8 +661,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages\Tesseract.3.0.2.0\Tesseract.3.0.2.0.nupkg" />
-    <None Include="packages\Tesseract.3.0.2.0\tools\install.ps1" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1091,7 +1090,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="packages\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

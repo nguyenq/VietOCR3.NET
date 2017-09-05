@@ -262,10 +262,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,KB2468871"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4 (x86 and x64) and Update for .NET Framework 4 (KB2468871)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.0,KB2468871"
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.4.5"
                     {
@@ -836,11 +836,6 @@
             "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F903A5C7376D7D91ACE85046663D67A5"
-                    {
-                    "Name" = "8:Tesseract.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Tesseract.dll"
             "TargetName" = "8:"

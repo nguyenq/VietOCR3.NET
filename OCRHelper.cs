@@ -36,6 +36,7 @@ namespace VietOCR.NET
                 ocrEngine.PageSegMode = pageSegMode;
                 ocrEngine.Language = langCode;
                 ocrEngine.OutputFormat = outputFormat.Replace("+", string.Empty);
+                ocrEngine.OutputFile = outputFile;
 
                 // convert PDF to TIFF
                 if (imageFile.ToLower().EndsWith(".pdf"))

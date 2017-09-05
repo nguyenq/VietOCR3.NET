@@ -43,7 +43,10 @@ namespace VietOCR.NET
             psmDict.Add("SingleWord", "8 - Treat the image as a single word");
             psmDict.Add("CircleWord", "9 - Treat the image as a single word in a circle");
             psmDict.Add("SingleChar", "10 - Treat the image as a single character");
-            psmDict.Add("Count", "11 - Number of enum entries");
+            psmDict.Add("SparseText", "11 - Find as much text as possible in no particular order");
+            psmDict.Add("SparseTextOsd", "12 - Sparse text with orientation and script detection");
+            psmDict.Add("RawLine", "13 - Treat the image as a single text line, bypassing hacks that are Tesseract-specific");
+            psmDict.Add("Count", "14 - Number of enum entries");
 
             InitializeComponent();
 

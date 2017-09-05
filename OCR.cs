@@ -85,6 +85,12 @@ namespace VietOCR.NET
             }
         }
 
+        public string OutputFile
+        {
+            get;
+            set;
+        }
+
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string RecognizeText(IList<T> imageEntities, string inputName, Rectangle selection)
         {
@@ -138,6 +144,13 @@ namespace VietOCR.NET
 
             return RecognizeText(imageEntities, inputName);
         }
+
+        /// <summary>
+        /// Processes a file using ResultRenderers.
+        /// </summary>
+        /// <param name="renderer"></param>
+        /// <param name="filename"></param>
+        public abstract void ProcessFile(string filename);
 
         /// <summary>
         /// Gets segmented regions at specified page iterator level.
