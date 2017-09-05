@@ -46,14 +46,14 @@
             this.btnWatch = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.textBoxWatch = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBoxRemoveHyphens = new System.Windows.Forms.CheckBox();
+            this.checkBoxReplaceHyphens = new System.Windows.Forms.CheckBox();
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkBoxReplaceHyphens = new System.Windows.Forms.CheckBox();
-            this.checkBoxRemoveHyphens = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -131,7 +131,8 @@
             this.comboBoxOutputFormat.Items.AddRange(new object[] {
             resources.GetString("comboBoxOutputFormat.Items"),
             resources.GetString("comboBoxOutputFormat.Items1"),
-            resources.GetString("comboBoxOutputFormat.Items2")});
+            resources.GetString("comboBoxOutputFormat.Items2"),
+            resources.GetString("comboBoxOutputFormat.Items3")});
             resources.ApplyResources(this.comboBoxOutputFormat, "comboBoxOutputFormat");
             this.comboBoxOutputFormat.Name = "comboBoxOutputFormat";
             this.comboBoxOutputFormat.MouseHover += new System.EventHandler(this.comboBoxOutputFormat_MouseHover);
@@ -180,6 +181,28 @@
             this.textBoxWatch.Name = "textBoxWatch";
             this.textBoxWatch.ReadOnly = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.checkBoxRemoveHyphens);
+            this.tabPage3.Controls.Add(this.checkBoxReplaceHyphens);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxRemoveHyphens
+            // 
+            resources.ApplyResources(this.checkBoxRemoveHyphens, "checkBoxRemoveHyphens");
+            this.checkBoxRemoveHyphens.Name = "checkBoxRemoveHyphens";
+            this.toolTip1.SetToolTip(this.checkBoxRemoveHyphens, resources.GetString("checkBoxRemoveHyphens.ToolTip"));
+            this.checkBoxRemoveHyphens.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxReplaceHyphens
+            // 
+            resources.ApplyResources(this.checkBoxReplaceHyphens, "checkBoxReplaceHyphens");
+            this.checkBoxReplaceHyphens.Name = "checkBoxReplaceHyphens";
+            this.toolTip1.SetToolTip(this.checkBoxReplaceHyphens, resources.GetString("checkBoxReplaceHyphens.ToolTip"));
+            this.checkBoxReplaceHyphens.UseVisualStyleBackColor = true;
+            // 
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -199,28 +222,6 @@
             this.openFileDialog1.DefaultExt = "txt";
             resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.RestoreDirectory = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.checkBoxRemoveHyphens);
-            this.tabPage3.Controls.Add(this.checkBoxReplaceHyphens);
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxReplaceHyphens
-            // 
-            resources.ApplyResources(this.checkBoxReplaceHyphens, "checkBoxReplaceHyphens");
-            this.checkBoxReplaceHyphens.Name = "checkBoxReplaceHyphens";
-            this.toolTip1.SetToolTip(this.checkBoxReplaceHyphens, resources.GetString("checkBoxReplaceHyphens.ToolTip"));
-            this.checkBoxReplaceHyphens.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRemoveHyphens
-            // 
-            resources.ApplyResources(this.checkBoxRemoveHyphens, "checkBoxRemoveHyphens");
-            this.checkBoxRemoveHyphens.Name = "checkBoxRemoveHyphens";
-            this.toolTip1.SetToolTip(this.checkBoxRemoveHyphens, resources.GetString("checkBoxRemoveHyphens.ToolTip"));
-            this.checkBoxRemoveHyphens.UseVisualStyleBackColor = true;
             // 
             // OptionsDialog
             // 

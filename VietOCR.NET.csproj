@@ -143,12 +143,8 @@
     <Content Include="gsdll32.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\liblept1742.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x64\libtesseract3051.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="x64\liblept1742.dll" />
+    <None Include="x64\libtesseract3051.dll" />
     <Content Include="x86\liblept1742.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -157,9 +153,9 @@
     </Content>
     <None Include="packages.config" />
     <None Include="README.md" />
-    <Content Include="readme_cs_bn.html" />
-    <Content Include="readme_cs_ku.html" />
-    <Content Include="readme_cs_ne.html" />
+    <EmbeddedResource Include="readme_cs_bn.html" />
+    <EmbeddedResource Include="readme_cs_ku.html" />
+    <EmbeddedResource Include="readme_cs_ne.html" />
     <None Include="gsdll64.dll" />
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
