@@ -20,59 +20,42 @@ namespace VietOCR.NET
         /// <param name="outputFormat">format of output file. Possible values: <code>text</code>, <code>text+</code> (with post-corrections), <code>hocr</code></param>
         public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat)
         {
-            IList<Image> imageList;
-
-            try
+            DirectoryInfo dir = Directory.GetParent(outputFile);
+            if (dir != null && !dir.Exists)
             {
-                DirectoryInfo dir = Directory.GetParent(outputFile);
-                if (dir != null && !dir.Exists)
-                {
-                    dir.Create();
-                }
-
-                bool postprocess = "text+" == outputFormat;
-
-                OCR<Image> ocrEngine = new OCRImages();
-                ocrEngine.PageSegMode = pageSegMode;
-                ocrEngine.Language = langCode;
-                ocrEngine.OutputFormat = outputFormat.Replace("+", string.Empty);
-                ocrEngine.OutputFile = outputFile;
-
-                // convert PDF to TIFF
-                if (imageFile.ToLower().EndsWith(".pdf"))
-                {
-                    imageFile = PdfUtilities.ConvertPdf2Tiff(imageFile);
-                }
-
-                imageList = ImageIOHelper.GetImageList(new FileInfo(imageFile));
-                string result = ocrEngine.RecognizeText(imageList, imageFile);
-
-                // post-corrections for text+ output
-                if (postprocess)
-                {
-                    // postprocess to correct common OCR errors
-                    result = Processor.PostProcess(result, langCode);
-                    // correct letter cases
-                    result = TextUtilities.CorrectLetterCases(result);
-                }
-
-                //if (outputFormat == "pdf") // not yet supported
-                //{
-                //    byte[] bytes = null; // get the byte array
-                //    File.WriteAllBytes(outputFile, bytes);
-                //} 
-                //else 
-                {
-                    string filename = outputFile + "." + outputFormat.Replace("+", string.Empty).Replace("text", "txt");
-                    using (StreamWriter sw = new StreamWriter(filename, false, new System.Text.UTF8Encoding()))
-                    {
-                        sw.Write(result);
-                    }
-                }
+                dir.Create();
             }
-            finally
+
+            bool postprocess = "text+" == outputFormat;
+
+            OCR<Image> ocrEngine = new OCRImages();
+            ocrEngine.PageSegMode = pageSegMode;
+            ocrEngine.Language = langCode;
+            ocrEngine.OutputFormat = outputFormat.Replace("+", string.Empty);
+            ocrEngine.OutputFile = outputFile;
+
+            // convert PDF to TIFF
+            if (imageFile.ToLower().EndsWith(".pdf"))
             {
-                imageList = null;
+                imageFile = PdfUtilities.ConvertPdf2Tiff(imageFile);
+            }
+
+            ocrEngine.ProcessFile(imageFile);
+
+            // post-corrections for text+ output
+            if (postprocess)
+            {
+                string filename = outputFile + ".txt";
+                string result = File.ReadAllText(filename);
+                // postprocess to correct common OCR errors
+                result = Processor.PostProcess(result, langCode);
+                // correct letter cases
+                result = TextUtilities.CorrectLetterCases(result);
+
+                using (StreamWriter sw = new StreamWriter(filename, false, new System.Text.UTF8Encoding()))
+                {
+                    sw.Write(result);
+                }
             }
         }
     }

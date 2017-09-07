@@ -7,3 +7,5 @@
 /bin/Release
 /obj/Release
 /UnitTests/obj/Release
+/Setup/Debug
+/Setup/Release
