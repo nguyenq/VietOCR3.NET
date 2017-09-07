@@ -186,7 +186,7 @@ namespace VietOCR.NET
                         }
                     }
 
-                    List<string> lst = installedLanguageCodes.Values.ToList();
+                    List<string> lst = installedLanguageCodes.Values.Where(i => i != "OSD").ToList();
                     lst.Sort();
                     installedLanguages = lst;
                 }
