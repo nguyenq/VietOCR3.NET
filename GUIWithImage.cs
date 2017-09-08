@@ -310,7 +310,7 @@ namespace VietOCR.NET
 
         private void UpdatedGamma(object sender, TrackbarDialog.ValueChangedEventArgs e)
         {
-            Image image = ImageHelper.AdjustGamma(originalImage, e.NewValue * 0.005f);
+            Image image = ImageHelper.AdjustGamma(originalImage, e.NewValue * 0.02f);
             if (image != null)
             {
                 imageList[imageIndex] = image;
