@@ -557,7 +557,7 @@
     <value>Rechtschreibung</value>
   </data>
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 39</value>
+    <value>110, 39</value>
   </data>
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>

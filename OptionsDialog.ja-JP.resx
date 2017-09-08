@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -63,7 +122,7 @@
     <value>80, 74</value>
   </data>
   <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>67, 24</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
     <value>可能</value>
@@ -72,49 +131,46 @@
     <value>8, 16</value>
   </data>
   <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 17</value>
+    <value>38, 20</value>
   </data>
   <data name="labelPath.Text" xml:space="preserve">
     <value>パス:</value>
   </data>
   <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 12</value>
+    <value>359, 11</value>
   </data>
   <data name="btnDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
+    <value>44, 33</value>
   </data>
   <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 13</value>
   </data>
-  <data name="textBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
-  </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 99</value>
+    <value>460, 154</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
+    <value>3, 97</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 70</value>
+    <value>124, 92</value>
   </data>
   <data name="comboBoxOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
+    <value>70, 28</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 74</value>
+    <value>231, 96</value>
   </data>
   <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>67, 24</value>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>可能</value>
   </data>
   <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 42</value>
+    <value>8, 53</value>
   </data>
   <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>92, 20</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>出力フォルダ:</value>
@@ -123,61 +179,49 @@
     <value>8, 16</value>
   </data>
   <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>92, 20</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
     <value>監視フォルダ:</value>
   </data>
   <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 37</value>
+    <value>409, 48</value>
   </data>
   <data name="btnOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
+    <value>42, 35</value>
   </data>
   <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 11</value>
+    <value>409, 9</value>
   </data>
   <data name="btnWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
+    <value>42, 35</value>
   </data>
   <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 39</value>
-  </data>
-  <data name="textBoxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
+    <value>125, 50</value>
   </data>
   <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 13</value>
-  </data>
-  <data name="textBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
+    <value>125, 13</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 99</value>
+    <value>460, 154</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>監視</value>
   </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 154</value>
+  </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>354, 128</value>
+    <value>468, 187</value>
   </data>
   <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 136</value>
-  </data>
-  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>118, 197</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 136</value>
-  </data>
-  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>238, 197</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>キャンセル</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>354, 168</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>オプション</value>

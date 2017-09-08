@@ -584,7 +584,7 @@
     <value>Spell Check</value>
   </data>
   <data name="toolStripCbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 39</value>
+    <value>110, 39</value>
   </data>
   <data name="toolStripComboBoxPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 33</value>

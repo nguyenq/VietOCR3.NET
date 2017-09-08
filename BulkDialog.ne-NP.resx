@@ -104,7 +104,7 @@
     <value>115, 105</value>
   </data>
   <data name="comboBoxOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
+    <value>68, 24</value>
   </data>
   <data name="labelInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 30</value>
