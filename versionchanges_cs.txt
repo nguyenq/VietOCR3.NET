@@ -80,6 +80,7 @@ Version 4.3 (14 January 2017)
   * Expand support to include Regex text replacements from DangAmbigs.txt file
   * Hyphen replacements
 
-Version 4.4RC (8 September 2017)
+Version 4.4 (16 October 2017)
 - Update Tesseract.NET library to 3.2.0-alpha4
-- Update GhostScript to 9.21
+- Update GhostScript to 9.22
+- Add PDF output support for batch process
