@@ -1116,7 +1116,6 @@ namespace VietOCR.NET
             // 
             // toolStripStatusLabelPSMvalue
             // 
-            this.toolStripStatusLabelPSMvalue.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabelPSMvalue.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabelPSMvalue.Name = "toolStripStatusLabelPSMvalue";
             resources.ApplyResources(this.toolStripStatusLabelPSMvalue, "toolStripStatusLabelPSMvalue");

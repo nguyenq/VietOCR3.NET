@@ -1806,7 +1806,7 @@
     <value>False</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 29</value>
+    <value>160, 29</value>
   </data>
   <data name="toolStripStatusLabelDim.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 29</value>
@@ -1878,10 +1878,10 @@
     <value>Segmented Regions</value>
   </data>
   <data name="toolStripStatusLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 29</value>
+    <value>160, 29</value>
   </data>
   <data name="toolStripStatusLabelSpring.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 29</value>
+    <value>160, 29</value>
   </data>
   <data name="toolStripStatusLabelSM.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 29</value>
@@ -1916,8 +1916,14 @@
   <data name="toolStripStatusLabelOEM.ToolTipText" xml:space="preserve">
     <value>OCR Engine Mode</value>
   </data>
+  <data name="toolStripStatusLabelOEM.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="toolStripStatusLabelOEMvalue.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 29</value>
+  </data>
+  <data name="toolStripStatusLabelOEMvalue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 708</value>
