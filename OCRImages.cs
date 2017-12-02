@@ -125,14 +125,7 @@ namespace VietOCR.NET
 
             using (IResultRenderer renderer = new AggregateResultRenderer(resultRenderers))
             {
-                if (filename.EndsWith(".tif"))
-                {
-                    ProcessTiffFile(renderer, filename);
-                }
-                else
-                {
-                    ProcessFile(renderer, filename);
-                }
+                ProcessImageFile(renderer, filename);
             }
         }
 
@@ -141,7 +134,7 @@ namespace VietOCR.NET
         /// </summary>
         /// <param name="renderer"></param>
         /// <param name="filename"></param>
-        private void ProcessTiffFile(IResultRenderer renderer, string filename)
+        private void ProcessImageFile(IResultRenderer renderer, string filename)
         {
             IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
 
@@ -149,7 +142,7 @@ namespace VietOCR.NET
             {
                 var imageName = Path.GetFileNameWithoutExtension(filename);
 
-                using (var pixA = PixArray.LoadMultiPageTiffFromFile(filename))
+                using (var pixA = LoadPixArray(filename))
                 {
                     using (renderer.BeginDocument(imageName))
                     {
@@ -165,40 +158,19 @@ namespace VietOCR.NET
             }
         }
 
-        private void ProcessFile(IResultRenderer renderer, string filename)
+        private PixArray LoadPixArray(string filename)
         {
-            IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
-
-            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode, configs_file))
+            if (filename.ToLower().EndsWith(".tif") || filename.ToLower().EndsWith(".tiff"))
             {
-                var imageName = Path.GetFileNameWithoutExtension(filename);
-                using (var pix = Pix.LoadFromFile(filename))
-                {
-                    using (renderer.BeginDocument(imageName))
-                    {
-                        using (var page = engine.Process(pix, imageName))
-                        {
-                            var addedPage = renderer.AddPage(page);
-                        }
-                    }
-                }
+                return PixArray.LoadMultiPageTiffFromFile(filename);
+            }
+            else
+            {
+                PixArray pixA = PixArray.Create(0);
+                pixA.Add(Pix.LoadFromFile(filename));
+                return pixA;
             }
         }
-
-        //private PixArray LoadPixArray(string filename)
-        //{
-        //    if (filename.EndsWith(".tif"))
-        //    {
-        //        return PixArray.LoadMultiPageTiffFromFile(filename);
-        //    }
-        //    else
-        //    {
-        //        var pix = Pix.LoadFromFile(filename);
-        //        PixArray pixA = PixArray.Create(0);
-        //        pixA.Add(pix, 0); // this will crash; so don't use!
-        //        return pixA;
-        //    }
-        //}
 
         /// <summary>
         /// Converts .NET Bitmap to Leptonica Pix.
