@@ -504,6 +504,35 @@
             Gets the number of <see cref="T:Tesseract.Pix"/> contained in the array.
             </summary>
         </member>
+        <member name="M:Tesseract.PixArray.Add(Tesseract.Pix,Tesseract.PixArrayAccessType)">
+            <summary>
+            Add the specified pix to the end of the pix array.
+            </summary>
+            <remarks>
+            PixArrayAccessType.Insert is not supported as the managed Pix object will attempt to release the pix when
+            it goes out of scope creating an access exception.
+            </remarks>
+            <param name="pix">The pix to add.</param>
+            <param name="copyflag">Determines if a clone or copy of the pix is inserted into the array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.PixArray.Remove(System.Int32)">
+            <summary>
+            Removes the pix located at index.
+            </summary>
+            <remarks>
+            Notes:
+            * This shifts pixa[i] --> pixa[i - 1] for all i > index.
+            * Do not use on large arrays as the functionality is O(n).
+            * The corresponding box is removed as well, if it exists.
+            </remarks>
+            <param name="index">The index of the pix to remove.</param>
+        </member>
+        <member name="M:Tesseract.PixArray.Clear">
+            <summary>
+            Destroys ever pix in the array.
+            </summary>
+        </member>
         <member name="M:Tesseract.PixArray.GetPix(System.Int32,Tesseract.PixArrayAccessType)">
             <summary>
             Gets the <see cref="T:Tesseract.Pix"/> located at <paramref name="index"/> using the specified <paramref name="accessType"/>.

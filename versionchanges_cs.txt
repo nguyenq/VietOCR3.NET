@@ -84,3 +84,6 @@ Version 4.4 (16 October 2017)
 - Update Tesseract.NET library to 3.2.0-alpha4
 - Update GhostScript to 9.22
 - Add PDF output support for batch process
+
+Version 4.5 (2 December 2017)
+- Update Tesseract.NET library (Leptonica 1.74.4)

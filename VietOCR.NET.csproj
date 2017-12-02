@@ -44,7 +44,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>
     </DocumentationFile>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -55,7 +55,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -140,9 +140,8 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="gsdll32.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="x86\liblept1744.dll" />
+    <None Include="gsdll32.dll" />
     <Content Include="tessdata\configs\pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -152,20 +151,21 @@
     <Content Include="tessdata\pdf.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x64\liblept1742.dll" />
-    <None Include="x64\libtesseract3051.dll" />
-    <Content Include="x86\liblept1742.dll">
+    <Content Include="x64\liblept1744.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x86\libtesseract3051.dll">
+    <Content Include="x64\libtesseract3051.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="x86\libtesseract3051.dll" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <EmbeddedResource Include="readme_cs_bn.html" />
     <EmbeddedResource Include="readme_cs_ku.html" />
     <EmbeddedResource Include="readme_cs_ne.html" />
-    <None Include="gsdll64.dll" />
+    <Content Include="gsdll64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,7 +359,9 @@
     <EmbeddedResource Include="readme_cs_pl.html" />
     <EmbeddedResource Include="readme_cs_ru.html" />
     <EmbeddedResource Include="readme_cs_de.html" />
-    <None Include="Hunspellx64.dll" />
+    <Content Include="Hunspellx64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="BulkDialog.ca-ES.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -893,9 +895,7 @@
     <Content Include="Data\Tess3DataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Hunspellx86.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Hunspellx86.dll" />
     <EmbeddedResource Include="ChangeCaseDialog.sk-SK.resx">
       <DependentUpon>ChangeCaseDialog.cs</DependentUpon>
     </EmbeddedResource>
