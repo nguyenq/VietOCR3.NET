@@ -7,7 +7,5 @@
 /bin/Release
 /obj/Release
 /UnitTests/obj/Release
-/Setup/Debug
-/Setup/Release
-/Setup/VietOCR.NET-4.5_64
-/Setup/VietOCR.NET-4.5_32
+/Setup/
+/TestResults/

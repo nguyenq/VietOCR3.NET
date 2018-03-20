@@ -6,7 +6,7 @@ using ConvertPDF;
 
 namespace VietOCR.NET.Utilities
 {
-    class PdfUtilities
+    public class PdfUtilities
     {
         /// <summary>
         /// Convert PDF to TIFF format.
@@ -117,14 +117,16 @@ namespace VietOCR.NET.Utilities
             converter.RedirectIO = true;
             converter.ThrowOnlyException = true; // rethrow exceptions
 
-            //gs -q -sPDFname=test.pdf pdfpagecount.ps
+            //gs -q -dNODISPLAY -c "(input.pdf) (r) file runpdfbegin pdfpagecount = quit"
             List<string> gsArgs = new List<string>();
             gsArgs.Add("-gs");
             gsArgs.Add("-dNOPAUSE");
             gsArgs.Add("-dQUIET");
+            gsArgs.Add("-dNODISPLAY");
             gsArgs.Add("-dBATCH");
-            gsArgs.Add("-sPDFname=" + inputPdfFile);
-            gsArgs.Add("Library/pdfpagecount.ps");
+            gsArgs.Add("-c");
+            string cValue = string.Format("({0}) (r) file runpdfbegin pdfpagecount = quit", inputPdfFile.Replace('\\', '/'));
+            gsArgs.Add(cValue);
 
             int pageCount = 0;
 
@@ -135,7 +137,7 @@ namespace VietOCR.NET.Utilities
                     converter.StdOut = writer;
                     if (converter.Initialize(gsArgs.ToArray()))
                     {
-                        pageCount = Int32.Parse(writer.ToString().Replace("%%Pages: ", String.Empty));
+                        pageCount = Int32.Parse(writer.ToString().Trim());
                     }
                 }
                 catch (Exception e)
