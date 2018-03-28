@@ -18,7 +18,7 @@
             files, automatically processes them through the OCR engine, and outputs recognition
             results to an output folder.</p>
         <h3>Systemvoraussetzungen</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">Microsoft .NET Framework 4.5.2 Redistributable</a>.</p>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">Microsoft .NET Framework 4.7.1 Redistributable</a>.</p>
         <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install
             <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
         <h3>INSTALLATION</h3>
@@ -26,7 +26,14 @@
             you can specify another folder in Install Installation Folder dialog.</p>
         <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
         <p>Die PDF Unterstützung ist möglich via <a href="http://www.ghostscript.com/">GPL
-Ghostscript</a>.</p>
+Ghostscript</a>. Stellen Sie sicher, dass nach der Installation, die Datei
+<code>gsdll64.dll</code> sich in dem Suchpfad <code>Path</code> der
+Umgebungsvariable befindet, welches auch erreichbar ist durch Windows&#39; Systemsteuerung &gt; System &gt; Erweiterte Systemeinstellungen &gt; Umgebungsvariablen.
+Fügen Sie folgenden Wert ein zu der
+<code>Path</code> Variable für die GS version 9.23:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.23\bin</code></p>
+        </blockquote>
         <p>Die Rechtschreibprüfung ist wird mit Hunspell umgesetzt <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
 Wörterbücher-Dateien</a> (<code>.aff</code>, <code>.dic</code>) sollten in dem Ordner <code>dict</code>
 aus dem VietOCR abgelegt werden.</p>

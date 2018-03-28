@@ -244,7 +244,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:VietOCR.NET-4.5_64\\Setup.msi"
+        "OutputFilename" = "8:VietOCR.NET-4.6_64\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
