@@ -7,27 +7,17 @@
     <div>
         <h2 align="center">VietOCR.NET</h2>
         <h3>PROGRAMOS APRAŠAS</h3>
-        <p>„<a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>“
-            yra .NET technologija pagrįsta grafinė aplinka leidžianti naudotis „<a href="https://github.com/tesseract-ocr">Tesseract
-                OCR</a>“ optinio ženklų atpažinimo moduliu ir yra skirta automatiškai atpažinti
-            skenuoto teksto ženklams. Programa numato populiariausius vaizdų formatus, leidžia
-            naudoti kelis ar daugiau puslapių viename vaizdo faile. Be to, programa gali papildomai
-            aptvarkyti atpažintą tekstą, ištaisydama būdingiausias teksto atpažinimo metu pasitaikančias
-            klaidas. Tai padeda pasiekti daug geresnės rezultato kokybės. Programa gali veikti
-            ir terminalo ekrane, ją startuojant komandinėje eilutėje.</p>
+        <p>„<a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>“ yra .NET technologija pagrįsta grafinė aplinka leidžianti naudotis „<a href="https://github.com/tesseract-ocr">Tesseract OCR</a>“ optinio ženklų atpažinimo moduliu ir yra skirta automatiškai atpažinti skenuoto teksto ženklams. Programa numato populiariausius vaizdų formatus, leidžia naudoti kelis ar daugiau puslapių viename vaizdo faile. Be to, programa gali papildomai aptvarkyti atpažintą tekstą, ištaisydama būdingiausias teksto atpažinimo metu pasitaikančias klaidas. Tai padeda pasiekti daug geresnės rezultato kokybės. Programa gali veikti ir terminalo ekrane, ją startuojant komandinėje eilutėje.</p>
         <p>Programoje numatytas ir urminis vaizdų apdorojimas. Programa gali stebėti nurodytą
 aplanką ir, jame atsiradus naujų failų, automatiškai juos apdoroti, o atpažintus
 tekstus įrašyti į rezultatams talpinti nurodytą aplanką.</p>
         <h3>REIKALAVIMAI SISTEMAI</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">„Microsoft .NET Framework 4.7.1“ platforma</a>.</p>
-        <p>Jeigu, bandydami paleisti šią programą, susiduriate su „FileLoadException“ tipo klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">„Microsoft Visual C++ 2015 Redistributable Package“ platinamąjį paketą</a>.</p>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">„Microsoft .NET Framework 4.5.2“ platforma</a>.</p>
+        <p>Jeigu, bandydami paleisti šią programą, susiduriate su klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">„Microsoft Visual C++ 2015 Redistributable Package“ platinamąjį paketą</a>.</p>
         <h3>PROGRAMOS ĮDIEGIMAS</h3>
         <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code> aplanką, diegimo metu galėsite nurodyti kitą paskirties aplanką.</p>
-        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library (WIA) v2.0“ biblioteka.</p>
-        <p>PDF failų palaikymas galimas naudojant „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonę. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll64.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atverę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.23“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
-        <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.23\bin</code></p>
-        </blockquote>
+        <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library 2.0“ biblioteka.</p>
+        <p>PDF failų palaikymui naudojama „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonė.</p>
         <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">žodynų</a> failai (<code>.aff</code>, <code>.dic</code>) turėtų būti patalpinti į aplanką <code>dict</code>, esantį „VietOCR“ programos aplanke.</p>
         <h3>INSTRUKCIJOS</h3>
         <p>„Tesseract“ programos <a href="https://github.com/tesseract-ocr/tessdata">kalbinių duomenų paketai</a> turėtų būti išskleisti į <code>tesseract</code> diegimo aplanke. Duomenų failai, kurių vardai prasideda ISO639-3 kodais, bus patalpinti į poaplankį <code>tessdata</code>. „VietOCR“ geba parsiųsti ir įdiegti kalbinių duomenų paketus kai kurioms kalboms; šia funkcija galite pasinaudoti, iškviesdami meniu <em>„Nustatymai“</em> punktą <em>„Parsiųsti kalbinius duomenis“</em>. Jeigu <code>tessdata</code> aplankas yra sisteminio aplanko (pvz., <code>C:\Program Files</code>) viduje, kalbiniams duomenims įdiegti programą gali reikėti vykdyti administratoriaus teisėmis.</p>

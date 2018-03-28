@@ -10,19 +10,16 @@
         <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a> jest nakładka GUI w technologii .NET dla silnika <a href="https://github.com/tesseract-ocr"> Tesseract OCR</a>, zapewniającego wsparcie rozpoznawania znaków dla popularnych formatów obrazu i obrazów wielostronicowych. Program posiada mechanizm przetwarzania wtórnego, który pomaga poprawiać błędy napotykane regularnie w procesie rozpoznawania tekstu OCR, zwiększa stopień dokładności, który ma wpływ na wynik. Program może również działać jako aplikacja w konsoli, wykonując komendy z  lini poleceń.</p>
         <p>Przetwarzanie wsadowe jest już dostępne. Program przeszukuje obserwowany folder celem znalezienia nowych plików z obrazami i automatycznie przetwarza je przez silnik OCR, następnie wysyła wyniki procesu do folderu wyjściowego.</p>
         <h3>WYMAGANIA SYSTEMOWE</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">
-                Microsoft .NET Framework 4.7.1 Redistributable
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">
+                Microsoft .NET Framework 4.5.2 Redistributable
             </a>.</p>
         <p>Jeśli pojawi się błąd &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; proszę zainstaluj <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
         <h3>INSTALACJA</h3>
         <p>Jeśli nie posiadasz uprawnień by zainstalować program w folderze <code>C:\Program Files</code>, możesz wskazać inny folder podczas instalacji.</p>
-        <p>Scanning support is provided via the Windows Image Acquisition
-            Library v2.0.</p>
-        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Po zainstalowaniu bibliotek upewnij się, że udostępnione biblioteki (<code>gsdll64.dll</code> or <code>libgs.so</code>) &nbsp;są w ścieżce wyszukiwania poprzez ustawienie odpowiednich zmiennych systemowych. W Windows dla GS w wersji 9.23, dodaj poniższy wpis do&nbsp;zmiennej&nbsp;<code>Path</code> (dostępnej poprzez Panel Kontrolny &gt; System &gt; zakładka Zaawansowane &gt; Zmienne środowiskowe...) :</p>
-        <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.23\bin</code></p>
-        </blockquote>
-        <p>Funkcjonalność sprawdzania pisowni jest dostępna poprzez Hunspell, którego pliki <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">słownika (</a><code>.aff</code> <code>.dic</code>) powinny być umieszczone w folderze <code>dict</code> programu VietOCR.</p>
+		<p>Scanning support is provided via the Windows Image Acquisition 
+		Library v2.0.</p>
+        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>.</p>
+        <p>Funkcjonalność sprawdzania pisowni jest dostępna poprzez Hunspell, którego pliki <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">słownika</a> (<code>.aff</code> <code>.dic</code>) powinny być umieszczone w folderze <code>dict</code> programu VietOCR.</p>
         <h3>INSTRUKCJA</h3>
         <p><a href="https://github.com/tesseract-ocr/tessdata">Pakiety językowe</a> dla Tesseract powinny być wypakowane do folderu  instalacyjnego <code>tesseract</code>;  pakiety językowe dla Tesseract, których nazwy zaczynają się kodami ISO639-3, powinny być umieszczone w podfolderze <code>tessdata</code>.
 VietOCR również umożliwia ściąganie i instalowanie wybranych pakietów językowych poprzez element menu <em>Pobierz pakiet językowy</em>. W zależności od lokalizacji folderu <code>tessdata</code>, może będzie wymagane uruchomienie programu jako administrator by było możliwe zainstalowanie ściągniętych danych do folderu, zwłaszcza jeśli jest on wewnątrz katalogu systemowego takiego jak <code>C:\Program Files</code>.</p>

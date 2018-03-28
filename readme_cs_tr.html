@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>VietOCR.NET - Tesseract OCR için .NET Görsel Kullanıcı Arabirim Öneki</title>
+<title>VietOCR.NET - Tesseract OCR için .NET Görsel Kullanıcı Arabirim Öneki</title>
 </head>
 <body>
     <div>
@@ -18,23 +18,17 @@
             files, automatically processes them through the OCR engine, and outputs recognition
             results to an output folder.</p>
         <h3>SİSTEM GEREKSİNİMLERİ</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">
-                Microsoft .NET Framework 4.7.1 Redistributable</a>.</p>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">
+                Microsoft .NET Framework 4.5.2 Redistributable</a>.</p>
         <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install
             <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
         <h3>KURULUM</h3>
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
             you can specify another folder in Install Installation Folder dialog.</p>
-        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition 
+			Library v2.0.</p>
         <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
-                Ghostscript</a>. After installation of the library, please ensure the dynamic
-            load library <code>gsdll64.dll</code> is in the search path by setting the <code>Path</code>
-            environment variable, which is accessible through Windows&#39; Control Panel &gt;
-            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
-            to <code>Path</code> variable value for GS version 9.23:</p>
-        <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.23\bin</code></p>
-        </blockquote>
+                Ghostscript</a>.</p>
         <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
                 dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
             folder of VietOCR.</p>
@@ -84,8 +78,8 @@
             errors, which means that the words are valid entries in the dictionary but are wrong
             in the context — e.g., tinh – tình, vân – vấn. These errors require the editor to
             read though and manually correct them according to the original image.</p>
-        <p>OCR hataları ilk iki kategoride nasıl çözüleceği ile ilgili talimatlar aşağıda verilmiştir
-            yerleşik işlevini kullanarak:</p>
+        <p>Following are instructions on how to correct the first two categories of OCR errors
+            using the built-in functionality:</p>
         <ol style="margin-top: 0in" start="1" type="1">
 <li>Group lines. The lines need to be grouped to the paragraph they belong, as being
                 OCRed, each line becomes a separate 1-line paragraph. Use <i>Remove Line Breaks</i>
@@ -99,8 +93,8 @@
 <p>Through the above process, most of common errors can be eliminated. The remaining,
             semantic errors are few, but it requires a human editor to read though and make
             necessary edits to make the document like the original scanned document.</p>
-        <p>Herhangi bir sorunuz varsa, lütfen bildirin <a href="http://sourceforge.net/projects/vietocr/forums">
-                VietOCR Forumu</a>.</p>
+        <p>If there is any questions, please post in <a href="http://sourceforge.net/projects/vietocr/forums">
+                VietOCR Forum</a>.</p>
         <hr>
 </div>
 </body>

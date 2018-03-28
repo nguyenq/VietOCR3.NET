@@ -1,12 +1,12 @@
 ﻿<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>VietOCR.NET - .NET GUI Frontend für Tesseract OCR</title>
+<title>VietOCR.NET - Tesseract ओसीआर को लागि .NET जीयूआई फ्रन्टएण्ड</title>
 </head>
 <body>
     <div>
         <h2 align="center">VietOCR.NET</h2>
-        <h3>BESCHREIBUNG</h3>
+        <h3>वर्णन</h3>
         <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
             is a .NET GUI frontend for <a href="https://github.com/tesseract-ocr">Tesseract
                 OCR engine</a>, providing character recognition support for common image formats,
@@ -17,20 +17,21 @@
         <p>Batch processing is now supported. The program monitors a watch folder for new image
             files, automatically processes them through the OCR engine, and outputs recognition
             results to an output folder.</p>
-        <h3>Systemvoraussetzungen</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">Microsoft .NET Framework 4.5.2 Redistributable</a>.</p>
+        <h3>प्रणाली आवश्यकताहरू</h3>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">
+Microsoft .NET फ्रेमवर्क 4.5.2 रिडिस्ट्रिब्युटेबल
+</a>।</p>
         <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install
             <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
-        <h3>INSTALLATION</h3>
+        <h3>स्थापन</h3>
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
             you can specify another folder in Install Installation Folder dialog.</p>
-        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
-        <p>Die PDF Unterstützung ist möglich via <a href="http://www.ghostscript.com/">GPL
-Ghostscript</a>.</p>
-        <p>Die Rechtschreibprüfung ist wird mit Hunspell umgesetzt <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-Wörterbücher-Dateien</a> (<code>.aff</code>, <code>.dic</code>) sollten in dem Ordner <code>dict</code>
-aus dem VietOCR abgelegt werden.</p>
-        <h3>ANWEISUNGEN</h3>
+        <p>स्क्यानिङ समर्थन विण्डोज इमेज अक्वाइजिसन
+लाइब्रेरी v2.0 द्वारा उपलब्ध गराइएको छ।</p>
+        <p>पीडीएफ समर्थन <a href="http://www.ghostscript.com/">जीपीएल
+घोस्टस्क्रिप्ट</a> मार्फत सम्भव छ।</p>
+        <p>हिज्जेजाँच सुबिधा हनस्पेल मार्फत उपलब्ध छ, जसका <a href="http://wiki.services.openoffice.org/wiki/Dictionaries"> शब्दकोश</a> फाइलहरू (<code>.aff</code>, <code>.dic</code>) VietOCR फोल्डर भित्र रहेको <code>dict</code> फोल्डरमा राख्नुपर्ने हुन्छ।</p>
+        <h3>निर्देशनहरू</h3>
         <p><a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a>
             for Tesseract should be decompressed into <code>tesseract</code> installation folder;
             the data files, whose names start with ISO639-3 codes, will be placed in the <code>tessdata</code>
@@ -64,7 +65,7 @@ aus dem VietOCR abgelegt werden.</p>
         <p>Some built-in tools are provided to merge several images or PDF files into a single
             one for convenient OCR operations, or to split a PDF file into smaller ones if it
             is too large, which can cause out-of-memory exceptions.</p>
-        <h3>NACHBEARBEITUNG</h3>
+        <h3>पश्च-प्रशोधन</h3>
         <p>The recognition errors can generally be classified into three categories. Many of
             the errors are related to the letter cases — for example: hOa, nhắC — which can
             be easily corrected by popular Unicode text editors. Many other errors are a result
@@ -76,22 +77,23 @@ aus dem VietOCR abgelegt werden.</p>
             errors, which means that the words are valid entries in the dictionary but are wrong
             in the context — e.g., tinh – tình, vân – vấn. These errors require the editor to
             read though and manually correct them according to the original image.</p>
-        <p>Das sind die Anweisungen um die ersten Kategorien von OCR-Fehler
-mit der eingebauten Funktionalität zu beheben:</p>
+        <p>Following are instructions on how to correct the first two categories of OCR errors
+            using the built-in functionality:</p>
         <ol style="margin-top: 0in" start="1" type="1">
 <li>Group lines. The lines need to be grouped to the paragraph they belong, as being
                 OCRed, each line becomes a separate 1-line paragraph. Use <i>Remove Line Breaks</i>
                 function under <i>Format</i> menu. Note that this operation may not be needed for
                 poems.</li>
-            <li>Wählen Sie <i>Groß/Kleinschreibung ändern</i>, auch im Menü unter<i>Format</i>, und wählen Sie <i>Groß- und
-Kleinschreibung</i> um die meisten Groß- und Kleinbuchstaben Fehler zu korrigieren. Korrigiere und finde die meisten Groß- und Kleinbuchstaben Fehler.</li>
-            <li>Korrigieren Sie die Rechtschreibung mit der eingebauten <i>Rechtschreibprüfung</i>.</li>
+            <li>Select <i>Change Case</i>, also under <i>Format</i> menu, and choose <i>Sentence
+                case</i> to correct most of the letter case errors. Locate and fix the rest of remaining
+                letter case errors.</li>
+            <li>गलतहिज्जे त्रुटीहरूलाई एकीकृत <i>हिज्जे जाँच</i>द्वारा सच्याउनुहोस्।</li>
         </ol>
 <p>Through the above process, most of common errors can be eliminated. The remaining,
             semantic errors are few, but it requires a human editor to read though and make
             necessary edits to make the document like the original scanned document.</p>
-        <p>Bitte stellen Sie Ihre Fragen unter: <a href="http://sourceforge.net/projects/vietocr/forums">
-                VietOCR Forum</a>.</p>
+        <p>यकि कुनै प्रश्‍न भए, कृपया  <a href="http://sourceforge.net/projects/vietocr/forums">↩
+VietOCR Forum</a>मा पोष्ट गर्नुहोस्।</p>
         <hr>
 </div>
 </body>
