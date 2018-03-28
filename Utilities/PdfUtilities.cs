@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Linq;
 using ConvertPDF;
 
 namespace VietOCR.NET.Utilities
@@ -35,13 +36,16 @@ namespace VietOCR.NET.Utilities
             }
             finally
             {
-                if (pngFiles != null)
+                if (pngFiles != null && pngFiles.Length > 0)
                 {
+                    string pngDirectory = Path.GetDirectoryName(pngFiles[0]);
                     // delete temporary PNG images
                     foreach (string tempFile in pngFiles)
                     {
                         File.Delete(tempFile);
                     }
+
+                    Directory.Delete(pngDirectory);
                 }
             }
         }
@@ -53,6 +57,9 @@ namespace VietOCR.NET.Utilities
         /// <returns>an array of PNG images</returns>
         public static string[] ConvertPdf2Png(string inputPdfFile)
         {
+            string tempDirectory = Path.Combine(Path.GetTempPath(), "tessimages" + Path.GetFileNameWithoutExtension(Path.GetRandomFileName()));
+            Directory.CreateDirectory(tempDirectory);
+
             PDFConvert converter = new PDFConvert();
             converter.GraphicsAlphaBit = 4;
             converter.TextAlphaBit = 4;
@@ -60,19 +67,30 @@ namespace VietOCR.NET.Utilities
             converter.OutputFormat = "pnggray"; // -sDEVICE
             converter.ThrowOnlyException = true; // rethrow exceptions
 
-            string sOutputFile = string.Format("{0}\\workingimage%03d.png", Path.GetDirectoryName(inputPdfFile));
-            bool success = converter.Convert(inputPdfFile, sOutputFile);
+            string sOutputFile = string.Format("{0}\\workingimage%04d.png", tempDirectory);
 
-            if (success)
+            try
             {
-                // find working files
-                string[] workingFiles = Directory.GetFiles(Path.GetDirectoryName(inputPdfFile), "workingimage???.png");
-                Array.Sort(workingFiles);
-                return workingFiles;
+                bool success = converter.Convert(inputPdfFile, sOutputFile);
+
+                if (success)
+                {
+                    // find working files
+                    string[] workingFiles = Directory.GetFiles(tempDirectory, "workingimage????.png");
+                    Array.Sort(workingFiles);
+                    return workingFiles;
+                }
+                else
+                {
+                    return new string[0];
+                }
             }
-            else
+            finally
             {
-                return new string[0];
+                if (!Directory.EnumerateFileSystemEntries(tempDirectory).Any())
+                {
+                    Directory.Delete(tempDirectory);
+                }
             }
         }
 
@@ -167,7 +185,7 @@ namespace VietOCR.NET.Utilities
             gsArgs.Add("-dQUIET");
             gsArgs.Add("-dBATCH");
             gsArgs.Add("-sOutputFile=" + outputPdfFile);
-            
+
             foreach (string inputPdfFile in inputPdfFiles)
             {
                 gsArgs.Add(inputPdfFile);
