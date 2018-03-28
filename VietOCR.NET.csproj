@@ -141,7 +141,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="x86\liblept1744.dll" />
-    <None Include="gsdll32.dll" />
     <Content Include="tessdata\configs\pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -163,9 +162,6 @@
     <EmbeddedResource Include="readme_cs_bn.html" />
     <EmbeddedResource Include="readme_cs_ku.html" />
     <EmbeddedResource Include="readme_cs_ne.html" />
-    <Content Include="gsdll64.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.cs</DependentUpon>
     </EmbeddedResource>
