@@ -46,7 +46,7 @@ namespace ConvertPDF
         private const string GS_StandardOutputDevice = "-";
         private const string GS_MultiplePageCharacter = "%";
         private const string GSDLL_NOT_FOUND = "The gsdll32.dll or gsdll64.dll wasn't found in default DLL search path.\nPlease download, install " +
-                        "GPL Ghostscript from http://sourceforge.net/projects/ghostscript/files\nand/or set the appropriate environment variable.";
+                        "GPL Ghostscript from https://www.ghostscript.com\nand/or set the appropriate Path environment variable.";
         private const string GSDLL_INSTANCE = "I can't create a new instance of Ghostscript. Please verify no other instances are running!";
         #endregion
         #region Windows Import
