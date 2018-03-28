@@ -18,8 +18,8 @@
             files, automatically processes them through the OCR engine, and outputs recognition
             results to an output folder.</p>
         <h3>SYSTEM REQUIREMENTS</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">
-                Microsoft .NET Framework 4.5.2 Redistributable</a>.</p>
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">
+                Microsoft .NET Framework 4.7.1 Redistributable</a>.</p>
         <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install
             <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
         <h3>INSTALLATION</h3>
@@ -27,7 +27,14 @@
             you can specify another folder in Install Installation Folder dialog.</p>
         <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
         <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
-                Ghostscript</a>.</p>
+                Ghostscript</a>. After installation of the library, please ensure the dynamic
+            load library <code>gsdll64.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.23:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.23\bin</code></p>
+        </blockquote>
         <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
                 dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
             folder of VietOCR.</p>
