@@ -18,8 +18,8 @@
             files, automatically processes them through the OCR engine, and outputs recognition
             results to an output folder.</p>
         <h3>प्रणाली आवश्यकताहरू</h3>
-        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">
-Microsoft .NET फ्रेमवर्क 4.5.2 रिडिस्ट्रिब्युटेबल
+        <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56116">
+Microsoft .NET फ्रेमवर्क 4.7.1 रिडिस्ट्रिब्युटेबल
 </a>।</p>
         <p>If you encounter &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; errors, please install
             <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
@@ -28,8 +28,17 @@ Microsoft .NET फ्रेमवर्क 4.5.2 रिडिस्ट्रि�
             you can specify another folder in Install Installation Folder dialog.</p>
         <p>स्क्यानिङ समर्थन विण्डोज इमेज अक्वाइजिसन
 लाइब्रेरी v2.0 द्वारा उपलब्ध गराइएको छ।</p>
-        <p>पीडीएफ समर्थन <a href="http://www.ghostscript.com/">जीपीएल
-घोस्टस्क्रिप्ट</a> मार्फत सम्भव छ।</p>
+        <p>पीडीएफ समर्थन <a href="http://www.ghostscript.com/">जीपीएल घोस्टस्क्रिप्ट</a> मार्फत सम्भव छ।. After installation of the library, please ensure the dynamic
+            load library <code>gsdll64.dll</code> is in the search path by setting the <code>Path</code>
+            environment variable, which is accessible through Windows&#39; Control Panel &gt;
+            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
+            to <code>Path</code> variable value for GS version 9.23:
+        </p>
+        <blockquote>
+            <p>
+                <code>;C:\Program Files\gs\gs9.23\bin</code>
+            </p>
+        </blockquote>
         <p>हिज्जेजाँच सुबिधा हनस्पेल मार्फत उपलब्ध छ, जसका <a href="http://wiki.services.openoffice.org/wiki/Dictionaries"> शब्दकोश</a> फाइलहरू (<code>.aff</code>, <code>.dic</code>) VietOCR फोल्डर भित्र रहेको <code>dict</code> फोल्डरमा राख्नुपर्ने हुन्छ।</p>
         <h3>निर्देशनहरू</h3>
         <p><a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a>
