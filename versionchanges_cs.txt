@@ -91,3 +91,6 @@ Version 4.5 (2 December 2017)
 Version 4.6 (28 March 2018)
 - Update to .NET Framework 4.7.1
 - Remove GS DLL due to license incompatibility
+
+Version 4.7 (4 July 2018)
+- Update Tesseract.NET library to 3.3.0 (Tesseract 3.05.2 & Leptonica 1.75.3)

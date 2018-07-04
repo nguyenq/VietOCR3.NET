@@ -87,12 +87,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9092DF5E9BC4F9070A756538B3572CA0"
-        "OwnerKey" = "8:_0F9BC766C2104ABCBBD324F1D4F596BB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_90A5F6A5E80B4221A56B8FBA419A9EA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -135,6 +129,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D947649F66951287F1B4F00C3864B94F"
+        "OwnerKey" = "8:_0F9BC766C2104ABCBBD324F1D4F596BB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DCC862CC52C2742A1ACE584FAD19E596"
         "OwnerKey" = "8:_0F9BC766C2104ABCBBD324F1D4F596BB"
         "MsmSig" = "8:_UNDEFINED"
@@ -172,12 +172,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9092DF5E9BC4F9070A756538B3572CA0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C5FBE239B4101EFF22264AD09BE89C32"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -185,6 +179,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DCC862CC52C2742A1ACE584FAD19E596"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D947649F66951287F1B4F00C3864B94F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -244,7 +244,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:VietOCR.NET-4.6_64\\Setup.msi"
+        "OutputFilename" = "8:VietOCR.NET-4.7_64\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -529,37 +529,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9092DF5E9BC4F9070A756538B3572CA0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9092DF5E9BC4F9070A756538B3572CA0"
-                    {
-                    "Name" = "8:Tesseract.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Tesseract.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90A5F6A5E80B4221A56B8FBA419A9EA7"
             {
             "SourcePath" = "8:..\\readme_cs_ca.html"
@@ -705,6 +674,37 @@
                     }
                 }
             "SourcePath" = "8:Interop.WIA.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D947649F66951287F1B4F00C3864B94F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Tesseract, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D947649F66951287F1B4F00C3864B94F"
+                    {
+                    "Name" = "8:Tesseract.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Tesseract.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"
@@ -900,20 +900,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR.NET"
-        "ProductCode" = "8:{98CFBCCE-C4EF-484A-9D79-6071CABBAF62}"
-        "PackageCode" = "8:{13103E0D-AEFB-4C6A-92BD-2F94B8C4BC34}"
+        "ProductCode" = "8:{16CEF805-B75C-4064-AA5D-191856DFE244}"
+        "PackageCode" = "8:{74472CD4-3B78-49DB-BA4B-EE9DE77C4057}"
         "UpgradeCode" = "8:{E53F3670-7B1D-405A-AC8A-2207B69BDDDB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:4.6"
+        "ProductVersion" = "8:4.7"
         "Manufacturer" = "8:VietUnicode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://sourceforge.net/projects/vietocr/support"
         "Title" = "8:Setup for VietOCR.NET"
-        "Subject" = "8:Installer for VietOCR.NET v4.6"
+        "Subject" = "8:Installer for VietOCR.NET v4.7"
         "ARPCONTACT" = "8:Quan Nguyen"
         "Keywords" = "8:Vietnamese OCR"
         "ARPCOMMENTS" = "8:http://vietocr.sf.net"
@@ -1450,7 +1450,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0F9BC766C2104ABCBBD324F1D4F596BB"
             {
-            "SourcePath" = "8:..\\obj\\Debug\\VietOCR.exe"
+            "SourcePath" = "8:..\\obj\\Release\\VietOCR.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_98398543C46D44C39079FAA3C2D1433D"

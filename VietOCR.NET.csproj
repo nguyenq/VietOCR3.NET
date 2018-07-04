@@ -80,8 +80,8 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
-      <HintPath>packages\Tesseract.3.2.0-alpha4\lib\net451\Tesseract.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Tesseract.dll</HintPath>
     </Reference>
     <Reference Include="VietKeyInput, Version=2.0.3073.22842, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -140,7 +140,11 @@
     <Compile Include="OCRHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="x86\liblept1744.dll" />
+    <Content Include="x64\libtesseract3052.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="x86\liblept1753.dll" />
+    <None Include="x86\libtesseract3052.dll" />
     <Content Include="tessdata\configs\pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -150,13 +154,9 @@
     <Content Include="tessdata\pdf.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\liblept1744.dll">
+    <Content Include="x64\liblept1753.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract3051.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="x86\libtesseract3051.dll" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <EmbeddedResource Include="readme_cs_bn.html" />
