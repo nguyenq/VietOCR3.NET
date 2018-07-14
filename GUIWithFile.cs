@@ -95,7 +95,7 @@ namespace VietOCR.NET
 
         protected override bool saveAction()
         {
-            if (textFilename == null || textFilename.Length == 0)
+            if (string.IsNullOrEmpty(textFilename))
             {
                 return SaveFileDlg();
             }
@@ -117,7 +117,7 @@ namespace VietOCR.NET
             saveFileDialog1.Filter = "UTF-8 Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
-            if (textFilename != null && textFilename.Length > 1)
+            if (!string.IsNullOrEmpty(textFilename))
             {
                 saveFileDialog1.InitialDirectory = Path.GetDirectoryName(textFilename);
                 saveFileDialog1.FileName = Path.GetFileName(textFilename);
