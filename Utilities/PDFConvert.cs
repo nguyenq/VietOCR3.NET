@@ -4,6 +4,8 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Collections;
 using System.IO;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace ConvertPDF
 {
@@ -18,6 +20,7 @@ namespace ConvertPDF
     /// <see cref="http://www.codeproject.com/KB/cs/GhostScriptUseWithCSharp.aspx"/>
     /// <seealso cref="http://www.hrangel.com.br/index.php/2006/12/04/converter-pdf-para-imagem-jpeg-em-c/"/>
     /// Modified by Quan Nguyen to support 64-bit DLL (10-May-2014)
+    /// Modified by Quan Nguyen to support Unicode filename/path (19-Sep-2018)
     public class PDFConvert
     {
         #region Static
@@ -45,6 +48,8 @@ namespace ConvertPDF
         private const string GS_QuietOperation = "-q";
         private const string GS_StandardOutputDevice = "-";
         private const string GS_MultiplePageCharacter = "%";
+        private const int GS_ARG_ENCODING_LOCAL = 0;
+        private const int GS_ARG_ENCODING_UTF8 = 1;
         private const string GSDLL_NOT_FOUND = "The gsdll32.dll or gsdll64.dll wasn't found in default DLL search path.\nPlease download, install " +
                         "GPL Ghostscript from https://www.ghostscript.com\nand/or set the appropriate Path environment variable.";
         private const string GSDLL_INSTANCE = "I can't create a new instance of Ghostscript. Please verify no other instances are running!";
@@ -69,6 +74,12 @@ namespace ConvertPDF
 
         [DllImport("gsdll64.dll", EntryPoint = "gsapi_new_instance")]
         private static extern int gsapi_new_instance64(out IntPtr pinstance, IntPtr caller_handle);
+
+        [DllImport("gsdll32.dll", EntryPoint = "gsapi_set_arg_encoding")]
+        private static extern int gsapi_set_arg_encoding32(IntPtr pinstance, int encoding);
+
+        [DllImport("gsdll64.dll", EntryPoint = "gsapi_set_arg_encoding")]
+        private static extern int gsapi_set_arg_encoding64(IntPtr pinstance, int encoding);
 
         /// <summary>This is the important function that will perform the conversion</summary>
         /// <param name="instance"></param>
@@ -132,6 +143,14 @@ namespace ConvertPDF
                 return gsapi_new_instance64(out pinstance, caller_handle);
             else
                 return gsapi_new_instance32(out pinstance, caller_handle);
+        }
+
+        private static int gsapi_set_arg_encoding(IntPtr instance, int encoding)
+        {
+            if (IntPtr.Size > 4)
+                return gsapi_set_arg_encoding64(instance, encoding);
+            else
+                return gsapi_set_arg_encoding32(instance, encoding);
         }
 
         private static int gsapi_init_with_args(IntPtr instance, int argc, IntPtr argv)
@@ -421,7 +440,7 @@ namespace ConvertPDF
                     throw new ArgumentNullException("inputFile");
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("The inputfile is missing.");
+                    MessageBox.Show("The inputfile is missing.");
                     return false;
                 }
             }
@@ -431,7 +450,7 @@ namespace ConvertPDF
                     throw new ArgumentException(string.Format("The file '{0}' doesn't exist.", inputFile), "inputFile");
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show(string.Format("The file '{0}' doesn't exist.", inputFile));
+                    MessageBox.Show(string.Format("The file '{0}' doesn't exist.", inputFile));
                     return false;
                 }
             }
@@ -441,7 +460,7 @@ namespace ConvertPDF
                     throw new ArgumentNullException("Device");
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("You didn't provide a device for the conversion.");
+                    MessageBox.Show("You didn't provide a device for the conversion.");
                     return false;
                 }
             }
@@ -449,7 +468,7 @@ namespace ConvertPDF
             #endregion
             #region Variables
             int intReturn, intCounter, intElementCount;
-            //The pointer to the current istance of the dll
+            //The pointer to the current instance of the dll
             IntPtr intGSInstanceHandle;
             object[] aAnsiArgs;
             IntPtr[] aPtrArgs;
@@ -459,8 +478,8 @@ namespace ConvertPDF
             #endregion
             //Generate the list of the parameters i need to pass to the dll
             string[] sArgs = GetGeneratedArgs(inputFile, outputFile, options);
-            #region Convert Unicode strings to null terminated ANSI byte arrays
-            // Convert the Unicode strings to null terminated ANSI byte arrays
+            #region Convert Unicode strings to null-terminated UTF8 byte arrays
+            // Convert the Unicode strings to null-terminated UTF8 byte arrays
             // then get pointers to the byte arrays.
             intElementCount = sArgs.Length;
             aAnsiArgs = new object[intElementCount];
@@ -469,19 +488,19 @@ namespace ConvertPDF
             //Convert the parameters
             for (intCounter = 0; intCounter < intElementCount; intCounter++)
             {
-                aAnsiArgs[intCounter] = StringToAnsiZ(sArgs[intCounter]);
+                aAnsiArgs[intCounter] = NativeUtf8FromString(sArgs[intCounter]);
                 aGCHandle[intCounter] = GCHandle.Alloc(aAnsiArgs[intCounter], GCHandleType.Pinned);
                 aPtrArgs[intCounter] = aGCHandle[intCounter].AddrOfPinnedObject();
             }
             gchandleArgs = GCHandle.Alloc(aPtrArgs, GCHandleType.Pinned);
             intptrArgs = gchandleArgs.AddrOfPinnedObject();
             #endregion
-            #region Create a new istance of the library!
+            #region Create a new instance of the library!
             intReturn = -1;
             try
             {
                 intReturn = gsapi_new_instance(out intGSInstanceHandle, _objHandle);
-                //Be sure that we create an istance!
+                //Be sure that we create an instance!
                 if (intReturn < 0)
                 {
                     ClearParameters(ref aGCHandle, ref gchandleArgs);
@@ -489,7 +508,7 @@ namespace ConvertPDF
                         throw new ApplicationException(GSDLL_INSTANCE);
                     else
                     {
-                        System.Windows.Forms.MessageBox.Show(GSDLL_INSTANCE);
+                        MessageBox.Show(GSDLL_INSTANCE);
                         return false;
                     }
                 }
@@ -501,11 +520,11 @@ namespace ConvertPDF
                     throw new ApplicationException(GSDLL_NOT_FOUND);
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show(GSDLL_NOT_FOUND);
+                    MessageBox.Show(GSDLL_NOT_FOUND);
                     return false;
                 }
             }
-            callerHandle = IntPtr.Zero;//remove unwanter handler
+            callerHandle = IntPtr.Zero;//remove unwanted handler
             #endregion
             #region Capture the I/O
             //if (_bRedirectIO)
@@ -522,18 +541,21 @@ namespace ConvertPDF
             #endregion
             intReturn = -1;//if nothing change it there is an error!
             //Ok now is time to call the interesting method
-            try { intReturn = gsapi_init_with_args(intGSInstanceHandle, intElementCount, intptrArgs); }
+            try {
+                intReturn = gsapi_set_arg_encoding(intGSInstanceHandle, GS_ARG_ENCODING_UTF8);
+                intReturn = gsapi_init_with_args(intGSInstanceHandle, intElementCount, intptrArgs);
+            }
             catch (Exception ex)
             {
                 if (throwException)
                     throw new ApplicationException(ex.Message, ex);
                 else
-                    System.Windows.Forms.MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
             }
-            finally//No matter what happen i MUST close the istance!
+            finally//No matter what happen i MUST close the instance!
             {   //free all the memory
                 ClearParameters(ref aGCHandle, ref gchandleArgs);
-                gsapi_exit(intGSInstanceHandle);//Close the istance
+                gsapi_exit(intGSInstanceHandle);//Close the instance
                 gsapi_delete_instance(intGSInstanceHandle);//delete it
                 //In case i was looking for output now stop
                 if (myProcess != null) myProcess.OutputDataReceived -= new System.Diagnostics.DataReceivedEventHandler(SaveOutputToImage);
@@ -547,7 +569,7 @@ namespace ConvertPDF
             #region Variables
 
             int intReturn, intCounter, intElementCount;
-            //The pointer to the current istance of the dll
+            //The pointer to the current instance of the dll
             IntPtr intGSInstanceHandle;
             object[] aAnsiArgs;
             IntPtr[] aPtrArgs;
@@ -557,8 +579,8 @@ namespace ConvertPDF
 
             #endregion
 
-            #region Convert Unicode strings to null terminated ANSI byte arrays
-            // Convert the Unicode strings to null terminated ANSI byte arrays
+            #region Convert Unicode strings to null-terminated UTF8 byte arrays
+            // Convert the Unicode strings to null-terminated UTF8 byte arrays
             // then get pointers to the byte arrays.
             intElementCount = sArgs.Length;
             aAnsiArgs = new object[intElementCount];
@@ -567,7 +589,7 @@ namespace ConvertPDF
             //Convert the parameters
             for (intCounter = 0; intCounter < intElementCount; intCounter++)
             {
-                aAnsiArgs[intCounter] = StringToAnsiZ(sArgs[intCounter]);
+                aAnsiArgs[intCounter] = NativeUtf8FromString(sArgs[intCounter]);
                 aGCHandle[intCounter] = GCHandle.Alloc(aAnsiArgs[intCounter], GCHandleType.Pinned);
                 aPtrArgs[intCounter] = aGCHandle[intCounter].AddrOfPinnedObject();
             }
@@ -575,12 +597,12 @@ namespace ConvertPDF
             intptrArgs = gchandleArgs.AddrOfPinnedObject();
             #endregion
 
-            #region Create a new istance of the library!
+            #region Create a new instance of the library!
             intReturn = -1;
             try
             {
                 intReturn = gsapi_new_instance(out intGSInstanceHandle, _objHandle);
-                //Be sure that we create an istance!
+                //Be sure that we create an instance!
                 if (intReturn < 0)
                 {
                     ClearParameters(ref aGCHandle, ref gchandleArgs);
@@ -610,16 +632,17 @@ namespace ConvertPDF
             //Ok now is time to call the interesting method
             try
             {
+                intReturn = gsapi_set_arg_encoding(intGSInstanceHandle, GS_ARG_ENCODING_UTF8);
                 intReturn = gsapi_init_with_args(intGSInstanceHandle, intElementCount, intptrArgs);
             }
             catch (Exception ex)
             {
                 throw new ApplicationException(ex.Message, ex);
             }
-            finally//No matter what happen i MUST close the istance!
+            finally//No matter what happen, i MUST close the instance!
             {   //free all the memory
                 ClearParameters(ref aGCHandle, ref gchandleArgs);
-                gsapi_exit(intGSInstanceHandle);//Close the istance
+                gsapi_exit(intGSInstanceHandle);//Close the instance
                 gsapi_delete_instance(intGSInstanceHandle);//delete it
                 //In case i was looking for output now stop
                 if (myProcess != null) myProcess.OutputDataReceived -= new System.Diagnostics.DataReceivedEventHandler(SaveOutputToImage);
@@ -785,23 +808,16 @@ namespace ConvertPDF
         }
 
         /// <summary>
-        /// Convert a Unicode string to a null terminated Ansi string for Ghostscript.
-        /// The result is stored in a byte array
+        /// Converts a Unicode string to a null-terminated UTF-8 byte array for Ghostscript.
         /// </summary>
-        /// <param name="str">The parameter i want to convert</param>
-        /// <returns>the byte array that contain the string</returns>
-        private static byte[] StringToAnsiZ(string str)
+        /// <param name="str">Unicode string</param>
+        /// <returns>UTF8 bytes</returns>
+        public static byte[] NativeUtf8FromString(string str)
         {
-            // Later you will need to convert
-            // this byte array to a pointer with
-            // GCHandle.Alloc(XXXX, GCHandleType.Pinned)
-            // and GSHandle.AddrOfPinnedObject()
-            //int intElementCount,intCounter;
-
-            //This with Encoding.Default should work also with Chineese Japaneese
-            //Thanks to tchu_2000 I18N related patch
-            if (str == null) str = String.Empty;
-            return Encoding.Default.GetBytes(str);
+            int len = Encoding.UTF8.GetByteCount(str);
+            byte[] buffer = new byte[len + 1]; // null-terminator allocated
+            Encoding.UTF8.GetBytes(str, 0, str.Length, buffer, 0);
+            return buffer;
         }
 
         /// <summary>Convert a Pointer to a string to a real string</summary>

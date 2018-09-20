@@ -21,6 +21,10 @@ namespace VietOCR.NET.Utilities
             try
             {
                 pngFiles = ConvertPdf2Png(inputPdfFile);
+                if (pngFiles == null)
+                {
+                    throw new ApplicationException("Could not convert PDF file.");
+                }
                 string tiffFile = Path.GetTempFileName();
                 File.Delete(tiffFile);
                 tiffFile = Path.ChangeExtension(tiffFile, ".tif");
@@ -82,7 +86,7 @@ namespace VietOCR.NET.Utilities
                 }
                 else
                 {
-                    return new string[0];
+                    return null;
                 }
             }
             finally
