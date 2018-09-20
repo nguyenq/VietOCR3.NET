@@ -1,11 +1,9 @@
 /.project
-/bin/Debug
-/obj/Debug
-/UnitTests/obj/Debug
-/UnitTests/bin/Debug
+/UnitTests/obj/
+/UnitTests/bin/
 /.vs
-/bin/Release
-/obj/Release
-/UnitTests/obj/Release
+/bin/
+/obj/
 /Setup/
 /TestResults/
+/packages/

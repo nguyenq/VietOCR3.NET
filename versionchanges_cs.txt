@@ -94,3 +94,7 @@ Version 4.6 (28 March 2018)
 
 Version 4.7 (4 July 2018)
 - Update Tesseract.NET library to 3.3.0 (Tesseract 3.05.2 & Leptonica 1.75.3)
+
+Version 4.7.1 (20 September 2018)
+
+- Add Unicode filename/path support for PDF files
